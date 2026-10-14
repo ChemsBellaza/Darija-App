@@ -1,6 +1,6 @@
 /* Kelma — service worker (hors ligne). Aucun serveur : simple cache du navigateur.
    Change VERSION à chaque mise à jour du fichier HTML pour forcer le rafraîchissement. */
-const VERSION = 'kelma-pop-1';
+const VERSION = 'kelma-pop-3';
 const SHELL = ['./', './index.html', './manifest.json',
   './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'];
 const RUNTIME_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com', 'cdn.jsdelivr.net'];
