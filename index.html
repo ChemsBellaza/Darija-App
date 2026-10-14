@@ -1,47 +1,61 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0B1020">
+<meta name="theme-color" content="#FFF8EF">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Darja Dz">
-<meta name="description" content="Apprends la Darija algérienne (Alger) depuis le français.">
-<title>Darja Dz</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1020'/%3E%3Cpath d='M18 54V30a14 14 0 0 1 28 0v24z' fill='%233D6BFF'/%3E%3Ccircle cx='32' cy='34' r='5' fill='%233DDC97'/%3E%3C/svg%3E">
+<meta name="apple-mobile-web-app-title" content="Kelma">
+<meta name="description" content="Kelma – À toi la parole ! Apprends la darija d’Alger depuis le français, avec ton guide.">
+<title>Kelma – À toi la parole !</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230E9963'/%3E%3Crect x='19' y='19' width='26' height='26' rx='6' transform='rotate(45 32 32)' fill='%23FFF8EF'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%230E9963'/%3E%3C/svg%3E">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 /* =====================================================================
-   DARJA DZ — « Néo-Méditerranée : Alger la nuit »
-   Signature : l’arche de la Casbah. Mode nuit par défaut, « Blanc chaux » en option.
+   KELMA — « Maghreb Pop »
+   Clair par défaut, couleurs franches par pays, motifs de zellige et
+   maisons de casbah dessinés à plat. Mode sombre en option.
    ===================================================================== */
-:root,[data-theme="dark"]{
-  --bg:#0B1020; --s1:#141A2E; --s2:#1C2340; --s3:#262E52; --ink:#F6F3EE; --mut:#9AA3BF; --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
-  --blue:#3D6BFF; --blue-g:#5B82FF; --blue-btn:#3461F5; --blue-ink:#7E9BFF; --blue-soft:rgba(61,107,255,.16);
-  --mint:#3DDC97; --mint-ink:#3DDC97; --mint-soft:rgba(61,220,151,.14);
-  --coral:#FF6B4A; --coral-ink:#FF8A6E; --coral-soft:rgba(255,107,74,.15);
-  --sun:#FFC857; --on-accent:#0B1020;
-  --glass:rgba(20,26,46,.72); --shadow:0 10px 30px rgba(0,0,0,.35); --grain:.07;
-  --r:24px; --r-sm:16px; --tab-h:66px; --vvh:100dvh; --vvt:0px;
+:root,[data-theme="light"]{
+  --bg:#FFF8EF; --s1:#FFFFFF; --s2:#F7EFE3; --s3:#EDE3D4; --ink:#1C1633; --mut:#675F7D; --line:rgba(28,22,51,.08); --line2:rgba(28,22,51,.14);
+  --mint:#22C38E; --mint-ink:#0B805A; --mint-soft:rgba(34,195,142,.16); --mint-dk:#16996D;
+  --coral:#FF5A4E; --coral-ink:#C93127; --coral-soft:rgba(255,90,78,.13); --coral-dk:#D63A2F;
+  --sun:#FFB627; --sun-ink:#9A6400; --on-accent:#1C1633;
+  --glass:rgba(255,255,255,.86); --shadow:0 8px 24px rgba(70,45,20,.10); --pop:0 4px 0; --grain:0;
+  --frame:#FFF1DF; --pat-op:.16;
+  --r:24px; --r-sm:18px; --tab-h:66px; --vvh:100dvh; --vvt:0px;
   --sat:env(safe-area-inset-top,0px); --sab:env(safe-area-inset-bottom,0px);
-  --f-title:'Space Grotesk',ui-sans-serif,system-ui,sans-serif; --f-body:'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif; --f-ar:'IBM Plex Sans Arabic','Geeza Pro','Arial',sans-serif;
+  --f-title:'Poppins','Space Grotesk',ui-sans-serif,system-ui,sans-serif; --f-body:'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif; --f-ar:'IBM Plex Sans Arabic','Geeza Pro','Arial',sans-serif;
   --spring:cubic-bezier(.34,1.56,.64,1); --ease:cubic-bezier(.2,.8,.2,1);
-  color-scheme:dark;
-}
-[data-theme="light"]{
-  --bg:#F6F3EE; --s1:#FFFFFF; --s2:#EDE8DF; --s3:#E2DCD0; --ink:#0B1020; --mut:#545C78; --line:rgba(11,16,32,.09); --line2:rgba(11,16,32,.16);
-  --blue-ink:#2A52D9; --blue-soft:rgba(61,107,255,.12);
-  --mint-ink:#0B7D52; --mint-soft:rgba(61,220,151,.18);
-  --coral-ink:#C23B1C; --coral-soft:rgba(255,107,74,.14);
-  --glass:rgba(255,255,255,.78); --shadow:0 10px 30px rgba(11,16,32,.10); --grain:.04;
   color-scheme:light;
 }
+[data-theme="dark"]{
+  --bg:#15122A; --s1:#201C38; --s2:#2A2546; --s3:#363055; --ink:#FBF6EE; --mut:#A9A1C2; --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.15);
+  --mint-ink:#4FE0A8; --mint-soft:rgba(34,195,142,.18);
+  --coral-ink:#FF8C80; --coral-soft:rgba(255,90,78,.17);
+  --sun-ink:#FFC857; --on-accent:#15122A;
+  --glass:rgba(32,28,56,.86); --shadow:0 10px 30px rgba(0,0,0,.35); --frame:#2A2546; --pat-op:.12;
+  color-scheme:dark;
+}
+/* ---------- Versions : chaque pays a sa couleur, son motif et sa casbah.
+   dz : vert jasmin + bleu de la baie d’Alger · ma : terracotta de Marrakech + bleu Majorelle
+   tn : bleu de Sidi Bou Saïd + rose bougainvillier.  Bonnes / mauvaises réponses : menthe / corail partout. */
+body{--v1:#0E9963;--v1-hi:#1DBF7E;--v1-dk:#0A7149;--v-rgb:14,153,99;--v-rgb-hi:29,191,126;--v-ink:#0A7149;--v2:#2B6CFF;--v3:#FFB627;
+  --hero-a:#13A86E;--hero-b:#0B8253;--sea:#2B6CFF;--wall:#FFFFFF;--wall-sh:#E3F1EA;--door:#2B6CFF;--flower:#FFB627;
+  --blue:var(--v1);--blue-g:var(--v1-hi);--blue-btn:var(--v1);--blue-ink:var(--v-ink);--blue-soft:rgba(var(--v-rgb),.12)}
+body[data-version="ma"]{--v1:#DD5228;--v1-hi:#F2754F;--v1-dk:#AE3B17;--v-rgb:221,82,40;--v-rgb-hi:242,117,79;--v-ink:#AE3B17;--v2:#4B3BD6;--v3:#F2B33D;
+  --hero-a:#E5602F;--hero-b:#C2441D;--sea:#2F7FD8;--wall:#F9D3B9;--wall-sh:#EDB596;--door:#4B3BD6;--flower:#2FA37A}
+body[data-version="tn"]{--v1:#0A78D1;--v1-hi:#2D96F0;--v1-dk:#075AA0;--v-rgb:10,120,209;--v-rgb-hi:45,150,240;--v-ink:#075AA0;--v2:#E8336D;--v3:#FFC93C;
+  --hero-a:#1488E0;--hero-b:#0A66B8;--sea:#1E9BE0;--wall:#FFFFFF;--wall-sh:#DCEBF8;--door:#075AA0;--flower:#E8336D}
+[data-theme="dark"] body{--v-ink:#4FE0A8;--blue-soft:rgba(var(--v-rgb-hi),.18)}
+[data-theme="dark"] body[data-version="ma"]{--v-ink:#FF9C7A}
+[data-theme="dark"] body[data-version="tn"]{--v-ink:#7CC2FF}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);overscroll-behavior:none}
 body{font-family:var(--f-body);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
@@ -60,7 +74,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 
 /* ---------- Shell */
 #app{position:fixed;inset:0;display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidden;
-  background:radial-gradient(600px 380px at 110% -10%,rgba(61,107,255,.18),transparent 70%),radial-gradient(500px 360px at -20% 30%,rgba(61,220,151,.07),transparent 70%),var(--bg)}
+  background:radial-gradient(600px 380px at 110% -10%,rgba(var(--v-rgb),.18),transparent 70%),radial-gradient(500px 360px at -20% 30%,rgba(61,220,151,.07),transparent 70%),var(--bg)}
 .screen{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(var(--sat) + 10px) 18px calc(var(--tab-h) + var(--sab) + 28px)}
 .screen-in{animation:screenIn .34s var(--spring) both}
 @keyframes screenIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
@@ -69,12 +83,12 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .tab{flex:1;height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:10.5px;font-weight:600;color:var(--mut);position:relative;min-width:44px}
 .tab .ti{width:44px;height:30px;display:flex;align-items:center;justify-content:center;position:relative;transition:transform .3s var(--spring)}
 .tab .ti svg{width:23px;height:23px;position:relative;z-index:1}
-.tab .ti:before{content:"";position:absolute;inset:0;border-radius:22px 22px 8px 8px;background:var(--blue);opacity:0;transform:scale(.6);transition:opacity .2s,transform .3s var(--spring)}
-.tab.on{color:var(--ink)} .tab.on .ti{color:#fff;transform:translateY(-2px)} .tab.on .ti:before{opacity:1;transform:none;box-shadow:0 6px 18px rgba(61,107,255,.45)}
+.tab .ti:before{content:"";position:absolute;inset:0;border-radius:12px;background:var(--blue);opacity:0;transform:scale(.6);transition:opacity .2s,transform .3s var(--spring)}
+.tab.on{color:var(--ink)} .tab.on .ti{color:#fff;transform:translateY(-2px)} .tab.on .ti:before{opacity:1;transform:none;box-shadow:0 6px 18px rgba(var(--v-rgb),.45)}
 .topbar{display:flex;align-items:center;gap:8px;padding:4px 0 16px}
 .brand{font-family:var(--f-title);font-weight:700;font-size:1.45rem;letter-spacing:-.05em;display:flex;align-items:center;gap:7px}
-.brand i{width:16px;height:20px;border-radius:9px 9px 3px 3px;background:linear-gradient(var(--blue-g),var(--blue));display:inline-block;box-shadow:0 0 14px rgba(91,130,255,.6)}
-.brand b{color:var(--mint-ink);font-weight:700}
+.brand i{width:16px;height:20px;border-radius:7px;background:linear-gradient(var(--blue-g),var(--blue));display:inline-block;box-shadow:0 0 14px rgba(var(--v-rgb-hi),.6)}
+.brand b{color:var(--blue-ink);font-weight:700}
 .pill{display:inline-flex;align-items:center;gap:5px;padding:0 11px;height:38px;border-radius:999px;background:var(--s1);border:1px solid var(--line);font-family:var(--f-title);font-weight:700;font-size:1rem}
 .pill svg{width:18px;height:18px}
 .pill.hot{color:var(--coral-ink)} .pill.xp{color:var(--sun)} .pill.heart{color:var(--coral-ink)}
@@ -90,7 +104,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .arch{border-radius:999px 999px var(--r-sm) var(--r-sm)}
 .arch-wide{border-radius:180px 180px var(--r) var(--r)/86px 86px var(--r) var(--r)}
 .blob{position:absolute;width:220px;height:220px;border-radius:50%;pointer-events:none;opacity:.55;filter:blur(2px)}
-.b-blue{background:radial-gradient(circle,rgba(61,107,255,.55),transparent 65%)}
+.b-blue{background:radial-gradient(circle,rgba(var(--v-rgb),.55),transparent 65%)}
 .b-mint{background:radial-gradient(circle,rgba(61,220,151,.38),transparent 65%)}
 .b-coral{background:radial-gradient(circle,rgba(255,107,74,.40),transparent 65%)}
 .giant-ar{position:absolute;font-family:var(--f-ar);font-weight:600;line-height:1;white-space:nowrap;color:var(--ink);opacity:.06;pointer-events:none;direction:rtl}
@@ -99,7 +113,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 /* ---------- Buttons */
 .btn{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:54px;padding:12px 20px;border-radius:18px;
   font-family:var(--f-title);font-weight:700;font-size:1.06rem;letter-spacing:-.01em;background:var(--blue-btn);color:#fff;
-  box-shadow:0 8px 22px rgba(52,97,245,.35),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .18s var(--spring),filter .15s,box-shadow .2s}
+  box-shadow:0 8px 22px rgba(var(--v-rgb),.35),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .18s var(--spring),filter .15s,box-shadow .2s}
 .btn:active{transform:scale(.97)}
 .btn svg{width:20px;height:20px;flex:none}
 .btn[disabled]{background:var(--s2);color:var(--mut);box-shadow:none;cursor:default}
@@ -109,7 +123,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line2);box-shadow:none}
 .btn.sm{min-height:44px;font-size:.92rem;padding:8px 14px;border-radius:14px;width:auto}
 .btn.link{background:none;box-shadow:none;color:var(--blue-ink);min-height:44px;font-family:var(--f-body);font-weight:600;font-size:.95rem}
-.btn.arch-btn{border-radius:28px 28px 18px 18px}
+.btn.arch-btn{border-radius:22px}
 .iconbtn{width:44px;height:44px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:var(--s1);border:1px solid var(--line);flex:none;color:var(--ink)}
 .iconbtn svg{width:22px;height:22px}
 .chip{display:inline-flex;align-items:center;gap:5px;padding:0 14px;height:40px;border-radius:999px;border:1px solid var(--line2);background:var(--s1);font-weight:600;font-size:.86rem;white-space:nowrap}
@@ -135,7 +149,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .ar-draw{animation:arDraw .34s var(--ease) both}
 @keyframes arDraw{from{clip-path:inset(-20% 0 -20% 100%);opacity:.2;filter:blur(3px)}to{clip-path:inset(-20% 0 -20% 0);opacity:1;filter:none}}
 
-/* ---------- Mimouch */
+/* ---------- Mimoush */
 .mim{width:100%;height:100%;display:block;overflow:visible}
 .mim-happy .m-all{animation:mimJump .34s var(--spring)}
 @keyframes mimJump{50%{transform:translateY(-9px)}}
@@ -158,19 +172,19 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .span2{grid-column:span 2}
 .tile-btn{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;text-align:left;min-height:124px;transition:transform .2s var(--spring)}
 .tile-btn:active{transform:scale(.97)}
-.tile-btn .t-ic{width:40px;height:40px;border-radius:20px 20px 10px 10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.tile-btn .t-ic{width:40px;height:40px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px}
 .tile-btn .t-n{font-size:2rem}
 .tile-btn .t-l{font-size:.85rem;color:var(--mut);font-weight:500}
 .greet{padding:14px 16px 0;background:linear-gradient(160deg,var(--s2),var(--s1))}
-.greet .hello{font-family:var(--f-title);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mint-ink);margin-bottom:6px}
+.greet .hello{font-family:var(--f-title);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-ink);margin-bottom:6px}
 .hero{min-height:200px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;text-align:left;
-  background:linear-gradient(165deg,#2747C7 0%,#1A2A6C 55%,#141A2E 100%);color:#F6F3EE;border-color:rgba(255,255,255,.12)}
-[data-theme="light"] .hero{background:linear-gradient(165deg,#3D6BFF 0%,#2A48B8 60%,#1C2340 100%)}
+  background:linear-gradient(165deg,var(--hero-a) 0%,var(--hero-b) 58%,#1E2640 100%);color:#F6F3EE;border-color:rgba(255,255,255,.12)}
+[data-theme="light"] .hero{background:linear-gradient(165deg,var(--hero-a) 0%,var(--hero-b) 100%)}
 .hero .giant-ar{font-size:8.5rem;top:-18px;right:-14px;opacity:.13;color:#fff}
 .hero .eyebrow{font-family:var(--f-title);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
 .hero h2{font-size:1.75rem;margin:6px 0 4px;color:#fff}
 .hero .sub{opacity:.78;font-size:.9rem}
-.hero .go{margin-top:16px;display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 20px;border-radius:24px 24px 14px 14px;background:#F6F3EE;color:#0B1020;font-family:var(--f-title);font-weight:700;align-self:flex-start;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.hero .go{margin-top:16px;display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 20px;border-radius:18px;background:#F6F3EE;color:#0B1020;font-family:var(--f-title);font-weight:700;align-self:flex-start;box-shadow:0 8px 24px rgba(0,0,0,.25)}
 .hero .ringwrap{position:absolute;top:18px;right:18px;width:64px;height:64px}
 .ring{position:relative} .ring svg{transform:rotate(-90deg);display:block}
 .ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--f-title);font-size:.85rem;font-weight:700}
@@ -194,7 +208,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .skyline{position:relative;height:150px;margin:6px -18px 0;overflow:hidden}
 .skyline svg{position:absolute;inset:0;width:100%;height:100%}
 .unit-head{position:relative;display:flex;align-items:center;gap:12px;padding:16px;margin:8px 0 4px;border-radius:var(--r);background:var(--s1);border:1px solid var(--line);overflow:hidden}
-.unit-head .uh-ic{width:46px;height:52px;border-radius:23px 23px 10px 10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex:none;background:var(--s2);border:1px solid var(--line2)}
+.unit-head .uh-ic{width:46px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex:none;background:var(--s2);border:1px solid var(--line2)}
 .unit-head small{font-family:var(--f-title);font-weight:700;text-transform:uppercase;font-size:.7rem;letter-spacing:.08em;color:var(--mut)}
 .unit-head h3{font-size:1.12rem;margin-top:2px}
 .unit-head .uprog{height:4px;border-radius:9px;background:var(--s3);margin-top:8px;overflow:hidden}
@@ -203,13 +217,13 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .path{position:relative;display:flex;flex-direction:column;align-items:center;gap:20px;padding:42px 0 26px}
 .path-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
 .node{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;z-index:1}
-.node .nb{width:72px;height:80px;border-radius:36px 36px 18px 18px;display:flex;align-items:center;justify-content:center;background:var(--s2);border:1px solid var(--line2);color:var(--mut);transition:transform .2s var(--spring)}
+.node .nb{width:72px;height:80px;border-radius:22px;display:flex;align-items:center;justify-content:center;background:var(--s2);border:1px solid var(--line2);color:var(--mut);transition:transform .2s var(--spring)}
 .node .nb svg{width:28px;height:28px}
 .node .nb:active{transform:scale(.93)}
 .node.locked .nb{opacity:.5}
 .node.done .nb{background:linear-gradient(180deg,#5CE8AC,#2DBF80);border-color:transparent;color:#0B1020;box-shadow:0 8px 22px rgba(61,220,151,.25)}
-.node.cur .nb{background:linear-gradient(180deg,var(--blue-g),var(--blue));border-color:transparent;color:#fff;box-shadow:0 0 0 6px rgba(61,107,255,.18),0 0 34px rgba(91,130,255,.65);animation:glow 2.4s ease-in-out infinite}
-@keyframes glow{50%{box-shadow:0 0 0 10px rgba(61,107,255,.10),0 0 46px rgba(91,130,255,.8)}}
+.node.cur .nb{background:linear-gradient(180deg,var(--blue-g),var(--blue));border-color:transparent;color:#fff;box-shadow:0 0 0 6px rgba(var(--v-rgb),.18),0 0 34px rgba(var(--v-rgb-hi),.65);animation:glow 2.4s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 0 10px rgba(var(--v-rgb),.10),0 0 46px rgba(var(--v-rgb-hi),.8)}}
 .node .stars{font-size:12px;letter-spacing:1px;min-height:14px;color:var(--sun)}
 .node .nl{font-size:.78rem;font-weight:600;color:var(--mut);max-width:150px;text-align:center}
 .node.cur .nl{color:var(--ink)}
@@ -246,16 +260,16 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .ex-title{font-family:var(--f-title);font-size:1.4rem;font-weight:700;letter-spacing:-.03em;margin:2px 0 14px;line-height:1.2}
 .ex-inst{color:var(--mut);font-size:.92rem;margin:-6px 0 12px}
 .prompt{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.speak{width:56px;height:56px;border-radius:28px 28px 14px 14px;background:var(--blue-btn);color:#fff;display:inline-flex;align-items:center;justify-content:center;flex:none;box-shadow:0 8px 20px rgba(52,97,245,.35);transition:transform .2s var(--spring)}
+.speak{width:56px;height:56px;border-radius:18px;background:var(--blue-btn);color:#fff;display:inline-flex;align-items:center;justify-content:center;flex:none;box-shadow:0 8px 20px rgba(var(--v-rgb),.35);transition:transform .2s var(--spring)}
 .speak svg{width:24px;height:24px}
-.speak.big{width:104px;height:112px;border-radius:52px 52px 22px 22px} .speak.big svg{width:40px;height:40px}
+.speak.big{width:104px;height:112px;border-radius:26px} .speak.big svg{width:40px;height:40px}
 .speak.slow{background:var(--s2);color:var(--blue-ink);box-shadow:none;border:1px solid var(--line2)}
 .speak:active{transform:scale(.93)}
 .opts{display:flex;flex-direction:column;gap:10px}
 .opts.grid{display:grid;grid-template-columns:1fr 1fr}
 .opt{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 14px;min-height:58px;border-radius:18px;background:var(--s1);border:1px solid var(--line2);font-weight:500;transition:transform .18s var(--spring),background .2s,border-color .2s}
 .opt:active{transform:scale(.98)}
-.opt .k{width:26px;height:26px;border-radius:13px 13px 6px 6px;border:1px solid var(--line2);display:inline-flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--mut);flex:none;font-family:var(--f-title)}
+.opt .k{width:26px;height:26px;border-radius:10px;border:1px solid var(--line2);display:inline-flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--mut);flex:none;font-family:var(--f-title)}
 .opt.sel{border-color:var(--blue);background:var(--blue-soft)}
 .opt.good{border-color:var(--mint);background:var(--mint-soft);animation:pulseGood .34s var(--spring)}
 .opt.bad{border-color:var(--coral);background:var(--coral-soft);animation:shake .3s}
@@ -274,7 +288,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
   background:repeating-linear-gradient(transparent 0 52px,var(--line) 52px 53px)}
 .tiles-answer.rtl{direction:rtl}
 .tiles-bank{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.tile{padding:8px 14px;border-radius:16px 16px 10px 10px;background:var(--s1);border:1px solid var(--line2);font-family:var(--f-title);font-weight:600;font-size:1.02rem;min-height:46px;min-width:44px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15;transition:transform .2s var(--spring)}
+.tile{padding:8px 14px;border-radius:14px;background:var(--s1);border:1px solid var(--line2);font-family:var(--f-title);font-weight:600;font-size:1.02rem;min-height:46px;min-width:44px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15;transition:transform .2s var(--spring)}
 .tile:active{transform:scale(.94)}
 .tile .ar{font-size:1.25rem;line-height:1.35}
 .tile .sub{font-size:.78rem;color:var(--mut);font-weight:500;margin-top:2px}
@@ -321,20 +335,20 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .hintbox b{font-family:var(--f-title);letter-spacing:.06em}
 .kbar{display:flex;gap:6px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none}
 .kbar::-webkit-scrollbar{display:none}
-.kk{position:relative;flex:1;min-width:44px;height:46px;border-radius:14px 14px 9px 9px;background:var(--s2);border:1px solid var(--line2);font-family:var(--f-title);font-weight:700;font-size:1.05rem;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.kk{position:relative;flex:1;min-width:44px;height:46px;border-radius:13px;background:var(--s2);border:1px solid var(--line2);font-family:var(--f-title);font-weight:700;font-size:1.05rem;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
 .kk small{font-family:var(--f-ar);font-size:.72rem;color:var(--mut);font-weight:500;margin-top:2px}
 .kk:active{background:var(--blue-soft)}
 .tip-pop{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:6px 10px;border-radius:12px;white-space:nowrap;font-size:.8rem;font-family:var(--f-body);font-weight:600;z-index:5}
 .tip-pop .ar{font-size:1.2rem;color:var(--bg)}
 .arkb{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;direction:rtl;padding-bottom:8px}
-.arkb button{height:46px;border-radius:12px 12px 8px 8px;background:var(--s2);border:1px solid var(--line2);font-family:var(--f-ar);font-size:1.35rem;line-height:1;min-width:0}
+.arkb button{height:46px;border-radius:12px;background:var(--s2);border:1px solid var(--line2);font-family:var(--f-ar);font-size:1.35rem;line-height:1;min-width:0}
 .arkb button:active{background:var(--blue-soft);transform:scale(.94)}
 .arkb .wide{grid-column:span 4;font-family:var(--f-body);font-size:.9rem;font-weight:600}
 .arkb .back{grid-column:span 2;font-family:var(--f-body);font-size:1.1rem}
 .arkb .fn{grid-column:span 2;font-family:var(--f-body);font-size:.85rem}
 .fill-row{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:12px 0 6px}
 .fill-row.rtl{direction:rtl}
-.lb{min-width:34px;height:48px;padding:0 6px;border-radius:14px 14px 8px 8px;background:var(--s1);border:1px solid var(--line2);display:inline-flex;align-items:center;justify-content:center;font-family:var(--f-title);font-weight:700;font-size:1.3rem}
+.lb{min-width:34px;height:48px;padding:0 6px;border-radius:12px;background:var(--s1);border:1px solid var(--line2);display:inline-flex;align-items:center;justify-content:center;font-family:var(--f-title);font-weight:700;font-size:1.3rem}
 .fill-row.rtl .lb{font-family:var(--f-ar);font-size:1.5rem}
 .lb.sp{background:none;border:0;min-width:12px}
 .lb.miss{border:2px dashed var(--blue);color:var(--blue-ink);background:var(--blue-soft)}
@@ -382,7 +396,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .sign{font-family:var(--f-ar);direction:rtl;text-align:center;box-shadow:0 14px 30px rgba(0,0,0,.35)}
 .sign.shop{background:linear-gradient(#244E3C,#183829);color:#fff;border-radius:10px;padding:14px 26px;border:5px solid #D8C9A0;min-width:250px}
 .sign.shop .t{font-size:2.2rem;font-weight:600;line-height:1.5}.sign.shop .s{font-size:1.1rem;opacity:.9}
-.sign.shop:before{content:"";display:block;height:10px;margin:-14px -26px 10px;background:repeating-linear-gradient(90deg,#3D6BFF 0 18px,#F6F3EE 18px 36px)}
+.sign.shop:before{content:"";display:block;height:10px;margin:-14px -26px 10px;background:repeating-linear-gradient(90deg,var(--blue) 0 18px,#F6F3EE 18px 36px)}
 .sign.menu{background:#1F2A24;color:#F5F1E6;border:8px solid #6B4F2A;border-radius:6px;padding:14px 18px;min-width:260px}
 .sign.menu .t{font-size:1.6rem;border-bottom:1px dashed rgba(255,255,255,.4);margin-bottom:8px}
 .sign.menu .r{display:flex;justify-content:space-between;gap:24px;font-size:1.3rem;padding:2px 0}.sign.menu .r span:last-child{color:#FFD86B}
@@ -406,18 +420,18 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .sign.door .t{font-size:2.1rem;color:#0A7A3D;font-weight:600}.sign.door .s{font-size:1.15rem;color:#B91C1C}
 .sign.plate{background:linear-gradient(135deg,#D4AF37,#B8912A);color:#2B2006;border-radius:6px;padding:10px 24px;min-width:220px;border:2px solid #8C6D1F}
 .sign.plate .t{font-size:1.7rem;font-weight:600}.sign.plate .s{font-size:1rem}
-.sign.taxi{background:#FFD400;color:#111;border-radius:12px 12px 4px 4px;padding:8px 30px;border:3px solid #111;min-width:200px}
+.sign.taxi{background:#FFD400;color:#111;border-radius:8px;padding:8px 30px;border:3px solid #111;min-width:200px}
 .sign.taxi .t{font-size:2.2rem;font-weight:600}.sign.taxi .s{font-family:var(--f-body);direction:ltr;font-weight:800;letter-spacing:.2em}
 .sign.note{background:linear-gradient(135deg,#3E6B4F,#2D5A9E 60%,#6A4C93);color:#fff;border-radius:10px;padding:12px 18px;min-width:280px;border:3px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:space-between;gap:12px}
 .sign.note .t{font-family:var(--f-title);font-size:2.4rem;font-weight:700}.sign.note .s{font-size:1.1rem}
 
 /* ---------- Trace & shadowing */
-.trace-box{position:relative;width:100%;max-width:300px;aspect-ratio:1;margin:0 auto;border-radius:150px 150px 26px 26px;background:var(--s1);border:1px dashed var(--line2);touch-action:none;overflow:hidden}
+.trace-box{position:relative;width:100%;max-width:300px;aspect-ratio:1;margin:0 auto;border-radius:28px;background:var(--s1);border:1px dashed var(--line2);touch-action:none;overflow:hidden}
 .trace-box canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
 .trace-score{font-weight:600;text-align:center;margin-top:8px;min-height:24px}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
 .duo .card{text-align:center;padding:12px;display:flex;flex-direction:column;align-items:center;gap:8px}
-.rec{width:84px;height:92px;border-radius:42px 42px 20px 20px;background:var(--coral);color:#0B1020;margin:14px auto 0;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(255,107,74,.35)}
+.rec{width:84px;height:92px;border-radius:24px;background:var(--coral);color:#0B1020;margin:14px auto 0;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(255,107,74,.35)}
 .rec svg{width:32px;height:32px}
 .rec.on{animation:pulseRed 1s infinite}
 @keyframes pulseRed{50%{box-shadow:0 0 0 14px rgba(255,107,74,0),0 0 0 0 rgba(255,107,74,.45)}}
@@ -438,7 +452,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 
 /* ---------- Alphabet */
 .agrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.acell{aspect-ratio:.86;border-radius:40px 40px 14px 14px;background:var(--s1);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform .2s var(--spring)}
+.acell{aspect-ratio:.86;border-radius:18px;background:var(--s1);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform .2s var(--spring)}
 .acell:active{transform:scale(.94)}
 .acell .ar{font-size:2.1rem;line-height:1.3}
 .acell small{font-size:.74rem;font-weight:600;color:var(--mut)}
@@ -449,16 +463,16 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .forms small{font-size:.7rem;color:var(--mut);font-weight:600}
 .al-lessons{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:none;margin:0 -18px;padding-left:18px;padding-right:18px}
 .al-lessons::-webkit-scrollbar{display:none}
-.al-lesson{flex:none;width:126px;padding:16px 10px 12px;border-radius:63px 63px 18px 18px;background:var(--s1);border:1px solid var(--line2);text-align:center}
+.al-lesson{flex:none;width:126px;padding:16px 10px 12px;border-radius:22px;background:var(--s1);border:1px solid var(--line2);text-align:center}
 .al-lesson .ar{font-size:1.1rem;line-height:1.5;display:block;min-height:3em}
 .al-lesson.done{border-color:var(--mint);background:linear-gradient(180deg,var(--mint-soft),var(--s1))}
 .al-lesson b{font-size:.8rem;display:block;font-family:var(--f-title)}
 
 /* ---------- Stories */
-.story-ic{width:56px;height:62px;border-radius:28px 28px 12px 12px;display:flex;align-items:center;justify-content:center;font-size:28px;background:var(--s2);flex:none}
+.story-ic{width:56px;height:62px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;background:var(--s2);flex:none}
 .cast{display:flex;margin-top:4px}.cast span{width:26px;height:26px;border-radius:50%;background:var(--s2);display:inline-flex;align-items:center;justify-content:center;font-size:14px;margin-right:-6px;border:2px solid var(--s1)}
 .sline{display:flex;gap:10px;margin-bottom:14px;animation:layerIn .3s var(--spring)}
-.sline .av{width:42px;height:46px;border-radius:21px 21px 10px 10px;flex:none;display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--s2)}
+.sline .av{width:42px;height:46px;border-radius:14px;flex:none;display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--s2)}
 .sline .sb{flex:1;background:var(--s1);border:1px solid var(--line);border-radius:6px 20px 20px 20px;padding:10px 14px}
 .sline .who{font-family:var(--f-title);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .tok{display:inline;border-radius:6px;padding:1px 2px;cursor:pointer;border-bottom:2px dotted transparent}
@@ -474,7 +488,7 @@ h1{font-size:1.9rem;font-weight:700} h2{font-size:1.35rem;font-weight:700} h3{fo
 .stat{background:var(--s1);border:1px solid var(--line);border-radius:20px;padding:12px 6px;text-align:center}
 .stat b{display:block;font-family:var(--f-title);font-size:1.45rem;font-weight:700;letter-spacing:-.03em}.stat small{font-size:.74rem;color:var(--mut);font-weight:500}
 .bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.bcell{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:12px 4px 10px;border-radius:30px 30px 14px 14px;background:var(--s1);border:1px solid var(--line);font-size:.68rem;font-weight:600;min-height:44px}
+.bcell{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:12px 4px 10px;border-radius:18px;background:var(--s1);border:1px solid var(--line);font-size:.68rem;font-weight:600;min-height:44px}
 .bcell .bi{font-size:28px}.bcell.off{opacity:.35;filter:grayscale(1)}
 .setting{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);min-height:56px}
 .setting:last-child{border-bottom:0}
@@ -489,7 +503,7 @@ input[type=range]{width:140px;accent-color:var(--blue)}
 /* ---------- Onboarding, end, misc */
 .onb{display:flex;flex-direction:column;gap:12px}
 .onb .opt{min-height:68px;font-size:1.02rem}
-.onb .opt .oi{width:44px;height:48px;border-radius:22px 22px 10px 10px;background:var(--s2);display:flex;align-items:center;justify-content:center;font-size:22px;flex:none}
+.onb .opt .oi{width:44px;height:48px;border-radius:14px;background:var(--s2);display:flex;align-items:center;justify-content:center;font-size:22px;flex:none}
 .welcome{position:relative;text-align:center;padding:30px 0 10px}
 .welcome .giant-ar{font-size:10rem;left:50%;top:10px;transform:translateX(-50%);opacity:.07}
 .welcome .mim-frame{margin:0 auto}
@@ -498,7 +512,7 @@ input[type=range]{width:140px;accent-color:var(--blue)}
 .end{text-align:center;padding-top:10px}
 .end .mim-frame{margin:0 auto 10px}
 .end-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
-.end-stats div{border-radius:30px 30px 16px 16px;background:var(--s1);border:1px solid var(--line);padding:14px 4px 12px}
+.end-stats div{border-radius:20px;background:var(--s1);border:1px solid var(--line);padding:14px 4px 12px}
 .end-stats b{display:block;font-family:var(--f-title);font-size:1.6rem;font-weight:700;letter-spacing:-.04em}
 .end-stats small{font-size:.72rem;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
 .end-stats div:nth-child(1) b{color:var(--sun)} .end-stats div:nth-child(2) b{color:var(--mint-ink)} .end-stats div:nth-child(3) b{color:var(--blue-ink)}
@@ -521,7 +535,7 @@ input[type=range]{width:140px;accent-color:var(--blue)}
 .ex-big{font-family:var(--f-title);font-size:1.6rem;font-weight:700;letter-spacing:-.03em;line-height:1.25;margin:2px 0 6px}
 .ex-sub{color:var(--mut);font-size:.92rem;margin:0 0 14px}
 .ladder{margin-bottom:8px;font-weight:600}
-input.lb-in{font-family:var(--f-title);font-weight:700;font-size:1.35rem;text-align:center;color:var(--blue-ink);border:2px dashed var(--blue);background:var(--blue-soft);outline:none;padding:0;-webkit-appearance:none;appearance:none;border-radius:14px 14px 8px 8px;height:50px}
+input.lb-in{font-family:var(--f-title);font-weight:700;font-size:1.35rem;text-align:center;color:var(--blue-ink);border:2px dashed var(--blue);background:var(--blue-soft);outline:none;padding:0;-webkit-appearance:none;appearance:none;border-radius:12px;height:50px}
 input.lb-in.filled{border-style:solid}
 input.lb-in.cur,input.lb-in:focus{border-style:solid;border-color:var(--blue-g);box-shadow:0 0 0 4px var(--blue-soft),0 6px 0 -2px var(--blue-g);transform:translateY(-2px)}
 .fill-row{margin:16px 0 8px}
@@ -539,17 +553,17 @@ input.lb-in.cur,input.lb-in:focus{border-style:solid;border-color:var(--blue-g);
 .banner{display:flex;align-items:center;gap:10px;padding:10px 6px 10px 14px;margin-bottom:10px;border-radius:20px;background:var(--s2);border:1px solid var(--line2);animation:toastIn .3s var(--spring)}
 .banner .b-ic{font-size:22px}.banner .btn.sm{flex:none}.banner .close{width:36px;height:36px}
 .banner[data-ban="repair"]{border-color:var(--coral)} .banner[data-ban="guest"]{border-color:var(--sun)}
-.sugg .sg-ic{width:40px;height:44px;border-radius:20px 20px 10px 10px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none;color:var(--blue-ink)}
+.sugg .sg-ic{width:40px;height:44px;border-radius:14px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none;color:var(--blue-ink)}
 .sugg .sg-ic .ar{font-size:1.4rem}.sugg .btn.sm{flex:none}
 .avgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
 .avcell{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 4px;border-radius:20px;border:2px solid transparent}
 .avcell.on{border-color:var(--blue);background:var(--blue-soft)}
 .avcell .mim-frame{width:76px;height:86px}.avcell small{font-size:.7rem;color:var(--mut);text-align:center}
 .pindots{display:flex;justify-content:center;gap:14px;margin:18px 0}
-.pindots i{width:16px;height:20px;border-radius:8px 8px 4px 4px;border:2px solid var(--line2)}
+.pindots i{width:16px;height:20px;border-radius:8px;border:2px solid var(--line2)}
 .pindots i.on{background:var(--blue);border-color:var(--blue)}
 .pinpad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:300px;margin:0 auto}
-.pinpad button{height:62px;border-radius:30px 30px 16px 16px;background:var(--s2);border:1px solid var(--line2);font-family:var(--f-title);font-size:1.5rem;font-weight:700}
+.pinpad button{height:62px;border-radius:20px;background:var(--s2);border:1px solid var(--line2);font-family:var(--f-title);font-size:1.5rem;font-weight:700}
 .pinpad button:active{background:var(--blue-soft)}
 .pickgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
 .pickcell{display:flex;flex-direction:column;align-items:center;gap:6px;padding:16px 8px;border-radius:28px;background:var(--s1);border:1px solid var(--line2);transition:transform .2s var(--spring)}
@@ -557,11 +571,305 @@ input.lb-in.cur,input.lb-in:focus{border-style:solid;border-color:var(--blue-g);
 .pickcell .mim-frame{width:92px;height:104px}
 button.mim-frame{cursor:pointer}
 
+/* =====================================================================
+   GUIDES — animations (transform + opacity uniquement)
+   ===================================================================== */
+.gd{display:block;width:100%;height:100%;overflow:visible}
+.gd g{transform-box:view-box}
+.gd .g-move{transform-origin:60px 100px}
+.gd .g-body,.gd .g-breathe{transform-origin:60px 116px;animation:gdBreath 3s ease-in-out infinite}
+.gd .g-headpos{animation:gdHeadBreath 3s ease-in-out infinite}
+.gd .g-head{transform-origin:60px 82px}
+.gd .g-look{transform-origin:60px 80px}
+.gd .g-cheeks{opacity:.42;transition:opacity .3s}
+.gd .e-open{animation:gdBlinkOpen 5s infinite}
+.gd .e-shut{animation:gdBlinkShut 5s infinite}
+.gd-sbaa .e-open,.gd-sbaa .e-shut{animation-duration:4.3s}
+.gd-nesr .e-open,.gd-nesr .e-shut{animation-duration:5.8s}
+@keyframes gdBreath{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.03)}}
+@keyframes gdHeadBreath{0%,100%{transform:none}50%{transform:translateY(-1px)}}
+@keyframes gdBlinkOpen{0%,95.5%,100%{opacity:1}96%,98.5%{opacity:0}}
+@keyframes gdBlinkShut{0%,95.5%,100%{opacity:0}96%,98.5%{opacity:1}}
+/* Zinou : oreilles qui frémissent, queue qui se balance */
+.gd-zinou .g-earL{transform-origin:40px 44px;animation:gdTwitchL 3.7s ease-in-out infinite}
+.gd-zinou .g-earR{transform-origin:80px 44px;animation:gdTwitchR 4.9s ease-in-out 1.1s infinite}
+.gd-zinou .g-ears{transform-origin:60px 42px}
+.gd-zinou .g-tail{transform-origin:86px 106px;animation:gdSway 2.5s ease-in-out infinite alternate}
+@keyframes gdTwitchL{0%,88%,100%{transform:none}91%{transform:rotate(-10deg)}94%{transform:rotate(3deg)}}
+@keyframes gdTwitchR{0%,86%,100%{transform:none}89%{transform:rotate(10deg)}92%{transform:rotate(-3deg)}}
+@keyframes gdSway{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
+/* Sbaa : crinière qui respire, touffe de queue */
+.gd-sbaa .g-mane{transform-origin:60px 55px;animation:gdMane 3s ease-in-out .45s infinite}
+.gd-sbaa .g-maneShake{transform-origin:60px 70px}
+.gd-sbaa .g-tuft{transform-origin:104px 90px;animation:gdFlick 3.4s ease-in-out infinite}
+.gd-sbaa .g-tail{transform-origin:84px 109px}
+@keyframes gdMane{0%,100%{transform:none}50%{transform:scale(1.04)}}
+@keyframes gdFlick{0%,78%,100%{transform:none}84%{transform:rotate(20deg)}90%{transform:rotate(-10deg)}}
+/* Nesr : vol stationnaire, tête qui tourne parfois */
+.gd-nesr .g-float{animation:gdHover 2.8s ease-in-out infinite}
+.gd-nesr .g-look{animation:gdLook 7.5s ease-in-out infinite}
+.gd-nesr .g-wingL{transform-origin:43px 86px}
+.gd-nesr .g-wingR{transform-origin:77px 86px}
+@keyframes gdHover{0%,100%{transform:none}50%{transform:translateY(-4px)}}
+@keyframes gdLook{0%,30%,50%,72%,92%,100%{transform:none}36%,45%{transform:rotate(-10deg)}78%,87%{transform:rotate(10deg)}}
+/* États communs */
+.gd .g-paw{transform-origin:44px 103px}
+.gd.st-happy .g-move,.gd.st-proud .g-move{animation:gdJump .4s cubic-bezier(.3,.7,.4,1)}
+.gd.st-happy .g-cheeks,.gd.st-proud .g-cheeks,.gd.st-chosen .g-cheeks{opacity:.8}
+.gd.st-sad .g-head{animation:gdTilt .9s ease-in-out}
+.gd.st-wave .g-paw{animation:gdWave .9s ease-in-out .15s both}
+.gd-nesr.st-wave .g-paw{animation:gdWaveWing .9s ease-in-out .15s both}
+.gd .g-spark{transform-origin:104px 29px;animation:gdTwinkle 1.6s ease-in-out infinite}
+@keyframes gdJump{0%,100%{transform:none}45%{transform:translateY(-12px)}}
+@keyframes gdTilt{0%,100%{transform:none}30%{transform:rotate(-8deg)}55%{transform:rotate(0)}70%{transform:translateY(2.5px)}85%{transform:none}}
+@keyframes gdWave{0%,100%{transform:none}14%{transform:translate(-3px,-16px) rotate(-20deg)}28%{transform:translate(-3px,-16px) rotate(20deg)}42%{transform:translate(-3px,-16px) rotate(-20deg)}56%{transform:translate(-3px,-16px) rotate(20deg)}70%{transform:translate(-3px,-16px) rotate(-20deg)}84%{transform:translate(-3px,-16px) rotate(20deg)}}
+@keyframes gdWaveWing{0%,100%{transform:none}15%,45%,75%{transform:rotate(-58deg)}30%,60%,90%{transform:rotate(-24deg)}}
+@keyframes gdTwinkle{0%,100%{transform:scale(.8);opacity:.6}50%{transform:scale(1.15);opacity:1}}
+/* Intros */
+.gd-zinou.st-intro .g-move{animation:gdPop .6s cubic-bezier(.34,1.56,.64,1) both}
+.gd-zinou.st-intro .g-ears{animation:gdEarsUp .42s cubic-bezier(.34,1.56,.64,1) .38s both}
+@keyframes gdPop{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@keyframes gdEarsUp{from{transform:scaleY(.25)}to{transform:none}}
+.gd-sbaa.st-intro .g-move{animation:gdWalk .7s ease-out both}
+.gd-sbaa.st-intro .g-maneShake{animation:gdShake .6s ease-in-out .7s}
+@keyframes gdWalk{0%{transform:translateX(-30px);opacity:0}25%{opacity:1}35%{transform:translate(-20px,-3px)}55%{transform:translate(-10px,0)}70%{transform:translate(-3px,-2px)}100%{transform:none}}
+@keyframes gdShake{0%,100%{transform:none}16%,50%,83%{transform:rotate(-4deg)}33%,66%{transform:rotate(4deg)}}
+.gd-nesr.st-intro .g-move{animation:gdGlide .8s cubic-bezier(.2,.8,.2,1) both}
+.gd-nesr.st-intro .g-wingL{animation:gdFoldL .5s ease-in-out .5s both}
+.gd-nesr.st-intro .g-wingR{animation:gdFoldR .5s ease-in-out .5s both}
+@keyframes gdGlide{from{transform:translateY(-40px) rotate(-6deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes gdFoldL{from{transform:rotate(32deg)}to{transform:none}}
+@keyframes gdFoldR{from{transform:rotate(-32deg)}to{transform:none}}
+/* Choisi ! */
+.gd-zinou.st-chosen .g-move{transform-origin:60px 70px;animation:gdSpinHop .7s cubic-bezier(.3,.7,.4,1)}
+@keyframes gdSpinHop{0%{transform:none}50%{transform:translateY(-18px) rotate(180deg)}100%{transform:rotate(360deg)}}
+.gd-sbaa.st-chosen .g-move{transform-origin:60px 116px;animation:gdProud .5s cubic-bezier(.34,1.56,.64,1) forwards}
+.gd-sbaa.st-chosen .g-roar path{opacity:0;animation:gdRoar .5s ease-out forwards}
+.gd-sbaa.st-chosen .g-roar .r2{animation-delay:.12s}.gd-sbaa.st-chosen .g-roar .r3{animation-delay:.24s}
+@keyframes gdProud{to{transform:scale(1.08)}}
+@keyframes gdRoar{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+.gd-nesr.st-chosen .g-wingL{animation:gdSpreadL 1.2s ease-in-out both}
+.gd-nesr.st-chosen .g-wingR{animation:gdSpreadR 1.2s ease-in-out both}
+@keyframes gdSpreadL{0%,100%{transform:none}35%{transform:rotate(35deg)}50%{transform:rotate(20deg)}65%{transform:rotate(35deg)}}
+@keyframes gdSpreadR{0%,100%{transform:none}35%{transform:rotate(-35deg)}50%{transform:rotate(-20deg)}65%{transform:rotate(-35deg)}}
+/* Mimoush hôte : respire, cligne, montre, applaudit */
+.mim.host .m-all{transform-box:view-box;transform-origin:60px 116px;animation:gdBreath 3s ease-in-out infinite}
+.mim.host .e-open{animation:gdBlinkOpen 4.6s infinite}.mim.host .e-shut{animation:gdBlinkShut 4.6s infinite}
+.mim.host g{transform-box:view-box}
+.mim.host .m-pawR{transform-origin:70px 98px}.mim.host .m-pawL{transform-origin:50px 98px}
+.mim.host.point .m-pawR{animation:mPoint 1.4s ease-in-out .5s 2 alternate both}
+.mim.host.clap .m-pawL{animation:mClapL .5s ease-in-out 2}
+.mim.host.clap .m-pawR{animation:mClapR .5s ease-in-out 2}
+@keyframes mPoint{from{transform:none}to{transform:translate(4px,-12px) rotate(-50deg)}}
+@keyframes mClapL{0%,100%{transform:none}50%{transform:translate(9px,-8px)}}
+@keyframes mClapR{0%,100%{transform:none}50%{transform:translate(-9px,-8px)}}
+/* Silhouette (avant découverte) */
+.gd.sil *{fill:rgba(20,14,40,.78)!important;stroke:rgba(20,14,40,.78)!important}
+
+/* =====================================================================
+   ÉCRAN « Choisis ton guide »
+   ===================================================================== */
+.gp{position:fixed;inset:0;z-index:70;display:flex;flex-direction:column;overflow:hidden;color:var(--ink);background:var(--bg);
+  padding:calc(var(--sat) + 14px) 0 calc(var(--sab) + 14px)}
+.gp-bg,.gp-bg i{position:absolute;inset:0;pointer-events:none}
+.gp-bg{background:var(--bg)}
+.gp-bg i{opacity:0;transition:opacity .6s ease}
+.gp-bg i.on{opacity:1}
+.gp-bg i{background:radial-gradient(440px 340px at 50% 26%,rgba(var(--c-rgb),.20),transparent 72%),radial-gradient(260px 220px at 100% 100%,rgba(var(--c2-rgb),.14),transparent 70%)}
+.gp>*:not(.gp-bg){position:relative}
+.gp-host{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:0 20px;cursor:pointer;text-align:center}
+.gp-hostframe{animation:gpHostIn .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes gpHostIn{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
+.gp-bubble{max-width:320px;min-height:74px;text-align:left;position:relative}
+.gp-bubble b{font-size:1.05rem;line-height:1.4;font-weight:600;color:var(--ink)}
+.gp-caret{display:inline-block;width:2px;height:1.05em;background:var(--ink);margin-left:2px;vertical-align:-2px;animation:caret 1s steps(1) infinite}
+.gp.typed .gp-caret{display:none}
+@keyframes caret{50%{opacity:0}}
+.gp-show{max-width:320px}
+.gp-taphint{color:var(--mut)}
+.gp-stage{flex:1;display:flex;flex-direction:column;min-height:0}
+.gp-stage[hidden],.gp-host[hidden],.gp-cele[hidden]{display:none}
+.gp-top{display:flex;align-items:center;gap:12px;padding:0 18px}
+.gp-mini{width:56px;height:64px}
+.gp-eyebrow{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.gp-title{font-size:1.6rem;color:var(--ink)}
+.gp-car{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:16px calc(50% - 90px) 6px;flex:none}
+.gp-car::-webkit-scrollbar{display:none}
+.gp-card{flex:none;width:180px;scroll-snap-align:center;display:flex;justify-content:center;padding:0;transform:scale(.84);opacity:.55;transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .35s}
+.gp-card.on{transform:none;opacity:1}
+.gp-in{display:flex;flex-direction:column;align-items:center;gap:10px}
+.gp.revealing .gp-in{animation:gpSlideUp .7s cubic-bezier(.34,1.56,.64,1) calc(var(--i) * 150ms) both}
+@keyframes gpSlideUp{from{transform:translateY(140px);opacity:0}to{transform:none;opacity:1}}
+.gp-arch{position:relative;display:block;width:156px;height:172px;border-radius:30px!important;background:var(--c1);overflow:hidden;box-shadow:0 6px 0 var(--c-dk),0 16px 30px rgba(var(--c-rgb),.28)}
+.gp-arch .pat{opacity:.22}
+.gp-arch:after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;background:rgba(0,0,0,.10)}
+.gp-m{position:absolute;left:12px;right:12px;bottom:0;top:18px;display:flex;align-items:flex-end;z-index:1}
+.gp-col{opacity:0;transition:opacity .3s}
+.gp-sil{opacity:1;transition:opacity .3s}
+.gp-card.lit .gp-col{opacity:1}.gp-card.lit .gp-sil{opacity:0}
+.gp-tag{font-family:var(--f-title);font-weight:700;font-size:1rem;color:var(--ink)}
+.gp-dots{display:flex;justify-content:center;gap:8px;margin:6px 0 2px}
+.gp-dots i{width:8px;height:8px;border-radius:4px;background:var(--line2);transition:transform .3s,background .3s;cursor:pointer}
+.gp-dots i.on{background:var(--c1);transform:scaleX(2.2)}
+.gp-info{flex:1;min-height:0;overflow-y:auto;padding:6px 18px 6px}
+.gp-name{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.gp-name h2{font-size:1.6rem;color:var(--ink)}
+.gp-animal{color:var(--mut);font-weight:500;font-size:.95rem}
+.gp-country{margin:10px 0 12px;padding:14px;border-radius:22px;background:var(--s1);border:1px solid var(--line);box-shadow:var(--shadow)}
+.gp-ch{display:flex;gap:12px;align-items:center}
+.gp-flag{font-size:2rem;line-height:1;width:48px;height:48px;border-radius:16px;background:rgba(var(--c-rgb),.12);display:flex;align-items:center;justify-content:center;flex:none}
+.gp-ch b{display:block;font-family:var(--f-title);font-size:1.12rem;color:var(--c-ink)}
+.gp-ch small{display:block;color:var(--mut);font-size:.84rem;line-height:1.3;margin-top:2px}
+.gp-country p{margin:10px 0 10px;font-size:.92rem;line-height:1.5;color:var(--ink)}
+.gp-tags{display:flex;flex-wrap:wrap;gap:6px}
+.gp-tags span{font-size:.78rem;font-weight:600;padding:5px 10px;border-radius:999px;background:rgba(var(--c-rgb),.10);color:var(--c-ink)}
+.gp-hi{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:20px;background:var(--s1);border:1px solid var(--line)}
+.gp-hi b{display:block;color:var(--ink);font-family:var(--f-title)}.gp-hi small{color:var(--mut)}
+.gp-hi .speak{flex:none;background:var(--c1,var(--v1));box-shadow:0 3px 0 var(--c-dk,var(--v1-dk))}
+.gp-foot{padding:8px 18px 0;display:flex;flex-direction:column;gap:2px}
+.gp-pick{background:var(--c1)!important;box-shadow:0 5px 0 var(--c-dk)!important}
+.gp .btn.link{color:var(--mut)}
+/* fête */
+.gp.celebrating .gp-card:not(.on){opacity:0;transform:translateY(60px) scale(.7);transition:opacity .4s,transform .5s}
+.gp.celebrating .gp-card.on{transform:scale(1.14) translateY(30px);transition:transform .6s cubic-bezier(.34,1.56,.64,1)}
+.gp.celebrating .gp-info,.gp.celebrating .gp-foot,.gp.celebrating .gp-dots,.gp.celebrating .gp-title,.gp.celebrating .gp-eyebrow{opacity:0;transition:opacity .3s}
+.gp-cele{position:absolute!important;inset:0;pointer-events:none}
+.gp-cele h1{position:absolute;left:18px;right:18px;bottom:calc(var(--sab) + 18%);text-align:center;font-size:1.65rem;color:var(--ink);text-wrap:balance;animation:gpCeleIn .5s cubic-bezier(.34,1.56,.64,1) .25s both}
+@keyframes gpCeleIn{from{opacity:0;transform:translateY(16px) scale(.95)}to{opacity:1;transform:none}}
+.gp-burst{position:fixed;width:0;height:0}
+.gp-burst span{position:absolute;left:0;top:0;width:8px;height:13px;border-radius:2px;background:var(--c);opacity:0;animation:gpBurst 1.25s cubic-bezier(.15,.7,.3,1) var(--d) forwards}
+@keyframes gpBurst{0%{transform:translate(-50%,-50%) scale(.4) rotate(0);opacity:1}80%{opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy) + 60px)) scale(1) rotate(var(--r));opacity:0}}
+/* Version à venir */
+.soon{text-align:center;padding:26px 20px}
+.soon .badge{display:inline-flex}
+@media (max-height:700px){.gp-arch{width:136px;height:150px}.gp-card{width:160px}.gp-car{padding-left:calc(50% - 80px);padding-right:calc(50% - 80px)}.gp-country p{display:none}}
+
+/* Mouvement réduit : fondus simples, pas de confettis */
+@media (prefers-reduced-motion: reduce){
+  .gd *,.mim.host *,.gp *,.gp-in{animation:none!important}
+  .gd.st-intro,.gd.st-chosen,.gd.st-happy,.gd.st-wave{animation:gdFade .4s ease both}
+  .gp-card,.gp-stat i{transition:opacity .3s!important}
+  .gp-burst{display:none}
+}
+@keyframes gdFade{from{opacity:0}to{opacity:1}}
+.guide-card{display:flex;gap:14px;align-items:center}
+.gp-bubble{flex:none;align-self:center;width:min(320px,100%)}
+.gp-host.leaving{position:absolute!important;inset:0;pointer-events:none;z-index:2}
+.soon .gp-hi{background:var(--s2);border-color:var(--line2)}
+
+/* =====================================================================
+   MAGHREB POP — surcouche de la refonte (formes, motifs, reliefs)
+   ===================================================================== */
+[data-v="dz"],.gp:has(.gp-card[data-v="dz"].on){--c1:#0E9963;--c-dk:#0A7149;--c-rgb:14,153,99;--c2-rgb:43,108,255;--c-ink:#0A7149}
+[data-v="ma"],.gp:has(.gp-card[data-v="ma"].on){--c1:#DD5228;--c-dk:#AE3B17;--c-rgb:221,82,40;--c2-rgb:75,59,214;--c-ink:#AE3B17}
+[data-v="tn"],.gp:has(.gp-card[data-v="tn"].on){--c1:#0A78D1;--c-dk:#075AA0;--c-rgb:10,120,209;--c2-rgb:232,51,109;--c-ink:#075AA0}
+[data-theme="dark"] [data-v="dz"],[data-theme="dark"] .gp:has(.gp-card[data-v="dz"].on){--c-ink:#4FE0A8}
+[data-theme="dark"] [data-v="ma"],[data-theme="dark"] .gp:has(.gp-card[data-v="ma"].on){--c-ink:#FF9C7A}
+[data-theme="dark"] [data-v="tn"],[data-theme="dark"] .gp:has(.gp-card[data-v="tn"].on){--c-ink:#7CC2FF}
+#app{background:var(--bg)}
+body::after{display:none}
+.giant-ar{display:none!important}
+.blob{display:none}
+/* Motif de zellige (losanges + étoiles à 4 branches), coloré par currentColor */
+.pat{position:absolute;inset:0;pointer-events:none;background:currentColor;opacity:var(--pat-op);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='44'%20height='44'%20viewBox='0%200%2044%2044'%3E%3Cg%20fill='none'%20stroke='%23000'%20stroke-width='2'%3E%3Cpath%20d='M22%205%2039%2022%2022%2039%205%2022z'/%3E%3C/g%3E%3Cpath%20d='M22%2015l2.4%204.6L29%2022l-4.6%202.4L22%2029l-2.4-4.6L15%2022l4.6-2.4z'/%3E%3Ccircle%20cx='0'%20cy='0'%20r='3.2'/%3E%3Ccircle%20cx='44'%20cy='0'%20r='3.2'/%3E%3Ccircle%20cx='0'%20cy='44'%20r='3.2'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='3.2'/%3E%3C/svg%3E") repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='44'%20height='44'%20viewBox='0%200%2044%2044'%3E%3Cg%20fill='none'%20stroke='%23000'%20stroke-width='2'%3E%3Cpath%20d='M22%205%2039%2022%2022%2039%205%2022z'/%3E%3C/g%3E%3Cpath%20d='M22%2015l2.4%204.6L29%2022l-4.6%202.4L22%2029l-2.4-4.6L15%2022l4.6-2.4z'/%3E%3Ccircle%20cx='0'%20cy='0'%20r='3.2'/%3E%3Ccircle%20cx='44'%20cy='0'%20r='3.2'/%3E%3Ccircle%20cx='0'%20cy='44'%20r='3.2'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='3.2'/%3E%3C/svg%3E") repeat;-webkit-mask-size:44px 44px;mask-size:44px 44px}
+.pat.corner{inset:-10px -10px auto auto;width:150px;height:120px;color:var(--v1);opacity:.10;border-radius:0 0 0 60px}
+/* Surfaces */
+.card{border:1px solid var(--line);box-shadow:0 2px 0 var(--line),0 8px 22px rgba(70,45,20,.05)}
+[data-theme="dark"] .card{box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.arch{border-radius:22px}
+.arch-wide{border-radius:var(--r)}
+.greet{background:var(--s1)}
+.greet .hello{color:var(--v-ink)}
+.streakc{background:linear-gradient(170deg,var(--coral-soft),var(--s1) 70%)}
+.revhero{background:var(--s1)}
+.wotd .face{box-shadow:0 2px 0 var(--line)}
+.wotd .back{background:var(--s2)}
+/* Héros : aplat de la couleur du pays + motif + casbah */
+.hero{background:linear-gradient(150deg,var(--hero-a),var(--hero-b))!important;color:#fff;border:0;box-shadow:0 6px 0 var(--v1-dk),0 14px 30px rgba(var(--v-rgb),.25);min-height:214px}
+.hero .pat{color:#fff;opacity:.13}
+.hero .hero-art{position:absolute;right:-6px;bottom:-3px;width:36%;max-width:170px;height:auto;pointer-events:none}
+.hero h2,.hero .sub,.hero .eyebrow{position:relative;max-width:62%;text-shadow:0 1px 0 rgba(0,0,0,.08)}
+.hero .eyebrow{opacity:.92} .hero .sub{opacity:.9}
+.hero .go{position:relative;background:#fff;color:var(--v1-dk);box-shadow:0 4px 0 rgba(0,0,0,.16);border-radius:16px}
+.hero .ringwrap b{color:#fff}
+.hero:active{transform:translateY(3px);box-shadow:0 3px 0 var(--v1-dk)}
+/* Boutons en relief */
+.btn{box-shadow:var(--pop) var(--v1-dk);border-radius:18px}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--v1-dk)}
+.btn.mint,.btn.gold{box-shadow:var(--pop) var(--mint-dk)} .btn.mint:active,.btn.gold:active{box-shadow:0 1px 0 var(--mint-dk)}
+.btn.coral,.btn.red{color:#fff;box-shadow:var(--pop) var(--coral-dk)} .btn.coral:active,.btn.red:active{box-shadow:0 1px 0 var(--coral-dk)}
+.btn.ghost,.btn.link,.btn[disabled]{box-shadow:none}
+.btn.ghost{background:var(--s1);box-shadow:0 3px 0 var(--line2)}
+.btn.ghost:active{box-shadow:0 1px 0 var(--line2)}
+.speak{box-shadow:0 4px 0 var(--v1-dk);border-radius:20px}
+.speak:active{transform:translateY(3px);box-shadow:0 1px 0 var(--v1-dk)}
+.speak.slow{box-shadow:0 3px 0 var(--line2)}
+.speak.big{border-radius:30px}
+.iconbtn,.chip,.pill{box-shadow:0 2px 0 var(--line)}
+/* Barre d’onglets */
+.tabbar{border-radius:24px;box-shadow:0 2px 0 var(--line),0 12px 30px rgba(70,45,20,.12)}
+.tab .ti:before{border-radius:14px}
+.tab.on{color:var(--v-ink)}
+.tab.on .ti:before{box-shadow:0 3px 0 var(--v1-dk)}
+/* Logo : carreau de zellige */
+.brand i{width:17px;height:17px;border-radius:5px;transform:rotate(45deg) scale(.9);margin:0 3px;background:radial-gradient(circle,#fff 0 2.4px,transparent 3px),var(--v1);box-shadow:0 2px 0 var(--v1-dk)}
+.brand b,.wordmark b{color:var(--v1)}
+[data-theme="dark"] .brand b,[data-theme="dark"] .wordmark b{color:var(--v1-hi)}
+/* Cadres des mascottes : carreau coloré au lieu de l’arche */
+.mim-frame{position:relative;background:var(--frame);border:0;border-radius:22px;box-shadow:inset 0 -12px 0 rgba(var(--v-rgb),.10)}
+.mim-frame:before{content:"";position:absolute;inset:0;background:var(--v1);opacity:.07;-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='44'%20height='44'%20viewBox='0%200%2044%2044'%3E%3Cg%20fill='none'%20stroke='%23000'%20stroke-width='2'%3E%3Cpath%20d='M22%205%2039%2022%2022%2039%205%2022z'/%3E%3C/g%3E%3Cpath%20d='M22%2015l2.4%204.6L29%2022l-4.6%202.4L22%2029l-2.4-4.6L15%2022l4.6-2.4z'/%3E%3Ccircle%20cx='0'%20cy='0'%20r='3.2'/%3E%3Ccircle%20cx='44'%20cy='0'%20r='3.2'/%3E%3Ccircle%20cx='0'%20cy='44'%20r='3.2'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='3.2'/%3E%3C/svg%3E") repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='44'%20height='44'%20viewBox='0%200%2044%2044'%3E%3Cg%20fill='none'%20stroke='%23000'%20stroke-width='2'%3E%3Cpath%20d='M22%205%2039%2022%2022%2039%205%2022z'/%3E%3C/g%3E%3Cpath%20d='M22%2015l2.4%204.6L29%2022l-4.6%202.4L22%2029l-2.4-4.6L15%2022l4.6-2.4z'/%3E%3Ccircle%20cx='0'%20cy='0'%20r='3.2'/%3E%3Ccircle%20cx='44'%20cy='0'%20r='3.2'/%3E%3Ccircle%20cx='0'%20cy='44'%20r='3.2'/%3E%3Ccircle%20cx='44'%20cy='44'%20r='3.2'/%3E%3C/svg%3E") repeat;-webkit-mask-size:30px 30px;mask-size:30px 30px;pointer-events:none}
+.mim-frame>*{position:relative}
+.mim-frame[data-v]{background:var(--c1);box-shadow:0 4px 0 var(--c-dk)}
+/* Parcours */
+.node .nb{border-radius:24px;box-shadow:0 4px 0 var(--line2)}
+.node.done .nb{background:var(--mint);color:#fff;box-shadow:0 4px 0 var(--mint-dk)}
+.node.cur .nb{background:var(--v1);box-shadow:0 5px 0 var(--v1-dk),0 0 0 8px rgba(var(--v-rgb),.14)}
+.unit-head{box-shadow:0 2px 0 var(--line)}
+.unit-head .uh-ic{background:rgba(var(--v-rgb),.10);border:0}
+.skyline{height:160px}
+/* Accueil (premier lancement) */
+.welcome{padding-top:8px}
+.welcome-art{position:relative;height:168px;border-radius:28px;overflow:hidden;background:linear-gradient(150deg,var(--hero-a),var(--hero-b));margin-bottom:-70px;box-shadow:0 6px 0 var(--v1-dk)}
+.welcome-art .pat{color:#fff;opacity:.14}
+.welcome-art .casbah{position:absolute;right:-6px;bottom:-3px;width:42%}
+.welcome .mim-frame{z-index:1;box-shadow:0 5px 0 var(--line2),0 10px 24px rgba(70,45,20,.12);background:var(--s1)}
+.welcome .wordmark{margin-top:14px}
+.welcome .speech{background:var(--s1);box-shadow:0 2px 0 var(--line)}
+.speech{background:var(--s2)}
+.search{box-shadow:0 2px 0 var(--line)}
+
 </style>
 </head>
-<body>
+<body data-version="dz">
 <div id="app"></div>
-<noscript>Darja Dz a besoin de JavaScript.</noscript>
+<noscript><style>#app{display:none!important}body{background:#FFF8EF}</style><div style="font-family:Poppins,Inter,system-ui,sans-serif;color:#1C1633;background:#FFF8EF;min-height:100vh;padding:32px 16px;text-align:center">
+    <h1 style="margin:0 0 6px">Kelma – À toi la parole !</h1><p style="color:#675F7D;margin:0 0 22px">Active JavaScript pour lancer l’app. Voici tes futurs guides :</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap"><div style="width:120px"><div style="width:110px;height:124px;margin:0 auto;border-radius:20px;background:linear-gradient(180deg,#313B60,#262F4F);border:1px solid rgba(255,255,255,.14);overflow:hidden;display:flex;align-items:flex-end;padding:6px 4px 0"><svg class="gd gd-zinou st-idle" viewBox="-7 -9 134 134" role="img" aria-label="Zinou, le fennec"><g class="g-move"><g class="g-float">
+    <g class="g-tail"><path d="M83 108 C103 113 118 99 113 80 C110 69 99 69 98 78 C97 88 95 97 81 100 Z" fill="#D2A86E"/><path d="M113 80 C110 69 99 69 98 78 C103 76 108 79 111 85 Z" fill="#FAEBD3"/></g><g class="g-body"><path d="M34 116 C30 96 42 80 60 80 C78 80 90 96 86 116 Z" fill="#E9C796"/><ellipse cx="60" cy="105" rx="13" ry="10.5" fill="#FAEBD3"/><ellipse cx="49" cy="115" rx="8.5" ry="5" fill="#D2A86E"/><ellipse cx="71" cy="115" rx="8.5" ry="5" fill="#D2A86E"/></g>
+    <g class="g-headpos"><g class="g-head"><g class="g-look"><g class="g-ears"><g class="g-earL"><path d="M30 50 Q14 24 12 3 Q36 9 53 34 Z" fill="#E9C796"/><path d="M31 43 Q21 24 19.5 11 Q35 17 46.5 33 Z" fill="#FFAFB8"/></g>
+    <g class="g-earR"><path d="M90 50 Q106 24 108 3 Q84 9 67 34 Z" fill="#E9C796"/><path d="M89 43 Q99 24 100.5 11 Q85 17 73.5 33 Z" fill="#FFAFB8"/></g></g><path d="M60 30 C84 30 96 44 96 58 C96 74 80 84 60 84 C40 84 24 74 24 58 C24 44 36 30 60 30 Z" fill="#E9C796"/>
+    <path d="M60 49 C71 49 81 58 81 67 C81 77 71 83 60 83 C49 83 39 77 39 67 C39 58 49 49 60 49 Z" fill="#FAEBD3"/>
+    <path d="M54 34 l2.5 7 M60 32.5 v8 M66 34 l-2.5 7" stroke="#D2A86E" stroke-width="2.6" stroke-linecap="round"/>
+    <g class="e-open"><path class="" d="M38 58 q8 -9.5 16 0" stroke="#0B1020" stroke-width="3.3" fill="none" stroke-linecap="round"/><path class="" d="M66 58 q8 -9.5 16 0" stroke="#0B1020" stroke-width="3.3" fill="none" stroke-linecap="round"/></g><g class="e-shut" opacity="0"><path class="" d="M38.5 56 h15" stroke="#0B1020" stroke-width="3.1" stroke-linecap="round" opacity="1"/><path class="" d="M66.5 56 h15" stroke="#0B1020" stroke-width="3.1" stroke-linecap="round" opacity="1"/></g><ellipse cx="60" cy="65" rx="4.4" ry="3.2" fill="#0B1020"/><path d="M54.5 71 q5.5 5 11 0" stroke="#0B1020" stroke-width="2.1" fill="none" stroke-linecap="round"/><g class="g-cheeks"><ellipse cx="35.5" cy="67" rx="5.2" ry="3.2" fill="#FFAFB8"/><ellipse cx="84.5" cy="67" rx="5.2" ry="3.2" fill="#FFAFB8"/></g></g></g></g>
+    <g class="g-breathe"><g class="g-scarf"><path d="M35 80 C47 89 73 89 85 80 L87 89 C73 97 47 97 33 89 Z" fill="#006233" /><path d="M69 91 l9 16 l-9.5 -2.5 l-4.5 -12.5 z" fill="#00431F" /></g></g><ellipse cx="76" cy="103" rx="7" ry="6.2" fill="#E9C796"/><g class="g-paw"><ellipse cx="44" cy="103" rx="7" ry="6.2" fill="#E9C796"/><path d="M41 106 v-2.6 M44 107 v-2.6 M47 106 v-2.6" stroke="#D2A86E" stroke-width="1.3" stroke-linecap="round"/></g>
+  </g></g></svg></div><b style="display:block;margin-top:8px">Zinou</b><small style="color:#675F7D">Le dialecte algérien</small></div><div style="width:120px"><div style="width:110px;height:124px;margin:0 auto;border-radius:20px;background:linear-gradient(180deg,#313B60,#262F4F);border:1px solid rgba(255,255,255,.14);overflow:hidden;display:flex;align-items:flex-end;padding:6px 4px 0"><svg class="gd gd-sbaa st-idle" viewBox="0 0 120 120" role="img" aria-label="Sbaa, le lionceau"><g class="g-move"><g class="g-float">
+    <g class="g-tail"><path d="M82 109 C100 113 109 101 104 88" stroke="#D8952F" stroke-width="5" fill="none" stroke-linecap="round"/><g class="g-tuft"><ellipse cx="104" cy="82" rx="6.5" ry="8" fill="#DD7A24"/><ellipse cx="102.5" cy="80" rx="2.6" ry="3.4" fill="#BC5F17" opacity=".55"/></g></g><g class="g-body"><path d="M34 116 C30 96 42 80 60 80 C78 80 90 96 86 116 Z" fill="#F0B44C"/><ellipse cx="60" cy="105" rx="13" ry="10.5" fill="#FBE6B8"/><ellipse cx="49" cy="115" rx="8.5" ry="5" fill="#D8952F"/><ellipse cx="71" cy="115" rx="8.5" ry="5" fill="#D8952F"/></g>
+    <g class="g-headpos"><g class="g-head"><g class="g-look"><g class="g-maneShake"><g class="g-mane"><circle cx="60" cy="55" r="36" fill="#DD7A24"/><circle cx="93.0" cy="55.0" r="11.5" fill="#DD7A24"/><circle cx="88.6" cy="70.5" r="11.5" fill="#BC5F17"/><circle cx="76.5" cy="81.8" r="11.5" fill="#DD7A24"/><circle cx="60.0" cy="86.0" r="11.5" fill="#BC5F17"/><circle cx="43.5" cy="81.8" r="11.5" fill="#DD7A24"/><circle cx="31.4" cy="70.5" r="11.5" fill="#BC5F17"/><circle cx="27.0" cy="55.0" r="11.5" fill="#DD7A24"/><circle cx="31.4" cy="39.5" r="11.5" fill="#BC5F17"/><circle cx="43.5" cy="28.2" r="11.5" fill="#DD7A24"/><circle cx="60.0" cy="24.0" r="11.5" fill="#BC5F17"/><circle cx="76.5" cy="28.2" r="11.5" fill="#DD7A24"/><circle cx="88.6" cy="39.5" r="11.5" fill="#BC5F17"/><circle cx="60" cy="55" r="33" fill="#DD7A24"/></g></g><circle cx="38" cy="33" r="8.5" fill="#F0B44C"/><circle cx="38" cy="33" r="4.4" fill="#FBE6B8"/><circle cx="82" cy="33" r="8.5" fill="#F0B44C"/><circle cx="82" cy="33" r="4.4" fill="#FBE6B8"/>
+    <circle cx="60" cy="57" r="27" fill="#F0B44C"/><ellipse cx="60" cy="67" rx="13.5" ry="9.5" fill="#FBE6B8"/>
+    <g class="e-open"><path class="" d="M41.7 55 q6.8 -8.3 13.6 0" stroke="#0B1020" stroke-width="3.3" fill="none" stroke-linecap="round"/><path class="" d="M64.7 55 q6.8 -8.3 13.6 0" stroke="#0B1020" stroke-width="3.3" fill="none" stroke-linecap="round"/></g><g class="e-shut" opacity="0"><path class="" d="M42.2 53 h12.6" stroke="#0B1020" stroke-width="3.1" stroke-linecap="round" opacity="1"/><path class="" d="M65.2 53 h12.6" stroke="#0B1020" stroke-width="3.1" stroke-linecap="round" opacity="1"/></g><path d="M55.5 60.5 h9 l-4.5 4.6 z" fill="#7A3E22"/><path d="M60 65 v2" stroke="#0B1020" stroke-width="1.9" stroke-linecap="round"/><path d="M54.5 69 q5.5 5 11 0" stroke="#0B1020" stroke-width="2.1" fill="none" stroke-linecap="round"/><g class="g-cheeks"><ellipse cx="39" cy="64" rx="5.2" ry="3.2" fill="#FF9FAE"/><ellipse cx="81" cy="64" rx="5.2" ry="3.2" fill="#FF9FAE"/></g></g></g></g>
+    <g class="g-breathe"><g class="g-scarf"><path d="M35 80 C47 89 73 89 85 80 L87 89 C73 97 47 97 33 89 Z" fill="#C1272D" stroke="#006233" stroke-width="1.6" stroke-linejoin="round"/><path d="M69 91 l9 16 l-9.5 -2.5 l-4.5 -12.5 z" fill="#951B20" stroke="#006233" stroke-width="1.4" stroke-linejoin="round"/></g></g><ellipse cx="76" cy="103" rx="7.2" ry="6.4" fill="#F0B44C"/><g class="g-paw"><ellipse cx="44" cy="103" rx="7.2" ry="6.4" fill="#F0B44C"/><path d="M41 106 v-2.6 M44 107 v-2.6 M47 106 v-2.6" stroke="#D8952F" stroke-width="1.3" stroke-linecap="round"/></g>
+  </g></g></svg></div><b style="display:block;margin-top:8px">Sbaa</b><small style="color:#675F7D">Le dialecte marocain</small></div><div style="width:120px"><div style="width:110px;height:124px;margin:0 auto;border-radius:20px;background:linear-gradient(180deg,#313B60,#262F4F);border:1px solid rgba(255,255,255,.14);overflow:hidden;display:flex;align-items:flex-end;padding:6px 4px 0"><svg class="gd gd-nesr st-idle" viewBox="0 0 120 120" role="img" aria-label="Nesr, l’aiglon"><g class="g-move"><g class="g-float">
+    <g class="g-tail"><path d="M50 108 L42 119 Q60 123 78 119 L70 108 Z" fill="#6A4229"/></g><g class="g-body"><path d="M34 116 C30 96 42 80 60 80 C78 80 90 96 86 116 Z" fill="#8B5A3C"/><path d="M50 99 q3 3 6 0 M64 99 q3 3 6 0 M57 107 q3 3 6 0" stroke="#6A4229" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M45 116 l-2 3 M49 116 v3.4 M53 116 l2 3 M67 116 l-2 3 M71 116 v3.4 M75 116 l2 3" stroke="#D3961A" stroke-width="2" stroke-linecap="round"/><ellipse cx="49" cy="115.5" rx="6.5" ry="3.6" fill="#F5C242"/><ellipse cx="71" cy="115.5" rx="6.5" ry="3.6" fill="#F5C242"/></g>
+    <g class="g-headpos"><g class="g-head"><g class="g-look"><path d="M51 30 q1 -11 8 -14 q-1 7 2 13 q3 -9 10 -10 q-4 6 -3 12 Z" fill="#F6F3EC"/>
+    <path d="M60 26 C84 26 94 42 94 56 C94 72 80 82 60 82 C40 82 26 72 26 56 C26 42 36 26 60 26 Z" fill="#F6F3EC"/>
+    <path d="M29 64 C36 77 84 77 91 64 C87 76 75 82 60 82 C45 82 33 76 29 64 Z" fill="#DCD5C8"/>
+    <g class="e-open"><path class="" d="M37 54 q8 -9.5 16 0" stroke="#0B1020" stroke-width="3.3" fill="none" stroke-linecap="round"/><path class="" d="M67 54 q8 -9.5 16 0" stroke="#0B1020" stroke-width="3.3" fill="none" stroke-linecap="round"/></g><g class="e-shut" opacity="0"><path class="" d="M37.5 52 h15" stroke="#0B1020" stroke-width="3.1" stroke-linecap="round" opacity="1"/><path class="" d="M67.5 52 h15" stroke="#0B1020" stroke-width="3.1" stroke-linecap="round" opacity="1"/></g>
+    <path d="M52.5 58.5 Q60 54.5 67.5 58.5 Q66.5 68 60 72.5 Q53.5 68 52.5 58.5 Z" fill="#F5C242"/><path d="M56.5 67.5 Q60 75 63.5 67.5 Q60 70 56.5 67.5 Z" fill="#D3961A"/>
+    <g class="g-cheeks"><ellipse cx="35" cy="62" rx="5.2" ry="3.2" fill="#FF9FAE"/><ellipse cx="85" cy="62" rx="5.2" ry="3.2" fill="#FF9FAE"/></g></g></g></g>
+    <g class="g-breathe"><g class="g-scarf"><path d="M35 80 C47 89 73 89 85 80 L87 89 C73 97 47 97 33 89 Z" fill="#E70013" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/><path d="M69 91 l9 16 l-9.5 -2.5 l-4.5 -12.5 z" fill="#B0000E" stroke="#FFFFFF" stroke-width="1.4" stroke-linejoin="round"/></g></g><g class="g-wingL"><path d="M41 83 C27 89 25 106 31 117 C40 113 46 101 45 88 Z" fill="#6A4229"/><path d="M33 104 q4 -2 7 -8 M33 111 q4 -2 7 -8" stroke="#8B5A3C" stroke-width="1.8" fill="none" stroke-linecap="round"/></g><g class="g-wingR g-paw"><path d="M79 83 C93 89 95 106 89 117 C80 113 74 101 75 88 Z" fill="#6A4229"/><path d="M87 104 q-4 -2 -7 -8 M87 111 q-4 -2 -7 -8" stroke="#8B5A3C" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+  </g></g></svg></div><b style="display:block;margin-top:8px">Nesr</b><small style="color:#675F7D">Le dialecte tunisien</small></div></div></div></noscript>
 <script>
 'use strict';
 /* =====================================================================
@@ -1456,6 +1764,8 @@ const CONTENT = {
 };
 /* === CONTENT END === */
 
+const AUDIO_MAP={};
+
 /* =====================================================================
    CORE — utilitaires, stockage, état, audio, tolérance, SRS
    ===================================================================== */
@@ -1489,7 +1799,7 @@ const STATE_KEY = 'darjadz_state_v1';
 function defaultState() {
   return {
     v: 4, onboarded: false, name: '',
-    goal: 'voyage', dailyGoal: 10, script: 'both', theme: 'dark', sound: true, vibrate: true, rate: 0.85,
+    goal: 'voyage', dailyGoal: 10, script: 'both', theme: 'light', sound: true, vibrate: true, rate: 0.85,
     answerMode: 'lat', favs: {}, avatar: 0, pinHash: null, created: Date.now(),
     arWrite: false, wlad: {}, gramSeen: {}, freezes: 0, repair: null, lastBackup: 0, backupSnooze: 0,
     reminder: { time: '19:00', banner: true }, weekly: {},
@@ -1498,16 +1808,20 @@ function defaultState() {
     hearts: 5, heartsAt: Date.now(),
     lessons: {}, alphaLessons: {}, cards: {}, mistakes: {}, badges: {}, letters: {},
     stories: {}, custom: {}, daily: {}, duels: {}, placementUnit: 0,
-    stats: { lessons: 0, exercises: 0, correct: 0, perfect: 0, seconds: 0 }
+    stats: { lessons: 0, exercises: 0, correct: 0, perfect: 0, seconds: 0 },
+    version: null, mascot: null, vault: {}, pop: 1
   };
 }
 /* L’état S est chargé par Profiles.init() (IndexedDB, repli localStorage) — voir le module PROFILS */
 let S = defaultState();
 /* Migration : complète les champs ajoutés au fil des versions (même structure, rien n’est perdu) */
 function migrate(st) {
+  const hadPop = !!(st && st.pop);
   st = Object.assign(defaultState(), st || {});
   st.stats = Object.assign(defaultState().stats, st.stats || {});
   if (!st.v || st.v < 2) { if (st.theme === 'auto') st.theme = 'dark'; st.v = 2; }
+  /* « Maghreb Pop » : le clair devient le thème par défaut, une seule fois (le sombre reste au choix dans le profil) */
+  if (!hadPop) { if (st.theme === 'dark') st.theme = 'light'; st.pop = 1; }
   if (st.v < 4) {
     st.mem = Object.assign(defaultState().mem, st.mem || {});
     st.wlad = st.wlad || {}; st.freezes = st.freezes || 0; st.avatar = st.avatar || 0; st.bestStreak = Math.max(st.bestStreak || 0, st.streak || 0); if (st.answerMode === 'ar') st.arWrite = true; if (!st.created) st.created = Date.now();
@@ -1517,20 +1831,22 @@ function migrate(st) {
   st.mem.sounds = Object.assign(defaultState().mem.sounds, st.mem.sounds || {});
   return st;
 }
-function save() { if (typeof Profiles !== 'undefined') Profiles.persist(); }
+function save() { if (typeof Profiles !== 'undefined') Profiles.persist(); if (typeof storeVersionProgress === 'function') storeVersionProgress(); }
 
 /* ---------- Registre des contenus (normalisation) */
 const DB = { words: {}, sentences: {}, dialogues: {}, letters: {}, signs: {}, units: [], unitById: {}, lessonById: {}, wordList: [], sentenceList: [] };
+/* Enregistrements natifs : AUDIO_MAP {id: 'fichier.m4a'} est généré au build depuis le dossier audio/ */
+function audioFor(id) { return (typeof AUDIO_MAP !== 'undefined' && AUDIO_MAP[id]) ? 'audio/' + AUDIO_MAP[id] : null; }
 function buildDB() {
   CONTENT.units.forEach((u, ui) => {
     u.index = ui;
     DB.units.push(u); DB.unitById[u.id] = u;
     (u.words || []).forEach(w => {
-      Object.assign(w, { theme: u.id, level: ui + 1, loanFr: !!w.loanFr, alt: w.alt || [], regional: w.regional || null, audioUrl: w.audioUrl || null, register: w.register || 'neutre', kind: 'word' });
+      Object.assign(w, { theme: u.id, level: ui + 1, loanFr: !!w.loanFr, alt: w.alt || [], regional: w.regional || null, audioUrl: w.audioUrl || audioFor(w.id), register: w.register || 'neutre', kind: 'word' });
       DB.words[w.id] = w; DB.wordList.push(w);
     });
     (u.sentences || []).forEach(s => {
-      s.kind = 'sentence'; s.theme = u.id; s.level = ui + 1; s.alt = s.alt || []; s.audioUrl = s.audioUrl || null;
+      s.kind = 'sentence'; s.theme = u.id; s.level = ui + 1; s.alt = s.alt || []; s.audioUrl = s.audioUrl || audioFor(s.id);
       if (s.t) {
         s.tokens = s.t.map(p => p[0]); s.arTokens = s.t.map(p => p[1]);
         s.arabizi = s.tokens.join(' '); s.ar = s.arTokens.join(' ');
@@ -1840,10 +2156,11 @@ function confirmBox(msg, okLabel, onOk, danger) {
   });
 }
 function confetti() {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const c = document.createElement('canvas'); c.id = 'confetti'; document.body.appendChild(c);
   const dpr = window.devicePixelRatio || 1; c.width = innerWidth * dpr; c.height = innerHeight * dpr;
   const g = c.getContext('2d'); g.scale(dpr, dpr);
-  const cols = ['#3DDC97', '#3D6BFF', '#FF6B4A', '#5B82FF', '#F6F3EE'];
+  const cs = getComputedStyle(document.body), cols = [cs.getPropertyValue('--v1').trim() || '#006233', cs.getPropertyValue('--v1-hi').trim() || '#12894F', '#3DDC97', '#FFC857', '#F6F3EE'];
   const P = Array.from({ length: 70 }, () => ({ x: innerWidth / 2 + (Math.random() - .5) * 80, y: innerHeight * .35, vx: (Math.random() - .5) * 9, vy: -Math.random() * 10 - 3, r: Math.random() * 6 + 3, c: pick(cols), a: Math.random() * 6, va: (Math.random() - .5) * .3 }));
   const t0 = performance.now();
   (function f(t) {
@@ -1856,7 +2173,7 @@ function applyTheme() {
   const r = document.documentElement;
   const dark = S.theme === 'dark' || (S.theme === 'auto' && !(window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches));
   r.setAttribute('data-theme', dark ? 'dark' : 'light');
-  const m = $('meta[name="theme-color"]'); if (m) m.content = dark ? '#0B1020' : '#F6F3EE';
+  const m = $('meta[name="theme-color"]'); if (m) m.content = dark ? '#15122A' : '#FFF8EF';
 }
 
 
@@ -2013,7 +2330,7 @@ const Profiles = {
    neutral · happy · proud · sad · sleep
    ===================================================================== */
 const MIM_C = { fur: '#A6ACBF', furD: '#8A91A7', stripe: '#5E6680', muzzle: '#DCDFE8', ear: '#FF9C86', eye: '#F2D06B', ink: '#0B1020', scarf: '#3DDC97', scarfD: '#22B676' };
-function mimSVG(state = 'neutral', label, av) {
+function catSVG(state = 'neutral', label, av, opts = {}) {
   const pal = (typeof AVATARS !== 'undefined' && AVATARS[av != null ? av : ((typeof S !== 'undefined' && S && S.avatar) || 0)]) || {};
   const c = Object.assign({}, MIM_C, pal);
   const sad = state === 'sad', sleep = state === 'sleep';
@@ -2024,7 +2341,7 @@ function mimSVG(state = 'neutral', label, av) {
   const openEye = (x, dy = 0) => `<ellipse cx="${x}" cy="50" rx="8.6" ry="9.6" fill="${c.eye}"/><ellipse cx="${x}" cy="${51 + dy}" rx="3.3" ry="7" fill="${c.ink}"/><circle cx="${x + 2.6}" cy="${46.5 + dy}" r="2.3" fill="#fff"/>`;
   switch (state) {
     case 'happy':
-      eyes = `<path d="M37.5 53 q8.5 -10 17 0 M65.5 53 q8.5 -10 17 0" stroke="${c.ink}" stroke-width="3.4" fill="none" stroke-linecap="round"/>`;
+      eyes = `<path class="e-open" d="M37.5 53 q8.5 -10 17 0 M65.5 53 q8.5 -10 17 0" stroke="${c.ink}" stroke-width="3.4" fill="none" stroke-linecap="round"/>` + (opts.host ? `<path class="e-shut" d="M38 50 h16 M66 50 h16" stroke="${c.ink}" stroke-width="3.2" stroke-linecap="round" opacity="0"/>` : '');
       mouth = `<path d="M52.5 65 q7.5 10 15 0 z" fill="${c.ink}"/><path d="M56 69 q4 3 8 0" stroke="#FF6B4A" stroke-width="2.4" fill="none" stroke-linecap="round"/>`;
       extra = `<ellipse cx="34" cy="62" rx="5" ry="3" fill="#FF6B4A" opacity=".35"/><ellipse cx="86" cy="62" rx="5" ry="3" fill="#FF6B4A" opacity=".35"/>`;
       break;
@@ -2047,7 +2364,8 @@ function mimSVG(state = 'neutral', label, av) {
       eyes = openEye(46) + openEye(74);
       mouth = `<path d="M60 63.5 v2.6 M60 66.1 q-4 4 -7.5 1 M60 66.1 q4 4 7.5 1" stroke="${c.ink}" stroke-width="1.9" fill="none" stroke-linecap="round"/>`;
   }
-  return `<svg class="mim mim-${state}" viewBox="0 0 120 120" role="img" aria-label="${esc(label || 'Mimouch, le chat de la Casbah')}">
+  const paws = opts.host ? `<g class="m-pawL"><ellipse cx="47" cy="101" rx="7.5" ry="6.5" fill="${c.fur}"/><path d="M44 104 v-3 M47 105 v-3 M50 104 v-3" stroke="${c.furD}" stroke-width="1.4" stroke-linecap="round"/></g><g class="m-pawR"><ellipse cx="73" cy="101" rx="7.5" ry="6.5" fill="${c.fur}"/><path d="M70 104 v-3 M73 105 v-3 M76 104 v-3" stroke="${c.furD}" stroke-width="1.4" stroke-linecap="round"/></g>` : '';
+  return `<svg class="mim mim-${state}${opts.host ? ' host' : ''}${opts.cls ? ' ' + opts.cls : ''}" viewBox="0 0 120 120" role="img" aria-label="${esc(label || 'Mimoush, le chat de la Casbah')}">
     <g class="m-all">
       <path class="m-tail" d="M84 104 C108 102 114 80 102 70 C97 66 93 71 96 75 C104 83 99 94 82 96 Z" fill="${c.furD}"/>
       <path d="M33 116 C29 94 40 77 60 77 C80 77 91 94 87 116 Z" fill="${c.furD}"/>
@@ -2067,6 +2385,7 @@ function mimSVG(state = 'neutral', label, av) {
       </g>
       <path d="M35 77 C47 86 73 86 85 77 L87 86 C73 94 47 94 33 86 Z" fill="${c.scarf}"/>
       <path d="M69 88 l9 17 l-9.5 -2.5 l-4.5 -12.5 z" fill="${c.scarfD}"/>
+      ${paws}
     </g></svg>`;
 }
 const MIM_LINES = {
@@ -2093,7 +2412,7 @@ function mimLine(kind, vars = {}) {
   return { dz: f(l[0]), fr: f(l[1]) };
 }
 function timeKind() { const h = new Date().getHours(); return h < 12 ? 'morning' : h < 18 ? 'afternoon' : 'evening'; }
-/* Mimouch + bulle (darija en gras, français en petit dessous) */
+/* Mimoush + bulle (darija en gras, français en petit dessous) */
 function mimRow(state, line, opts = {}) {
   return `<div class="mimrow ${opts.cls || ''}"><div class="mim-frame arch ${opts.size || ''}">${mimSVG(state)}</div>
     <div class="speech"><b>${esc(line.dz)}</b><small>${esc(line.fr)}</small></div></div>`;
@@ -2102,9 +2421,9 @@ function mimRow(state, line, opts = {}) {
 /* ---------- Icônes (traits fins, héritent de currentColor) */
 const I = (d, extra = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extra}>${d}</svg>`;
 const ICON = {
-  home: I('<path d="M4 21V11a8 8 0 0 1 16 0v10"/><path d="M9.5 21v-6a2.5 2.5 0 0 1 5 0v6"/><path d="M2.5 21h19"/>'),
+  home: I('<path d="M4 21V10h7V5h9v16"/><path d="M2.5 21h19"/><path d="M13.5 21v-3.5a2 2 0 0 1 4 0V21"/><path d="M7 14h1.5M14.5 9.5h2"/>'),
   review: I('<path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M4 12A8 8 0 0 1 18 6.7"/><path d="M18 2.8v4h-4"/><path d="M6 21.2v-4h4"/>'),
-  alpha: I('<path d="M5 20V10a7 7 0 0 1 14 0v10"/><text x="12" y="17.5" text-anchor="middle" font-size="9" font-family="IBM Plex Sans Arabic, sans-serif" fill="currentColor" stroke="none">ع</text>'),
+  alpha: I('<rect x="4" y="3.5" width="16" height="17" rx="5"/><text x="12" y="17.5" text-anchor="middle" font-size="9" font-family="IBM Plex Sans Arabic, sans-serif" fill="currentColor" stroke="none">ع</text>'),
   book: I('<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M9 8h7M9 11.5h5"/>'),
   user: I('<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>'),
   speaker: I('<path d="M4 9.5v5h3.5L13 19V5L7.5 9.5z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/>'),
@@ -2130,27 +2449,382 @@ function flameSVG(live) {
   return `<svg class="flame ${live ? 'live' : 'dim'}" viewBox="0 0 44 52" aria-hidden="true"><defs><linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB199"/><stop offset=".55" stop-color="#FF6B4A"/><stop offset="1" stop-color="#E2421F"/></linearGradient></defs>
     <path d="M22 2c3 9 14 14 14 28a14 14 0 0 1-28 0c0-7 3-11 6-14 0 5 2 8 5 9-1-9 1-16 3-23z" fill="url(#fg)"/><path d="M22 28c4 4 7 6 7 12a7 7 0 0 1-14 0c0-4 3-7 7-12z" fill="#FFD9A8" opacity=".9"/></svg>`;
 }
-/* Skyline d’Alger, trait fin : maisons de la Casbah, Maqam Echahid, la baie */
+/* =====================================================================
+   ART « Maghreb Pop » — motif de zellige, maisons de casbah, skyline par pays.
+   Tout est à plat, coloré par les variables CSS de la version (--wall, --door, --flower…).
+   ===================================================================== */
+const curV = () => (typeof S !== 'undefined' && S && S.version) || 'dz';
+/* Maisons cubiques empilées (casbah) : [x, y, largeur, hauteur, porte?, fenêtres] */
+const CASBAH = [[0, 70, 46, 60, 0, 2], [38, 46, 40, 84, 1, 1], [70, 62, 44, 68, 0, 2], [104, 34, 38, 96, 0, 1], [134, 56, 48, 74, 1, 2], [172, 74, 40, 56, 0, 1]];
+function casbahSVG(cls = '') {
+  const house = h => {
+    const [x, y, w, hh, door, wins] = h;
+    let s = `<rect x="${x}" y="${y}" width="${w}" height="${hh}" fill="var(--wall)"/><rect x="${x + w - 7}" y="${y}" width="7" height="${hh}" fill="var(--wall-sh)"/><rect x="${x - 2}" y="${y - 4}" width="${w + 4}" height="5" rx="1.5" fill="var(--wall-sh)"/>`;
+    for (let k = 0; k < wins; k++) s += `<rect x="${x + 8 + k * 15}" y="${y + 12}" width="8" height="11" rx="4" fill="var(--door)"/>`;
+    if (door) s += `<rect x="${x + w / 2 - 8}" y="${y + hh - 26}" width="16" height="26" rx="8" fill="var(--door)"/><circle cx="${x + w / 2 + 4}" cy="${y + hh - 12}" r="1.4" fill="var(--wall)"/>`;
+    return s;
+  };
+  return `<svg class="casbah ${cls}" viewBox="0 0 212 130" aria-hidden="true">${CASBAH.map(house).join('')}
+    <g fill="var(--flower)"><circle cx="44" cy="60" r="6"/><circle cx="52" cy="54" r="5"/><circle cx="140" cy="62" r="6"/><circle cx="148" cy="56" r="4.5"/><circle cx="132" cy="58" r="4"/></g></svg>`;
+}
+/* Repère du pays dans la skyline (monuments et paysages, rien de religieux) */
+function landmarkSVG(v) {
+  if (v === 'ma') return `<g><path d="M250 112 L292 58 L318 84 L340 52 L392 112 Z" fill="var(--v1)" opacity=".22"/><path d="M292 58 l9 12 h-18z M340 52 l11 14 h-22z" fill="#fff" opacity=".9"/>
+    <path d="M226 112 q2 -30 6 -46" stroke="#8A5A2B" stroke-width="3" fill="none" stroke-linecap="round"/><g fill="var(--flower)"><path d="M232 66 q-16 -4 -22 6 q12 -2 22 -6z"/><path d="M232 66 q14 -10 24 -2 q-12 0 -24 2z"/><path d="M232 66 q-4 -14 -14 -16 q8 8 14 16z"/><path d="M232 66 q10 -14 20 -12 q-12 4 -20 12z"/></g></g>`;
+  if (v === 'tn') return `<g><path d="M300 104 h52 l-8 8 h-36z" fill="var(--v1-dk)"/><path d="M325 102 V58 L350 100 Z" fill="#fff"/><path d="M322 102 V66 L304 100 Z" fill="var(--flower)"/>
+    <circle cx="372" cy="40" r="5" fill="var(--flower)" opacity=".7"/></g>`;
+  return `<g transform="translate(318 34)" stroke="var(--v1-dk)" stroke-width="2.4" stroke-linejoin="round"><path d="M18 78 C20 54 22 26 26 4 C14 26 4 52 2 78 Z" fill="#F3E7D3"/><path d="M48 78 C46 52 38 26 26 4 C30 28 32 54 32 78 Z" fill="#E6D6BC"/><path d="M-6 78 h60" stroke-linecap="round"/><path d="M22 36 h10" stroke="var(--v1)"/></g>`;
+}
 function skylineSVG() {
-  const houses = [[8, 88, 26, 30], [30, 80, 22, 38], [50, 92, 28, 26], [74, 74, 20, 44], [92, 84, 26, 34], [116, 70, 22, 48], [136, 82, 30, 36], [164, 76, 18, 42], [180, 90, 26, 28], [204, 80, 24, 38], [226, 94, 20, 24]];
-  const win = h => { let s = ''; for (let k = 0; k < 2; k++) s += `<rect x="${h[0] + 5 + k * (h[2] / 2 - 2)}" y="${h[1] + 8}" width="4" height="6" rx="2"/>`; return s; };
-  const lights = [[38, 92], [56, 100], [96, 94], [122, 82], [142, 94], [186, 98], [210, 90]];
+  const v = curV();
+  const houses = [[6, 86, 30, 34], [30, 72, 26, 48], [52, 90, 32, 30], [80, 64, 24, 56], [100, 80, 30, 40], [126, 58, 26, 62], [148, 76, 34, 44], [178, 70, 22, 50], [196, 88, 30, 32], [222, 80, 28, 40], [246, 96, 24, 24]];
   return `<svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D6BFF" stop-opacity=".45"/><stop offset="1" stop-color="#3D6BFF" stop-opacity="0"/></linearGradient>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5B82FF" stop-opacity="0"/><stop offset="1" stop-color="#5B82FF" stop-opacity=".12"/></linearGradient></defs>
-    <rect width="400" height="122" fill="url(#sky)"/>
-    <circle cx="340" cy="26" r="9" fill="#F6F3EE" opacity=".85"/><g fill="#F6F3EE" opacity=".5"><circle cx="60" cy="20" r="1"/><circle cx="150" cy="36" r="1"/><circle cx="250" cy="14" r="1.2"/><circle cx="300" cy="50" r="1"/><circle cx="380" cy="60" r="1"/></g>
-    <g fill="none" stroke="var(--ink)" stroke-opacity=".55" stroke-width="1.2">
-      <path d="M0 120 C60 108 120 66 200 72 C260 78 300 96 400 110"/>
-      ${houses.map(h => `<rect x="${h[0]}" y="${h[1]}" width="${h[2]}" height="${h[3]}" rx="1.5"/>`).join('')}
-      <path d="M318 112 C320 80 330 54 344 38 C346 62 340 90 336 112 M344 38 C350 60 352 88 350 112 M344 38 C356 58 364 84 366 112"/>
-      <path d="M314 112 h56"/>
-    </g>
-    <g fill="var(--ink)" fill-opacity=".35">${houses.map(win).join('')}</g>
-    <g fill="#FFC857">${lights.map(l => `<rect x="${l[0]}" y="${l[1]}" width="3.5" height="5" rx="1.5" opacity=".85"/>`).join('')}</g>
-    <rect y="120" width="400" height="30" fill="url(#sea)"/>
-    <g stroke="#5B82FF" stroke-opacity=".5" stroke-width="1" fill="none"><path d="M20 130 q10 -4 20 0 t20 0"/><path d="M150 138 q10 -4 20 0 t20 0"/><path d="M290 132 q10 -4 20 0 t20 0"/></g>
+    <circle cx="352" cy="30" r="16" fill="var(--v3)"/>
+    ${landmarkSVG(v)}
+    ${houses.map((h, i) => `<rect x="${h[0]}" y="${h[1]}" width="${h[2]}" height="${h[3]}" fill="var(--wall)" stroke="var(--line2)" stroke-width="1"/><rect x="${h[0] + h[2] - 6}" y="${h[1]}" width="6" height="${h[3]}" fill="var(--wall-sh)"/>
+      <rect x="${h[0] + 6}" y="${h[1] + 9}" width="6" height="9" rx="3" fill="var(--door)"/>${i % 3 === 1 ? `<rect x="${h[0] + h[2] / 2 - 5}" y="${h[1] + h[3] - 18}" width="10" height="18" rx="5" fill="var(--door)"/>` : ''}`).join('')}
+    <g fill="var(--flower)">${[[36, 74], [130, 60], [228, 82]].map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="5"/><circle cx="${p[0] + 6}" cy="${p[1] - 4}" r="4"/>`).join('')}</g>
+    <rect y="120" width="400" height="30" fill="var(--sea)"/>
+    <g stroke="#fff" stroke-opacity=".7" stroke-width="2" fill="none" stroke-linecap="round"><path d="M20 132 q10 -4 20 0 t20 0"/><path d="M150 140 q10 -4 20 0 t20 0"/><path d="M290 134 q10 -4 20 0 t20 0"/></g>
   </svg>`;
+}
+
+/* =====================================================================
+   GUIDES — Zinou (fennec, dz) · Sbaa (lionceau, ma) · Nesr (aiglon, tn)
+   Même style que Mimoush : SVG à plat, proportions chibi, assis, écharpe unie.
+   Chaque partie animée est un groupe <g class="g-…"> (voir style.css, section GUIDES).
+   États : idle · happy · sad (encourager) · wave · intro · chosen · proud · sleep
+   ===================================================================== */
+const GUIDES = {
+  zinou: {
+    id: 'zinou', v: 'dz', name: 'Zinou', animal: 'le fennec', dialect: 'Le dialecte algérien', dialectShort: 'algérien',
+    who: 'Malin, rapide, un brin taquin.',
+    tagline: 'La darija d’Alger, celle qu’on parle vraiment au café, dans la 7ouma et en famille.',
+    country: { flag: '🇩🇿', name: 'L’Algérie', hook: 'Le plus grand pays d’Afrique, entre Méditerranée et Sahara.',
+      text: 'Alger la Blanche descend en cascade vers la mer, avec sa Casbah classée au patrimoine mondial. Plus au sud, les dunes du Sahara et les fresques du Tassili n’Ajjer. Partout, le raï, le chaâbi et une hospitalité qui commence par un café.',
+      tags: ['🏙️ Casbah d’Alger', '🏜️ Tassili n’Ajjer', '🎶 Raï & chaâbi', '🥘 Couscous'] },
+    // TODO(native) : phrase d’accueil à faire valider par un locuteur natif algérien
+    hi: { kind: 'sentence', arabizi: 'Wesh ! Nta li tchoufni ?', ar: 'واش! نتا لي تشوفني؟', phon: 'ouech ! enta li tchoufni ?', fr: 'Salut ! C’est toi qui me vois ?' },
+    intro: { dz: 'Ana Zinou, el fennec ! Yallah n9raw', fr: 'Moi c’est Zinou, le fennec. On apprend ensemble !' },
+    pal: { fur: '#E9C796', furD: '#D2A86E', light: '#FAEBD3', pink: '#FFAFB8', ink: '#0B1020', scarf: '#006233', scarfD: '#00431F', edge: null }
+  },
+  sbaa: {
+    id: 'sbaa', v: 'ma', name: 'Sbaa', animal: 'le lionceau', dialect: 'Le dialecte marocain', dialectShort: 'marocain',
+    who: 'Confiant, chaleureux, toujours là pour t’encourager.',
+    tagline: 'La darija du Maroc, celle de la rue, du souk et des repas en famille.',
+    country: { flag: '🇲🇦', name: 'Le Maroc', hook: 'Des sommets de l’Atlas aux dunes de Merzouga.',
+      text: 'Les souks de Marrakech et la place Jemaa el-Fna, Chefchaouen toute en bleu, la médina de Fès, les vagues d’Essaouira… Et à chaque rencontre, un thé à la menthe servi de haut.',
+      tags: ['🌆 Jemaa el-Fna', '💙 Chefchaouen', '🏔️ Atlas', '🫖 Thé à la menthe'] },
+    // TODO(native) : phrase d’accueil à faire valider par un locuteur natif marocain
+    hi: { kind: 'sentence', arabizi: 'Salam ! Mrehba bik !', ar: 'سلام! مرحبا بيك!', phon: 'salam ! mer7ba bik !', fr: 'Salut ! Bienvenue !' },
+    intro: { dz: 'Ana Sbaa ! Mrehba bik', fr: 'Moi c’est Sbaa, le lionceau. Bienvenue !' },
+    pal: { fur: '#F0B44C', furD: '#D8952F', light: '#FBE6B8', mane: '#DD7A24', maneD: '#BC5F17', nose: '#7A3E22', pink: '#FF9FAE', ink: '#0B1020', scarf: '#C1272D', scarfD: '#951B20', edge: '#006233' }
+  },
+  nesr: {
+    id: 'nesr', v: 'tn', name: 'Nesr', animal: 'l’aiglon', dialect: 'Le dialecte tunisien', dialectShort: 'tunisien',
+    who: 'Calme, précis, l’œil vif.',
+    tagline: 'Le tounsi, celui qu’on parle à Tunis, au café comme à la plage.',
+    country: { flag: '🇹🇳', name: 'La Tunisie', hook: 'Un petit pays, une très longue histoire et une grande douceur de vivre.',
+      text: 'Les maisons blanches et bleues de Sidi Bou Saïd, les ruines de Carthage, les plages de Djerba et les oasis de Tozeur. Le soir, le jasmin parfume les rues et la famille se retrouve autour d’un couscous au poisson.',
+      tags: ['💙 Sidi Bou Saïd', '🏛️ Carthage', '🏝️ Djerba', '🌼 Jasmin'] },
+    // TODO(native) : phrase d’accueil à faire valider par un locuteur natif tunisien
+    hi: { kind: 'sentence', arabizi: 'Aslema ! Chnowa ahwalek ?', ar: 'عسلامة! شنوّة أحوالك؟', phon: 'asléma ! chnoua a7ouélek ?', fr: 'Salut ! Comment ça va ?' },
+    intro: { dz: 'Ana Nesr. Aslema !', fr: 'Moi c’est Nesr, l’aiglon. Salut !' },
+    pal: { fur: '#8B5A3C', furD: '#6A4229', head: '#F6F3EC', headD: '#DCD5C8', beak: '#F5C242', beakD: '#D3961A', pink: '#FF9FAE', ink: '#0B1020', scarf: '#E70013', scarfD: '#B0000E', edge: '#FFFFFF' }
+  }
+};
+const GUIDE_ORDER = ['zinou', 'sbaa', 'nesr'];
+const VERSIONS = { dz: { guide: 'zinou', ready: true }, ma: { guide: 'sbaa', ready: false }, tn: { guide: 'nesr', ready: false } };
+const currentGuide = () => (typeof S !== 'undefined' && S && GUIDES[S.mascot]) || null;
+const guideName = () => (currentGuide() || { name: 'Mimoush' }).name;
+const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+
+/* ---------- Dessin : pièces communes */
+function gdEyes(xl, xr, y, c, state, w = 8) {
+  const arc = x => `M${x - w} ${y + 2} q${w} -${w + 1.5} ${w * 2} 0`, line = x => `M${x - w + .5} ${y} h${w * 2 - 1}`;
+  const happy = (x, cls) => `<path class="${cls}" d="${arc(x)}" stroke="${c.ink}" stroke-width="3.3" fill="none" stroke-linecap="round"/>`;
+  const shut = (x, cls, op = 0) => `<path class="${cls}" d="${line(x)}" stroke="${c.ink}" stroke-width="3.1" stroke-linecap="round" opacity="${op}"/>`;
+  if (state === 'sleep') return shut(xl, '', 1) + shut(xr, '', 1);
+  if (state === 'sad') {
+    const dot = x => `<ellipse cx="${x}" cy="${y}" rx="4.2" ry="5" fill="${c.ink}"/><circle cx="${x + 1.5}" cy="${y - 2}" r="1.5" fill="#fff"/>`;
+    return `<g class="e-open">${dot(xl)}${dot(xr)}</g><g class="e-shut" opacity="0">${shut(xl, '', 1)}${shut(xr, '', 1)}</g>`;
+  }
+  if (state === 'chosen' && c.wink) return happy(xl, '') + `<path d="M${xr - w} ${y} q${w} 5 ${w * 2} 0" stroke="${c.ink}" stroke-width="3.1" fill="none" stroke-linecap="round"/>`;
+  return `<g class="e-open">${happy(xl, '')}${happy(xr, '')}</g><g class="e-shut" opacity="0">${shut(xl, '', 1)}${shut(xr, '', 1)}</g>`;
+}
+const gdCheeks = (xl, xr, y, c) => `<g class="g-cheeks"><ellipse cx="${xl}" cy="${y}" rx="5.2" ry="3.2" fill="${c.pink}"/><ellipse cx="${xr}" cy="${y}" rx="5.2" ry="3.2" fill="${c.pink}"/></g>`;
+function gdMouth(y, c, state) {
+  if (state === 'happy' || state === 'proud' || state === 'chosen' || state === 'wave') return `<path d="M54.5 ${y - 1} q5.5 8 11 0 z" fill="${c.ink}"/><path d="M57.5 ${y + 2.4} q2.5 1.6 5 0" stroke="#FF8FA3" stroke-width="2" fill="none" stroke-linecap="round"/>`;
+  if (state === 'sleep') return `<path d="M57.5 ${y} q2.5 1.6 5 0" stroke="${c.ink}" stroke-width="1.9" fill="none" stroke-linecap="round"/>`;
+  return `<path d="M54.5 ${y - 1} q5.5 5 11 0" stroke="${c.ink}" stroke-width="2.1" fill="none" stroke-linecap="round"/>`;
+}
+const gdScarf = c => `<g class="g-scarf"><path d="M35 80 C47 89 73 89 85 80 L87 89 C73 97 47 97 33 89 Z" fill="${c.scarf}" ${c.edge ? `stroke="${c.edge}" stroke-width="1.6" stroke-linejoin="round"` : ''}/><path d="M69 91 l9 16 l-9.5 -2.5 l-4.5 -12.5 z" fill="${c.scarfD}" ${c.edge ? `stroke="${c.edge}" stroke-width="1.4" stroke-linejoin="round"` : ''}/></g>`;
+const gdSleepZ = st => st === 'sleep' ? `<g fill="#9AA3BF" font-family="Poppins, sans-serif" font-weight="700"><text x="96" y="26" font-size="13">z</text><text x="106" y="14" font-size="9">z</text></g>` : '';
+const gdSpark = st => st === 'proud' ? `<path class="g-spark" d="M104 22 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 z" fill="#FFC857"/>` : '';
+const gdBodyBase = (c, belly) => `<path d="M34 116 C30 96 42 80 60 80 C78 80 90 96 86 116 Z" fill="${c.fur}"/>${belly ? `<ellipse cx="60" cy="105" rx="13" ry="10.5" fill="${belly}"/>` : ''}`;
+
+function gdZinou(c, st) {
+  const tail = `<g class="g-tail"><path d="M83 108 C103 113 118 99 113 80 C110 69 99 69 98 78 C97 88 95 97 81 100 Z" fill="${c.furD}"/><path d="M113 80 C110 69 99 69 98 78 C103 76 108 79 111 85 Z" fill="${c.light}"/></g>`;
+  const body = gdBodyBase(c, c.light) + `<ellipse cx="49" cy="115" rx="8.5" ry="5" fill="${c.furD}"/><ellipse cx="71" cy="115" rx="8.5" ry="5" fill="${c.furD}"/>`;
+  const ears = `<g class="g-ears"><g class="g-earL"><path d="M30 50 Q14 24 12 3 Q36 9 53 34 Z" fill="${c.fur}"/><path d="M31 43 Q21 24 19.5 11 Q35 17 46.5 33 Z" fill="${c.pink}"/></g>
+    <g class="g-earR"><path d="M90 50 Q106 24 108 3 Q84 9 67 34 Z" fill="${c.fur}"/><path d="M89 43 Q99 24 100.5 11 Q85 17 73.5 33 Z" fill="${c.pink}"/></g></g>`;
+  const head = `${ears}<path d="M60 30 C84 30 96 44 96 58 C96 74 80 84 60 84 C40 84 24 74 24 58 C24 44 36 30 60 30 Z" fill="${c.fur}"/>
+    <path d="M60 49 C71 49 81 58 81 67 C81 77 71 83 60 83 C49 83 39 77 39 67 C39 58 49 49 60 49 Z" fill="${c.light}"/>
+    <path d="M54 34 l2.5 7 M60 32.5 v8 M66 34 l-2.5 7" stroke="${c.furD}" stroke-width="2.6" stroke-linecap="round"/>
+    ${gdEyes(46, 74, 56, c, st)}<ellipse cx="60" cy="65" rx="4.4" ry="3.2" fill="${c.ink}"/>${gdMouth(72, c, st)}${gdCheeks(35.5, 84.5, 67, c)}`;
+  const paw = `<ellipse cx="76" cy="103" rx="7" ry="6.2" fill="${c.fur}"/><g class="g-paw"><ellipse cx="44" cy="103" rx="7" ry="6.2" fill="${c.fur}"/><path d="M41 106 v-2.6 M44 107 v-2.6 M47 106 v-2.6" stroke="${c.furD}" stroke-width="1.3" stroke-linecap="round"/></g>`;
+  return { tail, body, head, front: paw };
+}
+function gdSbaa(c, st) {
+  const tail = `<g class="g-tail"><path d="M82 109 C100 113 109 101 104 88" stroke="${c.furD}" stroke-width="5" fill="none" stroke-linecap="round"/><g class="g-tuft"><ellipse cx="104" cy="82" rx="6.5" ry="8" fill="${c.mane}"/><ellipse cx="102.5" cy="80" rx="2.6" ry="3.4" fill="${c.maneD}" opacity=".55"/></g></g>`;
+  const body = gdBodyBase(c, c.light) + `<ellipse cx="49" cy="115" rx="8.5" ry="5" fill="${c.furD}"/><ellipse cx="71" cy="115" rx="8.5" ry="5" fill="${c.furD}"/>`;
+  const puffs = Array.from({ length: 12 }, (_, i) => { const a = i / 12 * Math.PI * 2, x = 60 + Math.cos(a) * 33, y = 55 + Math.sin(a) * 31; return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11.5" fill="${i % 2 ? c.maneD : c.mane}"/>`; }).join('');
+  const mane = `<g class="g-maneShake"><g class="g-mane"><circle cx="60" cy="55" r="36" fill="${c.mane}"/>${puffs}<circle cx="60" cy="55" r="33" fill="${c.mane}"/></g></g>`;
+  const roar = st === 'chosen';
+  const mouth = roar ? `<ellipse cx="60" cy="71" rx="5.6" ry="5.2" fill="${c.ink}"/><ellipse cx="60" cy="73.6" rx="3" ry="1.8" fill="#FF8FA3"/>` : gdMouth(70, c, st);
+  const head = `${mane}<circle cx="38" cy="33" r="8.5" fill="${c.fur}"/><circle cx="38" cy="33" r="4.4" fill="${c.light}"/><circle cx="82" cy="33" r="8.5" fill="${c.fur}"/><circle cx="82" cy="33" r="4.4" fill="${c.light}"/>
+    <circle cx="60" cy="57" r="27" fill="${c.fur}"/><ellipse cx="60" cy="67" rx="13.5" ry="9.5" fill="${c.light}"/>
+    ${gdEyes(48.5, 71.5, 53, c, st, 6.8)}<path d="M55.5 60.5 h9 l-4.5 4.6 z" fill="${c.nose}"/>${roar ? mouth : `<path d="M60 65 v2" stroke="${c.ink}" stroke-width="1.9" stroke-linecap="round"/>` + mouth}${gdCheeks(39, 81, 64, c)}`;
+  const paw = `<ellipse cx="76" cy="103" rx="7.2" ry="6.4" fill="${c.fur}"/><g class="g-paw"><ellipse cx="44" cy="103" rx="7.2" ry="6.4" fill="${c.fur}"/><path d="M41 106 v-2.6 M44 107 v-2.6 M47 106 v-2.6" stroke="${c.furD}" stroke-width="1.3" stroke-linecap="round"/></g>`;
+  const lines = roar ? `<g class="g-roar" stroke="#FFD27A" stroke-width="2.6" fill="none" stroke-linecap="round"><path class="r1" d="M93 62 q4 5 0 10"/><path class="r2" d="M99 58 q6 9 0 18"/><path class="r3" d="M105 54 q8 13 0 26"/></g>` : '';
+  return { tail, body, head, front: paw + lines };
+}
+function gdNesr(c, st) {
+  const tail = `<g class="g-tail"><path d="M50 108 L42 119 Q60 123 78 119 L70 108 Z" fill="${c.furD}"/></g>`;
+  const body = gdBodyBase(c, null) + `<path d="M50 99 q3 3 6 0 M64 99 q3 3 6 0 M57 107 q3 3 6 0" stroke="${c.furD}" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M45 116 l-2 3 M49 116 v3.4 M53 116 l2 3 M67 116 l-2 3 M71 116 v3.4 M75 116 l2 3" stroke="${c.beakD}" stroke-width="2" stroke-linecap="round"/><ellipse cx="49" cy="115.5" rx="6.5" ry="3.6" fill="${c.beak}"/><ellipse cx="71" cy="115.5" rx="6.5" ry="3.6" fill="${c.beak}"/>`;
+  const head = `<path d="M51 30 q1 -11 8 -14 q-1 7 2 13 q3 -9 10 -10 q-4 6 -3 12 Z" fill="${c.head}"/>
+    <path d="M60 26 C84 26 94 42 94 56 C94 72 80 82 60 82 C40 82 26 72 26 56 C26 42 36 26 60 26 Z" fill="${c.head}"/>
+    <path d="M29 64 C36 77 84 77 91 64 C87 76 75 82 60 82 C45 82 33 76 29 64 Z" fill="${c.headD}"/>
+    ${gdEyes(45, 75, 52, c, st)}
+    <path d="M52.5 58.5 Q60 54.5 67.5 58.5 Q66.5 68 60 72.5 Q53.5 68 52.5 58.5 Z" fill="${c.beak}"/><path d="M56.5 67.5 Q60 75 63.5 67.5 Q60 70 56.5 67.5 Z" fill="${c.beakD}"/>
+    ${st === 'happy' || st === 'proud' || st === 'chosen' || st === 'wave' ? `<path d="M55 62.5 q5 3.2 10 0" stroke="${c.beakD}" stroke-width="1.6" fill="none" stroke-linecap="round"/>` : ''}${gdCheeks(35, 85, 62, c)}`;
+  const wing = (cls, d, f) => `<g class="${cls}"><path d="${d}" fill="${c.furD}"/><path d="${f}" stroke="${c.fur}" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>`;
+  const front = wing('g-wingL', 'M41 83 C27 89 25 106 31 117 C40 113 46 101 45 88 Z', 'M33 104 q4 -2 7 -8 M33 111 q4 -2 7 -8') + wing('g-wingR g-paw', 'M79 83 C93 89 95 106 89 117 C80 113 74 101 75 88 Z', 'M87 104 q-4 -2 -7 -8 M87 111 q-4 -2 -7 -8');
+  return { tail, body, head, front };
+}
+const GD_DRAW = { zinou: gdZinou, sbaa: gdSbaa, nesr: gdNesr };
+function guideSVG(id, state = 'idle', opts = {}) {
+  const g = GUIDES[id] || GUIDES.zinou;
+  const c = Object.assign({ wink: id === 'zinou' }, g.pal);
+  const p = GD_DRAW[g.id](c, state);
+  const label = opts.label || `${g.name}, ${g.animal}`;
+  return `<svg class="gd gd-${g.id} st-${state}${opts.cls ? ' ' + opts.cls : ''}" viewBox="${g.id === 'zinou' ? '-7 -9 134 134' : '0 0 120 120'}" role="img" aria-label="${esc(label)}"><g class="g-move"><g class="g-float">
+    ${p.tail}<g class="g-body">${p.body}</g>
+    <g class="g-headpos"><g class="g-head"><g class="g-look">${p.head}</g></g></g>
+    <g class="g-breathe">${gdScarf(c)}</g>${p.front}${gdSleepZ(state)}${gdSpark(state)}
+  </g></g></svg>`;
+}
+/* Mimoush (hôte) ou le guide choisi selon le contexte. Les écrans Profil appellent catSVG directement. */
+const GD_STATE = { neutral: 'idle', happy: 'happy', proud: 'proud', sad: 'sad', sleep: 'sleep', wave: 'wave', idle: 'idle' };
+function mimSVG(state = 'neutral', label, av) {
+  const g = currentGuide();
+  if (g) return guideSVG(g.id, GD_STATE[state] || 'idle', { label });
+  return catSVG(state === 'wave' ? 'happy' : state, label, av);
+}
+
+/* ---------- Version : thème, coffre de progression par version */
+const PROG_KEYS = ['xp', 'xpByDay', 'streak', 'bestStreak', 'lastActiveDay', 'hearts', 'heartsAt', 'lessons', 'alphaLessons', 'cards', 'mistakes', 'badges', 'letters', 'stories', 'custom', 'daily', 'duels', 'placementUnit', 'stats', 'wlad', 'gramSeen', 'freezes', 'repair', 'mem', 'weekly', 'favs'];
+function applyVersion(v) {
+  v = VERSIONS[v] ? v : 'dz';
+  document.body.setAttribute('data-version', v);
+}
+function setGuide(id) {
+  const g = GUIDES[id]; if (!g) return;
+  const from = S.version || 'dz', to = g.v;
+  if (from !== to) {
+    /* chaque version garde sa propre progression : on range l’actuelle, on ressort l’autre */
+    S.vault = S.vault || {};
+    const out = {}; PROG_KEYS.forEach(k => { out[k] = S[k]; }); S.vault[from] = JSON.parse(JSON.stringify(out));
+    const fresh = defaultState(), back = S.vault[to];
+    PROG_KEYS.forEach(k => { S[k] = back && k in back ? back[k] : fresh[k]; });
+    delete S.vault[to];
+  }
+  S.mascot = id; S.version = to;
+  lsSet('kelma_version', to); lsSet('kelma_mascot', id);
+  /* copie lisible de la progression de chaque version (en plus du profil) */
+  applyVersion(to); save();
+}
+function storeVersionProgress() {
+  if (!S || !S.version || (typeof Profiles !== 'undefined' && Profiles.guest)) return;
+  try { const o = {}; ['xp', 'streak', 'bestStreak', 'lessons', 'lastActiveDay'].forEach(k => o[k] = S[k]); localStorage.setItem('kelma_progress_' + S.version, JSON.stringify(o)); } catch (e) {}
+}
+/* Premier lancement : reprend le guide déjà choisi sur cet appareil (avant la création du profil) */
+function adoptStoredGuide() {
+  if (S.mascot) return;
+  const m = lsGet('kelma_mascot');
+  if (m && GUIDES[m] && !(typeof Profiles !== 'undefined' && Profiles.current)) { S.mascot = m; S.version = GUIDES[m].v; }
+}
+
+/* =====================================================================
+   « Choisis ton guide » — intro Mimoush → cadres → carrousel → confirmation → fête
+   ===================================================================== */
+const reducedMotion = () => !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+function guidePicker(opts = {}) {
+  const old = $('#gp'); if (old) old.remove();
+  closeSheet();
+  const rm = reducedMotion();
+  const startId = GUIDES[S.mascot] ? S.mascot : 'zinou';
+  const gp = document.createElement('div'); gp.className = 'gp'; gp.id = 'gp'; gp.setAttribute('role', 'dialog'); gp.setAttribute('aria-label', 'Choisis ton guide');
+  const card = (id, i) => { const g = GUIDES[id]; return `<button class="gp-card" data-g="${id}" data-v="${g.v}" aria-label="${esc(g.name + ', ' + g.animal + ' — ' + g.dialect)}" style="--i:${i}"><span class="gp-in">
+      <span class="gp-arch arch"><i class="pat" aria-hidden="true"></i><span class="gp-m gp-col"></span><span class="gp-m gp-sil" aria-hidden="true">${guideSVG(id, 'idle', { cls: 'sil' })}</span></span>
+      <span class="gp-tag">${esc(g.name)}</span></span></button>`; };
+  gp.innerHTML = `<div class="gp-bg" aria-hidden="true"><i data-v="dz"></i><i data-v="ma"></i><i data-v="tn"></i></div>
+    <div class="gp-host" id="gpHost"><div class="mim-frame arch lg gp-hostframe">${catSVG('happy', 'Mimoush, ton hôte', 0, { host: true })}</div>
+      <div class="speech gp-bubble" aria-live="polite"><b id="gpType"></b><span class="gp-caret"></span></div>
+      <button class="btn arch-btn gp-show" id="gpShow">Montre-moi</button><div class="small muted gp-taphint">ou touche l’écran</div></div>
+    <div class="gp-stage" id="gpStage" hidden>
+      <div class="gp-top"><div class="mim-frame arch sm gp-mini" id="gpMini">${catSVG('happy', 'Mimoush', 0, { host: true, cls: 'point' })}</div>
+        <div><div class="gp-eyebrow">Mimoush te présente</div><h1 class="gp-title" id="gpTitle">Choisis ton guide</h1></div></div>
+      <div class="gp-car" id="gpCar" role="listbox" aria-label="Guides">${GUIDE_ORDER.map(card).join('')}</div>
+      <div class="gp-dots" aria-hidden="true">${GUIDE_ORDER.map(id => `<i data-g="${id}"></i>`).join('')}</div>
+      <div class="gp-info" id="gpInfo" aria-live="polite"></div>
+      <div class="gp-foot"><button class="btn arch-btn gp-pick" id="gpPick">Je choisis…</button>${opts.closable ? '<button class="btn link" id="gpCancel">Garder mon guide actuel</button>' : ''}</div>
+    </div>
+    <div class="gp-cele" id="gpCele" hidden><div class="gp-burst" id="gpBurst"></div><h1 id="gpCeleT"></h1></div>`;
+  document.body.appendChild(gp);
+  const host = $('#gpHost', gp), stage = $('#gpStage', gp), car = $('#gpCar', gp), info = $('#gpInfo', gp), pickBtn = $('#gpPick', gp);
+  const revealed = new Set(); let active = null, typing = 0, phase = 'intro';
+  /* a) intro : bulle tapée lettre par lettre */
+  const msg = 'Ahlan\u00a0! Moi c’est Mimoush. Avant de commencer… choisis ton guide\u00a0!';
+  const typeEl = $('#gpType', gp);
+  const typeAll = () => { clearInterval(typing); typing = 0; typeEl.textContent = msg; gp.classList.add('typed'); };
+  function startIntro() {
+    let i = 0;
+    if (rm) { typeAll(); return; }
+    typing = setInterval(() => { i++; typeEl.textContent = msg.slice(0, i); if (i >= msg.length) typeAll(); }, 32);
+  }
+  /* b) révélation : Mimoush remonte et rétrécit, les arches arrivent */
+  function reveal(skipAnim) {
+    if (phase !== 'intro') return; phase = 'browse';
+    typeAll();
+    stage.hidden = false;
+    const mini = $('#gpMini', gp);
+    if (!skipAnim && !rm && host.animate) {
+      host.classList.add('leaving');
+      const a = $('.gp-hostframe', host).getBoundingClientRect(), b = mini.getBoundingClientRect();
+      const dx = (b.left + b.width / 2) - (a.left + a.width / 2), dy = (b.top + b.height / 2) - (a.top + a.height / 2), k = b.width / a.width;
+      mini.style.opacity = '0';
+      $('.gp-hostframe', host).animate([{ transform: 'none' }, { transform: `translate(${dx}px,${dy}px) scale(${k})` }], { duration: 520, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' });
+      $$('.gp-bubble,.gp-show,.gp-taphint', host).forEach(e => e.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 220, fill: 'forwards' }));
+      setTimeout(() => { host.hidden = true; mini.style.opacity = ''; }, 520);
+    } else host.hidden = true;
+    gp.classList.add('revealing');
+    requestAnimationFrame(() => { center(startId, false); });
+    setTimeout(() => gp.classList.remove('revealing'), 1200);
+  }
+  if (opts.skipIntro) { host.hidden = true; phase = 'intro'; reveal(true); }
+  else {
+    startIntro();
+    gp.classList.add('intro');
+    $('#gpShow', gp).onclick = e => { e.stopPropagation(); Sfx.ensure && Sfx.ensure(); reveal(); };
+    host.onclick = () => { if (typing) typeAll(); else reveal(); };
+  }
+  /* c) carrousel : la carte au centre grandit, se colore, joue son intro */
+  const cards = $$('.gp-card', car);
+  function setActive(id) {
+    if (active === id) return; active = id;
+    const g = GUIDES[id];
+    cards.forEach(c => { const on = c.dataset.g === id; c.classList.toggle('on', on); c.setAttribute('aria-selected', on); });
+    $$('.gp-dots i', gp).forEach(d => d.classList.toggle('on', d.dataset.g === id));
+    $$('.gp-bg i', gp).forEach(l => l.classList.toggle('on', l.dataset.v === g.v));
+    const c = cards.find(x => x.dataset.g === id);
+    $('.gp-col', c).innerHTML = guideSVG(id, 'intro');
+    if (!revealed.has(id)) { revealed.add(id); c.classList.add('lit'); }
+    setTimeout(() => { if (active === id) { const m = $('.gp-col', c); if (m) m.innerHTML = guideSVG(id, 'idle'); } }, 1500);
+    renderInfo(g);
+    pickBtn.textContent = `Je choisis ${g.name}\u00a0!`;
+    pickBtn.setAttribute('data-v', g.v);
+  }
+  function renderInfo(g) {
+    const soon = !VERSIONS[g.v].ready;
+    const c = g.country;
+    info.innerHTML = `<div class="gp-name"><h2>${esc(g.name)}</h2><span class="gp-animal">${esc(g.animal)} · ${esc(g.dialect.toLowerCase())}</span>${soon ? '<span class="badge fam">contenu bientôt</span>' : ''}</div>
+      <div class="gp-country"><div class="gp-ch"><span class="gp-flag" aria-hidden="true">${c.flag}</span><div><b>${esc(c.name)}</b><small>${esc(c.hook)}</small></div></div>
+        <p>${esc(c.text)}</p><div class="gp-tags">${c.tags.map(t => `<span>${esc(t)}</span>`).join('')}</div></div>
+      <div class="gp-hi"><button class="speak sm" id="gpSay" aria-label="Écouter ${esc(g.name)}">${ICON.play}</button><div class="grow"><b>${esc(g.hi.arabizi)}</b><small>${esc(g.hi.fr)}</small></div></div>`;
+    $('#gpSay', info).onclick = () => { speak(g.hi); const m = $('.gp-card.on .gp-col', gp); if (m) m.innerHTML = guideSVG(g.id, 'wave'); };
+    info.scrollTop = 0;
+  }
+  function center(id, smooth = true) {
+    const c = cards.find(x => x.dataset.g === id); if (!c) return;
+    const left = c.offsetLeft - (car.clientWidth - c.offsetWidth) / 2;
+    car.scrollTo({ left, behavior: smooth && !rm ? 'smooth' : 'auto' });
+    setActive(id);
+  }
+  let raf = 0;
+  car.addEventListener('scroll', () => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      const mid = car.scrollLeft + car.clientWidth / 2;
+      let best = cards[0], bd = 1e9;
+      cards.forEach(c => { const d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid); if (d < bd) { bd = d; best = c; } });
+      setActive(best.dataset.g);
+    });
+  }, { passive: true });
+  cards.forEach(c => c.onclick = () => { Sfx.play && Sfx.play('tap'); if (active !== c.dataset.g) center(c.dataset.g); });
+  $$('.gp-dots i', gp).forEach(d => d.onclick = () => center(d.dataset.g));
+  car.addEventListener('keydown', e => { const i = GUIDE_ORDER.indexOf(active); if (e.key === 'ArrowRight') center(GUIDE_ORDER[Math.min(2, i + 1)]); if (e.key === 'ArrowLeft') center(GUIDE_ORDER[Math.max(0, i - 1)]); });
+  const cancel = $('#gpCancel', gp); if (cancel) cancel.onclick = () => close(opts.onCancel);
+  /* d) confirmation */
+  pickBtn.onclick = () => {
+    const g = GUIDES[active];
+    openSheet(`<div class="mimrow" style="margin-bottom:14px"><div class="mim-frame arch" data-v="${g.v}">${guideSVG(g.id, 'wave')}</div><div class="speech"><b>Tu pars avec ${esc(g.name)}\u00a0?</b><small>Tu pourras changer plus tard.</small></div></div>
+      <div class="row"><button class="btn ghost" id="gpBack">Revoir</button><button class="btn arch-btn" id="gpGo">Oui, c’est parti</button></div>`, sh => {
+      $('#gpBack', sh).onclick = closeSheet;
+      $('#gpGo', sh).onclick = () => { closeSheet(); celebrate(g); };
+    });
+  };
+  /* e) fête */
+  function celebrate(g) {
+    phase = 'done';
+    setGuide(g.id);
+    try { navigator.vibrate && navigator.vibrate(30); } catch (e) {}
+    gp.classList.add('celebrating');
+    const c = cards.find(x => x.dataset.g === g.id);
+    $('.gp-col', c).innerHTML = guideSVG(g.id, 'chosen');
+    const mini = $('#gpMini .mim', gp); if (mini) { mini.classList.remove('point'); mini.classList.add('clap'); }
+    const cele = $('#gpCele', gp); cele.hidden = false;
+    $('#gpCeleT', gp).textContent = `${g.name} t’accompagne\u00a0! À\u00a0toi la parole\u00a0!`;
+    if (!rm) {
+      const r = c.querySelector('.gp-arch').getBoundingClientRect(), burst = $('#gpBurst', gp);
+      burst.style.left = (r.left + r.width / 2) + 'px'; burst.style.top = (r.top + r.height * .45) + 'px';
+      const cols = ['var(--v1)', 'var(--v1-hi)', 'var(--v2)', 'var(--v-ink)', '#FFD27A'];
+      burst.innerHTML = Array.from({ length: 26 }, (_, i) => { const a = (i / 26) * Math.PI * 2 + Math.random() * .3, d = 90 + Math.random() * 90; return `<span style="--dx:${Math.round(Math.cos(a) * d)}px;--dy:${Math.round(Math.sin(a) * d - 30)}px;--r:${Math.round(Math.random() * 540 - 270)}deg;--c:${cols[i % cols.length]};--d:${Math.round(Math.random() * 120)}ms;${i % 3 === 0 ? 'border-radius:50%;width:9px;height:9px' : ''}"></span>`; }).join('');
+    }
+    Sfx.play && Sfx.play('win');
+    setTimeout(() => close(opts.onDone), 1800);
+  }
+  function close(cb) {
+    clearInterval(typing);
+    if (rm || !gp.animate) { gp.remove(); cb && cb(); return; }
+    gp.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 260, fill: 'forwards' }).onfinish = () => { gp.remove(); cb && cb(); };
+  }
+  return gp;
+}
+
+/* Accueil des versions dont le contenu n’est pas encore prêt (ma / tn) */
+function screenSoon(scr) {
+  const g = currentGuide();
+  scr.innerHTML = `<div class="topbar"><div class="brand" aria-label="Kelma"><i></i><span>kel<b>ma</b></span></div></div>
+    <div class="card soon arch-wide"><div class="mim-frame arch lg" style="margin:0 auto">${guideSVG(g.id, 'wave')}</div>
+      <span class="badge fam" style="margin-top:14px">Bientôt disponible</span>
+      <h1 style="margin:10px 0 6px">${esc(g.dialect)}</h1>
+      <p class="muted" style="margin:0 auto;max-width:32ch">${esc(g.name)} prépare ses leçons. En attendant, tu peux apprendre le dialecte algérien avec Zinou : ta progression de chaque dialecte est gardée à part.</p>
+      <div class="gp-hi" style="margin:16px auto 0;max-width:320px;text-align:left"><button class="speak sm" id="soonSay" aria-label="Écouter ${esc(g.name)}">${ICON.play}</button><div class="grow"><b>${esc(g.hi.arabizi)}</b><small>${esc(g.hi.fr)}</small></div></div>
+      <button class="btn arch-btn" id="soonDz" style="margin-top:18px">Passer au dialecte algérien</button>
+      <button class="btn ghost" id="soonPick" style="margin-top:10px">Changer de guide</button></div>`;
+  $('#soonSay', scr).onclick = () => speak(g.hi);
+  $('#soonDz', scr).onclick = () => { setGuide('zinou'); toast('Zinou t’accompagne ! À toi la parole !'); TAB = 'learn'; renderApp(); };
+  $('#soonPick', scr).onclick = () => guidePicker({ skipIntro: true, closable: true, onDone: () => { TAB = 'learn'; renderApp(); } });
+}
+
+/* Version statique (sans JavaScript) : les trois guides dessinés, sans animation */
+function guidesStaticHTML() {
+  return `<style>#app{display:none!important}body{background:#FFF8EF}</style><div style="font-family:Poppins,Inter,system-ui,sans-serif;color:#1C1633;background:#FFF8EF;min-height:100vh;padding:32px 16px;text-align:center">
+    <h1 style="margin:0 0 6px">Kelma – À toi la parole !</h1><p style="color:#675F7D;margin:0 0 22px">Active JavaScript pour lancer l’app. Voici tes futurs guides :</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">${GUIDE_ORDER.map(id => { const g = GUIDES[id]; return `<div style="width:120px"><div style="width:110px;height:124px;margin:0 auto;border-radius:20px;background:linear-gradient(180deg,#313B60,#262F4F);border:1px solid rgba(255,255,255,.14);overflow:hidden;display:flex;align-items:flex-end;padding:6px 4px 0">${guideSVG(id, 'idle')}</div><b style="display:block;margin-top:8px">${g.name}</b><small style="color:#675F7D">${g.dialect}</small></div>`; }).join('')}</div></div>`;
 }
 
 /* =====================================================================
@@ -2328,8 +3002,8 @@ EX.intro = (ex, el, api) => {
   const draw = () => {
     const it = items[i], last = i === items.length - 1;
     const body = it.kind === 'letter'
-      ? `<div class="giant-ar" style="font-size:12rem;right:-10px;top:-40px">${esc(it.ch)}</div><div class="center"><div class="ar ar-draw" lang="ar" style="font-size:6rem;line-height:1.35">${esc(it.ch)}</div><h2>${esc(it.name)} · <span style="color:var(--mint-ink)">${esc(it.lat)}</span></h2><div class="muted small" style="margin-top:4px">${esc(it.fr)}</div></div>${formsHTML(it)}<div class="li" style="min-height:52px"><span class="ar" lang="ar" style="font-size:1.5rem">${esc(it.ex.ar)}</span><div class="grow"><b class="ttl">${esc(it.ex.arabizi)}</b> <span class="muted small">— ${esc(it.ex.fr)}</span></div></div>`
-      : `<div class="giant-ar" style="font-size:9rem;left:-20px;bottom:-40px">${esc(stripPunct(it.ar))}</div><div class="center"><div class="ar ar-draw" lang="ar" style="font-size:3.1rem;font-weight:600;line-height:1.4">${esc(it.ar)}</div><div class="ttl" style="font-size:1.6rem;margin-top:2px">${esc(it.arabizi)}</div><div class="muted" style="font-style:italic">« ${esc(it.phon)} »</div><h2 style="margin-top:12px;font-size:1.25rem">${esc(it.fr)}</h2><div class="kv" style="justify-content:center">${regBadge(it.register)} ${loanBadge(it)}</div>${regionalHTML(it)}</div>`;
+      ? `<div class="center"><div class="ar ar-draw" lang="ar" style="font-size:6rem;line-height:1.35">${esc(it.ch)}</div><h2>${esc(it.name)} · <span style="color:var(--mint-ink)">${esc(it.lat)}</span></h2><div class="muted small" style="margin-top:4px">${esc(it.fr)}</div></div>${formsHTML(it)}<div class="li" style="min-height:52px"><span class="ar" lang="ar" style="font-size:1.5rem">${esc(it.ex.ar)}</span><div class="grow"><b class="ttl">${esc(it.ex.arabizi)}</b> <span class="muted small">— ${esc(it.ex.fr)}</span></div></div>`
+      : `<div class="center"><div class="ar ar-draw" lang="ar" style="font-size:3.1rem;font-weight:600;line-height:1.4">${esc(it.ar)}</div><div class="ttl" style="font-size:1.6rem;margin-top:2px">${esc(it.arabizi)}</div><div class="muted" style="font-style:italic">« ${esc(it.phon)} »</div><h2 style="margin-top:12px;font-size:1.25rem">${esc(it.fr)}</h2><div class="kv" style="justify-content:center">${regBadge(it.register)} ${loanBadge(it)}</div>${regionalHTML(it)}</div>`;
     el.innerHTML = `<div class="ex-q">${tag(it.kind === 'letter' ? '✨ Nouvelle lettre' : '✨ Nouveau mot')}<div class="ex-title">${i + 1} / ${items.length}</div>
       <div class="card" style="padding:22px 18px">${body}<div class="row" style="justify-content:center;margin-top:12px"><button class="speak" data-say aria-label="Écouter">${ICON.speaker}</button><button class="speak slow" data-slow aria-label="Écouter lentement">${ICON.slow}</button></div></div></div>
       <div class="ex-a"><div class="row">${i ? `<button class="btn ghost sm" id="inPrev" aria-label="Carte précédente" style="width:56px">${ICON.back}</button>` : ''}<button class="btn ${last ? 'mint' : ''}" id="inNext">${last ? 'C’est parti, yallah !' : 'Suivant'}</button></div></div>`;
@@ -2792,7 +3466,7 @@ EX.speak = (ex, el, api) => {
     stopAll();
     if (result === 'skip') return { ok: true, neutral: true, answer: '<div class="fb-card">Exercice passé, ma3lich.</div>', noRetry: true };
     const ok = result === 'sr-ok' || result === 'self-ok';
-    return { ok, answer: `<div class="fb-card">${result && result.startsWith('sr') ? 'Vérifié par la reconnaissance vocale du navigateur (approximatif).' : 'Auto-évaluation : sois honnête avec Mimouch 😼'}</div>` + formsCard(it), explain: `<div class="small">Phonétique : « ${esc(it.phon)} »</div>`, noRetry: !ok ? false : true };
+    return { ok, answer: `<div class="fb-card">${result && result.startsWith('sr') ? 'Vérifié par la reconnaissance vocale du navigateur (approximatif).' : `Auto-évaluation : sois honnête avec ${guideName()} 😼`}</div>` + formsCard(it), explain: `<div class="small">Phonétique : « ${esc(it.phon)} »</div>`, noRetry: !ok ? false : true };
   } };
 };
 
@@ -3045,7 +3719,7 @@ EX.photo = (ex, el, api) => {
 
 /* =====================================================================
    LESSON PLAYER — fait défiler n’importe quelle liste d’exercices
-   Correction dans une feuille du bas avec Mimouch.
+   Correction dans une feuille du bas avec Mimoush.
    ===================================================================== */
 function runSession(cfg) {
   closeSheet();
@@ -3211,7 +3885,7 @@ function recapHTML(res) {
   const sounds = Object.keys(res.soundMiss || {}), nxt = nextReviewLabel(res.learned);
   if (!sounds.length && !nxt) return '';
   return `<div class="section-t">Récap</div><div class="card">${sounds.length ? `<div style="margin-bottom:8px"><b class="ttl">Sons à travailler</b><div class="kv">${sounds.map(c => `<span class="badge fam">${c} · <span class="ar" lang="ar">${SOUND_INFO[c].ar}</span> ${SOUND_INFO[c].how}</span>`).join('')}</div></div>` : ''}
-    ${nxt ? `<div class="row"><span style="font-size:20px">⏰</span><div><b class="ttl">Prochaine révision</b><div class="small muted">${esc(nxt)} — Mimouch te les ressortira au bon moment.</div></div></div>` : ''}</div>`;
+    ${nxt ? `<div class="row"><span style="font-size:20px">⏰</span><div><b class="ttl">Prochaine révision</b><div class="small muted">${esc(nxt)} — ${esc(guideName())} te les ressortira au bon moment.</div></div></div>` : ''}</div>`;
 }
 
 /* =====================================================================
@@ -3236,7 +3910,7 @@ function weakSounds() {
 function recordStudyHour() { const h = new Date().getHours(); S.mem.hours[h] = (S.mem.hours[h] || 0) + 1; }
 function usualHour() { const h = S.mem.hours || []; const tot = h.reduce((a, b) => a + (b || 0), 0); if (tot < 4) return null; let best = 0; h.forEach((v, i) => { if ((v || 0) > (h[best] || 0)) best = i; }); return best; }
 function topMistakes(n = 3) { return Object.keys(S.mistakes).filter(getItem).sort((a, b) => S.mistakes[b].n - S.mistakes[a].n).slice(0, n); }
-/* Suggestions affichées sur l’accueil (« Mimouch te conseille ») */
+/* Suggestions affichées sur l’accueil (« Mimoush te conseille ») */
 function suggestions() {
   const out = [], ws = weakSounds(), tm = topMistakes(3), uh = usualHour();
   if (ws.length) { const i = SOUND_INFO[ws[0]]; out.push({ id: 'sound', icon: `<span class="ar" lang="ar">${i.ar}</span>`, title: `Ton point faible : le ${ws[0]} (${i.ar})`, text: `${i.how}. On fait une révision ciblée ?`, btn: 'Révision ciblée', act: () => startTargeted() }); }
@@ -3327,8 +4001,8 @@ function playWeekly() {
 function shareWeekly() {
   const wk = weekKey(), W = S.weekly[wk];
   const code = b64u.enc({ v: 1, w: wk, n: S.name || 'Un ami', s: W.score, t: W.time }), url = baseURL() + '#week=' + code;
-  const text = `🏆 Défi Darja Dz semaine ${wk.split('-S')[1]} : ${W.score}/10 en ${fmtTime(W.time)}. À toi !`;
-  if (navigator.share) navigator.share({ title: 'Darja Dz', text: text + (linkWorks() ? '' : '\nCode : ' + code), url: linkWorks() ? url : undefined }).catch(() => {});
+  const text = `🏆 Défi Kelma semaine ${wk.split('-S')[1]} : ${W.score}/10 en ${fmtTime(W.time)}. À toi !`;
+  if (navigator.share) navigator.share({ title: 'Kelma', text: text + (linkWorks() ? '' : '\nCode : ' + code), url: linkWorks() ? url : undefined }).catch(() => {});
   else copyText(linkWorks() ? url : code, 'Copié ✓ Envoie-le à tes potes');
 }
 function receiveWeekly(o) {
@@ -3349,10 +4023,10 @@ function downloadICS() {
   const d = new Date(Date.now() + DAY), z = n => String(n).padStart(2, '0');
   const start = `${d.getFullYear()}${z(d.getMonth() + 1)}${z(d.getDate())}T${z(h)}${z(m)}00`;
   const now = new Date(), stamp = `${now.getUTCFullYear()}${z(now.getUTCMonth() + 1)}${z(now.getUTCDate())}T${z(now.getUTCHours())}${z(now.getUTCMinutes())}00Z`;
-  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Darja Dz//FR', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', 'UID:darjadz-' + Date.now() + '@local', 'DTSTAMP:' + stamp, 'DTSTART:' + start, 'DURATION:PT10M', 'RRULE:FREQ=DAILY',
-    'SUMMARY:Darja Dz 🐈 · 10 min de darija', 'DESCRIPTION:Mimouch t’attend : wach rak ? Ouvre Darja Dz pour garder ta série.' + (linkWorks() ? '\\n' + baseURL() : ''), linkWorks() ? 'URL:' + baseURL() : null,
-    'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Darja Dz', 'TRIGGER:-PT0M', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].filter(Boolean).join('\r\n');
-  downloadBlob(new Blob([ics], { type: 'text/calendar' }), 'rappel-darja-dz.ics');
+  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Kelma//FR', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', 'UID:darjadz-' + Date.now() + '@local', 'DTSTAMP:' + stamp, 'DTSTART:' + start, 'DURATION:PT10M', 'RRULE:FREQ=DAILY',
+    'SUMMARY:Kelma 🐈 · 10 min de darija', 'DESCRIPTION:' + guideName() + ' t’attend : wach rak ? Ouvre Kelma pour garder ta série.' + (linkWorks() ? '\\n' + baseURL() : ''), linkWorks() ? 'URL:' + baseURL() : null,
+    'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Kelma', 'TRIGGER:-PT0M', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].filter(Boolean).join('\r\n');
+  downloadBlob(new Blob([ics], { type: 'text/calendar' }), 'rappel-kelma.ics');
   toast('📅 Ouvre le fichier pour l’ajouter à ton calendrier');
 }
 function downloadBlob(blob, name) {
@@ -3396,15 +4070,15 @@ function transferSheet() {
     <div class="section-t" style="margin-top:0">Envoyer</div>
     <div class="list"><button class="li" id="tfFile"><span style="font-size:22px">📁</span><div class="grow"><b class="ttl">Fichier .json</b><div class="fr">À garder dans Fichiers, iCloud, ou à t’envoyer par mail</div></div></button>
     <button class="li" id="tfCode"><span style="font-size:22px">📋</span><div class="grow"><b class="ttl">Code à copier-coller</b><div class="fr">Pour WhatsApp, Notes, Messages…</div></div></button>
-    <button class="li" id="tfQr"><span style="font-size:22px">▦</span><div class="grow"><b class="ttl">QR codes</b><div class="fr">L’autre téléphone les scanne avec Darja Dz</div></div></button></div>
+    <button class="li" id="tfQr"><span style="font-size:22px">▦</span><div class="grow"><b class="ttl">QR codes</b><div class="fr">L’autre téléphone les scanne avec Kelma</div></div></button></div>
     <div class="section-t">Recevoir</div>
     <div class="list"><button class="li" id="tfInFile"><span style="font-size:22px">📂</span><div class="grow"><b class="ttl">Ouvrir un fichier</b></div></button>
     <button class="li" id="tfInCode"><span style="font-size:22px">⌨️</span><div class="grow"><b class="ttl">Coller un code</b></div></button>
     <button class="li" id="tfInScan"><span style="font-size:22px">📷</span><div class="grow"><b class="ttl">Scanner des QR codes</b></div></button></div>
     <input type="file" id="tfPick" accept="application/json,.json,text/plain" class="vh">`, sh => {
     const mark = () => { S.lastBackup = Date.now(); save(); };
-    $('#tfFile', sh).onclick = () => { if (downloadBlob(new Blob([JSON.stringify({ app: 'darjadz', v: 4, exported: new Date().toISOString(), state: S }, null, 1)], { type: 'application/json' }), `darja-dz-${(S.name || 'profil').replace(/\W+/g, '-')}-${dayKey()}.json`)) { mark(); toast('Fichier enregistré ✓'); } };
-    $('#tfCode', sh).onclick = async () => { const c = await packState(S); mark(); openSheet(`<h2>Ton code</h2><p class="muted small">Copie-le et colle-le dans Darja Dz sur l’autre appareil (Profil → Transférer → Coller un code).</p><div class="code-box" style="max-height:200px">${esc(c)}</div><button class="btn arch-btn" id="cpy" style="margin-top:12px">📋 Copier (${Math.round(c.length / 1024 * 10) / 10} ko)</button>`, s2 => $('#cpy', s2).onclick = () => copyText(c, 'Code copié ✓')); };
+    $('#tfFile', sh).onclick = () => { if (downloadBlob(new Blob([JSON.stringify({ app: 'darjadz', v: 4, exported: new Date().toISOString(), state: S }, null, 1)], { type: 'application/json' }), `kelma-${(S.name || 'profil').replace(/\W+/g, '-')}-${dayKey()}.json`)) { mark(); toast('Fichier enregistré ✓'); } };
+    $('#tfCode', sh).onclick = async () => { const c = await packState(S); mark(); openSheet(`<h2>Ton code</h2><p class="muted small">Copie-le et colle-le dans Kelma sur l’autre appareil (Profil → Transférer → Coller un code).</p><div class="code-box" style="max-height:200px">${esc(c)}</div><button class="btn arch-btn" id="cpy" style="margin-top:12px">📋 Copier (${Math.round(c.length / 1024 * 10) / 10} ko)</button>`, s2 => $('#cpy', s2).onclick = () => copyText(c, 'Code copié ✓')); };
     $('#tfQr', sh).onclick = async () => { const c = await packState(S); mark(); showQrCodes(chunkCode(c)); };
     $('#tfInFile', sh).onclick = () => $('#tfPick', sh).click();
     $('#tfPick', sh).onchange = e => { const f = e.target.files[0]; if (!f) return; const r = new FileReader(); r.onload = () => importFlow(r.result); r.readAsText(f); };
@@ -3419,7 +4093,7 @@ async function showQrCodes(chunks) {
   const L = duelLayer('QR codes de transfert');
   const draw = () => {
     const q = QR(0, 'L'); q.addData(chunks[i]); q.make();
-    L.body.innerHTML = `<p class="muted center">Sur l’autre téléphone : Darja Dz → Profil → Transférer → <b>Scanner des QR codes</b>. ${chunks.length > 1 ? 'Les codes défilent tout seuls.' : ''}</p>
+    L.body.innerHTML = `<p class="muted center">Sur l’autre téléphone : Kelma → Profil → Transférer → <b>Scanner des QR codes</b>. ${chunks.length > 1 ? 'Les codes défilent tout seuls.' : ''}</p>
       <div style="background:#fff;border-radius:24px;padding:14px;margin:12px auto;max-width:340px">${q.createSvgTag({ cellSize: 4, margin: 2, scalable: true })}</div>
       <h2 class="center num">${i + 1} / ${chunks.length}</h2>`;
     const svg = $('svg', L.body); if (svg) { svg.style.width = '100%'; svg.style.height = 'auto'; }
@@ -3468,7 +4142,7 @@ async function importFlow(text) {
   try { st = await unpackState(text); if (!st || typeof st !== 'object' || !('xp' in st)) throw new Error('format'); }
   catch (e) { toast('❌ Code ou fichier invalide' + (e.message && e.message !== 'format' ? ' : ' + e.message : '')); return; }
   st = migrate(st);
-  openSheet(`<div class="mimrow" style="margin-bottom:12px"><div class="mim-frame arch">${mimSVG('happy', '', st.avatar)}</div><div class="speech"><b>${esc(st.name || 'Profil sans nom')}</b><small>${st.xp} XP · ${Object.keys(st.cards || {}).length} cartes · série ${st.streak || 0}</small></div></div>
+  openSheet(`<div class="mimrow" style="margin-bottom:12px"><div class="mim-frame arch">${catSVG('happy', '', st.avatar)}</div><div class="speech"><b>${esc(st.name || 'Profil sans nom')}</b><small>${st.xp} XP · ${Object.keys(st.cards || {}).length} cartes · série ${st.streak || 0}</small></div></div>
     <button class="btn arch-btn" id="imNew">Ajouter comme nouveau profil</button>${Profiles.guest || !Profiles.current ? '' : `<button class="btn ghost" id="imRep" style="margin-top:10px">Remplacer le profil actuel (${esc(S.name || 'sans nom')})</button>`}`, sh => {
     $('#imNew', sh).onclick = () => { const id = Profiles.addFromState(st); closeSheet(); Profiles.enter(id); SHOWN = null; TAB = 'learn'; renderApp(); toast('Profil importé ✓'); };
     const r = $('#imRep', sh); if (r) r.onclick = () => confirmBox('Remplacer « ' + (S.name || 'ce profil') + ' » par la sauvegarde ?', 'Remplacer', () => { const keepPin = S.pinHash; S = st; S.pinHash = keepPin; Profiles.states[Profiles.current] = S; save(); SHOWN = null; renderApp(); toast('Progression remplacée ✓'); }, true);
@@ -3487,6 +4161,16 @@ const TABS = [
 function renderApp() {
   applyTheme();
   const app = $('#app');
+  adoptStoredGuide();
+  applyVersion(S.version || 'dz');
+  /* Premier lancement : Mimoush présente les trois guides */
+  if (!S.mascot) { app.innerHTML = '<main class="screen" id="scr"></main>'; guidePicker({ skipIntro: !!lsGet('kelma_mascot'), onDone: renderApp }); return; }
+  /* Versions pas encore prêtes (ma / tn) : accueil « Bientôt disponible » */
+  if (S.version && !VERSIONS[S.version].ready) {
+    app.innerHTML = `<main class="screen" id="scr" ${S.onboarded ? '' : 'style="padding-bottom:calc(var(--sab) + 24px)"'}></main>` + (S.onboarded ? `<nav class="tabbar" role="tablist" aria-label="Navigation">${TABS.filter(t => t[0] === 'learn' || t[0] === 'profile').map(t => `<button class="tab" role="tab" data-tab="${t[0]}" aria-label="${t[2]}"><span class="ti">${ICON[t[1]]}</span>${t[2]}</button>`).join('')}</nav>` : '');
+    $$('.tab', app).forEach(b => b.onclick = () => { Sfx.ensure(); go(b.dataset.tab); });
+    go(TAB === 'profile' && S.onboarded ? 'profile' : 'learn'); return;
+  }
   if (!S.onboarded) { app.innerHTML = '<main class="screen" id="scr" style="padding-bottom:calc(var(--sab) + 24px)"></main>'; onboarding(0); return; }
   app.innerHTML = `<main class="screen" id="scr"></main>
     <nav class="tabbar" role="tablist" aria-label="Navigation">${TABS.map(t => `<button class="tab" role="tab" data-tab="${t[0]}" aria-label="${t[2]}"><span class="ti">${ICON[t[1]]}</span>${t[2]}</button>`).join('')}</nav>`;
@@ -3499,7 +4183,8 @@ function go(tab) {
   $$('.tab').forEach(b => { b.classList.toggle('on', b.dataset.tab === navTab); b.setAttribute('aria-selected', b.dataset.tab === navTab); });
   const scr = $('#scr'); if (!scr) return;
   scr.scrollTop = 0;
-  ({ learn: screenLearn, review: screenReview, stories: screenStories, alpha: screenAlpha, dict: screenDict, profile: screenProfile })[tab](scr);
+  if (S.version && VERSIONS[S.version] && !VERSIONS[S.version].ready && tab !== 'profile') screenSoon(scr);
+  else ({ learn: screenLearn, review: screenReview, stories: screenStories, alpha: screenAlpha, dict: screenDict, profile: screenProfile })[tab](scr);
   scr.classList.remove('screen-in'); void scr.offsetWidth; scr.classList.add('screen-in');
 }
 const refresh = () => { if ($('#scr') && S.onboarded) go(TAB); };
@@ -3510,7 +4195,7 @@ function bannersHTML() {
   const b = [];
   if (Profiles.guest) b.push(['guest', '👤', 'Mode invité : rien n’est sauvegardé.', 'Créer mon profil']);
   if (S.repair && S.repair.day === dayKey()) b.push(['repair', '🔥', `Ta série de ${S.repair.old} jours s’est éteinte hier. Réussis le Défi du jour aujourd’hui pour la réparer !`, 'Réparer']);
-  if (reminderDue()) b.push(['remind', '🔔', 'C’est l’heure de ta darija ! 5 minutes avec Mimouch ?', 'Yallah']);
+  if (reminderDue()) b.push(['remind', '🔔', `C’est l’heure de ta darija\u00a0! 5 minutes avec ${guideName()}\u00a0?`, 'Yallah']);
   if (backupDue()) b.push(['backup', '💾', 'Sauvegarde ta progression : ça fait plus de 7 jours.', 'Sauvegarder']);
   return b.map(x => `<div class="banner" data-ban="${x[0]}"><span class="b-ic">${x[1]}</span><div class="grow small">${x[2]}</div><button class="btn sm" data-banact="${x[0]}">${x[3]}</button>${x[0] === 'backup' || x[0] === 'remind' ? `<button class="close" data-bandis="${x[0]}" aria-label="Masquer">${ICON.close}</button>` : ''}</div>`).join('');
 }
@@ -3526,13 +4211,13 @@ function bindBanners(scr) {
 }
 function suggestHTML() {
   const sg = suggestions().slice(0, 2); if (!sg.length) return '';
-  return `<div class="section-t">Mimouch te conseille</div><div class="list">${sg.map((x, i) => `<div class="li sugg"><span class="sg-ic">${x.icon}</span><div class="grow"><b class="ttl">${esc(x.title)}</b><div class="fr">${esc(x.text)}</div></div><button class="btn sm" data-sugg="${i}">${esc(x.btn)}</button></div>`).join('')}</div>`;
+  return `<div class="section-t">${esc(guideName())} te conseille</div><div class="list">${sg.map((x, i) => `<div class="li sugg"><span class="sg-ic">${x.icon}</span><div class="grow"><b class="ttl">${esc(x.title)}</b><div class="fr">${esc(x.text)}</div></div><button class="btn sm" data-sugg="${i}">${esc(x.btn)}</button></div>`).join('')}</div>`;
 }
 function bindSuggest(scr) { const sg = suggestions().slice(0, 2); $$('[data-sugg]', scr).forEach(b => b.onclick = () => sg[+b.dataset.sugg].act()); }
 
 function topbarHTML() {
   syncHearts();
-  return `<div class="topbar"><div class="brand" aria-label="Darja Dz"><i></i>darja<b>dz</b></div><div class="grow"></div>
+  return `<div class="topbar"><div class="brand" aria-label="Kelma"><i></i><span>kel<b>ma</b></span></div><div class="grow"></div>
     <button class="pill hot" id="tbStreak" aria-label="Série : ${streakNow()} jours"><svg viewBox="0 0 44 52" aria-hidden="true"><path d="M22 2c3 9 14 14 14 28a14 14 0 0 1-28 0c0-7 3-11 6-14 0 5 2 8 5 9-1-9 1-16 3-23z" fill="currentColor"/></svg><span id="nStreak">${streakNow()}</span></button>
     <button class="pill xp" id="tbXp" aria-label="${S.xp} XP">${ICON.bolt}<span id="nXp">${S.xp}</span></button>
     <button class="pill heart" id="tbHeart" aria-label="${S.hearts} cœurs">${ICON.heart}${S.hearts}</button></div>`;
@@ -3567,10 +4252,9 @@ function screenLearn(scr) {
   const w = wordOfDay(), due = SRS.due().length, storiesDone = CONTENT.stories.filter(s => S.stories[s.id]).length;
   const heroAr = u ? stripPunct(u.words[0] ? u.words[0].ar : '') : 'برافو';
   scr.innerHTML = topbarHTML() + bannersHTML() + `<div class="bento">
-    <div class="card greet span2"><div class="hello">${esc(hello)} 👋</div>${mimRow(mstate, line)}</div>
+    <div class="card greet span2"><div class="hello">${esc(hello)} 👋</div>${mimRow(mstate === 'happy' ? 'wave' : mstate, line)}</div>
     <button class="card hero arch-wide span2" id="bHero" aria-label="${nl ? 'Continuer : ' + esc(nl.title) : 'Réviser'}">
-      <div class="blob b-blue" style="right:-60px;top:-80px"></div><div class="blob b-mint" style="left:-90px;bottom:-110px"></div>
-      <div class="giant-ar">${esc(heroAr)}</div>
+      <i class="pat" aria-hidden="true"></i>${casbahSVG('hero-art')}
       ${u ? `<div class="ringwrap ring">${ringSVG(uDone / u.lessons.length, 64, 6, 'var(--mint)')}<b style="color:#fff">${uDone}/${u.lessons.length}</b></div>` : ''}
       <div class="eyebrow">${u ? `${u.icon} Unité ${u.index + 1} · Leçon ${nl.index + 1}` : '🏁 Parcours terminé'}</div>
       <h2>${nl ? esc(nl.title) : 'Tout est fait, wa3er !'}</h2><div class="sub">${u ? esc(u.title) : 'Garde le rythme avec une révision'}</div>
@@ -3578,8 +4262,8 @@ function screenLearn(scr) {
     <button class="card tile-btn streakc" id="bStreak" aria-label="Série de ${sk} jours">${flameSVG(sk > 0 && today)}<div><div class="num t-n" id="bStreakN">${sk}</div><div class="t-l">jour${sk > 1 ? 's' : ''} de suite</div></div></button>
     <button class="card tile-btn" id="bGoal" aria-label="Objectif du jour ${tx} sur ${gx} XP"><div class="ring">${ringSVG(tx / gx, 52, 6)}<b>${Math.min(100, Math.round(100 * tx / gx))}%</b></div><div><div class="num" style="font-size:1.25rem">${tx}<span class="muted" style="font-size:.9rem"> / ${gx} XP</span></div><div class="t-l">Objectif du jour</div></div></button>
     <div class="card wotd span2" id="bWotd"><div class="flip-in">
-      <div class="face front"><div class="giant-ar">${esc(w.ar)}</div><div class="label">Mot du jour</div><div class="big-ar ar-draw" lang="ar">${esc(w.ar)}</div><div class="ttl" style="font-size:1.2rem;text-align:right">${esc(w.arabizi)}</div>
-        <div class="acts"><button class="speak" id="wotdSay" aria-label="Écouter le mot du jour">${ICON.speaker}</button><button class="iconbtn" id="wotdFav" aria-label="Ajouter aux favoris" style="height:56px;width:52px;border-radius:26px 26px 14px 14px;color:${S.favs[w.id] ? 'var(--sun)' : 'var(--mut)'}">${S.favs[w.id] ? ICON.star : ICON.starO}</button></div><div class="hint">Touche pour retourner ↻</div></div>
+      <div class="face front"><i class="pat corner" aria-hidden="true"></i><div class="label">Mot du jour</div><div class="big-ar ar-draw" lang="ar">${esc(w.ar)}</div><div class="ttl" style="font-size:1.2rem;text-align:right">${esc(w.arabizi)}</div>
+        <div class="acts"><button class="speak" id="wotdSay" aria-label="Écouter le mot du jour">${ICON.speaker}</button><button class="iconbtn" id="wotdFav" aria-label="Ajouter aux favoris" style="height:56px;width:52px;border-radius:18px;color:${S.favs[w.id] ? 'var(--sun)' : 'var(--mut)'}">${S.favs[w.id] ? ICON.star : ICON.starO}</button></div><div class="hint">Touche pour retourner ↻</div></div>
       <div class="face back"><div class="label">Ça veut dire</div><h2 style="margin:8px 0 4px">${esc(w.fr)}</h2><div class="muted" style="font-style:italic">« ${esc(w.phon)} »</div><div class="kv">${regBadge(w.register)} ${loanBadge(w)}</div>
         ${w.example && DB.sentences[w.example] ? `<div class="small"><b>${esc(DB.sentences[w.example].arabizi)}</b><br><span class="muted">${esc(DB.sentences[w.example].fr)}</span></div>` : ''}</div>
     </div></div>
@@ -3627,7 +4311,7 @@ function pathHTML(nl) {
 }
 function bindPath(scr) {
   $$('[data-lesson]', scr).forEach(b => b.onclick = () => lessonSheet(DB.lessonById[b.dataset.lesson]));
-  $$('[data-soon]', scr).forEach(b => b.onclick = () => toast('🔒 Bientôt ! Mimouch y travaille…'));
+  $$('[data-soon]', scr).forEach(b => b.onclick = () => toast('🔒 Bientôt ! ' + guideName() + ' y travaille…'));
   $$('[data-culture]', scr).forEach(b => b.onclick = () => cultureSheet(DB.unitById[b.dataset.culture]));
   requestAnimationFrame(() => {
     $$('.path', scr).forEach(p => {
@@ -3657,7 +4341,7 @@ function lessonSheet(l) {
 }
 function cultureSheet(u, headline) {
   const c = u.cultureCard;
-  openSheet(`<div class="culture">${headline ? `<span class="ex-tag">${headline}</span>` : ''}<div style="font-size:40px">${u.icon}</div><h2 style="margin:6px 0 12px">${esc(c.title)}</h2>${c.text.map(p => `<p>${esc(p)}</p>`).join('')}</div><button class="btn arch-btn" id="ccOk" style="margin-top:8px">Sa7it, Mimouch !</button>`, sh => $('#ccOk', sh).onclick = closeSheet);
+  openSheet(`<div class="culture">${headline ? `<span class="ex-tag">${headline}</span>` : ''}<div style="font-size:40px">${u.icon}</div><h2 style="margin:6px 0 12px">${esc(c.title)}</h2>${c.text.map(p => `<p>${esc(p)}</p>`).join('')}</div><button class="btn arch-btn" id="ccOk" style="margin-top:8px">Sa7it, Mimoush !</button>`, sh => $('#ccOk', sh).onclick = closeSheet);
 }
 function heartsSheet() {
   syncHearts();
@@ -3673,7 +4357,7 @@ function streakSheet() {
   const line = sk >= 3 ? mimLine('streak', { n: sk }) : S.lastActiveDay === dayKey() ? mimLine(timeKind()) : mimLine('idle');
   openSheet(`<div class="row" style="align-items:center">${flameSVG(sk > 0)}<div><h2 style="font-size:2rem" class="num">${sk} jour${sk > 1 ? 's' : ''}</h2><div class="muted small">Record : ${S.bestStreak} jours</div></div></div>
     <div class="mimrow" style="margin:14px 0"><div class="mim-frame arch sm">${mimSVG(sk >= 3 ? 'proud' : 'neutral')}</div><div class="speech"><b>${esc(line.dz)}</b><small>${esc(line.fr)}</small></div></div>
-    <div class="row" style="justify-content:space-between">${days.map(d => `<div class="center"><div class="small muted ttl">${d.l}</div><div style="width:34px;height:40px;border-radius:17px 17px 8px 8px;margin-top:4px;background:${S.xpByDay[d.k] ? 'var(--coral)' : 'var(--s2)'};display:flex;align-items:center;justify-content:center;color:#0B1020">${S.xpByDay[d.k] ? '✓' : ''}</div></div>`).join('')}</div>
+    <div class="row" style="justify-content:space-between">${days.map(d => `<div class="center"><div class="small muted ttl">${d.l}</div><div style="width:34px;height:40px;border-radius:12px;margin-top:4px;background:${S.xpByDay[d.k] ? 'var(--coral)' : 'var(--s2)'};display:flex;align-items:center;justify-content:center;color:#0B1020">${S.xpByDay[d.k] ? '✓' : ''}</div></div>`).join('')}</div>
     <div class="li" style="margin-top:14px"><span style="font-size:24px">🧊</span><div class="grow"><b class="ttl">Gels de série : ${S.freezes || 0} / 2</b><div class="fr">Un gel est gagné tous les 7 jours de suite. Il protège automatiquement ta série si tu rates un jour.</div></div></div>
     ${S.repair && S.repair.day === dayKey() ? `<button class="btn coral" id="skRep" style="margin-top:10px">Réparer ma série de ${S.repair.old} jours (Défi du jour)</button>` : ''}
     <p class="muted small" style="margin-top:14px">Une leçon, une révision ou un défi par jour suffit pour garder la flamme.</p>`, sh => { const r = $('#skRep', sh); if (r) r.onclick = () => { closeSheet(); startDaily(); }; });
@@ -3725,7 +4409,7 @@ function screenReview(scr) {
   const row = id => { const it = getItem(id); return `<button class="li" data-word="${id}"><div class="grow">${it.kind === 'letter' ? `<span class="ar" lang="ar" style="font-size:1.6rem">${esc(it.ch)}</span>` : dzHTML(it, { size: 'sm', phon: false })}</div><div class="fr">${esc(it.kind === 'letter' ? it.name + ' · ' + it.lat : it.fr)}${S.mistakes[id] ? `<div class="small" style="color:var(--coral-ink)">✗ ${S.mistakes[id].n}</div>` : ''}</div></button>`; };
   const empty = kind => { const l = mimLine(kind); return `<div class="card empty">${`<div class="mim-frame arch sm">${mimSVG('happy')}</div>`}<div><b class="ttl">${esc(l.dz)}</b><div class="small muted">${esc(l.fr)}</div></div></div>`; };
   scr.innerHTML = `<div class="topbar"><h1>Réviser</h1></div>
-    <div class="card revhero arch-wide"><div class="giant-ar">عاود</div><div class="blob b-blue" style="right:-80px;bottom:-120px"></div>
+    <div class="card revhero arch-wide"><i class="pat corner" aria-hidden="true"></i>
       <div class="num">${due.length}</div><div class="muted" style="margin-bottom:16px">carte${due.length > 1 ? 's' : ''} à réviser maintenant · ${all.length} au total · ${mast} maîtrisée${mast > 1 ? 's' : ''}</div>
       ${due.length ? `<button class="btn arch-btn" id="rvDue">Réviser maintenant (${Math.min(10, due.length)})</button>` : all.length ? `<button class="btn ghost" id="rvFree">Révision libre</button>` : `<div class="muted">Termine une leçon pour remplir ta révision.</div>`}
       ${all.length ? `<button class="btn mint" id="rvQuick" style="margin-top:10px">${ICON.bolt} Révision éclair · 2 min</button>` : ''}
@@ -3916,7 +4600,7 @@ function wordSheet(id) {
   const u = w.theme && DB.unitById[w.theme];
   const c = S.cards[id];
   openSheet(`<div class="word-card"><div class="row" style="align-items:flex-start"><div class="grow">${dzHTML(w, { size: 'xl', forceAr: true, forceLat: true })}</div>
-      <div style="display:flex;flex-direction:column;gap:8px"><button class="speak" id="wsSay" aria-label="Écouter">${ICON.speaker}</button><button class="speak slow" id="wsSlow" aria-label="Écouter lentement">${ICON.slow}</button><button class="iconbtn" id="wsFav" aria-label="Favori" style="width:56px;height:52px;border-radius:26px 26px 14px 14px;color:${S.favs[id] ? 'var(--sun)' : 'var(--mut)'}">${S.favs[id] ? ICON.star : ICON.starO}</button></div></div>
+      <div style="display:flex;flex-direction:column;gap:8px"><button class="speak" id="wsSay" aria-label="Écouter">${ICON.speaker}</button><button class="speak slow" id="wsSlow" aria-label="Écouter lentement">${ICON.slow}</button><button class="iconbtn" id="wsFav" aria-label="Favori" style="width:56px;height:52px;border-radius:18px;color:${S.favs[id] ? 'var(--sun)' : 'var(--mut)'}">${S.favs[id] ? ICON.star : ICON.starO}</button></div></div>
     <h2 style="margin:8px 0">${esc(w.fr)}</h2>
     <div class="kv">${w.kind === 'word' ? regBadge(w.register) : ''} ${loanBadge(w)} ${u ? `<span class="badge">${u.icon} ${esc(u.title)}</span>` : ''}${w.kind === 'custom' ? '<span class="badge">ajouté depuis une histoire</span>' : ''}</div>
     ${regionalHTML(w)}
@@ -3941,19 +4625,21 @@ function screenProfile(scr) {
   const lg = league(), ids = Profiles.ids();
   const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent), standalone = window.navigator.standalone || (window.matchMedia && matchMedia('(display-mode: standalone)').matches);
   scr.innerHTML = `<div class="topbar"><h1 class="grow">Profil</h1>${Profiles.guest ? '<span class="badge fam">invité</span>' : ''}</div>
-    <div class="card prof-head"><button class="mim-frame arch lg" id="pAv" aria-label="Changer d’avatar">${mimSVG(sk >= 3 ? 'proud' : 'neutral')}</button><div class="grow" style="padding-bottom:4px">
+    <div class="card prof-head"><button class="mim-frame arch lg" id="pAv" aria-label="Changer d’avatar">${catSVG(sk >= 3 ? 'proud' : 'neutral')}</button><div class="grow" style="padding-bottom:4px">
       <input id="pName" value="${esc(S.name)}" placeholder="Ton prénom" aria-label="Ton prénom" style="border:0;background:none;font-family:var(--f-title);font-weight:700;font-size:1.5rem;letter-spacing:-.03em;width:100%;outline:none;padding:0">
       <div class="small muted">Niveau ${lv} · ${S.xp - lo} / ${hi - lo} XP</div><div class="lvbar"><i style="width:${Math.round(100 * (S.xp - lo) / (hi - lo))}%"></i></div></div></div>
     <div class="stats" style="margin-top:12px"><div class="stat"><b>${S.xp}</b><small>XP total</small></div><div class="stat"><b style="color:var(--coral-ink)">${sk}</b><small>série · 🧊${S.freezes || 0}</small></div><div class="stat"><b>${S.bestStreak}</b><small>record</small></div>
       <div class="stat"><b>${SRS.learnedWords().length}</b><small>mots appris</small></div><div class="stat"><b style="color:var(--mint-ink)">${SRS.mastered().length}</b><small>maîtrisés</small></div><div class="stat"><b>${acc}%</b><small>précision</small></div></div>
 
+    <div class="section-t">Ton guide</div><div class="card guide-card"><div class="mim-frame arch">${currentGuide() ? guideSVG(S.mascot, 'idle') : ''}</div><div class="grow"><b class="ttl">${esc(guideName())}</b><div class="small muted">${currentGuide() ? esc(currentGuide().animal + ' · ' + currentGuide().dialect) : ''}</div>
+      <button class="btn sm" id="pGuide" style="margin-top:10px">Changer de guide</button></div></div>
     <div class="section-t">👥 Profils sur cet appareil</div><div class="card">
-      <div class="list">${ids.map(id => { const st = Profiles.states[id], me = id === Profiles.current && !Profiles.guest; return `<div class="li" style="${me ? 'border-color:var(--blue)' : ''}"><span class="mim-frame arch sm" style="width:44px;height:50px">${mimSVG('neutral', '', st.avatar)}</span><div class="grow"><b class="ttl">${esc(st.name || 'Sans nom')}</b>${st.pinHash ? ' 🔒' : ''}<div class="fr">${st.xp} XP · série ${st.streak || 0}</div></div>${me ? '<span class="badge neu">actif</span>' : `<button class="btn ghost sm" data-switch="${id}">Passer</button>`}</div>`; }).join('')}</div>
+      <div class="list">${ids.map(id => { const st = Profiles.states[id], me = id === Profiles.current && !Profiles.guest; return `<div class="li" style="${me ? 'border-color:var(--blue)' : ''}"><span class="mim-frame arch sm" style="width:44px;height:50px">${catSVG('neutral', '', st.avatar)}</span><div class="grow"><b class="ttl">${esc(st.name || 'Sans nom')}</b>${st.pinHash ? ' 🔒' : ''}<div class="fr">${st.xp} XP · série ${st.streak || 0}</div></div>${me ? '<span class="badge neu">actif</span>' : `<button class="btn ghost sm" data-switch="${id}">Passer</button>`}</div>`; }).join('')}</div>
       <div class="row" style="margin-top:10px;flex-wrap:wrap"><button class="btn ghost sm grow" id="pNew">＋ Nouveau profil</button>${Profiles.guest ? '' : `<button class="btn ghost sm grow" id="pPin">${S.pinHash ? '🔓 Retirer le code' : '🔒 Code à 4 chiffres'}</button>`}</div>
       ${Profiles.guest ? '' : `<button class="btn link" id="pDel" style="color:var(--coral-ink)">Supprimer ce profil</button>`}</div>
 
     <div class="section-t">🏆 Ligue de la Casbah · cette semaine</div><div class="card">
-      ${lg.length > 1 ? `<div class="list">${lg.map((x, i) => `<div class="li" style="${x.me ? 'border-color:var(--blue)' : ''}"><b class="num" style="width:24px">${i + 1}</b><span class="mim-frame arch sm" style="width:40px;height:46px">${mimSVG(i === 0 ? 'proud' : 'neutral', '', x.avatar)}</span><div class="grow"><b class="ttl">${esc(x.name)}</b></div><b class="num">${x.xp} XP</b></div>`).join('')}</div>`
+      ${lg.length > 1 ? `<div class="list">${lg.map((x, i) => `<div class="li" style="${x.me ? 'border-color:var(--blue)' : ''}"><b class="num" style="width:24px">${i + 1}</b><span class="mim-frame arch sm" style="width:40px;height:46px">${catSVG(i === 0 ? 'proud' : 'neutral', '', x.avatar)}</span><div class="grow"><b class="ttl">${esc(x.name)}</b></div><b class="num">${x.xp} XP</b></div>`).join('')}</div>`
         : `<div class="small muted">Ajoute un profil pour un proche sur ce téléphone et affrontez-vous chaque semaine. Tes potes ailleurs ? Le <b>Défi de la semaine</b> et les <b>Duels</b> marchent par lien.</div>`}
       <div class="row" style="margin-top:10px"><button class="btn ghost sm grow" id="pWeek">Défi de la semaine</button><button class="btn ghost sm grow" id="pDuel">Duel</button></div></div>
 
@@ -3968,7 +4654,7 @@ function screenProfile(scr) {
     <div class="bgrid">${CONTENT.badges.map(b => `<button class="bcell ${S.badges[b.id] ? '' : 'off'}" data-badge="${b.id}" aria-label="${esc(b.title)}"><span class="bi">${b.icon}</span>${esc(b.title)}</button>`).join('')}</div>
 
     <div class="section-t">Réglages</div><div class="card">
-      <div class="setting"><span>Thème</span>${seg('theme', [['dark', 'Nuit'], ['light', 'Blanc chaux'], ['auto', 'Auto']], 'Thème')}</div>
+      <div class="setting"><span>Thème</span>${seg('theme', [['light', 'Clair'], ['dark', 'Sombre'], ['auto', 'Auto']], 'Thème')}</div>
       <div class="setting"><span>Écriture affichée</span>${seg('script', [['ar', 'Arabe'], ['lat', 'Arabizi'], ['both', 'Les deux']], 'Écriture affichée')}</div>
       <div class="setting"><span>Écrire aussi en lettres arabes<br><small class="muted">dernière marche des exercices d’écriture</small></span><button class="switch ${S.arWrite ? 'on' : ''}" data-sw="arWrite" role="switch" aria-checked="${S.arWrite}" aria-label="Écrire en lettres arabes"></button></div>
       <div class="setting"><span>Sons</span><button class="switch ${S.sound ? 'on' : ''}" data-sw="sound" role="switch" aria-checked="${S.sound}" aria-label="Sons"></button></div>
@@ -3985,7 +4671,7 @@ function screenProfile(scr) {
       ${S.lastBackup ? `<div class="small muted" style="margin-top:8px">Dernière sauvegarde : ${new Date(S.lastBackup).toLocaleDateString('fr-FR')}</div>` : ''}
       ${isIOS && !standalone ? `<div class="small muted" style="margin-top:10px">📲 <b>Installer</b> : dans Safari, touche Partager <span aria-hidden="true">⬆︎</span> puis « Sur l’écran d’accueil ».</div>` : ''}
       ${Profiles.guest ? '' : '<button class="btn link" id="pReset" style="color:var(--coral-ink);margin-top:6px">Réinitialiser ce profil</button>'}</div>
-    <p class="center small muted" style="margin-top:18px">darja dz v4 · contenu v${CONTENT.version} · ${DB.wordList.length} mots · ${DB.sentenceList.length} phrases · Mimouch 🐈</p>`;
+    <p class="center small muted" style="margin-top:18px">Kelma v5 · contenu v${CONTENT.version} · ${DB.wordList.length} mots · ${DB.sentenceList.length} phrases · Mimoush 🐈 · ${esc(guideName())}</p>`;
   $('#pName', scr).onchange = e => { S.name = e.target.value.trim().slice(0, 24); save(); };
   $('#pAv', scr).onclick = () => avatarSheet(i => { S.avatar = i; save(); screenProfile(scr); });
   $$('[data-seg]', scr).forEach(sg => $$('button', sg).forEach(b => b.onclick = () => {
@@ -4003,13 +4689,14 @@ function screenProfile(scr) {
   $('#pPersist', scr).onclick = async () => { const ok = await Profiles.askPersist(); toast(ok ? '🛡️ Stockage protégé ✓' : 'Safari n’a pas accordé la protection : installe l’app sur l’écran d’accueil, puis réessaie.', 3600); screenProfile(scr); };
   $$('[data-switch]', scr).forEach(b => b.onclick = () => switchProfile(b.dataset.switch));
   $('#pNew', scr).onclick = () => promptNewProfile(false);
+  $('#pGuide', scr).onclick = () => guidePicker({ skipIntro: true, closable: true, onDone: () => { SHOWN = null; TAB = 'profile'; renderApp(); toast(guideName() + ' t’accompagne !'); } });
   const pin = $('#pPin', scr); if (pin) pin.onclick = () => S.pinHash ? confirmBox('Retirer le code de ce profil ?', 'Retirer', async () => { await Profiles.setPin(Profiles.current, null); screenProfile(scr); }) : pinPad('Choisis un code à 4 chiffres', code => pinPad('Confirme le code', async (c2, sh) => { if (c2 !== code) { toast('Les deux codes ne correspondent pas'); buzz([60, 40, 60]); return; } closeSheet(); await Profiles.setPin(Profiles.current, code); toast('🔒 Code enregistré'); screenProfile(scr); }), 'Il sera demandé pour ouvrir ce profil sur cet appareil.');
   const del = $('#pDel', scr); if (del) del.onclick = () => confirmBox(`Supprimer « ${S.name || 'ce profil'} » et toute sa progression ? Fais une sauvegarde avant si besoin.`, 'Supprimer', () => { Profiles.remove(Profiles.current); SHOWN = null; if (Profiles.ids().length) Profiles.enter(Profiles.ids()[0]); else { Profiles.current = null; S = defaultState(); } TAB = 'learn'; renderApp(); toast('Profil supprimé'); }, true);
   const rs = $('#pReset', scr); if (rs) rs.onclick = () => confirmBox('Remettre ce profil à zéro ? Progression, cartes et badges seront effacés.', 'Tout effacer', () => { const keep = { name: S.name, avatar: S.avatar, pinHash: S.pinHash, created: S.created }; S = migrate(Object.assign(defaultState(), keep, { onboarded: true })); save(); TAB = 'learn'; SHOWN = null; renderApp(); toast('Profil remis à zéro'); }, true);
 }
 function importState(txt) { importFlow(txt); }
 function avatarSheet(onPick) {
-  openSheet(`<h2>Choisis ton Mimouch</h2><div class="avgrid">${AVATARS.map((a, i) => `<button class="avcell ${i === (S.avatar || 0) ? 'on' : ''}" data-av="${i}" aria-label="${esc(a.name)}"><span class="mim-frame arch">${mimSVG('happy', a.name, i)}</span><small>${esc(a.name)}</small></button>`).join('')}</div>`, sh => $$('[data-av]', sh).forEach(b => b.onclick = () => { closeSheet(); onPick(+b.dataset.av); }));
+  openSheet(`<h2>Choisis ton Mimoush</h2><div class="avgrid">${AVATARS.map((a, i) => `<button class="avcell ${i === (S.avatar || 0) ? 'on' : ''}" data-av="${i}" aria-label="${esc(a.name)}"><span class="mim-frame arch">${catSVG('happy', a.name, i)}</span><small>${esc(a.name)}</small></button>`).join('')}</div>`, sh => $$('[data-av]', sh).forEach(b => b.onclick = () => { closeSheet(); onPick(+b.dataset.av); }));
 }
 /* Pavé à 4 chiffres (création ou saisie du code) */
 function pinPad(title, onDone, sub) {
@@ -4035,7 +4722,7 @@ function promptNewProfile(fromGuest) {
   let av = Math.floor(Math.random() * AVATARS.length);
   openSheet(`<h2>${fromGuest ? 'Garder ta progression' : 'Nouveau profil'}</h2><p class="muted small">${fromGuest ? 'Ta session invité devient un vrai profil, enregistré sur cet appareil.' : 'Chaque profil a sa progression, sa série et ses réglages.'}</p>
     <input class="search" id="npName" style="background-image:none;padding-left:16px;margin:10px 0" maxlength="24" placeholder="Prénom" autocomplete="off" aria-label="Prénom">
-    <div class="avgrid">${AVATARS.map((a, i) => `<button class="avcell ${i === av ? 'on' : ''}" data-av="${i}" aria-label="${esc(a.name)}"><span class="mim-frame arch">${mimSVG('happy', a.name, i)}</span></button>`).join('')}</div>
+    <div class="avgrid">${AVATARS.map((a, i) => `<button class="avcell ${i === av ? 'on' : ''}" data-av="${i}" aria-label="${esc(a.name)}"><span class="mim-frame arch">${catSVG('happy', a.name, i)}</span></button>`).join('')}</div>
     <button class="btn arch-btn" id="npGo" style="margin-top:12px">Créer</button>`, sh => {
     $$('[data-av]', sh).forEach(b => b.onclick = () => { av = +b.dataset.av; $$('[data-av]', sh).forEach(x => x.classList.toggle('on', x === b)); });
     $('#npGo', sh).onclick = () => {
@@ -4050,8 +4737,8 @@ function promptNewProfile(fromGuest) {
 function renderPicker() {
   applyTheme();
   const app = $('#app');
-  app.innerHTML = `<main class="screen" id="scr" style="padding-bottom:calc(var(--sab) + 24px)"><div class="welcome" style="padding-top:20px"><div class="wordmark">darja<b>dz</b></div><h2 style="margin-top:8px">Qui apprend aujourd’hui ?</h2></div>
-    <div class="pickgrid">${Profiles.ids().map(id => { const st = Profiles.states[id]; return `<button class="pickcell" data-pick="${id}"><span class="mim-frame arch">${mimSVG('happy', '', st.avatar)}</span><b class="ttl">${esc(st.name || 'Sans nom')}</b><small class="muted">${st.pinHash ? '🔒 ' : ''}${st.xp} XP</small></button>`; }).join('')}
+  app.innerHTML = `<main class="screen" id="scr" style="padding-bottom:calc(var(--sab) + 24px)"><div class="welcome" style="padding-top:20px"><div class="wordmark">kel<b>ma</b></div><h2 style="margin-top:8px">Qui apprend aujourd’hui ?</h2></div>
+    <div class="pickgrid">${Profiles.ids().map(id => { const st = Profiles.states[id]; return `<button class="pickcell" data-pick="${id}"><span class="mim-frame arch">${catSVG('happy', '', st.avatar)}</span><b class="ttl">${esc(st.name || 'Sans nom')}</b><small class="muted">${st.pinHash ? '🔒 ' : ''}${st.xp} XP</small></button>`; }).join('')}
       <button class="pickcell" id="pkNew"><span class="mim-frame arch" style="display:flex;align-items:center;justify-content:center;font-size:30px">＋</span><b class="ttl">Nouveau</b></button></div>
     <button class="btn ghost" id="pkGuest" style="margin-top:18px">Continuer en invité</button></main>`;
   $$('[data-pick]', app).forEach(b => b.onclick = () => switchProfile(b.dataset.pick));
@@ -4071,16 +4758,16 @@ function onboarding(step) {
   const head = (n, title, mimText) => `<div class="row" style="margin:6px 0 18px">${n > 1 ? `<button class="close" id="obBack" aria-label="Retour">${ICON.back}</button>` : ''}<div class="pbar"><i style="width:${n * 20}%"></i></div></div>
     ${mimText ? `<div style="margin-bottom:16px">${mimRow('neutral', mimText)}</div>` : ''}<h1 style="margin-bottom:16px">${title}</h1>`;
   if (step === 0) {
-    scr.innerHTML = `<div class="welcome"><div class="giant-ar">واش راك</div><div class="mim-frame arch lg">${mimSVG('happy')}</div>
-      <div class="wordmark">darja<b>dz</b></div>
-      <p class="muted" style="font-size:1.05rem;margin:8px 10px 0">La darija d’Alger, celle qu’on parle vraiment au café, dans la 7ouma et en famille.</p>
-      <div class="speech" style="display:inline-block;margin:22px auto 0;text-align:center"><b>Ana Mimouch, el mech ta3 la Casbah 😼</b><small>Moi c’est Mimouch, le chat de la Casbah. Je t’accompagne !</small></div></div>
+    scr.innerHTML = `<div class="welcome"><div class="welcome-art" aria-hidden="true"><i class="pat"></i>${casbahSVG()}</div><div class="mim-frame arch lg">${mimSVG('wave')}</div>
+      <div class="wordmark">kel<b>ma</b></div>
+      <p class="muted" style="font-size:1.05rem;margin:8px 10px 0">${esc((currentGuide() || GUIDES.zinou).tagline)}</p>
+      <div class="speech" style="display:inline-block;margin:22px auto 0;text-align:center"><b>${esc((currentGuide() || GUIDES.zinou).intro.dz)}</b><small>${esc((currentGuide() || GUIDES.zinou).intro.fr)}</small></div></div>
       <input class="search" id="obName" style="background-image:none;padding-left:16px;margin-top:22px;text-align:center" maxlength="24" placeholder="Ton prénom (facultatif)" autocomplete="off" aria-label="Ton prénom" value="${esc(S.name)}">
       <div style="margin-top:12px"><button class="btn arch-btn" id="obGo">Yallah, on commence</button></div>
       <div class="row" style="margin-top:8px"><button class="btn link grow" id="obImp">J’ai déjà une sauvegarde</button><button class="btn link grow" id="obGuest">Essayer en invité</button></div>`;
     $('#obGo', scr).onclick = () => { Sfx.ensure(); S.name = $('#obName', scr).value.trim().slice(0, 24); onboarding(1); };
     $('#obImp', scr).onclick = () => transferSheet();
-    $('#obGuest', scr).onclick = () => { Profiles.enterGuest(); S.name = $('#obName', scr).value.trim() || 'Invité'; onboarding(1); };
+    $('#obGuest', scr).onclick = () => { const gm = S.mascot, gv = S.version; Profiles.enterGuest(); S.mascot = gm; S.version = gv; S.name = $('#obName', scr).value.trim() || 'Invité'; onboarding(1); };
     return;
   }
   if (step === 1) { scr.innerHTML = head(1, 'Pourquoi la darija ?', { dz: '9olli, 3lach?', fr: 'Dis-moi, pourquoi ?' }) + opts([['famille', '👨‍👩‍👧', 'Pour la famille', 'Parler avec les proches, les grands-parents'], ['voyage', '✈️', 'Pour voyager', 'Me débrouiller à Alger et ailleurs'], ['travail', '💼', 'Pour le travail', 'Collègues, clients, partenaires'], ['culture', '🎶', 'Pour la culture', 'Musique, films, humour']]); bindOpt('goal', 2); }
@@ -4193,7 +4880,7 @@ function shareBlock(L, url, code, label, text) {
   const payloadText = linkWorks() ? url : code;
   $('#dlCopy', L.body).onclick = () => copyText(payloadText, 'Copié ✓ Envoie-le à ton ami !');
   $('#dlShare', L.body).onclick = () => {
-    if (navigator.share) navigator.share({ title: 'Darja Dz', text: text + (linkWorks() ? '' : '\nCode : ' + code), url: linkWorks() ? url : undefined }).catch(() => {});
+    if (navigator.share) navigator.share({ title: 'Kelma', text: text + (linkWorks() ? '' : '\nCode : ' + code), url: linkWorks() ? url : undefined }).catch(() => {});
     else copyText(payloadText, 'Copié ✓ Colle-le dans ta messagerie');
   };
 }
@@ -4246,9 +4933,9 @@ function showVS(r, role) {
   if (role === 'guest') {
     const code = b64u.enc(r), url = baseURL() + '#duelr=' + code;
     L.body.insertAdjacentHTML('beforeend', '<p class="muted center">Renvoie ton résultat à ' + esc(r.n) + ' pour qu’il voie la comparaison.</p>');
-    shareBlock(L, url, code, 'Lien de résultat', `⚔️ Duel Darja Dz : ${r.fn} ${r.fs}/10 contre ${r.n} ${r.s}/10 !`);
+    shareBlock(L, url, code, 'Lien de résultat', `⚔️ Duel Kelma : ${r.fn} ${r.fs}/10 contre ${r.n} ${r.s}/10 !`);
   }
-  L.foot.innerHTML = `<button class="btn" id="dvNew">${role === 'guest' && !S.onboarded ? 'Découvrir Darja Dz' : 'Nouveau duel'}</button>`;
+  L.foot.innerHTML = `<button class="btn" id="dvNew">${role === 'guest' && !S.onboarded ? 'Découvrir Kelma' : 'Nouveau duel'}</button>`;
   $('#dvNew', L.foot).onclick = () => { L.layer.remove(); if (!S.onboarded) { renderApp(); return; } duelHome(); };
 }
 function handleHash() {

@@ -1,7 +1,7 @@
-/* Darja Dz — service worker (hors ligne). Aucun serveur : simple cache du navigateur.
+/* Kelma — service worker (hors ligne). Aucun serveur : simple cache du navigateur.
    Change VERSION à chaque mise à jour du fichier HTML pour forcer le rafraîchissement. */
-const VERSION = 'darjadz-v4.0.0';
-const SHELL = ['./', './index.html', './darja-dz.html', './manifest.json',
+const VERSION = 'kelma-pop-1';
+const SHELL = ['./', './index.html', './manifest.json',
   './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'];
 const RUNTIME_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com', 'cdn.jsdelivr.net'];
 
@@ -24,7 +24,7 @@ self.addEventListener('fetch', e => {
   /* Page HTML : réseau d'abord (pour recevoir les mises à jour), cache si hors ligne */
   if (req.mode === 'navigate') {
     e.respondWith(fetch(req).then(r => { const cp = r.clone(); caches.open(VERSION).then(c => c.put(req, cp)); return r; })
-      .catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match('./index.html')).then(r => r || caches.match('./darja-dz.html'))));
+      .catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match('./index.html'))));
     return;
   }
   /* Polices et bibliothèques CDN : cache puis mise à jour en arrière-plan */
