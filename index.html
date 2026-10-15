@@ -4110,6 +4110,1545 @@ CONTENT_BY.ma.grammar.push(
     tip:'Au pluriel (les dents, les yeux) : kayderrouni.' }
 );
 
+/* =====================================================================
+   VERSION TUNISIENNE (tounsi de Tunis) — avec Nesr.
+   Même format et mêmes identifiants d’unités / leçons que les autres versions.
+   TODO(native) : tout ce contenu est à faire relire par un locuteur tunisien.
+   ===================================================================== */
+CONTENT_BY.tn = {
+  version: 1,
+  characters: {
+    'Ommi':           { emoji: '👩🏻‍🦳', color: '#C2410C', desc: 'La maman de Karim' },
+    'Karim':          { emoji: '🧑🏻',    color: '#0F766E', desc: 'Le gars de la 7ouma' },
+    'Khalti Fatiha':  { emoji: '👵🏽',    color: '#7C3AED', desc: 'La voisine, la tante de tout le monde' },
+    'Amine':          { emoji: '🧑🏽‍🦱', color: '#1D4ED8', desc: 'L’ami de Karim' },
+    'Le vendeur':     { emoji: '🧔🏻',    color: '#92400E', desc: 'Vendeur' },
+    'Le chauffeur':   { emoji: '🚕',      color: '#A16207', desc: 'Chauffeur de taxi' },
+    'Le pharmacien':  { emoji: '🧑🏻‍⚕️', color: '#0F766E', desc: 'Le pharmacien du quartier' },
+    'Jeddi':          { emoji: '👴🏽',    color: '#92400E', desc: 'Le grand-père de Karim' },
+    'Toi':            { emoji: '🙂',      color: '#0A78D1', desc: 'Toi' }
+  },
+  units: [
+  /* ------------------------------------------------------------- U1 */
+  {
+    id: 'u1', title: 'Salutations & politesse', icon: '👋', color: '#0A78D1',
+    words: [
+      { id:'u1_aslema', fr:'Salut / Bonjour', ar:'عسلامة', arabizi:'aslema', phon:'asléma', register:'neutre', alt:['3aslema','asslema','aslama'], example:'u1s1' },
+      { id:'u1_ahla', fr:'Salut / Bienvenue', ar:'أهلا', arabizi:'ahla', phon:'ahla', register:'neutre', alt:['ahlan','ahlaa'], example:'u1s7' },
+      { id:'u1_salamalikoum', fr:'Bonjour (respectueux, « la paix sur vous »)', ar:'السلام عليكم', arabizi:'salam 3alaykom', phon:'salam âlaykom', register:'respectueux', alt:['salam alaykom','salamou 3alaykom','salam 3likom'], example:'u1s10' },
+      { id:'u1_w3alaykom', fr:'Et sur vous la paix (réponse au salam)', ar:'وعليكم السلام', arabizi:'w 3alaykom salam', phon:'ou âlaykom salam', register:'respectueux', alt:['wa 3alaykom salam','w alaykom salam'] },
+      { id:'u1_sbe7elkhir', fr:'Bonjour (le matin)', ar:'صباح الخير', arabizi:'sbe7 el khir', phon:'sbeh el khir', register:'neutre', alt:['sbeh el khir','sba7 el khir','sbe7 lkhir'] },
+      { id:'u1_msaelkhir', fr:'Bonsoir', ar:'مساء الخير', arabizi:'msa el khir', phon:'msa el khir', register:'neutre', alt:['msa lkhir','masa el khir'] },
+      { id:'u1_chnahwelek', fr:'Comment vas-tu ? (quelles nouvelles ?)', ar:'شنحوالك', arabizi:'chnahwelek', phon:'chnahouelek', register:'neutre', alt:['chna7welek','chnahwalek','chnowa a7walek'], example:'u1s1' },
+      { id:'u1_labes', fr:'Ça va (bien)', ar:'لاباس', arabizi:'labes', phon:'labess', register:'neutre', alt:['labess','la bes','labas'], example:'u1s2' },
+      { id:'u1_l7amdoulillah', fr:'Dieu merci', ar:'الحمد لله', arabizi:'l7amdoulillah', phon:'lhamdoulillah', register:'neutre', alt:['lhamdoulah','el 7amdoulillah','hamdoulah'], example:'u1s2' },
+      { id:'u1_behi', fr:'Bien / D’accord', ar:'باهي', arabizi:'behi', phon:'béhi', register:'neutre', alt:['bahi','bhi','behy'], example:'u1s5' },
+      { id:'u1_y3aychek', fr:'Merci (litt. « qu’il te fasse vivre »)', ar:'يعيّشك', arabizi:'y3aychek', phon:'yâaychek', register:'neutre', alt:['yaychek','3aychek','ya3ychek'], example:'u1s3' },
+      { id:'u1_sa77a', fr:'Bravo / Merci (litt. « santé »)', ar:'صحّة', arabizi:'sa77a', phon:'sahha', register:'neutre', alt:['saha','sa7a','sahha'] },
+      { id:'u1_barcha', fr:'Beaucoup', ar:'برشا', arabizi:'barcha', phon:'barcha', register:'neutre', alt:['barsha','berchaa'], example:'u1s3' },
+      { id:'u1_brabbi', fr:'S’il te plaît', ar:'بربّي', arabizi:'brabbi', phon:'brabbi', register:'neutre', alt:['b rabbi','birabbi','brabi'], example:'u1s9' },
+      { id:'u1_blamzeya', fr:'De rien', ar:'بلا مزيّة', arabizi:'bla mzeya', phon:'bla mzeya', register:'neutre', alt:['blamzeya','bla mziya'] },
+      { id:'u1_sama7ni', fr:'Pardon / Excuse-moi', ar:'سامحني', arabizi:'sama7ni', phon:'samahni', register:'neutre', alt:['samahni','sam7ni'], example:'u1s4' },
+      { id:'u1_ma3lich', fr:'Pas grave / Ce n’est rien', ar:'ماعليش', arabizi:'ma3lich', phon:'mâalich', register:'neutre', alt:['malich','ma 3lich'], example:'u1s8' },
+      { id:'u1_mouchmochkla', fr:'Pas de problème', ar:'موش مشكلة', arabizi:'mouch mochkla', phon:'mouch mochkla', register:'neutre', alt:['moch mochkla','mich mochkla','mouchmochkla'], example:'u1s8' },
+      { id:'u1_ey', fr:'Oui', ar:'إي', arabizi:'ey', phon:'eï', register:'neutre', alt:['eyh','ih','aye'], example:'u1s13' },
+      { id:'u1_le', fr:'Non', ar:'لا', arabizi:'le', phon:'lé', register:'neutre', alt:['la','lé'] },
+      { id:'u1_bislema', fr:'Au revoir', ar:'بالسلامة', arabizi:'bislema', phon:'bisléma', register:'neutre', alt:['beslama','bslema','bislama'], example:'u1s12' },
+      { id:'u1_nchoufek', fr:'À plus tard (litt. « je te vois »)', ar:'نشوفك', arabizi:'nchoufek', phon:'nchoufek', register:'familier', alt:['nchofek','nshoufek'], example:'u1s5' },
+      { id:'u1_tosba7', fr:'Bonne nuit', ar:'تصبح على خير', arabizi:'tosba7 3la khir', phon:'tossbah âla khir', register:'neutre', alt:['tosbah ala khir','tesba7 3la khir'] },
+      { id:'u1_inchallah', fr:'Si Dieu le veut', ar:'إن شاء الله', arabizi:'inchallah', phon:'inchallah', register:'neutre', alt:['inshallah','nchallah'], example:'u1s5' }
+    ],
+    sentences: [
+      { id:'u1s1', fr:'Salut, ça va ?', t:[['aslema,','عسلامة،'],['chnahwelek?','شنحوالك؟']], phon:'asléma, chnahouelek ?', tip:'« chnahwelek » vient de « chnowa a7walek » : quelles sont tes nouvelles ?' },
+      { id:'u1s2', fr:'Ça va, Dieu merci, et toi ?', t:[['labes,','لاباس،'],['l7amdoulillah,','الحمد لله،'],['w','و'],['inti?','انتي؟']], phon:'labess, lhamdoulillah, ou inti ?', tip:'À Tunis, « inti » s’emploie pour un homme comme pour une femme.' },
+      { id:'u1s3', fr:'Merci beaucoup.', t:[['y3aychek','يعيّشك'],['barcha.','برشا.']], phon:'yâaychek barcha.' },
+      { id:'u1s4', fr:'Pardon, je n’ai pas compris.', t:[['sama7ni,','سامحني،'],['ma fhemtech.','ما فهمتش.']], phon:'samahni, ma fhemtech.', tip:'ma + verbe + ch = ne … pas.' },
+      { id:'u1s5', fr:'D’accord, à demain si Dieu le veut.', t:[['behi,','باهي،'],['nchoufek','نشوفك'],['ghodwa','غدوة'],['inchallah.','إن شاء الله.']], phon:'béhi, nchoufek ghodoua inchallah.' },
+      { id:'u1s6', fr:'Comment allez-vous, tout le monde va bien ?', t:[['chnahwelkom,','شنحوالكم،'],['lkol','الكل'],['labes?','لاباس؟']], phon:'chnahouelkom, lkol labess ?' },
+      { id:'u1s7', fr:'Bienvenue à toi !', t:[['ahla','أهلا'],['bik!','بيك!']], phon:'ahla bik !' },
+      { id:'u1s8', fr:'Pas grave, pas de problème.', t:[['ma3lich,','ماعليش،'],['mouch','موش'],['mochkla.','مشكلة.']], phon:'mâalich, mouch mochkla.' },
+      { id:'u1s9', fr:'S’il te plaît, répète.', t:[['brabbi,','بربّي،'],['3awed.','عاود.']], phon:'brabbi, âaoued.' },
+      { id:'u1s10', fr:'Bonjour, comment allez-vous ?', t:[['salam 3alaykom,','السلام عليكم،'],['chnahwelkom?','شنحوالكم؟']], phon:'salam âlaykom, chnahouelkom ?' },
+      { id:'u1s11', fr:'Ça va, merci.', t:[['labes,','لاباس،'],['y3aychek.','يعيّشك.']], phon:'labess, yâaychek.' },
+      { id:'u1s12', fr:'À plus, au revoir !', t:[['nchoufek,','نشوفك،'],['bislema!','بالسلامة!']], phon:'nchoufek, bisléma !' },
+      { id:'u1s13', fr:'Oui, d’accord !', t:[['ey,','إي،'],['behi!','باهي!']], phon:'eï, béhi !' }
+    ],
+    lessons: [
+      { id:'u1l1', title:'Dire bonjour', auto:true, words:['u1_aslema','u1_ahla','u1_salamalikoum','u1_w3alaykom','u1_sbe7elkhir','u1_msaelkhir'], sentences:['u1s7','u1s10'] },
+      { id:'u1l2', title:'Chnahwelek ?', auto:true, words:['u1_chnahwelek','u1_labes','u1_l7amdoulillah','u1_behi'], sentences:['u1s1','u1s2','u1s6','u1s11'] },
+      { id:'u1l3', title:'Merci !', auto:true, words:['u1_y3aychek','u1_sa77a','u1_barcha','u1_brabbi','u1_blamzeya'], sentences:['u1s3','u1s9'] },
+      { id:'u1l4', title:'Pardon, d’accord', auto:true, words:['u1_sama7ni','u1_ma3lich','u1_mouchmochkla','u1_ey','u1_le'], sentences:['u1s4','u1s8','u1s13'] },
+      { id:'u1l5', title:'Scène : dans la 7ouma', auto:true, words:['u1_nchoufek','u1_tosba7','u1_inchallah','u1_bislema'], sentences:['u1s5','u1s12'],
+        extra:[ {type:'dialogue', id:'d_u1'}, {type:'sign', id:'sign_welcome'}, {type:'shadow', item:'u1s1'} ] }
+    ],
+    cultureCard: {
+      title: 'Aslema, behi et barcha',
+      text: [
+        '« Aslema » (de « 3a slama », sois en paix) est le salut tunisien par excellence ; on y répond par « aslema » ou « ahla ».',
+        'Trois mots reviennent dans toutes les phrases : « behi » (bien, d’accord), « barcha » (beaucoup) et « brabbi » (s’il te plaît, litt. « par mon Dieu »).',
+        'Pour remercier, on dit « y3aychek » (qu’il te fasse vivre) ; et après un effort ou un bon plat, un grand « sa77a ! ».'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U2 */
+  {
+    id: 'u2', title: 'Se présenter & famille', icon: '👨‍👩‍👧', color: '#0E7490',
+    words: [
+      { id:'u2_ena', fr:'Moi / Je', ar:'أنا', arabizi:'ena', phon:'éna', register:'neutre', alt:['ana','enaa'], example:'u2s3' },
+      { id:'u2_inti', fr:'Toi', ar:'انتي', arabizi:'inti', phon:'inti', register:'neutre', alt:['enti','nti'], example:'u2s4' },
+      { id:'u2_houwa', fr:'Lui / Il', ar:'هو', arabizi:'houwa', phon:'houa', register:'neutre', alt:['howa','huwa'] },
+      { id:'u2_hiya', fr:'Elle', ar:'هي', arabizi:'hiya', phon:'hia', register:'neutre', alt:['hia','hiyya'] },
+      { id:'u2_esmi', fr:'Mon nom (je m’appelle)', ar:'اسمي', arabizi:'esmi', phon:'essmi', register:'neutre', alt:['ismi','smi'], example:'u2s2' },
+      { id:'u2_metcharfin', fr:'Enchanté(e)', ar:'متشرفين', arabizi:'metcharfin', phon:'metcharfine', register:'neutre', alt:['mtcharfin','mitcharfin'], example:'u2s3' },
+      { id:'u2_ommi', fr:'Ma mère', ar:'أمّي', arabizi:'ommi', phon:'ommi', register:'neutre', alt:['oumi','ommy','mama'], example:'u2s7' },
+      { id:'u2_bouya', fr:'Mon père', ar:'بويا', arabizi:'bouya', phon:'bouya', register:'neutre', alt:['boya','bouia','baba'] },
+      { id:'u2_khouya', fr:'Mon frère', ar:'خويا', arabizi:'khouya', phon:'khouya', register:'neutre', alt:['khoya','khouia'] },
+      { id:'u2_okhti', fr:'Ma sœur', ar:'أختي', arabizi:'okhti', phon:'okhti', register:'neutre', alt:['khti','oukhti'] },
+      { id:'u2_jeddi', fr:'Mon grand-père', ar:'جدّي', arabizi:'jeddi', phon:'djeddi', register:'neutre', alt:['djeddi','jddi'] },
+      { id:'u2_jedda', fr:'Ma grand-mère', ar:'جدّة', arabizi:'jedda', phon:'djedda', register:'neutre', alt:['jadda','djedda'] },
+      { id:'u2_3ammi', fr:'Mon oncle (paternel) / Monsieur (aîné)', ar:'عمّي', arabizi:'3ammi', phon:'âmmi', register:'respectueux', alt:['ammi','3ami'] },
+      { id:'u2_khali', fr:'Mon oncle (maternel)', ar:'خالي', arabizi:'khali', phon:'khali', register:'neutre', alt:['5ali'], example:'u2s10' },
+      { id:'u2_khalti', fr:'Ma tante (maternelle) / Madame (aînée)', ar:'خالتي', arabizi:'khalti', phon:'khalti', register:'respectueux', alt:['5alti','khalty'], example:'u2s10' },
+      { id:'u2_3ammti', fr:'Ma tante (paternelle)', ar:'عمّتي', arabizi:'3ammti', phon:'âmmti', register:'neutre', alt:['ammti','3amti'] },
+      { id:'u2_weldi', fr:'Mon fils', ar:'ولدي', arabizi:'weldi', phon:'ouldi', register:'neutre', alt:['wldi','ouldi'], example:'u2s13' },
+      { id:'u2_benti', fr:'Ma fille', ar:'بنتي', arabizi:'benti', phon:'benti', register:'neutre', alt:['bnti','binti'] },
+      { id:'u2_sghar', fr:'Les enfants', ar:'الصغار', arabizi:'sghar', phon:'ssghar', register:'neutre', alt:['es-sghar','sgar'], example:'u2s9' },
+      { id:'u2_3ayla', fr:'La famille', ar:'العايلة', arabizi:'el 3ayla', phon:'el âayla', register:'neutre', alt:['3ayla','l3ayla','aila'] },
+      { id:'u2_sa7bi', fr:'Mon ami / Mon pote', ar:'صاحبي', arabizi:'sa7bi', phon:'sahbi', register:'familier', alt:['sahbi'] },
+      { id:'u2_m3arres', fr:'Marié', ar:'معرّس', arabizi:'m3arres', phon:'mâarress', register:'neutre', alt:['maarres','m3aress','mezzewej'], example:'u2s9' },
+      { id:'u2_3andi', fr:'J’ai', ar:'عندي', arabizi:'3andi', phon:'âandi', register:'neutre', alt:['andi','3ndi'], example:'u2s6' },
+      { id:'u2_noskon', fr:'J’habite', ar:'نسكن', arabizi:'noskon', phon:'nosskon', register:'neutre', alt:['nouskon','neskon'], example:'u2s12' },
+      { id:'u2_tounes', fr:'Tunis / La Tunisie', ar:'تونس', arabizi:'Tounes', phon:'tounes', register:'neutre', alt:['tunis','tounis','tounes'], example:'u2s5' }
+    ],
+    sentences: [
+      { id:'u2s1', fr:'Comment tu t’appelles ?', t:[['chnowa','شنوّة'],['esmek?','اسمك؟']], phon:'chnoua essmek ?', tip:'« chnowa » = quoi. Litt. « quoi ton nom ? ».' },
+      { id:'u2s2', fr:'Je m’appelle Amine.', t:[['esmi','اسمي'],['Amine.','أمين.']], phon:'essmi Amine.' },
+      { id:'u2s3', fr:'Enchanté, moi c’est Karim.', t:[['metcharfin,','متشرفين،'],['ena','أنا'],['Karim.','كريم.']], phon:'metcharfine, éna Karim.' },
+      { id:'u2s4', fr:'D’où es-tu ?', t:[['mnin','منين'],['inti?','انتي؟']], phon:'mnine inti ?' },
+      { id:'u2s5', fr:'Je suis de Tunis.', t:[['ena','أنا'],['men','من'],['Tounes.','تونس.']], phon:'éna men tounes.', tip:'« Tounes » veut dire à la fois Tunis et la Tunisie.' },
+      { id:'u2s6', fr:'J’ai un frère et deux sœurs.', t:[['3andi','عندي'],['khou','خو'],['w','و'],['zouz','زوز'],['khwet.','خوات.']], phon:'âandi khou ou zouz khouet.', tip:'« zouz » = deux : un mot bien tunisien !' },
+      { id:'u2s7', fr:'Ma mère te passe le bonjour.', t:[['ommi','أمّي'],['tsallem','تسلّم'],['3lik.','عليك.']], phon:'ommi tssallem âlik.' },
+      { id:'u2s8', fr:'Quel âge as-tu ?', t:[['9addech','قدّاش'],['3omrek?','عمرك؟']], phon:'qaddech âomrek ?', tip:'« 9addech » = combien.' },
+      { id:'u2s9', fr:'Je suis marié et j’ai deux enfants.', t:[['ena','أنا'],['m3arres','معرّس'],['w','و'],['3andi','عندي'],['zouz','زوز'],['sghar.','صغار.']], phon:'éna mâarress ou âandi zouz ssghar.' },
+      { id:'u2s10', fr:'Voici mon oncle, et voici ma tante Fatiha.', t:[['hedha','هذا'],['khali,','خالي،'],['w','و'],['hethi','هذي'],['khalti','خالتي'],['Fatiha.','فتيحة.']], phon:'hedha khali, ou hethi khalti Fatiha.', tip:'hedha (m) / hethi (f) = voici, celui-ci / celle-ci.' },
+      { id:'u2s11', fr:'Où habites-tu ?', t:[['win','وين'],['toskon?','تسكن؟']], phon:'ouine tosskon ?' },
+      { id:'u2s12', fr:'J’habite à La Marsa.', t:[['noskon','نسكن'],['fel','في'],['Marsa.','المرسى.']], phon:'nosskon fel Marssa.', tip:'La Marsa, au bord de la mer, au nord de Tunis. « fel » = fi + el (dans le).' },
+      { id:'u2s13', fr:'Bienvenue, comment tu t’appelles, mon fils ?', t:[['ahla','أهلا'],['bik,','بيك،'],['chnowa','شنوّة'],['esmek','اسمك'],['ya','يا'],['weldi?','ولدي؟']], phon:'ahla bik, chnoua essmek ya ouldi ?' },
+      { id:'u2s14', fr:'Tu as des frères et sœurs ?', t:[['3andek','عندك'],['khout?','خوت؟']], phon:'âandek khout ?' },
+      { id:'u2s15', fr:'Que Dieu les garde !', t:[['rabbi','ربّي'],['ykhallihom!','يخلّيهم!']], phon:'rabbi ykhallihom !' }
+    ],
+    lessons: [
+      { id:'u2l1', title:'Moi, toi, lui', auto:true, words:['u2_ena','u2_inti','u2_houwa','u2_hiya','u2_esmi','u2_metcharfin'], sentences:['u2s1','u2s2','u2s3'] },
+      { id:'u2l2', title:'Ma famille', auto:true, words:['u2_ommi','u2_bouya','u2_khouya','u2_okhti','u2_jeddi','u2_jedda'], sentences:['u2s6','u2s7'] },
+      { id:'u2l3', title:'Oncles et tantes', auto:true, words:['u2_3ammi','u2_khali','u2_khalti','u2_3ammti','u2_3ayla'], sentences:['u2s10','u2s14'] },
+      { id:'u2l4', title:'Mariés, enfants', auto:true, words:['u2_weldi','u2_benti','u2_sghar','u2_m3arres','u2_3andi'], sentences:['u2s8','u2s9'] },
+      { id:'u2l5', title:'Scène : Khalti Fatiha', auto:true, words:['u2_sa7bi','u2_noskon','u2_tounes'], sentences:['u2s4','u2s5','u2s11','u2s12','u2s13','u2s15'],
+        extra:[ {type:'dialogue', id:'d_u2'}, {type:'sign', id:'sign_family'}, {type:'shadow', item:'u2s3'} ] }
+    ],
+    cultureCard: {
+      title: 'La famille, et des mots venus d’ailleurs',
+      text: [
+        'En Tunisie, on dit « ommi » (ma mère) et « bouya » (mon père). Et comme partout au Maghreb, toute personne plus âgée devient « khalti » ou « 3ammi ».',
+        'Le tounsi est un carrefour : à côté de l’arabe, il garde des mots berbères, turcs, italiens et français. « Karhba » (voiture) vient de « carrozza », et « bech » (pour) de l’arabe ancien.',
+        '« Tounes » désigne à la fois la capitale et le pays. Les gens de Tunis sont les « Twensa » ; ceux de Sfax, les « Sfaxiens »… chaque ville a son accent.'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U3 */
+  {
+    id: 'u3', title: 'Nombres & argent', icon: '💰', color: '#B45309',
+    words: [
+      { id:'u3_wa7ed', fr:'1 — un', ar:'واحد', arabizi:'wa7ed', phon:'ouahed', register:'neutre', alt:['wahed','wa7d'] },
+      { id:'u3_zouz', fr:'2 — deux', ar:'زوز', arabizi:'zouz', phon:'zouz', register:'neutre', alt:['zoz','zouj'], example:'u3s9' },
+      { id:'u3_tlatha', fr:'3 — trois', ar:'ثلاثة', arabizi:'tlatha', phon:'tlatha', register:'neutre', alt:['tleta','tletha','tlata'] },
+      { id:'u3_arb3a', fr:'4 — quatre', ar:'أربعة', arabizi:'arb3a', phon:'arbâa', register:'neutre', alt:['arba','reb3a','arbaa'], example:'u3s14' },
+      { id:'u3_khamsa', fr:'5 — cinq', ar:'خمسة', arabizi:'khamsa', phon:'khamssa', register:'neutre', alt:['5amsa','khemsa'], example:'u3s4' },
+      { id:'u3_setta', fr:'6 — six', ar:'ستّة', arabizi:'setta', phon:'setta', register:'neutre', alt:['sitta','seta'] },
+      { id:'u3_sab3a', fr:'7 — sept', ar:'سبعة', arabizi:'sab3a', phon:'sabâa', register:'neutre', alt:['seb3a','sabaa'] },
+      { id:'u3_thmanya', fr:'8 — huit', ar:'ثمانية', arabizi:'thmanya', phon:'thmania', register:'neutre', alt:['tmanya','thmenya','thmania'] },
+      { id:'u3_tes3a', fr:'9 — neuf', ar:'تسعة', arabizi:'tes3a', phon:'tessâa', register:'neutre', alt:['tesaa','tis3a'] },
+      { id:'u3_3achra', fr:'10 — dix', ar:'عشرة', arabizi:'3achra', phon:'âchra', register:'neutre', alt:['achra','3ashra'] },
+      { id:'u3_7dach', fr:'11 — onze', ar:'حداش', arabizi:'7dach', phon:'hdach', register:'neutre', alt:['hdach','7dech'] },
+      { id:'u3_thnach', fr:'12 — douze', ar:'ثناش', arabizi:'thnach', phon:'thnach', register:'neutre', alt:['tnach','thnech'] },
+      { id:'u3_3achrin', fr:'20 — vingt', ar:'عشرين', arabizi:'3achrin', phon:'âchrin', register:'neutre', alt:['achrin','3chrin'] },
+      { id:'u3_khamsin', fr:'50 — cinquante', ar:'خمسين', arabizi:'khamsin', phon:'khamssin', register:'neutre', alt:['5amsin','khemsin'] },
+      { id:'u3_miya', fr:'100 — cent', ar:'مية', arabizi:'miya', phon:'mia', register:'neutre', alt:['mya','mia'] },
+      { id:'u3_alf', fr:'1 000 — mille (souvent : 1 dinar)', ar:'ألف', arabizi:'alf', phon:'alf', register:'neutre', alt:['elf'], example:'u3s4' },
+      { id:'u3_9addech', fr:'Combien ?', ar:'قدّاش', arabizi:'9addech', phon:'qaddech', register:'neutre', alt:['qaddech','9adech','kaddech'], example:'u3s1' },
+      { id:'u3_dinar', fr:'Dinar', ar:'دينار', arabizi:'dinar', phon:'dinar', register:'neutre', alt:['dinnar'], example:'u3s8' },
+      { id:'u3_millim', fr:'Millime (1 dinar = 1 000 millimes)', ar:'مليم', arabizi:'millim', phon:'millim', register:'neutre', alt:['millime','mellim','mlim'] },
+      { id:'u3_flous', fr:'L’argent (les sous)', ar:'فلوس', arabizi:'flous', phon:'flouss', register:'neutre', alt:['flouss','flos'], example:'u3s7' },
+      { id:'u3_ghali', fr:'Cher', ar:'غالي', arabizi:'ghali', phon:'ghali', register:'neutre', alt:['ghaali'], example:'u3s3' },
+      { id:'u3_rkhis', fr:'Pas cher', ar:'رخيص', arabizi:'rkhis', phon:'rkhiss', register:'neutre', alt:['rkhiss','r5is'], example:'u3s10' },
+      { id:'u3_sarf', fr:'La monnaie (petite)', ar:'الصرف', arabizi:'sarf', phon:'sarf', register:'neutre', alt:['es-sarf','serf'], example:'u3s5' },
+      { id:'u3_khallas', fr:'Paie ! (payer)', ar:'خلّص', arabizi:'khallas', phon:'khallass', register:'neutre', alt:['khalles','5allas','khless'], example:'u3s6' },
+      { id:'u3_yesser', fr:'Beaucoup (trop)', ar:'يسر', arabizi:'yesser', phon:'yesser', register:'familier', alt:['yasser','yesr'] }
+    ],
+    sentences: [
+      { id:'u3s1', fr:'Combien ça coûte ?', t:[['b9addech','بقدّاش'],['hedha?','هذا؟']], phon:'bqaddech hedha ?', tip:'« b9addech » = à combien.' },
+      { id:'u3s2', fr:'Combien le kilo ?', t:[['b9addech','بقدّاش'],['el kilo?','الكيلو؟']], phon:'bqaddech el kilo ?' },
+      { id:'u3s3', fr:'C’est trop cher.', t:[['ghali','غالي'],['barcha.','برشا.']], phon:'ghali barcha.' },
+      { id:'u3s4', fr:'Cinq dinars.', t:[['khamsa','خمسة'],['alaf.','آلاف.']], phon:'khamssa alaf.', tip:'On compte en millimes : « khamsa alaf » (cinq mille millimes) = 5 dinars.' },
+      { id:'u3s5', fr:'Tu as de la monnaie ?', t:[['3andek','عندك'],['sarf?','صرف؟']], phon:'âandek sarf ?' },
+      { id:'u3s6', fr:'Où est-ce que je paie ?', t:[['win','وين'],['nkhallas?','نخلّص؟']], phon:'ouine nkhallass ?' },
+      { id:'u3s7', fr:'Je n’ai pas d’argent.', t:[['ma 3andich','ما عنديش'],['flous.','فلوس.']], phon:'ma âandich flouss.' },
+      { id:'u3s8', fr:'Cinq cents millimes, c’est-à-dire un demi-dinar.', t:[['khamsmiya,','خمسمية،'],['ya3ni','يعني'],['nos','نص'],['dinar.','دينار.']], phon:'khamssmia, yaâni noss dinar.' },
+      { id:'u3s9', fr:'Donne-moi deux kilos.', t:[['a3tini','أعطيني'],['zouz','زوز'],['kilo.','كيلو.']], phon:'aâtini zouz kilo.' },
+      { id:'u3s10', fr:'Pas cher ! Je le prends.', t:[['rkhis!','رخيص!'],['bech','باش'],['nekhdhou.','ناخذو.']], phon:'rkhiss ! bech nekhdhou.', tip:'« bech » + verbe = futur : je vais le prendre.' },
+      { id:'u3s11', fr:'Combien au total ?', t:[['9addech','قدّاش'],['el kol?','الكل؟']], phon:'qaddech el kol ?' },
+      { id:'u3s12', fr:'Tiens, garde la monnaie.', t:[['hak,','هاك،'],['khalli','خلّي'],['es-sarf','الصرف'],['3andek.','عندك.']], phon:'hak, khalli essarf âandek.' },
+      { id:'u3s13', fr:'Bonjour, qu’est-ce que tu veux ?', t:[['aslema,','عسلامة،'],['chnowa','شنوّة'],['t7ebb?','تحب؟']], phon:'asléma, chnoua thebb ?', tip:'« t7ebb » = tu veux, tu aimes.' },
+      { id:'u3s14', fr:'D’accord, quatre dinars pour toi.', t:[['behi,','باهي،'],['arb3a','أربعة'],['alaf','آلاف'],['3lik.','عليك.']], phon:'béhi, arbâa alaf âlik.' }
+    ],
+    lessons: [
+      { id:'u3l1', title:'De 1 à 5', auto:true, words:['u3_wa7ed','u3_zouz','u3_tlatha','u3_arb3a','u3_khamsa'], sentences:['u3s9','u3s13'] },
+      { id:'u3l2', title:'De 6 à 12', auto:true, words:['u3_setta','u3_sab3a','u3_thmanya','u3_tes3a','u3_3achra','u3_7dach','u3_thnach'], sentences:['u3s11'] },
+      { id:'u3l3', title:'Dinars et millimes', auto:true, words:['u3_3achrin','u3_khamsin','u3_miya','u3_alf','u3_millim','u3_dinar'], sentences:['u3s4','u3s8','u3s14'] },
+      { id:'u3l4', title:'C’est combien ?', auto:true, words:['u3_9addech','u3_flous','u3_ghali','u3_rkhis','u3_yesser'], sentences:['u3s1','u3s2','u3s3','u3s10'] },
+      { id:'u3l5', title:'Scène : à la 7anout', auto:true, words:['u3_sarf','u3_khallas'], sentences:['u3s5','u3s6','u3s7','u3s12'],
+        extra:[ {type:'dialogue', id:'d_u3'}, {type:'sign', id:'sign_money'}, {type:'shadow', item:'u3s1'} ] }
+    ],
+    cultureCard: {
+      title: 'Dinars, millimes et « alaf »',
+      text: [
+        'La monnaie est le dinar tunisien (DT), divisé en 1 000 millimes. À l’oral, on compte presque toujours en millimes : « alf » (mille) veut souvent dire 1 dinar.',
+        '« Khamsa alaf » = 5 dinars, « khamsmiya » = 500 millimes, « dinar w nos » = 1,5 dinar. Sur les étiquettes, on lit 1.500 pour un dinar cinq cents.',
+        'Pour 2, on dit « zouz » : zouz kilo, zouz kahwa… c’est un des mots qui trahit tout de suite un Tunisien.'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U4 */
+  {
+    id: 'u4', title: 'Café & nourriture', icon: '☕', color: '#7C2D12',
+    words: [
+      { id:'u4_kahwa', fr:'Le café', ar:'قهوة', arabizi:'kahwa', phon:'kahoua', register:'neutre', alt:['9ahwa','qahwa','kahoua'], example:'u4s1' },
+      { id:'u4_kapsin', fr:'Le capucin (café crème serré)', ar:'كابوسان', arabizi:'kapsin', phon:'kapssine', register:'familier', loanFr:true, alt:['capucin','kabsin','capsin'], example:'u4s2' },
+      { id:'u4_direct', fr:'Le direct (café au lait)', ar:'ديريكت', arabizi:'direct', phon:'direct', register:'familier', loanFr:true, alt:['dirèk','dirik','derect'] },
+      { id:'u4_tey', fr:'Le thé', ar:'تاي', arabizi:'tey', phon:'teï', register:'neutre', alt:['tay','tei'], example:'u4s8' },
+      { id:'u4_bondok', fr:'Les pignons (pour le thé)', ar:'البندق', arabizi:'bondok', phon:'bondok', register:'neutre', alt:['bondo9','bondoq'], example:'u4s8' },
+      { id:'u4_sokkor', fr:'Le sucre', ar:'السكر', arabizi:'sokkor', phon:'sokkor', register:'neutre', alt:['sokkar','soukar','sokor'], example:'u4s13' },
+      { id:'u4_7lib', fr:'Le lait', ar:'الحليب', arabizi:'7lib', phon:'hlib', register:'neutre', alt:['hlib','el 7lib'] },
+      { id:'u4_kes', fr:'Le verre', ar:'كاس', arabizi:'kes', phon:'kess', register:'neutre', alt:['kas','kess'] },
+      { id:'u4_elma', fr:'L’eau', ar:'الماء', arabizi:'el ma', phon:'el ma', register:'neutre', alt:['ma','lma'], example:'u4s10' },
+      { id:'u4_ji3an', fr:'Affamé (j’ai faim)', ar:'جيعان', arabizi:'ji3an', phon:'djiâane', register:'neutre', alt:['jy3an','jiaan','jiy3an'], example:'u4s5' },
+      { id:'u4_3atchan', fr:'Assoiffé (j’ai soif)', ar:'عطشان', arabizi:'3atchan', phon:'âatchane', register:'neutre', alt:['atchan','3etchan'] },
+      { id:'u4_nekel', fr:'Je mange', ar:'ناكل', arabizi:'nekel', phon:'nékel', register:'neutre', alt:['nakel','nekl'] },
+      { id:'u4_nochrob', fr:'Je bois', ar:'نشرب', arabizi:'nochrob', phon:'nochrob', register:'neutre', alt:['nochreb','nechreb','noshrob'], example:'u4s8' },
+      { id:'u4_n7ebb', fr:'Je veux / J’aime', ar:'نحب', arabizi:'n7ebb', phon:'nhebb', register:'neutre', alt:['nhebb','n7eb','n7ib'] },
+      { id:'u4_famma', fr:'Il y a', ar:'فمّا', arabizi:'famma', phon:'famma', register:'neutre', alt:['fama','fammaa'], example:'u4s3' },
+      { id:'u4_mafammech', fr:'Il n’y a pas', ar:'ما فمّاش', arabizi:'ma fammech', phon:'ma fammech', register:'neutre', alt:['mafammech','ma famech','ma fammach'], example:'u4s4' },
+      { id:'u4_khobz', fr:'Le pain', ar:'الخبز', arabizi:'khobz', phon:'khobz', register:'neutre', alt:['5obz','el khobz'], example:'u4s3' },
+      { id:'u4_chwaya', fr:'Un peu', ar:'شويّة', arabizi:'chwaya', phon:'chouaya', register:'neutre', alt:['chwiya','chouaya','shwaya'] },
+      { id:'u4_tawla', fr:'La table', ar:'الطاولة', arabizi:'tawla', phon:'taoula', register:'neutre', alt:['tawela','ettawla'], example:'u4s11' },
+      { id:'u4_l7am', fr:'La viande', ar:'اللحم', arabizi:'l7am', phon:'lham', register:'neutre', alt:['lham','el 7am'] },
+      { id:'u4_djej', fr:'Le poulet', ar:'الدجاج', arabizi:'djej', phon:'djej', register:'neutre', alt:['jej','djaj','ejjej'] },
+      { id:'u4_7out', fr:'Le poisson', ar:'الحوت', arabizi:'7out', phon:'hout', register:'neutre', alt:['hout','el 7out'] },
+      { id:'u4_lablabi', fr:'Le lablabi (soupe de pois chiches)', ar:'اللبلابي', arabizi:'lablabi', phon:'lablabi', register:'neutre', alt:['leblebi','lablebi'], example:'u4s6' },
+      { id:'u4_brik', fr:'La brick (feuille croustillante à l’œuf)', ar:'البريك', arabizi:'brik', phon:'brik', register:'neutre', alt:['brick','el brik'] },
+      { id:'u4_kousksi', fr:'Le couscous', ar:'الكسكسي', arabizi:'kousksi', phon:'kousskssi', register:'neutre', alt:['kosksi','couscous','kesksi'] },
+      { id:'u4_harissa', fr:'La harissa', ar:'الهريسة', arabizi:'harissa', phon:'harissa', register:'neutre', alt:['hrissa','el harissa'] },
+      { id:'u4_bnin', fr:'Délicieux / Bon', ar:'بنين', arabizi:'bnin', phon:'bnine', register:'neutre', alt:['bnine'], example:'u4s12' }
+    ],
+    sentences: [
+      { id:'u4s1', fr:'Apporte-moi un café, s’il te plaît.', t:[['jibli','جيبلي'],['kahwa,','قهوة،'],['brabbi.','بربّي.']], phon:'djibli kahoua, brabbi.' },
+      { id:'u4s2', fr:'Un capucin, sans sucre.', t:[['kapsin,','كابوسان،'],['bla','بلا'],['sokkor.','سكر.']], phon:'kapssine, bla sokkor.' },
+      { id:'u4s3', fr:'Il y a du pain ?', t:[['famma','فمّا'],['khobz?','خبز؟']], phon:'famma khobz ?' },
+      { id:'u4s4', fr:'Il n’y en a plus, c’est fini.', t:[['ma fammech,','ما فمّاش،'],['wfé.','وفى.']], phon:'ma fammech, oufé.', tip:'« wfé » = c’est fini, épuisé.' },
+      { id:'u4s5', fr:'J’ai très faim.', t:[['ena','أنا'],['ji3an','جيعان'],['barcha.','برشا.']], phon:'éna djiâane barcha.' },
+      { id:'u4s6', fr:'Ce lablabi est délicieux !', t:[['el lablabi','اللبلابي'],['hedha','هذا'],['bnin!','بنين!']], phon:'el lablabi hedha bnine !' },
+      { id:'u4s7', fr:'Tu veux boire quoi ?', t:[['chnowa','شنوّة'],['t7ebb','تحب'],['tochrob?','تشرب؟']], phon:'chnoua thebb tochrob ?' },
+      { id:'u4s8', fr:'Je bois un thé aux pignons.', t:[['nochrob','نشرب'],['tey','تاي'],['bel bondok.','بالبندق.']], phon:'nochrob teï bel bondok.' },
+      { id:'u4s9', fr:'Je n’ai plus faim, Dieu merci.', t:[['chba3t,','شبعت،'],['l7amdoulillah.','الحمد لله.']], phon:'chbâat, lhamdoulillah.' },
+      { id:'u4s10', fr:'L’eau est dans le frigo.', t:[['el ma','الماء'],['fel','في'],['frigidaire.','الفريجيدار.']], phon:'el ma fel frigidaire.', tip:'« fel » = fi + el : dans le.' },
+      { id:'u4s11', fr:'Pose-le sur la table.', t:[['7ottou','حطّو'],['3al','عال'],['tawla.','طاولة.']], phon:'hottou âl taoula.' },
+      { id:'u4s12', fr:'Merci, c’était délicieux.', t:[['y3aychek,','يعيّشك،'],['kenet','كانت'],['bnina.','بنينة.']], phon:'yâaychek, kénet bnina.' },
+      { id:'u4s13', fr:'Avec du sucre ?', t:[['bel','بال'],['sokkor?','سكر؟']], phon:'bel sokkor ?' },
+      { id:'u4s14', fr:'Tiens, bon appétit !', t:[['hak,','هاك،'],['sa77a!','صحّة!']], phon:'hak, sahha !', tip:'« sa77a » : bon appétit, à ta santé, bravo… le mot à tout faire.' }
+    ],
+    lessons: [
+      { id:'u4l1', title:'Au café', auto:true, words:['u4_kahwa','u4_kapsin','u4_direct','u4_tey','u4_bondok','u4_sokkor'], sentences:['u4s1','u4s2','u4s13'] },
+      { id:'u4l2', title:'J’ai faim !', auto:true, words:['u4_ji3an','u4_3atchan','u4_nekel','u4_nochrob','u4_n7ebb','u4_elma'], sentences:['u4s5','u4s7','u4s8'] },
+      { id:'u4l3', title:'Famma, ma fammech', auto:true, words:['u4_famma','u4_mafammech','u4_khobz','u4_chwaya','u4_tawla','u4_7lib','u4_kes'], sentences:['u4s3','u4s4','u4s10','u4s11'] },
+      { id:'u4l4', title:'Les plats', auto:true, words:['u4_l7am','u4_djej','u4_7out','u4_lablabi','u4_brik','u4_kousksi','u4_harissa'], sentences:['u4s6','u4s9'] },
+      { id:'u4l5', title:'Scène : au café', auto:true, words:['u4_bnin'], sentences:['u4s12','u4s14'],
+        extra:[ {type:'dialogue', id:'d_u4'}, {type:'sign', id:'sign_cafe'}, {type:'sign', id:'sign_bakery'}, {type:'shadow', item:'u4s1'} ] }
+    ],
+    cultureCard: {
+      title: 'Capucin, thé aux pignons et lablabi',
+      text: [
+        'Au café tunisien, on commande un « kapsin » (capucin, petit café crème), un « direct » (café au lait) ou un thé vert à la menthe avec des pignons (tey bel bondok).',
+        'Le matin d’hiver, le lablabi (soupe de pois chiches au pain, cumin et harissa) réchauffe tout Tunis. La brick à l’œuf, elle, se mange avec les doigts… sans faire couler le jaune !',
+        'La harissa est partout : elle est même inscrite au patrimoine immatériel de l’UNESCO depuis 2022.'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U5 */
+  {
+    id: 'u5', title: 'Temps & jours', icon: '🕰️', color: '#4338CA',
+    words: [
+      { id:'u5_lyoum', fr:'Aujourd’hui', ar:'اليوم', arabizi:'lyoum', phon:'lyoum', register:'neutre', alt:['el youm','lyom'], example:'u5s5' },
+      { id:'u5_ghodwa', fr:'Demain', ar:'غدوة', arabizi:'ghodwa', phon:'ghodoua', register:'neutre', alt:['ghedwa','ghadwa'], example:'u5s4' },
+      { id:'u5_lbere7', fr:'Hier', ar:'البارح', arabizi:'lbere7', phon:'lbereh', register:'neutre', alt:['lbareh','el bere7','lbera7'] },
+      { id:'u5_sbe7', fr:'Le matin', ar:'الصباح', arabizi:'sbe7', phon:'sbeh', register:'neutre', alt:['sbeh','es-sbe7','sba7'] },
+      { id:'u5_l3chiya', fr:'L’après-midi / Le soir', ar:'العشيّة', arabizi:'l3chiya', phon:'lâchia', register:'neutre', alt:['el 3chiya','lachia'], example:'u5s4' },
+      { id:'u5_lil', fr:'La nuit', ar:'الليل', arabizi:'lil', phon:'lil', register:'neutre', alt:['el lil'] },
+      { id:'u5_sa3a', fr:'L’heure / La montre', ar:'الساعة', arabizi:'es-sa3a', phon:'essaâa', register:'neutre', alt:['sa3a','ssa3a','essaa'], example:'u5s1' },
+      { id:'u5_d9i9a', fr:'Minute', ar:'دقيقة', arabizi:'d9i9a', phon:'dqiqa', register:'neutre', alt:['dqiqa','dkika'] },
+      { id:'u5_jem3a', fr:'La semaine', ar:'جمعة', arabizi:'jem3a', phon:'djemâa', register:'neutre', alt:['jom3a','jemaa'], example:'u5s8' },
+      { id:'u5_chhar', fr:'Mois', ar:'شهر', arabizi:'chhar', phon:'chhar', register:'neutre', alt:['chher','shhar'] },
+      { id:'u5_3am', fr:'Année', ar:'عام', arabizi:'3am', phon:'âm', register:'neutre', alt:['am','3aam'] },
+      { id:'u5_la7ad', fr:'Dimanche', ar:'الأحد', arabizi:'el a7ad', phon:'el ahad', register:'neutre', alt:['la7ad','el ahad','l7ad'] },
+      { id:'u5_thnin', fr:'Lundi', ar:'الاثنين', arabizi:'el thnin', phon:'el thnine', register:'neutre', alt:['thnin','tnin','ethnin'], example:'u5s7' },
+      { id:'u5_thletha', fr:'Mardi', ar:'الثلاثاء', arabizi:'el thletha', phon:'el thletha', register:'neutre', alt:['thletha','tletha','ethletha'] },
+      { id:'u5_larb3a', fr:'Mercredi', ar:'الأربعاء', arabizi:'larb3a', phon:'larbâa', register:'neutre', alt:['el arb3a','larbaa'] },
+      { id:'u5_khmis', fr:'Jeudi', ar:'الخميس', arabizi:'el khmis', phon:'el khmiss', register:'neutre', alt:['khmis','lekhmis'] },
+      { id:'u5_nharjem3a', fr:'Vendredi', ar:'نهار الجمعة', arabizi:'nhar el jem3a', phon:'nhar el djemâa', register:'neutre', alt:['nhar jem3a','nhar el jom3a'], example:'u5s5' },
+      { id:'u5_sebt', fr:'Samedi', ar:'السبت', arabizi:'es-sebt', phon:'essebt', register:'neutre', alt:['sebt','essebt'] },
+      { id:'u5_taw', fr:'Maintenant / Tout de suite', ar:'توّا', arabizi:'taw', phon:'taou', register:'neutre', alt:['tawa','taou'], example:'u5s9' },
+      { id:'u5_bekri', fr:'Tôt / Autrefois', ar:'بكري', arabizi:'bekri', phon:'bekri', register:'neutre', alt:['bakri','bkri'], example:'u5s10' },
+      { id:'u5_dima', fr:'Toujours', ar:'ديما', arabizi:'dima', phon:'dima', register:'neutre', alt:['diima'] },
+      { id:'u5_wa9tech', fr:'Quand ?', ar:'وقتاش', arabizi:'wa9tech', phon:'ouaqtech', register:'neutre', alt:['wa9tach','waqtech','wektech'], example:'u5s3' },
+      { id:'u5_nhar', fr:'Jour (journée)', ar:'نهار', arabizi:'nhar', phon:'nhar', register:'neutre', alt:['nhaar'], example:'u5s10' },
+      { id:'u5_mazel', fr:'Encore / Pas encore', ar:'مازال', arabizi:'mazel', phon:'mazel', register:'neutre', alt:['mazal','mazelt'], example:'u5s12' }
+    ],
+    sentences: [
+      { id:'u5s1', fr:'Quelle heure est-il ?', t:[['9addech','قدّاش'],['es-sa3a?','الساعة؟']], phon:'qaddech essaâa ?', tip:'Litt. « combien l’heure ? ».' },
+      { id:'u5s2', fr:'Il est trois heures et demie.', t:[['es-sa3a','الساعة'],['tlatha','ثلاثة'],['w','و'],['nos.','نص.']], phon:'essaâa tlatha ou noss.', tip:'et quart = « w rba3 », et demie = « w nos », moins le quart = « ghir rba3 ».' },
+      { id:'u5s3', fr:'Quand est-ce que tu viens ?', t:[['wa9tech','وقتاش'],['tji?','تجي؟']], phon:'ouaqtech tji ?' },
+      { id:'u5s4', fr:'Je viens demain après-midi.', t:[['nji','نجي'],['ghodwa','غدوة'],['l3chiya.','العشيّة.']], phon:'nji ghodoua lâchia.' },
+      { id:'u5s5', fr:'Aujourd’hui, c’est vendredi.', t:[['lyoum','اليوم'],['nhar el jem3a.','نهار الجمعة.']], phon:'lyoum nhar el djemâa.' },
+      { id:'u5s6', fr:'Pardon, je suis un peu en retard.', t:[['sama7ni,','سامحني،'],['t3attalt','تعطّلت'],['chwaya.','شويّة.']], phon:'samahni, tâattalt chouaya.' },
+      { id:'u5s7', fr:'Je travaille du lundi au vendredi.', t:[['nekhdem','نخدم'],['mel thnin','مالاثنين'],['lel jem3a.','للجمعة.']], phon:'nekhdem mel thnine lel djemâa.', tip:'En Tunisie, le week-end, c’est samedi et dimanche.' },
+      { id:'u5s8', fr:'On se voit la semaine prochaine.', t:[['netla9aw','نتلاقاو'],['el jem3a','الجمعة'],['ejjeya.','الجاية.']], phon:'netlaqaou el djemâa ejjeya.', tip:'« jem3a » = la semaine ; « nhar el jem3a » = vendredi.' },
+      { id:'u5s9', fr:'Maintenant, je ne peux pas.', t:[['taw','توّا'],['ma nnajjemch.','ما ننجّمش.']], phon:'taou ma nnajjemch.', tip:'« nnajjem » = je peux : un verbe bien tunisien.' },
+      { id:'u5s10', fr:'Je me lève tôt chaque jour.', t:[['nnoudh','ننوض'],['bekri','بكري'],['koll','كل'],['nhar.','نهار.']], phon:'nnoudh bekri koll nhar.' },
+      { id:'u5s11', fr:'Karim, lève-toi, tu es en retard !', t:[['Karim,','كريم،'],['noudh,','نوض،'],['rak','راك'],['t3attalt!','تعطّلت!']], phon:'Karim, noudh, rak tâattalt !' },
+      { id:'u5s12', fr:'Encore cinq minutes, maman !', t:[['mazel','مازال'],['khams','خمس'],['d9aye9,','دقايق،'],['ommi!','أمّي!']], phon:'mazel khamss dqayeq, ommi !' },
+      { id:'u5s13', fr:'Quand est-ce que tu rentres ce soir ?', t:[['wa9tech','وقتاش'],['terja3','ترجع'],['l3chiya?','العشيّة؟']], phon:'ouaqtech terjaâ lâchia ?' },
+      { id:'u5s14', fr:'Vers sept heures, si Dieu le veut.', t:[['m3a','مع'],['sab3a,','سبعة،'],['inchallah.','إن شاء الله.']], phon:'mâa sabâa, inchallah.', tip:'« m3a » + heure = vers telle heure.' },
+      { id:'u5s15', fr:'D’accord, ne sois pas en retard !', t:[['behi,','باهي،'],['ma tet3attalch!','ما تتعطّلش!']], phon:'béhi, ma tetâattalch !' }
+    ],
+    lessons: [
+      { id:'u5l1', title:'Aujourd’hui, demain', auto:true, words:['u5_lyoum','u5_ghodwa','u5_lbere7','u5_taw','u5_bekri','u5_dima'], sentences:['u5s9','u5s10'] },
+      { id:'u5l2', title:'Matin, soir, nuit', auto:true, words:['u5_sbe7','u5_l3chiya','u5_lil','u5_nhar','u5_wa9tech'], sentences:['u5s3','u5s4'] },
+      { id:'u5l3', title:'Quelle heure est-il ?', auto:true, words:['u5_sa3a','u5_d9i9a','u5_jem3a','u5_chhar','u5_3am','u5_mazel'], sentences:['u5s1','u5s2','u5s8'] },
+      { id:'u5l4', title:'Les jours de la semaine', auto:true, words:['u5_la7ad','u5_thnin','u5_thletha','u5_larb3a','u5_khmis','u5_nharjem3a','u5_sebt'], sentences:['u5s5','u5s7'] },
+      { id:'u5l5', title:'Scène : le réveil', auto:true, words:[], sentences:['u5s6','u5s11','u5s12','u5s13','u5s14','u5s15'],
+        extra:[ {type:'dialogue', id:'d_u5'}, {type:'sign', id:'sign_hours'}, {type:'shadow', item:'u5s1'} ] }
+    ],
+    cultureCard: {
+      title: '« Taw », la semaine et la séance unique',
+      text: [
+        '« Taw » veut dire maintenant ; « taw taw », tout de suite… en théorie ! Un « taw nji » (j’arrive) peut durer un petit moment.',
+        'Attention au piège : « jem3a » veut dire « semaine », alors que vendredi se dit « nhar el jem3a ». Le week-end, lui, tombe le samedi et le dimanche.',
+        'En été et pendant Ramadan, beaucoup d’administrations passent à la « séance unique » : on travaille le matin et on profite de l’après-midi.'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U6 */
+  {
+    id: 'u6', title: 'Marché & négociation', icon: '🍅', color: '#B91C1C',
+    words: [
+      { id:'u6_souk', fr:'Le marché (le souk)', ar:'السوق', arabizi:'souk', phon:'souq', register:'neutre', alt:['souq','sou9','es-souk'], example:'u6s7' },
+      { id:'u6_7anout', fr:'Boutique / Épicerie', ar:'حانوت', arabizi:'7anout', phon:'hanout', register:'neutre', alt:['hanout','el 7anout'] },
+      { id:'u6_nechri', fr:'J’achète', ar:'نشري', arabizi:'nechri', phon:'nechri', register:'neutre', alt:['nichri','nechry'] },
+      { id:'u6_nbi3', fr:'Je vends', ar:'نبيع', arabizi:'nbi3', phon:'nbiâ', register:'neutre', alt:['nbia','nbi3'], example:'u6s8' },
+      { id:'u6_soum', fr:'Le prix', ar:'السوم', arabizi:'soum', phon:'soum', register:'neutre', alt:['es-soum','som'], example:'u6s8' },
+      { id:'u6_akhersoum', fr:'Dernier prix', ar:'آخر سوم', arabizi:'akher soum', phon:'akher soum', register:'neutre', alt:['akhir soum','akhersoum'], example:'u6s3' },
+      { id:'u6_na99es', fr:'Baisse (le prix) !', ar:'نقّص', arabizi:'na99es', phon:'naqqess', register:'neutre', alt:['naqqes','na9es','ne99es'], example:'u6s2' },
+      { id:'u6_kilo', fr:'Kilo', ar:'كيلو', arabizi:'kilo', phon:'kilo', register:'neutre', loanFr:true, alt:['kilu'], example:'u6s1' },
+      { id:'u6_tmatem', fr:'Les tomates', ar:'طماطم', arabizi:'tmatem', phon:'tmatem', register:'neutre', alt:['tmatim','tomatem'], example:'u6s1' },
+      { id:'u6_batata', fr:'Les pommes de terre', ar:'بطاطا', arabizi:'batata', phon:'batata', register:'neutre', alt:['btata','el batata'], example:'u6s5' },
+      { id:'u6_bsal', fr:'Les oignons', ar:'بصل', arabizi:'bsal', phon:'bssal', register:'neutre', alt:['bssal','el bsal'] },
+      { id:'u6_toffe7', fr:'Les pommes', ar:'تفّاح', arabizi:'toffe7', phon:'toffeh', register:'neutre', alt:['tuffe7','teffa7','toffah'] },
+      { id:'u6_banane', fr:'Les bananes', ar:'بانان', arabizi:'banane', phon:'banane', register:'neutre', alt:['banan','benan'] },
+      { id:'u6_9ares', fr:'Le citron', ar:'قارص', arabizi:'9ares', phon:'qaress', register:'neutre', alt:['qares','gares'], example:'u6s6' },
+      { id:'u6_khodhra', fr:'Les légumes', ar:'الخضرة', arabizi:'el khodhra', phon:'el khodhra', register:'neutre', alt:['khodhra','khodra','5odhra'] },
+      { id:'u6_ghalla', fr:'Les fruits', ar:'الغلّة', arabizi:'el ghalla', phon:'el ghalla', register:'neutre', alt:['ghalla','ghala'], example:'u6s7' },
+      { id:'u6_zid', fr:'Ajoute / Encore', ar:'زيد', arabizi:'zid', phon:'zid', register:'neutre', alt:['zide'], example:'u6s6' },
+      { id:'u6_yezzi', fr:'Ça suffit', ar:'يزّي', arabizi:'yezzi', phon:'yezzi', register:'neutre', alt:['yezi','yazzi'], example:'u6s4' },
+      { id:'u6_sel3a', fr:'La marchandise', ar:'السلعة', arabizi:'sel3a', phon:'selâa', register:'neutre', alt:['sela','es-sel3a'] },
+      { id:'u6_mizan', fr:'La balance', ar:'الميزان', arabizi:'el mizan', phon:'el mizane', register:'neutre', alt:['mizan','lmizan'], example:'u6s12' },
+      { id:'u6_chouf', fr:'Regarde !', ar:'شوف', arabizi:'chouf', phon:'chouf', register:'neutre', alt:['chof','shouf'], example:'u6s7' },
+      { id:'u6_mta3', fr:'De / À (appartenance)', ar:'متاع', arabizi:'mta3', phon:'mtaâ', register:'neutre', alt:['mte3','mtaa'], example:'u6s1' },
+      { id:'u6_chnowa', fr:'Quoi / Qu’est-ce que', ar:'شنوّة', arabizi:'chnowa', phon:'chnoua', register:'neutre', alt:['chnoua','chnou'], example:'u6s3' },
+      { id:'u6_9effa', fr:'Le couffin (panier)', ar:'القفّة', arabizi:'9effa', phon:'qeffa', register:'neutre', alt:['qeffa','el 9effa','gouffa'], example:'u6s13' }
+    ],
+    sentences: [
+      { id:'u6s1', fr:'Combien le kilo de tomates ?', t:[['b9addech','بقدّاش'],['el kilo','الكيلو'],['mta3','متاع'],['tmatem?','طماطم؟']], phon:'bqaddech el kilo mtaâ tmatem ?', tip:'« mta3 » = de, à (appartenance).' },
+      { id:'u6s2', fr:'Baisse un peu le prix, s’il te plaît !', t:[['na99es','نقّص'],['chwaya','شويّة'],['brabbi!','بربّي!']], phon:'naqqess chouaya brabbi !' },
+      { id:'u6s3', fr:'C’est quoi le dernier prix ?', t:[['chnowa','شنوّة'],['akher soum?','آخر سوم؟']], phon:'chnoua akher soum ?' },
+      { id:'u6s4', fr:'C’est bon, ça suffit.', t:[['behi,','باهي،'],['yezzi.','يزّي.']], phon:'béhi, yezzi.' },
+      { id:'u6s5', fr:'Donne-moi un kilo de pommes de terre.', t:[['a3tini','أعطيني'],['kilo','كيلو'],['batata.','بطاطا.']], phon:'aâtini kilo batata.' },
+      { id:'u6s6', fr:'Ajoute-moi un peu de citron.', t:[['zidni','زيدني'],['chwaya','شويّة'],['9ares.','قارص.']], phon:'zidni chouaya qaress.' },
+      { id:'u6s7', fr:'Regarde, les fruits sont tout frais !', t:[['chouf,','شوف،'],['el ghalla','الغلّة'],['jdida!','جديدة!']], phon:'chouf, el ghalla djdida !' },
+      { id:'u6s8', fr:'Je vends à un prix raisonnable.', t:[['nbi3','نبيع'],['b','ب'],['soum','سوم'],['m3a9oul.','معقول.']], phon:'nbiâ b soum mâqoul.' },
+      { id:'u6s9', fr:'Pour toi, c’est dix dinars.', t:[['3lik,','عليك،'],['3achra','عشرة'],['alaf.','آلاف.']], phon:'âlik, âchra alaf.' },
+      { id:'u6s10', fr:'C’est trop ! Sept dinars.', t:[['barcha!','برشا!'],['sab3a','سبعة'],['alaf.','آلاف.']], phon:'barcha ! sabâa alaf.' },
+      { id:'u6s11', fr:'D’accord, huit dinars et c’est réglé.', t:[['behi,','باهي،'],['thmanya','ثمانية'],['alaf','آلاف'],['w yezzi.','و يزّي.']], phon:'béhi, thmania alaf ou yezzi.' },
+      { id:'u6s12', fr:'Mets-le sur la balance.', t:[['7ottou','حطّو'],['fel','في'],['mizan.','الميزان.']], phon:'hottou fel mizane.' },
+      { id:'u6s13', fr:'C’est à qui, ce couffin ?', t:[['mta3','متاع'],['chkoun','شكون'],['el 9effa','القفّة'],['hethi?','هذي؟']], phon:'mtaâ chkoun el qeffa hethi ?' },
+      { id:'u6s14', fr:'Tu as bien su marchander, mon fils !', t:[['3reft','عرفت'],['tsawem','تساوم'],['ya','يا'],['weldi!','ولدي!']], phon:'âreft tssaouem ya ouldi !', tip:'« tsawem » = marchander.' }
+    ],
+    lessons: [
+      { id:'u6l1', title:'Au souk', auto:true, words:['u6_souk','u6_7anout','u6_nechri','u6_nbi3','u6_sel3a','u6_chouf'], sentences:['u6s7','u6s8'] },
+      { id:'u6l2', title:'Les légumes', auto:true, words:['u6_tmatem','u6_batata','u6_bsal','u6_khodhra','u6_kilo','u6_mizan'], sentences:['u6s1','u6s5','u6s12'] },
+      { id:'u6l3', title:'Les fruits', auto:true, words:['u6_toffe7','u6_banane','u6_9ares','u6_ghalla','u6_mta3','u6_9effa'], sentences:['u6s6','u6s13'] },
+      { id:'u6l4', title:'Le prix', auto:true, words:['u6_soum','u6_akhersoum','u6_na99es','u6_zid','u6_yezzi','u6_chnowa'], sentences:['u6s2','u6s3','u6s4'] },
+      { id:'u6l5', title:'Scène : négocier au souk', auto:true, words:[], sentences:['u6s9','u6s10','u6s11','u6s14'],
+        extra:[ {type:'dialogue', id:'d_u6'}, {type:'sign', id:'sign_price'}, {type:'shadow', item:'u6s2'} ] }
+    ],
+    cultureCard: {
+      title: 'Le Marché central et la « 9effa »',
+      text: [
+        'Le Marché central de Tunis, avec ses halles pleines de poissons, d’épices et de fruits, est une institution depuis plus d’un siècle.',
+        'On y va avec sa « 9effa », le couffin tressé en palmier ; on goûte, on discute le « soum » (prix), et on demande gentiment : « na99es chwaya, brabbi ».',
+        'Rappelle-toi : « 3achra alaf », ce n’est pas dix mille dinars, mais dix dinars (dix mille millimes) !'
+      ]
+    }
+  }
+  ],
+  comingSoon: [],
+  dialogues: [
+    { id:'d_u1', unit:'u1', title:'Karim croise Amine dans la 7ouma', you:'Amine', lines:[
+      { speaker:'Karim', sentenceId:'u1s1' },
+      { speaker:'Toi', choices:['u1s2','u1s9','u1s7'], correct:0 },
+      { speaker:'Karim', sentenceId:'u1s11' },
+      { speaker:'Karim', sentenceId:'u1s5' },
+      { speaker:'Toi', choices:['u1s3','u1s4','u1s12'], correct:2 }
+    ]},
+    { id:'d_u2', unit:'u2', title:'Khalti Fatiha fait ta connaissance', you:'Amine', lines:[
+      { speaker:'Khalti Fatiha', sentenceId:'u2s13' },
+      { speaker:'Toi', choices:['u2s4','u2s2','u2s8'], correct:1 },
+      { speaker:'Khalti Fatiha', sentenceId:'u2s4' },
+      { speaker:'Toi', choices:['u2s5','u2s7','u2s1'], correct:0 },
+      { speaker:'Khalti Fatiha', sentenceId:'u2s14' },
+      { speaker:'Toi', choices:['u2s12','u2s3','u2s6'], correct:2 },
+      { speaker:'Khalti Fatiha', sentenceId:'u2s15' }
+    ]},
+    { id:'d_u3', unit:'u3', title:'À la 7anout du quartier', you:'Amine', lines:[
+      { speaker:'Le vendeur', sentenceId:'u3s13' },
+      { speaker:'Toi', choices:['u3s1','u2s4','u1s4'], correct:0 },
+      { speaker:'Le vendeur', sentenceId:'u3s4' },
+      { speaker:'Toi', choices:['u3s10','u3s3','u3s5'], correct:1 },
+      { speaker:'Le vendeur', sentenceId:'u3s14' },
+      { speaker:'Toi', choices:['u3s7','u3s4','u3s12'], correct:2 }
+    ]},
+    { id:'d_u4', unit:'u4', title:'Au café de Karim', you:'Amine', lines:[
+      { speaker:'Karim', sentenceId:'u4s7' },
+      { speaker:'Toi', choices:['u4s4','u4s8','u4s10'], correct:1 },
+      { speaker:'Karim', sentenceId:'u4s13' },
+      { speaker:'Toi', choices:['u4s2','u4s5','u4s3'], correct:0 },
+      { speaker:'Karim', sentenceId:'u4s14' },
+      { speaker:'Toi', choices:['u1s4','u4s4','u1s3'], correct:2 }
+    ]},
+    { id:'d_u5', unit:'u5', title:'Ommi réveille Karim', you:'Karim', lines:[
+      { speaker:'Ommi', sentenceId:'u5s11' },
+      { speaker:'Toi', choices:['u5s12','u5s5','u5s2'], correct:0 },
+      { speaker:'Ommi', sentenceId:'u5s13' },
+      { speaker:'Toi', choices:['u5s9','u5s14','u5s8'], correct:1 },
+      { speaker:'Ommi', sentenceId:'u5s15' },
+      { speaker:'Toi', choices:['u5s6','u5s3','u1s12'], correct:2 }
+    ]},
+    { id:'d_u6', unit:'u6', title:'Négocier au souk', you:'Amine', lines:[
+      { speaker:'Le vendeur', sentenceId:'u6s7' },
+      { speaker:'Toi', choices:['u6s1','u6s8','u2s1'], correct:0 },
+      { speaker:'Le vendeur', sentenceId:'u6s9' },
+      { speaker:'Toi', choices:['u6s10','u6s12','u4s9'], correct:0 },
+      { speaker:'Le vendeur', sentenceId:'u6s11' },
+      { speaker:'Toi', choices:['u1s3','u6s3','u1s4'], correct:0 },
+      { speaker:'Ommi', sentenceId:'u6s14' }
+    ]}
+  ],
+  signs: [
+    { id:'sign_welcome', unit:'u1', kind:'shop', title:'مرحبا بكم', sub:'مقهى الياسمين', q:'Que dit ce panneau à l’entrée du café ?', options:['Bienvenue','Fermé','Soldes','Sortie'], correct:0, note:'مرحبا (mar7ba) = bienvenue. مقهى الياسمين = le café du Jasmin.' },
+    { id:'sign_family', unit:'u2', kind:'plate', title:'عائلة بن صالح', sub:'الطابق 2', q:'Sur cette plaque de porte, que signifie عائلة ?', options:['Famille','Bureau','Médecin','Étage'], correct:0, note:'عائلة (standard) = el 3ayla en tounsi : la famille. « الطابق 2 » = 2ᵉ étage.' },
+    { id:'sign_money', unit:'u3', kind:'note', title:'10', sub:'عشرة دنانير', q:'À l’oral, beaucoup de Tunisiens disent 10 dinars…', options:['« 3achra alaf »','« 3achra miya »','« alf »','« mlyoun »'], correct:0, note:'1 dinar = 1 000 millimes ; on compte souvent en millimes : 10 dinars = « 3achra alaf » (dix mille).' },
+    { id:'sign_cafe', unit:'u4', kind:'menu', title:'مقهى الحومة', rows:[['قهوة','1.500 د'],['كابوسان','1.800 د'],['تاي','1.200 د'],['ماء','1.000 د']], q:'Combien coûte un capucin ?', options:['1,800 DT','1,500 DT','1,200 DT','18 DT'], correct:0, note:'كابوسان = kapsin (capucin). 1.800 = 1 dinar 800 millimes : « alf w thmanmiya ».' },
+    { id:'sign_bakery', unit:'u4', kind:'shop', title:'مخبزة', sub:'خبز • حلويات', q:'Qu’est-ce qu’on achète principalement ici ?', options:['Du pain','Des médicaments','Des timbres','De la viande'], correct:0, note:'مخبزة = boulangerie, de خبز (khobz, le pain). حلويات = pâtisseries.' },
+    { id:'sign_hours', unit:'u5', kind:'door', title:'مفتوح', sub:'مغلق يوم الأحد', q:'Quel jour ce magasin est-il fermé ?', options:['Le dimanche','Le samedi','Le vendredi','Le lundi'], correct:0, note:'مفتوح = ouvert, مغلق = fermé, يوم الأحد = le dimanche (el a7ad).' },
+    { id:'sign_price', unit:'u6', kind:'price', rows:[['طماطم','1.200 د'],['بطاطا','0.900 د'],['بصل','0.800 د']], title:'السوق', q:'Combien coûte le kilo de pommes de terre ?', options:['900 millimes','1,200 DT','800 millimes','9 DT'], correct:0, note:'بطاطا = batata. 0.900 = 900 millimes (« tes3amiya »). طماطم = tmatem.' }
+  ],
+  stories: [],
+  placement: [],
+  grammar: [],
+  frLexicon: CONTENT_BY.dz.frLexicon,
+  badges: CONTENT_BY.dz.badges
+};
+
+/* Alphabet : le même, avec des exemples tunisiens (le ڨ s’utilise aussi en Tunisie) */
+(() => {
+  const tn = CONTENT_BY.tn, dz = CONTENT_BY.dz;
+  const ex = { 'ت': { ar:'توّا', arabizi:'taw', fr:'maintenant' }, 'ز': { ar:'زوز', arabizi:'zouz', fr:'deux' }, 'ف': { ar:'فمّا', arabizi:'famma', fr:'il y a' }, 'ق': { ar:'قدّاش', arabizi:'9addech', fr:'combien' }, 'ي': { ar:'يزّي', arabizi:'yezzi', fr:'ça suffit' }, 'ب': { ar:'باهي', arabizi:'behi', fr:'bien' } };
+  tn.alphabet = dz.alphabet.map(l => {
+    const c = JSON.parse(JSON.stringify(l));
+    if (c.ch === 'ڨ') { c.fr = '« g » dur de gâteau (utilisé en Tunisie et en Algérie)'; c.ex = { ar:'ڨطّوس', arabizi:'gattous', fr:'chat' }; }
+    else if (ex[c.ch]) c.ex = ex[c.ch];
+    return c;
+  });
+  tn.alphabetLessons = JSON.parse(JSON.stringify(dz.alphabetLessons));
+  tn.minimalPairs = JSON.parse(JSON.stringify(dz.minimalPairs));
+  const tt = tn.minimalPairs.find(p => p.pair[0] === 'ط');
+  if (tt) tt.items[3] = { word:'توّا', masked:'_وّا', arabizi:'taw', phon:'taou', fr:'maintenant', answer:'ت' };
+})();
+
+/* =====================================================================
+   VERSION TUNISIENNE — unités 7 → 12. TODO(native) : relecture tunisienne.
+   ===================================================================== */
+CONTENT_BY.tn.units.push(
+  /* ------------------------------------------------------------- U7 */
+  {
+    id: 'u7', title: 'Transports & taxi', icon: '🚕', color: '#A16207',
+    words: [
+      { id:'u7_taxi', fr:'Taxi', ar:'تاكسي', arabizi:'taxi', phon:'taxi', register:'neutre', loanFr:true, alt:['taksi','et-taxi'], example:'u7s1' },
+      { id:'u7_louage', fr:'Le louage (taxi collectif entre villes)', ar:'اللواج', arabizi:'louage', phon:'louaj', register:'neutre', loanFr:true, alt:['lwaj','louaj','el louage'], example:'u7s8' },
+      { id:'u7_chifour', fr:'Le chauffeur', ar:'الشيفور', arabizi:'chifour', phon:'chifour', register:'neutre', loanFr:true, alt:['chifor','chauffeur','ech-chifour'], example:'u7s15' },
+      { id:'u7_compteur', fr:'Le compteur', ar:'الكونتور', arabizi:'el compteur', phon:'el compteur', register:'neutre', loanFr:true, alt:['compteur','kontor','el kontor'], example:'u7s3' },
+      { id:'u7_o9ef', fr:'Arrête-toi !', ar:'أقف', arabizi:'o9ef', phon:'oqef', register:'neutre', alt:['oqef','w9ef','okef'], example:'u7s5' },
+      { id:'u7_hezzni', fr:'Emmène-moi', ar:'هزّني', arabizi:'hezzni', phon:'hezzni', register:'neutre', alt:['hezni','hazzni'], example:'u7s2' },
+      { id:'u7_kar', fr:'Le bus', ar:'الكار', arabizi:'el kar', phon:'el kar', register:'neutre', loanFr:true, alt:['kar','car'] },
+      { id:'u7_metro', fr:'Le métro (léger)', ar:'المترو', arabizi:'el metro', phon:'el metro', register:'neutre', loanFr:true, alt:['metro','métro'], example:'u7s7' },
+      { id:'u7_tran', fr:'Le train', ar:'التران', arabizi:'et-tran', phon:'ettran', register:'neutre', loanFr:true, alt:['tran','train','ttran'], example:'u7s9' },
+      { id:'u7_tgm', fr:'Le TGM (train Tunis – La Marsa)', ar:'التي جي آم', arabizi:'TGM', phon:'tgm', register:'neutre', alt:['tgm','ti ji em'] },
+      { id:'u7_ma7atta', fr:'La station / La gare', ar:'المحطّة', arabizi:'el ma7atta', phon:'el mahatta', register:'neutre', alt:['ma7atta','mahatta','station'], example:'u7s2' },
+      { id:'u7_blassa', fr:'Place (siège)', ar:'بلاصة', arabizi:'blassa', phon:'blassa', register:'neutre', loanFr:true, alt:['blasa','plassa'], example:'u7s10' },
+      { id:'u7_m3abbi', fr:'Plein (complet)', ar:'معبّي', arabizi:'m3abbi', phon:'mâabbi', register:'neutre', alt:['mabbi','m3abbe'], example:'u7s8' },
+      { id:'u7_nerkeb', fr:'Je monte (dans un véhicule)', ar:'نركب', arabizi:'nerkeb', phon:'nerkeb', register:'neutre', alt:['nrkeb','norkob'] },
+      { id:'u7_nahbet', fr:'Je descends', ar:'نهبط', arabizi:'nahbet', phon:'nahbet', register:'neutre', alt:['nhabet','nahbt'], example:'u7s6' },
+      { id:'u7_hne', fr:'Ici', ar:'هنا', arabizi:'hne', phon:'hné', register:'neutre', alt:['hna','hnee'], example:'u7s5' },
+      { id:'u7_ghadi', fr:'Là-bas', ar:'غادي', arabizi:'ghadi', phon:'ghadi', register:'neutre', alt:['ghady'], example:'u7s6' },
+      { id:'u7_b3id', fr:'Loin', ar:'بعيد', arabizi:'b3id', phon:'bâid', register:'neutre', alt:['baid','b3ide'], example:'u7s4' },
+      { id:'u7_9rib', fr:'Près', ar:'قريب', arabizi:'9rib', phon:'qrib', register:'neutre', alt:['qrib','grib','krib'] },
+      { id:'u7_thnia', fr:'La route / Le chemin', ar:'الثنية', arabizi:'thnia', phon:'thnia', register:'neutre', alt:['thniya','tnia','ethnia'], example:'u7s12' },
+      { id:'u7_essence', fr:'L’essence', ar:'الإسانس', arabizi:'essence', phon:'essance', register:'neutre', loanFr:true, alt:['lisans','essance'] },
+      { id:'u7_karhba', fr:'La voiture', ar:'الكرهبة', arabizi:'karhba', phon:'karhba', register:'neutre', alt:['kerhba','el karhba'], example:'u7s11' },
+      { id:'u7_emchi', fr:'Va !', ar:'امشي', arabizi:'emchi', phon:'emchi', register:'neutre', alt:['mchi','emchy'] },
+      { id:'u7_ija', fr:'Viens !', ar:'إيجا', arabizi:'ija', phon:'idja', register:'neutre', alt:['ije','aja','idja'], example:'u7s11' },
+      { id:'u7_fissa3', fr:'Vite !', ar:'فيسع', arabizi:'fissa3', phon:'fissaâ', register:'neutre', alt:['fissa','fisaa','fisa3'], example:'u7s9' }
+    ],
+    sentences: [
+      { id:'u7s1', fr:'Taxi ! Tu es libre ?', t:[['taxi!','تاكسي!'],['inti','انتي'],['fergh?','فارغ؟']], phon:'taxi ! inti fergh ?', tip:'« fergh » = vide, libre.' },
+      { id:'u7s2', fr:'Emmène-moi à la gare, s’il te plaît.', t:[['hezzni','هزّني'],['lel ma7atta,','للمحطّة،'],['brabbi.','بربّي.']], phon:'hezzni lel mahatta, brabbi.' },
+      { id:'u7s3', fr:'Mets le compteur, s’il te plaît.', t:[['7ell','حلّ'],['el compteur','الكونتور'],['brabbi.','بربّي.']], phon:'hell el compteur brabbi.', tip:'« 7ell » = ouvre, allume (litt. « ouvre »).' },
+      { id:'u7s4', fr:'C’est loin d’ici ?', t:[['b3id','بعيد'],['3la','على'],['hne?','هنا؟']], phon:'bâid âla hné ?' },
+      { id:'u7s5', fr:'Arrête-toi ici, s’il te plaît.', t:[['o9ef','أقف'],['hne','هنا'],['brabbi.','بربّي.']], phon:'oqef hné brabbi.' },
+      { id:'u7s6', fr:'Je descends là-bas.', t:[['bech','باش'],['nahbet','نهبط'],['ghadi.','غادي.']], phon:'bech nahbet ghadi.', tip:'« ghadi » veut dire « là-bas » en tunisien.' },
+      { id:'u7s7', fr:'Le métro passe devant la gare.', t:[['el metro','المترو'],['yet3adda','يتعدّى'],['9oddem','قدّام'],['el ma7atta.','المحطّة.']], phon:'el metro yetâadda qoddem el mahatta.', tip:'« yet3adda » = il passe.' },
+      { id:'u7s8', fr:'Le louage pour Sousse est plein.', t:[['el louage','اللواج'],['mta3','متاع'],['Sousse','سوسة'],['m3abbi.','معبّي.']], phon:'el louaj mtaâ Sousse mâabbi.', tip:'Le louage part dès que ses huit places sont prises.' },
+      { id:'u7s9', fr:'Vite, le train va partir !', t:[['fissa3,','فيسع،'],['et-tran','التران'],['bech','باش'],['yemchi!','يمشي!']], phon:'fissaâ, ettran bech yemchi !' },
+      { id:'u7s10', fr:'Il reste une place ?', t:[['mazelt','مازالت'],['blassa?','بلاصة؟']], phon:'mazelt blassa ?' },
+      { id:'u7s11', fr:'Viens, monte dans la voiture !', t:[['ija,','إيجا،'],['orkeb','اركب'],['fel','في'],['karhba!','الكرهبة!']], phon:'idja, orkeb fel karhba !' },
+      { id:'u7s12', fr:'Il y a des bouchons sur la route.', t:[['famma','فمّا'],['zo7ma','زحمة'],['fel','في'],['thnia.','الثنية.']], phon:'famma zohma fel thnia.', tip:'« zo7ma » = la foule, les bouchons.' },
+      { id:'u7s13', fr:'Où est-ce que tu vas ?', t:[['win','وين'],['machi?','ماشي؟']], phon:'ouine machi ?' },
+      { id:'u7s14', fr:'Combien la course ?', t:[['b9addech','بقدّاش'],['el course?','الكورس؟']], phon:'bqaddech el course ?' },
+      { id:'u7s15', fr:'Le chauffeur conduit trop vite !', t:[['ech-chifour','الشيفور'],['yesou9','يسوق'],['barcha!','برشا!']], phon:'echchifour yessouq barcha !' }
+    ],
+    lessons: [
+      { id:'u7l1', title:'Taxi !', auto:true, words:['u7_taxi','u7_chifour','u7_compteur','u7_o9ef','u7_hezzni'], sentences:['u7s1','u7s2','u7s3','u7s5'] },
+      { id:'u7l2', title:'Métro, TGM, train', auto:true, words:['u7_kar','u7_metro','u7_tran','u7_tgm','u7_ma7atta'], sentences:['u7s7','u7s9'] },
+      { id:'u7l3', title:'Le louage', auto:true, words:['u7_louage','u7_blassa','u7_m3abbi','u7_nerkeb','u7_nahbet'], sentences:['u7s6','u7s8','u7s10'] },
+      { id:'u7l4', title:'Ici, là-bas', auto:true, words:['u7_hne','u7_ghadi','u7_b3id','u7_9rib','u7_thnia','u7_essence'], sentences:['u7s4','u7s12'] },
+      { id:'u7l5', title:'Scène : une course en taxi', auto:true, words:['u7_karhba','u7_emchi','u7_ija','u7_fissa3'], sentences:['u7s11','u7s13','u7s14','u7s15'],
+        extra:[ {type:'dialogue', id:'d_u7'}, {type:'sign', id:'sign_bus'}, {type:'sign', id:'sign_taxi'}, {type:'shadow', item:'u7s2'} ] }
+    ],
+    cultureCard: {
+      title: 'Taxis jaunes, louages et TGM',
+      text: [
+        'À Tunis, les taxis sont jaunes et roulent au compteur : « 7ell el compteur, brabbi ».',
+        'Pour aller d’une ville à l’autre, on prend un louage : un minibus collectif qui part de la station dès que ses huit places sont prises.',
+        'Le TGM relie Tunis à La Goulette, Carthage, Sidi Bou Saïd et La Marsa en longeant la mer ; dans la ville, le métro léger fait le tour des quartiers.'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U8 */
+  {
+    id: 'u8', title: 'Directions & ville', icon: '🧭', color: '#1D4ED8',
+    words: [
+      { id:'u8_win', fr:'Où ?', ar:'وين', arabizi:'win', phon:'ouine', register:'neutre', alt:['ouin','wine'], example:'u8s1' },
+      { id:'u8_limin', fr:'La droite', ar:'اليمين', arabizi:'limin', phon:'limine', register:'neutre', alt:['el imin','lemin'], example:'u8s2' },
+      { id:'u8_lisar', fr:'La gauche', ar:'اليسار', arabizi:'lisar', phon:'lissar', register:'neutre', alt:['lissar','lisser','el isar'], example:'u8s8' },
+      { id:'u8_toul', fr:'Tout droit', ar:'طول', arabizi:'toul', phon:'toul', register:'neutre', alt:['tol','tool'], example:'u8s2' },
+      { id:'u8_dour', fr:'Tourne !', ar:'دور', arabizi:'dour', phon:'dour', register:'neutre', alt:['dor'], example:'u8s2' },
+      { id:'u8_9bala', fr:'En face', ar:'قبالة', arabizi:'9bala', phon:'qbala', register:'neutre', alt:['qbala','gbala'] },
+      { id:'u8_7dha', fr:'À côté de', ar:'حذا', arabizi:'7dha', phon:'hdha', register:'neutre', alt:['hdha','7da','hda'], example:'u8s3' },
+      { id:'u8_wra', fr:'Derrière', ar:'ورا', arabizi:'wra', phon:'oura', register:'neutre', alt:['wara','oura'], example:'u8s11' },
+      { id:'u8_9oddem', fr:'Devant', ar:'قدّام', arabizi:'9oddem', phon:'qoddem', register:'neutre', alt:['qoddem','9odem','godam'] },
+      { id:'u8_nahj', fr:'La rue', ar:'نهج', arabizi:'nahj', phon:'nahj', register:'neutre', alt:['nahej','nehj'], example:'u8s7' },
+      { id:'u8_zan9a', fr:'La ruelle', ar:'زنقة', arabizi:'zan9a', phon:'zanqa', register:'neutre', alt:['zanqa','zen9a'] },
+      { id:'u8_7ouma', fr:'Le quartier', ar:'الحومة', arabizi:'7ouma', phon:'houma', register:'familier', alt:['houma','el 7ouma'], example:'u8s10' },
+      { id:'u8_medina', fr:'La médina', ar:'المدينة', arabizi:'el medina', phon:'el medina', register:'neutre', alt:['medina','lmdina'], example:'u8s15' },
+      { id:'u8_sbitar', fr:'L’hôpital', ar:'السبيطار', arabizi:'sbitar', phon:'sbitar', register:'neutre', alt:['es-sbitar','sbitare'] },
+      { id:'u8_farmasia', fr:'La pharmacie', ar:'الفرمسية', arabizi:'el farmasia', phon:'el farmassia', register:'neutre', loanFr:true, alt:['farmasia','pharmacie','farmacie'], example:'u8s1' },
+      { id:'u8_bousta', fr:'La poste', ar:'البوسطة', arabizi:'el bousta', phon:'el boussta', register:'neutre', loanFr:true, alt:['bousta','bosta','la poste'], example:'u8s3' },
+      { id:'u8_bank', fr:'La banque', ar:'البنك', arabizi:'el bank', phon:'el bank', register:'neutre', loanFr:true, alt:['bank','banka','la banque'], example:'u8s3' },
+      { id:'u8_rompoan', fr:'Le rond-point', ar:'الرومبوان', arabizi:'rompoan', phon:'rond-point', register:'neutre', loanFr:true, alt:['rond point','rompwan','rondpoint'], example:'u8s8' },
+      { id:'u8_drouj', fr:'Les escaliers', ar:'الدروج', arabizi:'drouj', phon:'drouj', register:'neutre', alt:['droudj','ed-drouj'], example:'u8s4' },
+      { id:'u8_otla3', fr:'Monte ! (à pied)', ar:'اطلع', arabizi:'otla3', phon:'otlaâ', register:'neutre', alt:['atla3','tla3','otla'], example:'u8s4' },
+      { id:'u8_ahbet', fr:'Descends ! (à pied)', ar:'اهبط', arabizi:'ahbet', phon:'ahbet', register:'neutre', alt:['hbet','ahbt'], example:'u8s11' },
+      { id:'u8_dhaye3', fr:'Perdu', ar:'ضايع', arabizi:'dhaye3', phon:'dhayeâ', register:'neutre', alt:['dhay3','daye3','dhaya3'], example:'u8s9' },
+      { id:'u8_bab', fr:'La porte', ar:'باب', arabizi:'bab', phon:'bab', register:'neutre' },
+      { id:'u8_b7ar', fr:'La mer', ar:'البحر', arabizi:'el b7ar', phon:'el bhar', register:'neutre', alt:['b7ar','bhar','lb7ar'], example:'u8s10' },
+      { id:'u8_is2el', fr:'Demande ! (questionner)', ar:'اسأل', arabizi:'is2el', phon:'is-el', register:'neutre', alt:['es2el','isel','sel'], example:'u8s15' }
+    ],
+    sentences: [
+      { id:'u8s1', fr:'Excusez-moi, où est la pharmacie ?', t:[['sama7ni,','سامحني،'],['win','وين'],['el farmasia?','الفرمسية؟']], phon:'samahni, ouine el farmassia ?' },
+      { id:'u8s2', fr:'Va tout droit, puis tourne à droite.', t:[['emchi','امشي'],['toul,','طول،'],['ba3d','بعد'],['dour','دور'],['3al limin.','عاليمين.']], phon:'emchi toul, baâd dour âl limine.', tip:'« 3al » = 3la + el : à la / sur la.' },
+      { id:'u8s3', fr:'La poste est à côté de la banque.', t:[['el bousta','البوسطة'],['7dha','حذا'],['el bank.','البنك.']], phon:'el boussta hdha el bank.' },
+      { id:'u8s4', fr:'Monte ces escaliers, tu la trouveras en face de toi.', t:[['otla3','اطلع'],['ed-drouj','الدروج'],['hedhom,','هذوما،'],['tal9aha','تلقاها'],['9balek.','قبالك.']], phon:'otlaâ eddrouj hedhom, talqaha qbalek.' },
+      { id:'u8s5', fr:'C’est loin ou c’est près ?', t:[['b3id','بعيد'],['walla','ولّا'],['9rib?','قريب؟']], phon:'bâid oualla qrib ?', tip:'« walla » = ou (bien).' },
+      { id:'u8s6', fr:'Je ne suis pas d’ici.', t:[['ena','أنا'],['mouch','موش'],['men','من'],['hne.','هنا.']], phon:'éna mouch men hné.', tip:'« mouch » = ne… pas, devant un nom ou un adjectif.' },
+      { id:'u8s7', fr:'C’est quoi le nom de la rue ?', t:[['chnowa','شنوّة'],['esm','اسم'],['en-nahj?','النهج؟']], phon:'chnoua essm ennahj ?' },
+      { id:'u8s8', fr:'Tourne à gauche au rond-point.', t:[['dour','دور'],['3al lisar','عاليسار'],['fel','في'],['rompoan.','الرومبوان.']], phon:'dour âl lissar fel rond-point.' },
+      { id:'u8s9', fr:'Je suis perdu, tu peux m’aider ?', t:[['ena','أنا'],['dhaye3,','ضايع،'],['tnajjem','تنجّم'],['t3awenni?','تعاونّي؟']], phon:'éna dhayeâ, tnajjem tâaouenni ?' },
+      { id:'u8s10', fr:'Mon quartier est près de la mer.', t:[['7oumti','حومتي'],['9riba','قريبة'],['mel b7ar.','مالبحر.']], phon:'houmti qriba mel bhar.' },
+      { id:'u8s11', fr:'Descends, c’est derrière la banque.', t:[['ahbet,','اهبط،'],['rahi','راهي'],['wra','ورا'],['el bank.','البنك.']], phon:'ahbet, rahi oura el bank.' },
+      { id:'u8s12', fr:'Merci beaucoup, mon frère.', t:[['y3aychek','يعيّشك'],['barcha,','برشا،'],['ya','يا'],['khouya.','خويا.']], phon:'yâaychek barcha, ya khouya.' },
+      { id:'u8s13', fr:'Tu cherches quoi, mon fils ?', t:[['chnowa','شنوّة'],['tlawwej','تلوّج'],['ya','يا'],['weldi?','ولدي؟']], phon:'chnoua tlaouej ya ouldi ?', tip:'« tlawwej 3la » = tu cherches.' },
+      { id:'u8s14', fr:'C’est près, cinq minutes à pied.', t:[['9rib,','قريب،'],['khams','خمس'],['d9aye9','دقايق'],['3la sa9ik.','على ساقيك.']], phon:'qrib, khamss dqayeq âla saqik.', tip:'« 3la sa9ik » = à pied (litt. « sur tes jambes »).' },
+      { id:'u8s15', fr:'Dans la médina, demande toujours ton chemin !', t:[['fel','في'],['medina,','المدينة،'],['dima','ديما'],['is2el','اسأل'],['3al thnia!','عالثنية!']], phon:'fel medina, dima is-el âl thnia !' }
+    ],
+    lessons: [
+      { id:'u8l1', title:'Où est… ?', auto:true, words:['u8_win','u8_farmasia','u8_bousta','u8_bank','u8_sbitar'], sentences:['u8s1','u8s3'] },
+      { id:'u8l2', title:'Droite, gauche', auto:true, words:['u8_limin','u8_lisar','u8_toul','u8_dour','u8_rompoan'], sentences:['u8s2','u8s8'] },
+      { id:'u8l3', title:'Devant, derrière', auto:true, words:['u8_9bala','u8_7dha','u8_wra','u8_9oddem','u8_bab'], sentences:['u8s5','u8s11'] },
+      { id:'u8l4', title:'La médina', auto:true, words:['u8_drouj','u8_otla3','u8_ahbet','u8_nahj','u8_zan9a','u8_medina','u8_b7ar','u8_7ouma'], sentences:['u8s4','u8s7','u8s10','u8s15'] },
+      { id:'u8l5', title:'Scène : perdu dans la médina', auto:true, words:['u8_dhaye3','u8_is2el'], sentences:['u8s6','u8s9','u8s12','u8s13','u8s14'],
+        extra:[ {type:'dialogue', id:'d_u8'}, {type:'sign', id:'sign_pharma'}, {type:'sign', id:'sign_street'}, {type:'shadow', item:'u8s9'} ] }
+    ],
+    cultureCard: {
+      title: 'De Bab Bhar à la médina',
+      text: [
+        'La médina de Tunis, classée au patrimoine mondial de l’UNESCO, est un dédale de souks et de « nahj » (rues) où chaque corporation avait autrefois sa ruelle.',
+        'On y entre souvent par Bab Bhar, la « porte de la mer », au bout de l’avenue Habib Bourguiba, la grande avenue bordée de cafés et de ficus.',
+        'Sur les plaques, « نهج » (nahj) signifie rue. Et si tu es « dhaye3 » (perdu), demande : tout le monde t’expliquera… parfois à trois voix en même temps !'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U9 */
+  {
+    id: 'u9', title: 'Maison', icon: '🏠', color: '#0E7490',
+    words: [
+      { id:'u9_dar', fr:'La maison', ar:'الدار', arabizi:'ed-dar', phon:'eddar', register:'neutre', alt:['dar','eddar'], example:'u9s2' },
+      { id:'u9_bit', fr:'La chambre / La pièce', ar:'البيت', arabizi:'el bit', phon:'el bit', register:'neutre', alt:['bit','lbit'], example:'u9s5' },
+      { id:'u9_koujina', fr:'La cuisine', ar:'الكوجينة', arabizi:'koujina', phon:'koujina', register:'neutre', loanFr:true, alt:['kouzina','cuisine','kojina'] },
+      { id:'u9_sala', fr:'Le salon', ar:'الصالة', arabizi:'es-sala', phon:'essala', register:'neutre', loanFr:true, alt:['sala','salon'] },
+      { id:'u9_bitelma', fr:'Les toilettes', ar:'بيت الماء', arabizi:'bit el ma', phon:'bit el ma', register:'neutre', alt:['bit lma','bitelma'], example:'u9s3' },
+      { id:'u9_7ouch', fr:'La maison traditionnelle à patio', ar:'الحوش', arabizi:'el 7ouch', phon:'el houch', register:'neutre', alt:['7ouch','houch'] },
+      { id:'u9_farch', fr:'Le lit', ar:'الفرش', arabizi:'el farch', phon:'el farch', register:'neutre', alt:['farch','fersh'] },
+      { id:'u9_korsi', fr:'La chaise', ar:'الكرسي', arabizi:'el korsi', phon:'el korssi', register:'neutre', alt:['korsi','kursi'], example:'u9s13' },
+      { id:'u9_chobbek', fr:'La fenêtre', ar:'الشبّاك', arabizi:'chobbek', phon:'chobbek', register:'neutre', alt:['chebbak','chobak','ech-chobbek'] },
+      { id:'u9_sta7', fr:'La terrasse (le toit)', ar:'السطح', arabizi:'es-sta7', phon:'esstah', register:'neutre', alt:['sta7','stah'], example:'u9s12' },
+      { id:'u9_mefte7', fr:'La clé', ar:'المفتاح', arabizi:'el mefte7', phon:'el meftéh', register:'neutre', alt:['mefte7','mafta7','meftah'], example:'u9s7' },
+      { id:'u9_dhaw', fr:'La lumière (l’électricité)', ar:'الضوء', arabizi:'edhaw', phon:'edhaou', register:'neutre', alt:['dhaw','dhow','daw'], example:'u9s4' },
+      { id:'u9_tfi', fr:'Éteins !', ar:'طفي', arabizi:'tfi', phon:'tfi', register:'neutre', alt:['etfi','tafi'], example:'u9s4' },
+      { id:'u9_cha3el', fr:'Allume !', ar:'شعل', arabizi:'cha3el', phon:'chaâl', register:'neutre', alt:['ch3el','chaal'], example:'u9s14' },
+      { id:'u9_norgod', fr:'Je dors', ar:'نرقد', arabizi:'norgod', phon:'norgod', register:'neutre', alt:['nor9od','norqod'], example:'u9s5' },
+      { id:'u9_aghsel', fr:'Lave !', ar:'اغسل', arabizi:'aghsel', phon:'aghssel', register:'neutre', alt:['ghsel','aghssel'], example:'u9s9' },
+      { id:'u9_ndhif', fr:'Propre', ar:'نظيف', arabizi:'ndhif', phon:'ndhif', register:'neutre', alt:['ndif','nthif'], example:'u9s10' },
+      { id:'u9_mwassakh', fr:'Sale', ar:'موسّخ', arabizi:'mwassakh', phon:'mouassakh', register:'neutre', alt:['mousakh','mwasakh','msakh'], example:'u9s11' },
+      { id:'u9_kbir', fr:'Grand', ar:'كبير', arabizi:'kbir', phon:'kbir', register:'neutre', alt:['kebir'] },
+      { id:'u9_sghir', fr:'Petit', ar:'صغير', arabizi:'sghir', phon:'sghir', register:'neutre', alt:['seghir'], example:'u9s5' },
+      { id:'u9_azre9', fr:'Bleu', ar:'أزرق', arabizi:'azre9', phon:'azreq', register:'neutre', alt:['zre9','azraq','azreq'], example:'u9s15' },
+      { id:'u9_jiran', fr:'Les voisins', ar:'الجيران', arabizi:'el jiran', phon:'el djiran', register:'neutre', alt:['jiran','djiran'], example:'u9s8' },
+      { id:'u9_kra', fr:'Le loyer', ar:'الكراء', arabizi:'el kra', phon:'el kra', register:'neutre', alt:['kra','lkra'], example:'u9s6' }
+    ],
+    sentences: [
+      { id:'u9s1', fr:'Bienvenue, entre !', t:[['ahla bik,','أهلا بيك،'],['odkhol!','ادخل!']], phon:'ahla bik, odkhol !' },
+      { id:'u9s2', fr:'La maison a trois chambres.', t:[['ed-dar','الدار'],['fiha','فيها'],['tlatha','ثلاثة'],['byout.','بيوت.']], phon:'eddar fiha tlatha byout.' },
+      { id:'u9s3', fr:'Où sont les toilettes ?', t:[['win','وين'],['bit el ma?','بيت الماء؟']], phon:'ouine bit el ma ?' },
+      { id:'u9s4', fr:'Éteins la lumière, s’il te plaît.', t:[['tfi','طفي'],['edhaw','الضوء'],['brabbi.','بربّي.']], phon:'tfi edhaou brabbi.' },
+      { id:'u9s5', fr:'Je dors dans la petite chambre.', t:[['norgod','نرقد'],['fel','في'],['bit','البيت'],['es-sghir.','الصغير.']], phon:'norgod fel bit essghir.' },
+      { id:'u9s6', fr:'Le loyer est trop cher.', t:[['el kra','الكراء'],['ghali','غالي'],['barcha.','برشا.']], phon:'el kra ghali barcha.' },
+      { id:'u9s7', fr:'Où est la clé ?', t:[['win','وين'],['el mefte7?','المفتاح؟']], phon:'ouine el meftéh ?' },
+      { id:'u9s8', fr:'Les voisins sont gentils.', t:[['el jiran','الجيران'],['mla7.','ملاح.']], phon:'el djiran mlah.' },
+      { id:'u9s9', fr:'Lave la vaisselle !', t:[['aghsel','اغسل'],['el mwa3en!','الماعون!']], phon:'aghssel el mouaâen !', tip:'« el mwa3en » = la vaisselle.' },
+      { id:'u9s10', fr:'La maison est propre.', t:[['ed-dar','الدار'],['ndhifa.','نظيفة.']], phon:'eddar ndhifa.' },
+      { id:'u9s11', fr:'Ta chambre est sale !', t:[['bitek','بيتك'],['mwassakh!','موسّخ!']], phon:'bitek mouassakh !' },
+      { id:'u9s12', fr:'Le soir, on monte sur la terrasse.', t:[['l3chiya','العشيّة'],['notl3ou','نطلعو'],['lel sta7.','للسطح.']], phon:'lâchia notlâou lel stah.' },
+      { id:'u9s13', fr:'Assieds-toi sur la chaise.', t:[['o93ed','اقعد'],['3al','عال'],['korsi.','كرسي.']], phon:'oqâod âl korssi.', tip:'« o93ed » = assieds-toi.' },
+      { id:'u9s14', fr:'Allume la lumière, il fait noir.', t:[['cha3el','شعل'],['edhaw,','الضوء،'],['dhlam.','ظلام.']], phon:'chaâl edhaou, dhlam.', tip:'« dhlam » = il fait noir.' },
+      { id:'u9s15', fr:'Les portes de Sidi Bou Saïd sont bleues.', t:[['biben','بيبان'],['Sidi Bou Said','سيدي بو سعيد'],['zre9.','زرق.']], phon:'biben Sidi Bou Said zreq.', tip:'« biben » = les portes ; « zre9 » = bleus (pluriel de azre9).' },
+      { id:'u9s16', fr:'La maison est grande et propre !', t:[['ed-dar','الدار'],['kbira','كبيرة'],['w','و'],['ndhifa!','نظيفة!']], phon:'eddar kbira ou ndhifa !' }
+    ],
+    lessons: [
+      { id:'u9l1', title:'La maison', auto:true, words:['u9_dar','u9_bit','u9_koujina','u9_sala','u9_bitelma','u9_7ouch'], sentences:['u9s1','u9s2','u9s3'] },
+      { id:'u9l2', title:'Dans ma chambre', auto:true, words:['u9_farch','u9_korsi','u9_chobbek','u9_sta7','u9_mefte7'], sentences:['u9s5','u9s7','u9s13'] },
+      { id:'u9l3', title:'Allume, éteins', auto:true, words:['u9_dhaw','u9_tfi','u9_cha3el','u9_norgod'], sentences:['u9s4','u9s14'] },
+      { id:'u9l4', title:'Propre ou sale ?', auto:true, words:['u9_aghsel','u9_ndhif','u9_mwassakh','u9_kbir','u9_sghir'], sentences:['u9s9','u9s10','u9s11'] },
+      { id:'u9l5', title:'Scène : chez Khalti Fatiha', auto:true, words:['u9_azre9','u9_jiran','u9_kra'], sentences:['u9s6','u9s8','u9s12','u9s15','u9s16'],
+        extra:[ {type:'dialogue', id:'d_u9'}, {type:'sign', id:'sign_rent'}, {type:'shadow', item:'u9s3'} ] }
+    ],
+    cultureCard: {
+      title: 'Murs blancs, portes bleues',
+      text: [
+        'À Sidi Bou Saïd, toutes les maisons sont blanches, avec des portes cloutées et des fenêtres (chobbek) peintes en bleu : une règle respectée depuis près d’un siècle.',
+        'La maison traditionnelle, le « 7ouch », s’ouvre sur un patio intérieur ; on y fait sécher les piments, on y prend le café, et le jasmin grimpe le long des murs.',
+        'Quand on reçoit, on insiste : « o93ed, o93ed ! » (assieds-toi), et un thé ou un café arrive aussitôt.'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U10 */
+  {
+    id: 'u10', title: 'Sentiments', icon: '💚', color: '#BE185D',
+    words: [
+      { id:'u10_fer7an', fr:'Content / Heureux', ar:'فرحان', arabizi:'fer7an', phon:'ferhane', register:'neutre', alt:['farhan','far7an','ferhan'], example:'u10s1' },
+      { id:'u10_merte7', fr:'Tranquille / Serein', ar:'مرتاح', arabizi:'merte7', phon:'merteh', register:'neutre', alt:['mrte7','merta7','merteh'] },
+      { id:'u10_3jebni', fr:'Ça me plaît', ar:'عجبني', arabizi:'3jebni', phon:'âjebni', register:'neutre', alt:['ajebni','3ajebni'], example:'u10s7' },
+      { id:'u10_zhar', fr:'La chance', ar:'الزهر', arabizi:'ez-zhar', phon:'ezzhar', register:'neutre', alt:['zhar','zher'], example:'u10s15' },
+      { id:'u10_ydha77ek', fr:'Drôle (il fait rire)', ar:'يضحّك', arabizi:'ydha77ek', phon:'ydhahhek', register:'neutre', alt:['ydhahhek','yda7ek','ydhahek'], example:'u10s10' },
+      { id:'u10_mitghachech', fr:'Fâché / En colère', ar:'متغشّش', arabizi:'mitghachech', phon:'mitghachech', register:'neutre', alt:['metghachech','mtghachech'], example:'u10s2' },
+      { id:'u10_m9ahher', fr:'Triste (attristé)', ar:'مقهور', arabizi:'m9ahher', phon:'mqahher', register:'neutre', alt:['mqahher','m9aher','maqhour'] },
+      { id:'u10_ta3ben', fr:'Fatigué', ar:'تعبان', arabizi:'ta3ben', phon:'taâben', register:'neutre', alt:['taaben','ta3ban'], example:'u10s3' },
+      { id:'u10_fadit', fr:'J’en ai marre', ar:'فدّيت', arabizi:'fadit', phon:'fadit', register:'familier', alt:['fedit','faddit'], example:'u10s13' },
+      { id:'u10_nebki', fr:'Je pleure', ar:'نبكي', arabizi:'nebki', phon:'nebki', register:'neutre', alt:['nabki','nebky'] },
+      { id:'u10_khayef', fr:'J’ai peur (effrayé)', ar:'خايف', arabizi:'khayef', phon:'khayef', register:'neutre', alt:['khaif','khayf'], example:'u10s6' },
+      { id:'u10_khawwefteni', fr:'Tu m’as fait peur', ar:'خوّفتني', arabizi:'khawwefteni', phon:'khaououefteni', register:'familier', alt:['khawefteni','5awwefteni'], example:'u10s8' },
+      { id:'u10_mochkla', fr:'Problème', ar:'مشكلة', arabizi:'mochkla', phon:'mochkla', register:'neutre', alt:['mouchkla','mechkla'], example:'u10s9' },
+      { id:'u10_sabr', fr:'La patience', ar:'الصبر', arabizi:'es-sabr', phon:'essabr', register:'neutre', alt:['sabr','sber'], example:'u10s12' },
+      { id:'u10_kifech', fr:'Comment ?', ar:'كيفاش', arabizi:'kifech', phon:'kifech', register:'neutre', alt:['kifach','kifash'], example:'u10s14' },
+      { id:'u10_n7ebbek', fr:'Je t’aime', ar:'نحبّك', arabizi:'n7ebbek', phon:'nhebbek', register:'neutre', alt:['nhebbek','n7ebek','n7obek'] },
+      { id:'u10_twa7achtek', fr:'Tu m’as manqué', ar:'توحّشتك', arabizi:'twa7achtek', phon:'touahachtek', register:'neutre', alt:['twahachtek','twa7chtek'], example:'u10s4' },
+      { id:'u10_9alb', fr:'Le cœur', ar:'القلب', arabizi:'el 9alb', phon:'el qalb', register:'neutre', alt:['qalb','9alb'] },
+      { id:'u10_wa7di', fr:'Seul (moi seul)', ar:'وحدي', arabizi:'wa7di', phon:'ouahdi', register:'neutre', alt:['wahdi','wa7dy'], example:'u10s13' },
+      { id:'u10_3lakifek', fr:'Comme tu veux', ar:'على كيفك', arabizi:'3la kifek', phon:'âla kifek', register:'neutre', alt:['ala kifek','3la keifek'], example:'u10s9' },
+      { id:'u10_ya7asra', fr:'Ah, le bon vieux temps…', ar:'يا حسرة', arabizi:'ya 7asra', phon:'ya hasra', register:'familier', alt:['ya hasra','ya7asra'], example:'u10s16' }
+    ],
+    sentences: [
+      { id:'u10s1', fr:'Je suis très content aujourd’hui !', t:[['ena','أنا'],['fer7an','فرحان'],['barcha','برشا'],['lyoum!','اليوم!']], phon:'éna ferhane barcha lyoum !' },
+      { id:'u10s2', fr:'Pourquoi tu es fâché ?', t:[['3lech','علاش'],['mitghachech?','متغشّش؟']], phon:'âlech mitghachech ?', tip:'« 3lech » = pourquoi.' },
+      { id:'u10s3', fr:'Je suis fatigué, je veux dormir.', t:[['ena','أنا'],['ta3ben,','تعبان،'],['n7ebb','نحب'],['norgod.','نرقد.']], phon:'éna taâben, nhebb norgod.' },
+      { id:'u10s4', fr:'Tu m’as manqué, mon frère !', t:[['twa7achtek','توحّشتك'],['ya','يا'],['khouya!','خويا!']], phon:'touahachtek ya khouya !' },
+      { id:'u10s5', fr:'Moi aussi, tu m’as manqué.', t:[['7atta','حتى'],['ena','أنا'],['twa7achtek.','توحّشتك.']], phon:'hatta éna touahachtek.', tip:'« 7atta ena » = moi aussi.' },
+      { id:'u10s6', fr:'N’aie pas peur, ce n’est rien.', t:[['ma tkhafch,','ما تخافش،'],['ma famma','ما فمّا'],['chay.','شيء.']], phon:'ma tkhafch, ma famma chay.', tip:'« ma famma chay » = il n’y a rien.' },
+      { id:'u10s7', fr:'Ça m’a beaucoup plu !', t:[['3jebni','عجبني'],['barcha!','برشا!']], phon:'âjebni barcha !' },
+      { id:'u10s8', fr:'Tu m’as fait peur, ma sœur !', t:[['khawwefteni','خوّفتني'],['ya','يا'],['okhti!','أختي!']], phon:'khaououefteni ya okhti !' },
+      { id:'u10s9', fr:'Comme tu veux, pas de problème.', t:[['3la kifek,','على كيفك،'],['mouch','موش'],['mochkla.','مشكلة.']], phon:'âla kifek, mouch mochkla.' },
+      { id:'u10s10', fr:'Il est drôle, ce Karim !', t:[['Karim','كريم'],['hedha','هذا'],['ydha77ek!','يضحّك!']], phon:'Karim hedha ydhahhek !' },
+      { id:'u10s11', fr:'Pourquoi tu pleures ?', t:[['3lech','علاش'],['tebki?','تبكي؟']], phon:'âlech tebki ?' },
+      { id:'u10s12', fr:'Patience, ça va s’arranger.', t:[['es-sabr,','الصبر،'],['rabbi','ربّي'],['ysahhel.','يسهّل.']], phon:'essabr, rabbi yssahhel.', tip:'« rabbi ysahhel » (Dieu facilitera) : la phrase pour rassurer.' },
+      { id:'u10s13', fr:'Je suis seul à la maison, j’en ai marre.', t:[['ena','أنا'],['wa7di','وحدي'],['fed-dar,','في الدار،'],['fadit.','فدّيت.']], phon:'éna ouahdi feddar, fadit.', tip:'« fadit » = j’en ai marre : très utilisé !' },
+      { id:'u10s14', fr:'Comment tu te sens ?', t:[['kifech','كيفاش'],['t7ess','تحس'],['rou7ek?','روحك؟']], phon:'kifech thess rouhek ?', tip:'« rou7ek » = toi-même.' },
+      { id:'u10s15', fr:'Tu as de la chance !', t:[['3andek','عندك'],['ez-zhar!','الزهر!']], phon:'âandek ezzhar !' },
+      { id:'u10s16', fr:'Ah, le bon vieux temps…', t:[['ya 7asra','يا حسرة'],['3la','على'],['zmen…','زمان…']], phon:'ya hasra âla zmen…', tip:'« zmen » = autrefois.' }
+    ],
+    lessons: [
+      { id:'u10l1', title:'Ça va bien !', auto:true, words:['u10_fer7an','u10_merte7','u10_3jebni','u10_zhar','u10_ydha77ek'], sentences:['u10s1','u10s7','u10s15'] },
+      { id:'u10l2', title:'Ça ne va pas', auto:true, words:['u10_mitghachech','u10_m9ahher','u10_ta3ben','u10_fadit','u10_nebki'], sentences:['u10s2','u10s3','u10s11'] },
+      { id:'u10l3', title:'Peur et soucis', auto:true, words:['u10_khayef','u10_khawwefteni','u10_mochkla','u10_sabr','u10_kifech'], sentences:['u10s6','u10s8','u10s12','u10s14'] },
+      { id:'u10l4', title:'Tu m’as manqué', auto:true, words:['u10_n7ebbek','u10_twa7achtek','u10_9alb','u10_wa7di'], sentences:['u10s4','u10s5','u10s13'] },
+      { id:'u10l5', title:'Scène : les retrouvailles', auto:true, words:['u10_3lakifek','u10_ya7asra'], sentences:['u10s9','u10s10','u10s16'],
+        extra:[ {type:'dialogue', id:'d_u10'}, {type:'shadow', item:'u10s4'} ] }
+    ],
+    cultureCard: {
+      title: 'Dire ce qu’on ressent, à la tunisienne',
+      text: [
+        'En tounsi, on dit simplement « ena fer7an » (je suis content), « ena ta3ben » (je suis fatigué). Au féminin, on ajoute -a : fer7ana, ta3bena.',
+        '« Fadit » (j’en ai marre) et « mitghachech » (fâché) font partie du quotidien ; « 3la kifek » (comme tu veux) calme souvent le jeu.',
+        'Les retrouvailles se fêtent avec « twa7achtek » et de grandes accolades ; et pour rassurer, on invoque la patience : « es-sabr, rabbi ysahhel ».'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U11 */
+  {
+    id: 'u11', title: 'Santé & pharmacie', icon: '💊', color: '#0F766E',
+    words: [
+      { id:'u11_rasi', fr:'Ma tête', ar:'راسي', arabizi:'rasi', phon:'rassi', register:'neutre', alt:['rassi','rasy'], example:'u11s1' },
+      { id:'u11_kerchi', fr:'Mon ventre', ar:'كرشي', arabizi:'kerchi', phon:'kerchi', register:'neutre', alt:['karchi','kirchi'], example:'u11s2' },
+      { id:'u11_snani', fr:'Mes dents', ar:'سنيني', arabizi:'snini', phon:'snini', register:'neutre', alt:['snani','esnini'] },
+      { id:'u11_yedd', fr:'La main', ar:'اليد', arabizi:'el yedd', phon:'el yedd', register:'neutre', alt:['yedd','lyed','yed'] },
+      { id:'u11_sa9', fr:'La jambe / Le pied', ar:'الساق', arabizi:'sa9', phon:'saq', register:'neutre', alt:['saq','es-sa9'], example:'u11s15' },
+      { id:'u11_3in', fr:'L’œil', ar:'العين', arabizi:'el 3in', phon:'el âin', register:'neutre', alt:['3in','ain','l3in'] },
+      { id:'u11_youja3ni', fr:'Ça me fait mal', ar:'يوجعني', arabizi:'youja3ni', phon:'youjâni', register:'neutre', alt:['yoja3ni','youjaani','youj3ni'], example:'u11s1' },
+      { id:'u11_mridh', fr:'Malade', ar:'مريض', arabizi:'mridh', phon:'mridh', register:'neutre', alt:['mrid','marid'], example:'u11s4' },
+      { id:'u11_skhana', fr:'La fièvre', ar:'السخانة', arabizi:'skhana', phon:'sskhana', register:'neutre', alt:['sxana','es-skhana'], example:'u11s3' },
+      { id:'u11_bard', fr:'Le froid / Le rhume', ar:'البرد', arabizi:'el bard', phon:'el bard', register:'neutre', alt:['bard','berd'] },
+      { id:'u11_ka77a', fr:'La toux', ar:'الكحّة', arabizi:'el ka77a', phon:'el kahha', register:'neutre', alt:['ka77a','kaha','ko77a'], example:'u11s6' },
+      { id:'u11_tension', fr:'La tension (artérielle)', ar:'الطونسيون', arabizi:'la tension', phon:'la tension', register:'neutre', loanFr:true, alt:['tension','tansion'] },
+      { id:'u11_tbib', fr:'Le médecin', ar:'الطبيب', arabizi:'et-tbib', phon:'ettbib', register:'neutre', alt:['tbib','ttbib'], example:'u11s5' },
+      { id:'u11_rendezvous', fr:'Le rendez-vous', ar:'الرونديفو', arabizi:'rendez-vous', phon:'randivou', register:'neutre', loanFr:true, alt:['randivou','rondivou','rendez vous'], example:'u11s9' },
+      { id:'u11_carnet', fr:'Le carnet de soins (CNAM)', ar:'الكارني', arabizi:'el carnet', phon:'el karné', register:'neutre', loanFr:true, alt:['carnet','karni','carnet cnam'], example:'u11s11' },
+      { id:'u11_ordonnance', fr:'L’ordonnance', ar:'لوردونونس', arabizi:'l’ordonnance', phon:'lordonnance', register:'neutre', loanFr:true, alt:['ordonnance','lordonnance','ordonons'], example:'u11s10' },
+      { id:'u11_dwa', fr:'Le médicament', ar:'الدواء', arabizi:'ed-dwa', phon:'eddoua', register:'neutre', alt:['dwa','dawa'], example:'u11s6' },
+      { id:'u11_7abba', fr:'Un comprimé', ar:'حبّة', arabizi:'7abba', phon:'habba', register:'neutre', alt:['habba','7aba'], example:'u11s7' },
+      { id:'u11_pommade', fr:'La pommade', ar:'البوماضة', arabizi:'pommade', phon:'pommade', register:'neutre', loanFr:true, alt:['pomada','pommada'] },
+      { id:'u11_erta7', fr:'Repose-toi !', ar:'ارتاح', arabizi:'erta7', phon:'ertah', register:'neutre', alt:['rta7','erte7','ertah'], example:'u11s8' },
+      { id:'u11_khir', fr:'Mieux (en forme)', ar:'خير', arabizi:'khir', phon:'khir', register:'neutre', alt:['kheir','5ir'], example:'u11s12' }
+    ],
+    sentences: [
+      { id:'u11s1', fr:'J’ai mal à la tête.', t:[['rasi','راسي'],['youja3ni.','يوجعني.']], phon:'rassi youjâni.', tip:'Litt. « ma tête me fait mal ». On change juste la partie du corps.' },
+      { id:'u11s2', fr:'J’ai mal au ventre.', t:[['kerchi','كرشي'],['touja3ni.','توجعني.']], phon:'kerchi toujâni.', tip:'kerch est féminin : touja3ni (elle me fait mal).' },
+      { id:'u11s3', fr:'J’ai de la fièvre.', t:[['3andi','عندي'],['skhana.','سخانة.']], phon:'âandi sskhana.' },
+      { id:'u11s4', fr:'Je suis malade depuis hier.', t:[['ena','أنا'],['mridh','مريض'],['mel bere7.','مالبارح.']], phon:'éna mridh mel bereh.' },
+      { id:'u11s5', fr:'Il faut que tu ailles chez le médecin.', t:[['lezem','لازم'],['temchi','تمشي'],['lel tbib.','للطبيب.']], phon:'lézem temchi lel tbib.', tip:'« lezem » = il faut.' },
+      { id:'u11s6', fr:'Vous avez un médicament contre la toux ?', t:[['3andkom','عندكم'],['dwa','دواء'],['lel ka77a?','للكحّة؟']], phon:'âandkom doua lel kahha ?' },
+      { id:'u11s7', fr:'Prends un comprimé trois fois par jour.', t:[['ochrob','اشرب'],['7abba','حبّة'],['tlatha','ثلاثة'],['marrat','مرّات'],['fel nhar.','في النهار.']], phon:'ochrob habba tlatha marrat fel nhar.', tip:'Un comprimé, on le « boit » (ochrob) !' },
+      { id:'u11s8', fr:'Repose-toi bien.', t:[['erta7','ارتاح'],['mli7.','مليح.']], phon:'ertah mlih.' },
+      { id:'u11s9', fr:'J’ai rendez-vous chez le dentiste.', t:[['3andi','عندي'],['rendez-vous','رونديفو'],['3and','عند'],['tbib es-snan.','طبيب السنان.']], phon:'âandi randivou âand tbib essnan.' },
+      { id:'u11s10', fr:'Voici l’ordonnance.', t:[['hak','هاك'],['l’ordonnance.','لوردونونس.']], phon:'hak lordonnance.' },
+      { id:'u11s11', fr:'Tu as ton carnet de soins ?', t:[['3andek','عندك'],['el carnet?','الكارني؟']], phon:'âandek el karné ?', tip:'Le carnet de la CNAM sert à se faire rembourser.' },
+      { id:'u11s12', fr:'Ça va mieux, Dieu merci.', t:[['ena','أنا'],['khir,','خير،'],['l7amdoulillah.','الحمد لله.']], phon:'éna khir, lhamdoulillah.' },
+      { id:'u11s13', fr:'Bon rétablissement !', t:[['labes','لاباس'],['3lik!','عليك!']], phon:'labess âlik !', tip:'Litt. « pas de mal sur toi » : ce qu’on dit à quelqu’un de malade.' },
+      { id:'u11s14', fr:'Qu’est-ce qui te fait mal ?', t:[['chnowa','شنوّة'],['youja3ek?','يوجعك؟']], phon:'chnoua youjâek ?' },
+      { id:'u11s15', fr:'J’ai mal à la jambe depuis ce matin.', t:[['sa9i','ساقي'],['touja3ni','توجعني'],['mel sbe7.','مالصباح.']], phon:'saqi toujâni mel sbeh.' },
+      { id:'u11s16', fr:'Tu as de la fièvre ?', t:[['3andek','عندك'],['skhana?','سخانة؟']], phon:'âandek sskhana ?' }
+    ],
+    lessons: [
+      { id:'u11l1', title:'Où as-tu mal ?', auto:true, words:['u11_rasi','u11_kerchi','u11_snani','u11_youja3ni','u11_yedd','u11_sa9','u11_3in'], sentences:['u11s1','u11s2','u11s14','u11s15'] },
+      { id:'u11l2', title:'Je suis malade', auto:true, words:['u11_mridh','u11_skhana','u11_bard','u11_ka77a','u11_tension'], sentences:['u11s3','u11s4','u11s16'] },
+      { id:'u11l3', title:'Chez le médecin', auto:true, words:['u11_tbib','u11_rendezvous','u11_carnet','u11_ordonnance'], sentences:['u11s5','u11s9','u11s11'] },
+      { id:'u11l4', title:'À la pharmacie', auto:true, words:['u11_dwa','u11_7abba','u11_pommade'], sentences:['u11s6','u11s7','u11s10'] },
+      { id:'u11l5', title:'Scène : chez le pharmacien', auto:true, words:['u11_erta7','u11_khir'], sentences:['u11s8','u11s12','u11s13'],
+        extra:[ {type:'dialogue', id:'d_u11'}, {type:'sign', id:'sign_dose'}, {type:'shadow', item:'u11s1'} ] }
+    ],
+    cultureCard: {
+      title: 'La pharmacie, le carnet et « labes 3lik »',
+      text: [
+        'En Tunisie, le pharmacien est le premier conseiller : il explique la posologie et oriente vers un médecin si besoin. Les pharmacies de nuit assurent une garde dans chaque quartier.',
+        'Avec l’assurance maladie (la CNAM), on garde son « carnet » de soins et ses ordonnances pour être remboursé.',
+        'À une personne malade, on dit « labes 3lik » (pas de mal sur toi) ; et la famille arrive avec une chorba, du miel et des conseils de grand-mère.'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U12 */
+  {
+    id: 'u12', title: 'Travail', icon: '💼', color: '#4338CA',
+    words: [
+      { id:'u12_khedma', fr:'Le travail', ar:'الخدمة', arabizi:'el khedma', phon:'el khedma', register:'neutre', alt:['khedma','lkhedma','5edma'], example:'u12s7' },
+      { id:'u12_nekhdem', fr:'Je travaille', ar:'نخدم', arabizi:'nekhdem', phon:'nekhdem', register:'neutre', alt:['nakhdem','nekhdam'], example:'u12s2' },
+      { id:'u12_san3a', fr:'Le métier', ar:'الصنعة', arabizi:'es-san3a', phon:'essanâa', register:'neutre', alt:['san3a','sanaa'] },
+      { id:'u12_biro', fr:'Le bureau', ar:'البيرو', arabizi:'el biro', phon:'el biro', register:'neutre', loanFr:true, alt:['biro','bureau','birou'], example:'u12s2' },
+      { id:'u12_na3mel', fr:'Je fais', ar:'نعمل', arabizi:'na3mel', phon:'naâmel', register:'neutre', alt:['na3mil','naamel'], example:'u12s14' },
+      { id:'u12_patron', fr:'Le patron', ar:'الباطرون', arabizi:'el patron', phon:'el patron', register:'neutre', loanFr:true, alt:['patron','batron'], example:'u12s3' },
+      { id:'u12_khaddem', fr:'L’employé (le travailleur)', ar:'خدّام', arabizi:'khaddem', phon:'khaddem', register:'neutre', alt:['khaddam','5addem'] },
+      { id:'u12_chahriya', fr:'Le salaire (du mois)', ar:'الشهريّة', arabizi:'ech-chahriya', phon:'echchahria', register:'neutre', alt:['chahriya','chehria'], example:'u12s5' },
+      { id:'u12_conge', fr:'Le congé', ar:'الكونجي', arabizi:'el congé', phon:'el congé', register:'neutre', loanFr:true, alt:['conge','konji','congé'], example:'u12s6' },
+      { id:'u12_bdit', fr:'J’ai commencé', ar:'بديت', arabizi:'bdit', phon:'bdit', register:'neutre', alt:['bdite','bdiit'], example:'u12s15' },
+      { id:'u12_kammelt', fr:'J’ai fini', ar:'كمّلت', arabizi:'kammelt', phon:'kammelt', register:'neutre', alt:['kamalt','kemmelt'], example:'u12s7' },
+      { id:'u12_machghoul', fr:'Occupé', ar:'مشغول', arabizi:'machghoul', phon:'machghoul', register:'neutre', alt:['mechghoul','mchghoul'], example:'u12s4' },
+      { id:'u12_nestanna', fr:'J’attends', ar:'نستنّى', arabizi:'nestanna', phon:'nesstanna', register:'neutre', alt:['nastanna','nstena'], example:'u12s10' },
+      { id:'u12_9raya', fr:'Les études', ar:'القراية', arabizi:'el 9raya', phon:'el qraya', register:'neutre', alt:['qraya','9raya'] },
+      { id:'u12_fac', fr:'La fac (l’université)', ar:'الفاك', arabizi:'el fac', phon:'el fac', register:'neutre', loanFr:true, alt:['fac','la fac'], example:'u12s11' },
+      { id:'u12_s3ib', fr:'Dur / Difficile', ar:'صعيب', arabizi:'s3ib', phon:'sâib', register:'neutre', alt:['sa3ib','saib'], example:'u12s3' },
+      { id:'u12_sahel', fr:'Facile', ar:'ساهل', arabizi:'sahel', phon:'sahel', register:'neutre', alt:['sahl','sehel'], example:'u12s12' },
+      { id:'u12_lewra9', fr:'Les papiers (administratifs)', ar:'الأوراق', arabizi:'lewra9', phon:'leouraq', register:'neutre', alt:['awra9','lwra9','el awra9'], example:'u12s9' },
+      { id:'u12_dossier', fr:'Le dossier', ar:'الدوسي', arabizi:'dossier', phon:'dossier', register:'neutre', loanFr:true, alt:['dossi','el dossier'] },
+      { id:'u12_battal', fr:'Chômeur (sans travail)', ar:'بطّال', arabizi:'battal', phon:'battal', register:'neutre', alt:['betal','battel'], example:'u12s8' },
+      { id:'u12_stage', fr:'Le stage', ar:'الستاج', arabizi:'stage', phon:'stage', register:'neutre', loanFr:true, alt:['staj','el stage'], example:'u12s14' }
+    ],
+    sentences: [
+      { id:'u12s1', fr:'Qu’est-ce que tu fais comme travail ?', t:[['chnowa','شنوّة'],['tekhdem?','تخدم؟']], phon:'chnoua tekhdem ?' },
+      { id:'u12s2', fr:'Je travaille dans un bureau.', t:[['nekhdem','نخدم'],['fel','في'],['biro.','البيرو.']], phon:'nekhdem fel biro.' },
+      { id:'u12s3', fr:'Le patron est dur.', t:[['el patron','الباطرون'],['s3ib.','صعيب.']], phon:'el patron sâib.' },
+      { id:'u12s4', fr:'Je suis occupé, je te rappelle.', t:[['ena','أنا'],['machghoul,','مشغول،'],['n3awed','نعاود'],['nkallmek.','نكلّمك.']], phon:'éna machghoul, nâaoued nkallmek.', tip:'« nkallmek » = je t’appelle (kallem = appeler, parler à).' },
+      { id:'u12s5', fr:'Le salaire ne suffit pas.', t:[['ech-chahriya','الشهريّة'],['ma tkaffich.','ما تكفّيش.']], phon:'echchahria ma tkaffich.' },
+      { id:'u12s6', fr:'Je suis en congé la semaine prochaine.', t:[['ena','أنا'],['fel congé','في الكونجي'],['el jem3a','الجمعة'],['ejjeya.','الجاية.']], phon:'éna fel congé el djemâa ejjeya.' },
+      { id:'u12s7', fr:'J’ai fini le travail, je rentre.', t:[['kammelt','كمّلت'],['el khedma,','الخدمة،'],['bech','باش'],['nrawwa7.','نروّح.']], phon:'kammelt el khedma, bech nraououah.', tip:'« nrawwa7 » = je rentre (à la maison).' },
+      { id:'u12s8', fr:'Il est au chômage depuis un an.', t:[['houwa','هو'],['battal','بطّال'],['3andou','عندو'],['3am.','عام.']], phon:'houa battal âandou âm.', tip:'« 3andou 3am » = depuis un an (litt. « il a un an »).' },
+      { id:'u12s9', fr:'Je dois préparer les papiers.', t:[['lezem','لازم'],['nhadher','نحضّر'],['lewra9.','الأوراق.']], phon:'lézem nhadher leouraq.' },
+      { id:'u12s10', fr:'J’attends le patron.', t:[['nestanna','نستنّى'],['fel','في'],['patron.','الباطرون.']], phon:'nesstanna fel patron.' },
+      { id:'u12s11', fr:'J’étudie à la fac.', t:[['na9ra','نقرا'],['fel','في'],['fac.','الفاك.']], phon:'naqra fel fac.', tip:'« na9ra » = j’étudie, et aussi : je lis.' },
+      { id:'u12s12', fr:'Ce n’est pas facile, mais ça va.', t:[['mouch','موش'],['sahla,','ساهلة،'],['ama','أما'],['labes.','لاباس.']], phon:'mouch sahla, ama labess.', tip:'« ama » = mais.' },
+      { id:'u12s13', fr:'Quand est-ce que tu as commencé ?', t:[['wa9tech','وقتاش'],['bdit?','بديت؟']], phon:'ouaqtech bdit ?' },
+      { id:'u12s14', fr:'Je fais un stage dans une banque.', t:[['na3mel','نعمل'],['stage','ستاج'],['fi','في'],['bank.','بنك.']], phon:'naâmel stage fi bank.' },
+      { id:'u12s15', fr:'J’ai commencé il y a un mois.', t:[['bdit','بديت'],['3andi','عندي'],['chhar.','شهر.']], phon:'bdit âandi chhar.' },
+      { id:'u12s16', fr:'Et le patron, il est comment ?', t:[['w','و'],['el patron,','الباطرون،'],['kifech?','كيفاش؟']], phon:'ou el patron, kifech ?' },
+      { id:'u12s17', fr:'Bon courage, mon frère !', t:[['ya3tik','يعطيك'],['es-sa77a,','الصحّة،'],['khouya!','خويا!']], phon:'yaâtik essahha, khouya !' }
+    ],
+    lessons: [
+      { id:'u12l1', title:'Tu fais quoi ?', auto:true, words:['u12_khedma','u12_nekhdem','u12_san3a','u12_biro','u12_na3mel'], sentences:['u12s1','u12s2'] },
+      { id:'u12l2', title:'Le patron', auto:true, words:['u12_patron','u12_khaddem','u12_chahriya','u12_conge'], sentences:['u12s3','u12s5','u12s6'] },
+      { id:'u12l3', title:'Commencer, finir', auto:true, words:['u12_bdit','u12_kammelt','u12_machghoul','u12_nestanna'], sentences:['u12s4','u12s7','u12s10','u12s13'] },
+      { id:'u12l4', title:'Les études', auto:true, words:['u12_9raya','u12_fac','u12_s3ib','u12_sahel','u12_lewra9','u12_dossier'], sentences:['u12s9','u12s11','u12s12'] },
+      { id:'u12l5', title:'Scène : nouveau boulot', auto:true, words:['u12_battal','u12_stage'], sentences:['u12s8','u12s14','u12s15','u12s16','u12s17'],
+        extra:[ {type:'dialogue', id:'d_u12'}, {type:'sign', id:'sign_office'}, {type:'shadow', item:'u12s1'} ] }
+    ],
+    cultureCard: {
+      title: 'Travail, études et « ya3tik es-sa77a »',
+      text: [
+        'Au bureau, le français est partout : el biro, el patron, el congé, le dossier, le stage… On mélange sans y penser.',
+        'Pour saluer l’effort de quelqu’un, on dit « ya3tik es-sa77a » (que Dieu te donne la santé) ; il répond « w inti zeda » (toi aussi).',
+        'L’été, la « séance unique » libère les après-midi : on finit le travail à midi et demi… et direction la plage !'
+      ]
+    }
+  }
+);
+
+CONTENT_BY.tn.dialogues.push(
+  { id:'d_u7', unit:'u7', title:'Une course en taxi jaune', you:'Amine', lines:[
+    { speaker:'Toi', choices:['u7s15','u7s1','u7s9'], correct:1 },
+    { speaker:'Le chauffeur', sentenceId:'u7s13' },
+    { speaker:'Toi', choices:['u7s2','u7s7','u7s12'], correct:0 },
+    { speaker:'Toi', choices:['u7s3','u7s10','u7s8'], correct:0 },
+    { speaker:'Le chauffeur', sentenceId:'u1s13' },
+    { speaker:'Le chauffeur', sentenceId:'u7s12' },
+    { speaker:'Toi', choices:['u7s5','u7s11','u7s9'], correct:0 }
+  ]},
+  { id:'d_u8', unit:'u8', title:'Perdu dans la médina', you:'Amine', lines:[
+    { speaker:'Toi', choices:['u8s9','u8s3','u8s10'], correct:0 },
+    { speaker:'Khalti Fatiha', sentenceId:'u8s13' },
+    { speaker:'Toi', choices:['u8s6','u8s1','u8s7'], correct:1 },
+    { speaker:'Khalti Fatiha', sentenceId:'u8s2' },
+    { speaker:'Toi', choices:['u8s8','u8s11','u8s5'], correct:2 },
+    { speaker:'Khalti Fatiha', sentenceId:'u8s14' },
+    { speaker:'Toi', choices:['u8s12','u1s4','u8s6'], correct:0 }
+  ]},
+  { id:'d_u9', unit:'u9', title:'Khalti Fatiha t’accueille', you:'Amine', lines:[
+    { speaker:'Khalti Fatiha', sentenceId:'u9s1' },
+    { speaker:'Toi', choices:['u1s3','u9s11','u9s6'], correct:0 },
+    { speaker:'Khalti Fatiha', sentenceId:'u9s13' },
+    { speaker:'Toi', choices:['u9s16','u9s9','u9s4'], correct:0 },
+    { speaker:'Khalti Fatiha', sentenceId:'u9s2' },
+    { speaker:'Khalti Fatiha', sentenceId:'u9s12' },
+    { speaker:'Toi', choices:['u9s3','u9s11','u9s9'], correct:0 }
+  ]},
+  { id:'d_u10', unit:'u10', title:'Karim est de retour', you:'Amine', lines:[
+    { speaker:'Karim', sentenceId:'u10s4' },
+    { speaker:'Toi', choices:['u10s5','u10s2','u10s11'], correct:0 },
+    { speaker:'Karim', sentenceId:'u10s14' },
+    { speaker:'Toi', choices:['u10s1','u10s8','u10s6'], correct:0 },
+    { speaker:'Karim', sentenceId:'u10s16' },
+    { speaker:'Toi', choices:['u10s12','u10s15','u10s3'], correct:0 }
+  ]},
+  { id:'d_u11', unit:'u11', title:'À la pharmacie', you:'Amine', lines:[
+    { speaker:'Le pharmacien', sentenceId:'u11s14' },
+    { speaker:'Toi', choices:['u11s1','u11s12','u11s10'], correct:0 },
+    { speaker:'Le pharmacien', sentenceId:'u11s16' },
+    { speaker:'Toi', choices:['u11s3','u11s11','u11s9'], correct:0 },
+    { speaker:'Le pharmacien', sentenceId:'u11s7' },
+    { speaker:'Le pharmacien', sentenceId:'u11s8' },
+    { speaker:'Toi', choices:['u1s3','u11s4','u11s6'], correct:0 },
+    { speaker:'Le pharmacien', sentenceId:'u11s13' }
+  ]},
+  { id:'d_u12', unit:'u12', title:'Le nouveau boulot d’Amine', you:'Amine', lines:[
+    { speaker:'Karim', sentenceId:'u12s1' },
+    { speaker:'Toi', choices:['u12s2','u12s8','u12s5'], correct:0 },
+    { speaker:'Karim', sentenceId:'u12s13' },
+    { speaker:'Toi', choices:['u12s15','u12s6','u12s10'], correct:0 },
+    { speaker:'Karim', sentenceId:'u12s16' },
+    { speaker:'Toi', choices:['u12s3','u12s11','u12s7'], correct:0 },
+    { speaker:'Karim', sentenceId:'u12s17' }
+  ]}
+);
+
+CONTENT_BY.tn.signs.push(
+  { id:'sign_bus', unit:'u7', kind:'bus', title:'خطّ تونس - حلق الوادي - المرسى', rows:[['TGM','تونس البحرية ← المرسى'],['TGM','تونس البحرية ← حلق الوادي']], q:'Jusqu’où va le TGM ?', options:['La Marsa','Sousse','Djerba','Bizerte'], correct:0, note:'Le TGM relie Tunis Marine (تونس البحرية) à La Marsa (المرسى), en passant par La Goulette (حلق الوادي), Carthage et Sidi Bou Saïd.' },
+  { id:'sign_taxi', unit:'u7', kind:'taxi', title:'تاكسي', sub:'TAXI', q:'Comment se lit تاكسي ?', options:['taxi','louage','metro','karhba'], correct:0, note:'تاكسي se lit « taxi » : un emprunt au français. À Tunis, les taxis sont jaunes.' },
+  { id:'sign_pharma', unit:'u8', kind:'pharma', title:'صيدلية', sub:'صيدلية ليلية', q:'Ce commerce est…', options:['Une pharmacie','Une banque','Une poste','Une école'], correct:0, note:'صيدلية = pharmacie (standard). À l’oral : « el farmasia ». صيدلية ليلية = pharmacie de nuit.' },
+  { id:'sign_street', unit:'u8', kind:'street', title:'نهج الباشا', sub:'Rue du Pacha', q:'Sur cette plaque, que signifie نهج ?', options:['Rue','Place','Quartier','Marché'], correct:0, note:'نهج (nahj) = rue : c’est le mot qu’on lit sur toutes les plaques tunisiennes. L’avenue, c’est شارع.' },
+  { id:'sign_rent', unit:'u9', kind:'shop', title:'للكراء', sub:'شقة S+2 • 98 123 456', q:'Que propose cette affiche ?', options:['Un appartement à louer','Un appartement à vendre','Un magasin fermé','Des cours particuliers'], correct:0, note:'للكراء = à louer (el kra, c’est le loyer). « À vendre » = للبيع. S+2 = salon + 2 chambres, la façon tunisienne de compter les pièces.' },
+  { id:'sign_dose', unit:'u11', kind:'door', title:'3 مرات في اليوم', sub:'بعد الأكل', q:'Sur la boîte, comment prendre ce médicament ?', options:['3 fois par jour, après le repas','3 fois par semaine','Une fois, avant de dormir','3 comprimés le matin à jeun'], correct:0, note:'مرات = fois, في اليوم = par jour, بعد الأكل = après le repas. En tounsi : tlatha marrat fel nhar.' },
+  { id:'sign_office', unit:'u12', kind:'plate', title:'المدير', sub:'الطابق الأول', q:'Qui travaille derrière cette porte ?', options:['Le directeur','Le médecin','Le gardien','Le comptable'], correct:0, note:'مدير = directeur. À l’oral, on dit souvent « el directeur » ou « el patron ». الطابق الأول = 1ᵉʳ étage.' }
+);
+
+/* =====================================================================
+   VERSION TUNISIENNE — unités 13 → 18, histoires, test de niveau, grammaire.
+   TODO(native) : relecture par un locuteur tunisien.
+   ===================================================================== */
+CONTENT_BY.tn.units.push(
+  /* ------------------------------------------------------------- U13 */
+  {
+    id: 'u13', title: 'Téléphone & réseaux', icon: '📱', color: '#0369A1',
+    words: [
+      { id:'u13_allo', fr:'Allô', ar:'ألو', arabizi:'allo', phon:'allo', register:'neutre', loanFr:true, alt:['alo','allô'], example:'u13s1' },
+      { id:'u13_portable', fr:'Le téléphone portable', ar:'البورطابل', arabizi:'el portable', phon:'el portable', register:'neutre', loanFr:true, alt:['portable','portabl'], example:'u13s9' },
+      { id:'u13_kallem', fr:'Appelle ! (parle à)', ar:'كلّم', arabizi:'kallem', phon:'kallem', register:'neutre', alt:['kalem','kallam'], example:'u13s2' },
+      { id:'u13_noumrou', fr:'Le numéro', ar:'النومرو', arabizi:'noumrou', phon:'noumrou', register:'neutre', loanFr:true, alt:['numero','noumro','nimro'], example:'u13s3' },
+      { id:'u13_esma3', fr:'Écoute !', ar:'اسمع', arabizi:'esma3', phon:'essmaâ', register:'neutre', alt:['sma3','esmaa'] },
+      { id:'u13_batri', fr:'La batterie', ar:'الباتري', arabizi:'el batri', phon:'el batri', register:'neutre', loanFr:true, alt:['batri','batterie'], example:'u13s5' },
+      { id:'u13_chargeur', fr:'Le chargeur', ar:'الشارجور', arabizi:'chargeur', phon:'chargeur', register:'neutre', loanFr:true, alt:['charjour','charjeur','charjor'], example:'u13s6' },
+      { id:'u13_rezo', fr:'Le réseau', ar:'الريزو', arabizi:'rézo', phon:'rézo', register:'neutre', loanFr:true, alt:['reseau','réseau','rizo','rezo'], example:'u13s4' },
+      { id:'u13_recharge', fr:'La recharge (crédit)', ar:'الرشارج', arabizi:'recharge', phon:'recharge', register:'neutre', loanFr:true, alt:['rechaj','charge'], example:'u13s8' },
+      { id:'u13_forfait', fr:'Le forfait (internet)', ar:'الفورفي', arabizi:'forfait', phon:'forfé', register:'neutre', loanFr:true, alt:['forfé','forfe'] },
+      { id:'u13_msakker', fr:'Éteint / Fermé', ar:'مسكّر', arabizi:'msakker', phon:'msakker', register:'neutre', alt:['msaker','msakar'], example:'u13s9' },
+      { id:'u13_message', fr:'Le SMS / Le message', ar:'الميساج', arabizi:'message', phon:'message', register:'neutre', loanFr:true, alt:['messaj','missage','mesaj'], example:'u13s14' },
+      { id:'u13_taswira', fr:'La photo', ar:'التصويرة', arabizi:'et-taswira', phon:'ettassouira', register:'neutre', alt:['taswira','tsawra','tsawira'], example:'u13s7' },
+      { id:'u13_ab3athli', fr:'Envoie-moi', ar:'ابعثلي', arabizi:'ab3athli', phon:'abâathli', register:'neutre', alt:['ab3etli','b3athli'], example:'u13s7' },
+      { id:'u13_vocal', fr:'Le message vocal', ar:'الفوكال', arabizi:'vocal', phon:'vocal', register:'neutre', loanFr:true, alt:['vokal','el vocal'], example:'u13s11' },
+      { id:'u13_ekteb', fr:'Écris !', ar:'اكتب', arabizi:'ekteb', phon:'ekteb', register:'neutre', alt:['kteb','ektib'], example:'u13s14' },
+      { id:'u13_wifi', fr:'Le wifi', ar:'الويفي', arabizi:'el wifi', phon:'el wifi', register:'neutre', loanFr:true, alt:['wifi','wi-fi'], example:'u13s13' },
+      { id:'u13_internet', fr:'Internet', ar:'الأنترنات', arabizi:'internet', phon:'internet', register:'neutre', loanFr:true, alt:['lanternet','l internet'] },
+      { id:'u13_nrodd', fr:'Je réponds', ar:'نردّ', arabizi:'nrodd', phon:'nrodd', register:'neutre', alt:['nrod','nred'] },
+      { id:'u13_ta7', fr:'Il est tombé', ar:'طاح', arabizi:'ta7', phon:'tah', register:'neutre', alt:['tah','taah'], example:'u13s10' },
+      { id:'u13_tkasser', fr:'Il s’est cassé', ar:'تكسّر', arabizi:'tkasser', phon:'tkasser', register:'neutre', alt:['tkasar','tksser'], example:'u13s10' }
+    ],
+    sentences: [
+      { id:'u13s1', fr:'Allô, qui est à l’appareil ?', t:[['allo,','ألو،'],['chkoun','شكون'],['m3aya?','معايا؟']], phon:'allo, chkoun mâaya ?', tip:'« chkoun » = qui. « m3aya » = avec moi.' },
+      { id:'u13s2', fr:'Appelle-moi ce soir.', t:[['kallemni','كلّمني'],['l3chiya.','العشيّة.']], phon:'kallemni lâchia.', tip:'« kallem » = appeler, parler à quelqu’un.' },
+      { id:'u13s3', fr:'Donne-moi ton numéro.', t:[['a3tini','أعطيني'],['noumrouk.','نومروك.']], phon:'aâtini noumrouk.' },
+      { id:'u13s4', fr:'Il n’y a pas de réseau ici.', t:[['ma fammech','ما فمّاش'],['rézo','ريزو'],['hne.','هنا.']], phon:'ma fammech rézo hné.' },
+      { id:'u13s5', fr:'Ma batterie est vide.', t:[['el batri','الباتري'],['wfet.','وفات.']], phon:'el batri oufet.', tip:'« wfet » = elle est épuisée.' },
+      { id:'u13s6', fr:'Tu as un chargeur ?', t:[['3andek','عندك'],['chargeur?','شارجور؟']], phon:'âandek chargeur ?' },
+      { id:'u13s7', fr:'Envoie-moi la photo sur WhatsApp.', t:[['ab3athli','ابعثلي'],['et-taswira','التصويرة'],['3al','عال'],['WhatsApp.','واتساب.']], phon:'abâathli ettassouira âl WhatsApp.' },
+      { id:'u13s8', fr:'Je n’ai plus de crédit.', t:[['ma 3andich','ما عنديش'],['recharge.','رشارج.']], phon:'ma âandich recharge.', tip:'On recharge son crédit chez n’importe quel épicier ou au taxiphone.' },
+      { id:'u13s9', fr:'Son téléphone est éteint.', t:[['el portable','البورطابل'],['mta3ou','متاعو'],['msakker.','مسكّر.']], phon:'el portable mtaâou msakker.' },
+      { id:'u13s10', fr:'Mon téléphone est tombé et s’est cassé.', t:[['el portable','البورطابل'],['ta7','طاح'],['w','و'],['tkasser.','تكسّر.']], phon:'el portable tah ou tkasser.' },
+      { id:'u13s11', fr:'Je t’ai envoyé un vocal.', t:[['b3athtlek','بعثتلك'],['vocal.','فوكال.']], phon:'bâathtlek vocal.' },
+      { id:'u13s12', fr:'Pourquoi tu ne réponds pas ?', t:[['3lech','علاش'],['ma trodch?','ما تردّش؟']], phon:'âlech ma trodch ?' },
+      { id:'u13s13', fr:'C’est quoi le code du wifi ?', t:[['chnowa','شنوّة'],['el code','الكود'],['mta3','متاع'],['el wifi?','الويفي؟']], phon:'chnoua el code mtaâ el wifi ?' },
+      { id:'u13s14', fr:'Écris-moi un message.', t:[['ekteb li','اكتبلي'],['message.','ميساج.']], phon:'ekteb li message.' },
+      { id:'u13s15', fr:'Je n’entends rien, il y a du bruit.', t:[['ma nesma3','ما نسمع'],['chay,','شيء،'],['famma','فمّا'],['7ess.','حس.']], phon:'ma nessmaâ chay, famma hess.', tip:'« 7ess » = le bruit, la voix.' },
+      { id:'u13s16', fr:'D’accord, je te l’envoie maintenant.', t:[['behi,','باهي،'],['taw','توّا'],['nab3athhalek.','نبعثهالك.']], phon:'béhi, taou nabâathhalek.' }
+    ],
+    lessons: [
+      { id:'u13l1', title:'Allô ?', auto:true, words:['u13_allo','u13_portable','u13_kallem','u13_noumrou','u13_esma3'], sentences:['u13s1','u13s2','u13s3'] },
+      { id:'u13l2', title:'Plus de batterie !', auto:true, words:['u13_batri','u13_chargeur','u13_rezo','u13_recharge','u13_msakker'], sentences:['u13s4','u13s5','u13s6','u13s8'] },
+      { id:'u13l3', title:'Envoie-moi…', auto:true, words:['u13_message','u13_taswira','u13_ab3athli','u13_vocal','u13_ekteb'], sentences:['u13s7','u13s11','u13s14'] },
+      { id:'u13l4', title:'Internet', auto:true, words:['u13_wifi','u13_internet','u13_forfait','u13_nrodd'], sentences:['u13s12','u13s13'] },
+      { id:'u13l5', title:'Scène : le téléphone cassé', auto:true, words:['u13_ta7','u13_tkasser'], sentences:['u13s9','u13s10','u13s15','u13s16'],
+        extra:[ {type:'dialogue', id:'d_u13'}, {type:'sign', id:'sign_flexy'}, {type:'shadow', item:'u13s1'} ] }
+    ],
+    cultureCard: {
+      title: 'Recharges, forfaits et vocaux',
+      text: [
+        'On recharge son crédit chez l’épicier du coin ou au « taxiphone » ; beaucoup prennent un forfait internet à la semaine.',
+        'Les trois opérateurs sont Tunisie Telecom, Ooredoo et Orange ; et beaucoup de Tunisiens ont deux puces.',
+        'Dans les groupes, on écrit le tounsi en arabizi : « 3aslema », « chnowa el jaw ? », « behi »… avec les chiffres 3, 7 et 9, exactement comme ici.'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U14 */
+  {
+    id: 'u14', title: 'Football & loisirs', icon: '⚽', color: '#15803D',
+    words: [
+      { id:'u14_koura', fr:'Le foot / Le ballon', ar:'الكورة', arabizi:'el koura', phon:'el koura', register:'neutre', alt:['koura','kora'], example:'u14s6' },
+      { id:'u14_match', fr:'Le match', ar:'الماتش', arabizi:'el match', phon:'el match', register:'neutre', loanFr:true, alt:['match','matsh'], example:'u14s1' },
+      { id:'u14_stade', fr:'Le stade', ar:'الستاد', arabizi:'stade', phon:'stad', register:'neutre', loanFr:true, alt:['stad','el stade'], example:'u14s7' },
+      { id:'u14_but', fr:'Le but', ar:'البي', arabizi:'but', phon:'but', register:'neutre', loanFr:true, alt:['el but','bi'], example:'u14s14' },
+      { id:'u14_goal', fr:'Le gardien de but', ar:'الڨول', arabizi:'el goal', phon:'el gol', register:'neutre', alt:['goal','gol'], example:'u14s4' },
+      { id:'u14_rbe7', fr:'Il a gagné', ar:'ربح', arabizi:'rbe7', phon:'rbeh', register:'neutre', alt:['rbeh','rba7'], example:'u14s2' },
+      { id:'u14_khser', fr:'Il a perdu', ar:'خسر', arabizi:'khser', phon:'khsser', register:'neutre', alt:['khsar','5ser'], example:'u14s5' },
+      { id:'u14_kifkif', fr:'Pareil / Match nul', ar:'كيف كيف', arabizi:'kif kif', phon:'kif kif', register:'neutre', alt:['kifkif','kif-kif'], example:'u14s9' },
+      { id:'u14_wfe', fr:'C’est fini', ar:'وفى', arabizi:'wfé', phon:'oufé', register:'neutre', alt:['wfe','wfa'], example:'u14s9' },
+      { id:'u14_equipe', fr:'L’équipe', ar:'الإكيب', arabizi:'el équipe', phon:'el ékip', register:'neutre', loanFr:true, alt:['equipe','lekip','ekip'], example:'u14s15' },
+      { id:'u14_supporter', fr:'Le supporter', ar:'سبورتار', arabizi:'supporter', phon:'supporter', register:'neutre', loanFr:true, alt:['siporter','sipourtar'], example:'u14s8' },
+      { id:'u14_nsour', fr:'Les Aigles de Carthage (l’équipe de Tunisie)', ar:'نسور قرطاج', arabizi:'nsour 9artej', phon:'nsour qartej', register:'neutre', alt:['nsour qartaj','nousour 9artaj','nsour carthage'], example:'u14s3' },
+      { id:'u14_joueur', fr:'Le joueur', ar:'الجواور', arabizi:'joueur', phon:'joueur', register:'neutre', loanFr:true, alt:['jouer','jwer'] },
+      { id:'u14_nal3ab', fr:'Je joue', ar:'نلعب', arabizi:'nal3ab', phon:'nalâab', register:'neutre', alt:['nel3ab','nalaab'], example:'u14s6' },
+      { id:'u14_nokhrjou', fr:'On sort', ar:'نخرجو', arabizi:'nokhrjou', phon:'nokhrjou', register:'neutre', alt:['nokhorjou','nkhrjo'], example:'u14s10' },
+      { id:'u14_cinema', fr:'Le cinéma', ar:'السينما', arabizi:'cinema', phon:'cinema', register:'neutre', loanFr:true, alt:['sinima','cinéma'], example:'u14s12' },
+      { id:'u14_netfarrej', fr:'Je regarde (un match, un film)', ar:'نتفرّج', arabizi:'netfarrej', phon:'netfarrej', register:'neutre', alt:['netfarej','ntfarrej'] },
+      { id:'u14_mousi9a', fr:'La musique', ar:'الموسيقى', arabizi:'el mousi9a', phon:'el moussiqa', register:'neutre', alt:['mousiqa','musiqa'] },
+      { id:'u14_mezoued', fr:'Le mezoued (musique populaire)', ar:'المزود', arabizi:'mezoued', phon:'mezoued', register:'neutre', alt:['mizwed','mezwed','mezwid'], example:'u14s11' },
+      { id:'u14_malouf', fr:'Le malouf (musique andalouse)', ar:'المالوف', arabizi:'malouf', phon:'malouf', register:'neutre', alt:['maalouf','el malouf'] },
+      { id:'u14_derby', fr:'Le derby', ar:'الداربي', arabizi:'derby', phon:'derby', register:'neutre', loanFr:true, alt:['darbi','derbi'] }
+    ],
+    sentences: [
+      { id:'u14s1', fr:'Tu as vu le match hier ?', t:[['chefet','شفت'],['el match','الماتش'],['lbere7?','البارح؟']], phon:'chefet el match lbereh ?' },
+      { id:'u14s2', fr:'Oui, on a gagné deux à zéro.', t:[['ey,','إي،'],['rbe7na','ربحنا'],['zouz','زوز'],['l zero.','لزيرو.']], phon:'eï, rbehna zouz l zero.' },
+      { id:'u14s3', fr:'Allez les Aigles de Carthage !', t:[['aya','أيا'],['ya','يا'],['nsour 9artej!','نسور قرطاج!']], phon:'aya ya nsour qartej !' },
+      { id:'u14s4', fr:'Le gardien était incroyable.', t:[['el goal','الڨول'],['kan','كان'],['mouch normal.','موش نورمال.']], phon:'el gol kan mouch normal.', tip:'« mouch normal » (litt. « pas normal ») = incroyable !' },
+      { id:'u14s5', fr:'On a perdu, dommage.', t:[['khserna,','خسرنا،'],['khsara.','خسارة.']], phon:'khsserna, khssara.' },
+      { id:'u14s6', fr:'Je joue au foot avec mes amis le dimanche.', t:[['nal3ab','نلعب'],['el koura','الكورة'],['m3a','مع'],['s7abi','صحابي'],['nhar el a7ad.','نهار الأحد.']], phon:'nalâab el koura mâa shabi nhar el ahad.' },
+      { id:'u14s7', fr:'On va au stade ce soir ?', t:[['nemchiw','نمشيو'],['lel stade','للستاد'],['l3chiya?','العشيّة؟']], phon:'nemchiou lel stad lâchia ?' },
+      { id:'u14s8', fr:'Je supporte l’Espérance.', t:[['ena','أنا'],['supporter','سبورتار'],['mta3','متاع'],['el Espérance.','الترجي.']], phon:'éna supporter mtaâ el Espérance.', tip:'À Tunis, le grand derby oppose l’Espérance (rouge et jaune) et le Club Africain (rouge et blanc).' },
+      { id:'u14s9', fr:'C’est fini, match nul.', t:[['wfé','وفى'],['el match,','الماتش،'],['kif kif.','كيف كيف.']], phon:'oufé el match, kif kif.' },
+      { id:'u14s10', fr:'On sort ce soir ?', t:[['nokhrjou','نخرجو'],['l3chiya?','العشيّة؟']], phon:'nokhrjou lâchia ?' },
+      { id:'u14s11', fr:'J’adore le mezoued.', t:[['n7ebb','نحب'],['el mezoued','المزود'],['barcha.','برشا.']], phon:'nhebb el mezoued barcha.' },
+      { id:'u14s12', fr:'On va regarder un film au cinéma.', t:[['bech','باش'],['netfarrjou','نتفرّجو'],['fi film','في فيلم'],['fel cinema.','في السينما.']], phon:'bech netfarrjou fi film fel cinema.' },
+      { id:'u14s13', fr:'Qu’est-ce que tu fais quand tu es libre ?', t:[['chnowa','شنوّة'],['ta3mel','تعمل'],['ki','كي'],['tkoun','تكون'],['fergh?','فارغ؟']], phon:'chnoua taâmel ki tkoun fergh ?' },
+      { id:'u14s14', fr:'Il a marqué un but incroyable !', t:[['marka','مركى'],['but','بي'],['mouch normal!','موش نورمال!']], phon:'marka but mouch normal !', tip:'« marka » (de l’italien « marcare ») = il a marqué.' },
+      { id:'u14s15', fr:'L’équipe a gagné !', t:[['el équipe','الإكيب'],['rb7et!','ربحت!']], phon:'el ékip rbhet !' },
+      { id:'u14s16', fr:'Allez, on y va !', t:[['aya,','أيا،'],['nemchiw!','نمشيو!']], phon:'aya, nemchiou !' }
+    ],
+    lessons: [
+      { id:'u14l1', title:'Le match', auto:true, words:['u14_koura','u14_match','u14_stade','u14_but','u14_goal'], sentences:['u14s1','u14s4','u14s14'] },
+      { id:'u14l2', title:'Gagner, perdre', auto:true, words:['u14_rbe7','u14_khser','u14_kifkif','u14_wfe'], sentences:['u14s2','u14s5','u14s9'] },
+      { id:'u14l3', title:'Les Aigles de Carthage', auto:true, words:['u14_equipe','u14_supporter','u14_nsour','u14_joueur','u14_derby'], sentences:['u14s3','u14s8','u14s15'] },
+      { id:'u14l4', title:'On sort ?', auto:true, words:['u14_nokhrjou','u14_cinema','u14_netfarrej','u14_mousi9a','u14_mezoued','u14_malouf'], sentences:['u14s10','u14s11','u14s12'] },
+      { id:'u14l5', title:'Scène : au café après le match', auto:true, words:['u14_nal3ab'], sentences:['u14s6','u14s7','u14s13','u14s16'],
+        extra:[ {type:'dialogue', id:'d_u14'}, {type:'sign', id:'sign_stadium'}, {type:'shadow', item:'u14s1'} ] }
+    ],
+    cultureCard: {
+      title: 'Les Aigles de Carthage, le derby et le mezoued',
+      text: [
+        'L’équipe nationale, ce sont les « Nsour 9artej », les Aigles de Carthage — comme Nesr, ton guide ! Les soirs de match, tout le pays est devant la télé, au café.',
+        'À Tunis, le derby Espérance – Club Africain est le grand rendez-vous de la saison, avec des tifos impressionnants au stade de Radès.',
+        'Côté musique, le malouf (d’origine andalouse) côtoie le mezoued, la musique populaire des fêtes. Et chaque été, le Festival international de Carthage remplit l’amphithéâtre romain.'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U15 */
+  {
+    id: 'u15', title: 'Ramadan & Aïd', icon: '🌙', color: '#7C3AED',
+    words: [
+      { id:'u15_ramdhan', fr:'Ramadan', ar:'رمضان', arabizi:'ramdhan', phon:'ramdhane', register:'neutre', alt:['ramdan','ramadan'] },
+      { id:'u15_sayem', fr:'Qui jeûne (je jeûne)', ar:'صايم', arabizi:'sayem', phon:'sayem', register:'neutre', alt:['saim','sayam'], example:'u15s2' },
+      { id:'u15_ftour', fr:'Le ftour (repas de rupture du jeûne)', ar:'الفطور', arabizi:'el ftour', phon:'el ftour', register:'neutre', alt:['ftour','lftour'], example:'u15s3' },
+      { id:'u15_s7our', fr:'Le shour (repas avant l’aube)', ar:'السحور', arabizi:'es-s7our', phon:'ess-hour', register:'neutre', alt:['s7our','shour','sahour'], example:'u15s15' },
+      { id:'u15_nfatrou', fr:'On rompt le jeûne', ar:'نفطرو', arabizi:'nfatrou', phon:'nfatrou', register:'neutre', alt:['nfetrou','nftrou'], example:'u15s4' },
+      { id:'u15_sa77achribtek', fr:'Bon appétit après le ftour (litt. « santé à ta chorba »)', ar:'صحّة شربتك', arabizi:'sa77a chribtek', phon:'sahha chribtek', register:'neutre', alt:['saha chribtek','sa7a chribtek','sahha chorbtek'] },
+      { id:'u15_tmer', fr:'Les dattes', ar:'التمر', arabizi:'et-tmer', phon:'ettmer', register:'neutre', alt:['tmer','tmar'], example:'u15s4' },
+      { id:'u15_chorbafrik', fr:'La chorba frik (soupe au blé vert)', ar:'شربة فريك', arabizi:'chorba frik', phon:'chorba frik', register:'neutre', alt:['chorba frick','chourba frik'], example:'u15s5' },
+      { id:'u15_zlabia', fr:'La zlabia (beignet au miel)', ar:'الزلابية', arabizi:'zlabia', phon:'zlabia', register:'neutre', alt:['zlabiya','zalabia'], example:'u15s8' },
+      { id:'u15_mkharek', fr:'Les mkharek (beignets au miel de Béja)', ar:'المخارق', arabizi:'mkharek', phon:'mkharek', register:'neutre', alt:['makhrek','mkhareq'], example:'u15s8' },
+      { id:'u15_sahriyet', fr:'Les veillées (soirées de Ramadan)', ar:'السهريات', arabizi:'sahriyet', phon:'sahriyet', register:'neutre', alt:['sahrat','sahriyat'], example:'u15s6' },
+      { id:'u15_boutbila', fr:'Le boutbila (tambour qui réveille pour le shour)', ar:'بوطبيلة', arabizi:'boutbila', phon:'boutbila', register:'neutre', alt:['bou tbila','boutbilla'], example:'u15s14' },
+      { id:'u15_hammam', fr:'Le hammam', ar:'الحمّام', arabizi:'el hammam', phon:'el hammam', register:'neutre', alt:['hammam','7ammam'], example:'u15s18' },
+      { id:'u15_3id', fr:'L’Aïd (la fête)', ar:'العيد', arabizi:'el 3id', phon:'el âid', register:'neutre', alt:['3id','aid','l3id'], example:'u15s11' },
+      { id:'u15_3idmabrouk', fr:'Bonne fête (Aïd moubarak)', ar:'عيد مبروك', arabizi:'3id mabrouk', phon:'âid mabrouk', register:'neutre', alt:['aid mabrouk','3id mbarek'], example:'u15s9' },
+      { id:'u15_sa77a3idkom', fr:'Bonne fête (litt. « santé à votre fête »)', ar:'صحّة عيدكم', arabizi:'sa77a 3idkom', phon:'sahha âidkom', register:'neutre', alt:['saha 3idkom','sa7a 3idkom','saha aidkom'] },
+      { id:'u15_7wayej', fr:'Les habits neufs (de l’Aïd)', ar:'الحوايج الجدد', arabizi:'el 7wayej ejjdod', phon:'el houayej ejjdod', register:'neutre', alt:['7wayej jdod','hwayej jdod'], example:'u15s10' },
+      { id:'u15_7low', fr:'Les gâteaux (pâtisseries)', ar:'الحلو', arabizi:'el 7low', phon:'el hlou', register:'neutre', alt:['7low','7lou','helou'] },
+      { id:'u15_ka3kwarka', fr:'Le kaak warka (gâteau d’amandes)', ar:'كعك ورقة', arabizi:'ka3k warka', phon:'kaâk ouarka', register:'neutre', alt:['kaak warka','ka3k war9a'], example:'u15s13' },
+      { id:'u15_3allouch', fr:'Le mouton (de l’Aïd)', ar:'العلّوش', arabizi:'el 3allouch', phon:'el âallouch', register:'neutre', alt:['3allouch','allouch','3alouch'], example:'u15s11' },
+      { id:'u15_nzourou', fr:'On rend visite', ar:'نزورو', arabizi:'nzourou', phon:'nzourou', register:'neutre', alt:['nzouro','nezourou'], example:'u15s12' }
+    ],
+    sentences: [
+      { id:'u15s1', fr:'Bon Ramadan, les voisins !', t:[['ramdhan','رمضان'],['mabrouk,','مبروك،'],['ya','يا'],['jiran!','جيران!']], phon:'ramdhane mabrouk, ya djiran !' },
+      { id:'u15s2', fr:'Tu jeûnes ?', t:[['inti','انتي'],['sayem?','صايم؟']], phon:'inti sayem ?' },
+      { id:'u15s3', fr:'À quelle heure est le ftour ?', t:[['wa9tech','وقتاش'],['el ftour?','الفطور؟']], phon:'ouaqtech el ftour ?' },
+      { id:'u15s4', fr:'On rompt le jeûne avec des dattes et du lait.', t:[['nfatrou','نفطرو'],['bet-tmer','بالتمر'],['w','و'],['el 7lib.','الحليب.']], phon:'nfatrou bettmer ou el hlib.' },
+      { id:'u15s5', fr:'Maman a préparé la chorba frik et des bricks.', t:[['ommi','أمّي'],['tayblet','طيّبت'],['chorba frik','شربة فريك'],['w','و'],['brik.','بريك.']], phon:'ommi tayblet chorba frik ou brik.', tip:'« tayeb » = cuisiner (litt. « faire cuire »).' },
+      { id:'u15s6', fr:'Après le ftour, on sort pour les veillées.', t:[['ba3d','بعد'],['el ftour,','الفطور،'],['nokhrjou','نخرجو'],['lel sahriyet.','للسهريات.']], phon:'baâd el ftour, nokhrjou lel sahriyet.' },
+      { id:'u15s7', fr:'Il est de mauvaise humeur, il a faim !', t:[['rahou','راهو'],['mitghachech,','متغشّش،'],['rahou','راهو'],['ji3an!','جيعان!']], phon:'rahou mitghachech, rahou djiâane !' },
+      { id:'u15s8', fr:'Rapporte-nous de la zlabia et des mkharek, s’il te plaît.', t:[['jibelna','جيبلنا'],['zlabia','زلابية'],['w','و'],['mkharek,','مخارق،'],['brabbi.','بربّي.']], phon:'djibelna zlabia ou mkharek, brabbi.' },
+      { id:'u15s9', fr:'Bonne fête, et bonne santé chaque année !', t:[['3id mabrouk,','عيد مبروك،'],['w koll 3am','و كل عام'],['w inti','و انتي'],['b khir!','بخير!']], phon:'âid mabrouk, ou koll âm ou inti b khir !', tip:'« koll 3am w inti b khir » : « que chaque année te trouve en bonne santé ».' },
+      { id:'u15s10', fr:'Les enfants mettent leurs habits neufs.', t:[['es-sghar','الصغار'],['yelbsou','يلبسو'],['el 7wayej','الحوايج'],['ejjdod.','الجدد.']], phon:'essghar yelbssou el houayej ejjdod.' },
+      { id:'u15s11', fr:'On achète le mouton une semaine avant l’Aïd.', t:[['nechriw','نشريو'],['el 3allouch','العلّوش'],['jem3a','جمعة'],['9bal','قبل'],['el 3id.','العيد.']], phon:'nechriou el âallouch djemâa qbal el âid.' },
+      { id:'u15s12', fr:'On rend visite à la famille.', t:[['nzourou','نزورو'],['el 3ayla.','العايلة.']], phon:'nzourou el âayla.' },
+      { id:'u15s13', fr:'Goûte le kaak warka, il est fait maison !', t:[['dou9','ذوق'],['el ka3k warka,','الكعك ورقة،'],['mta3','متاع'],['dar!','دار!']], phon:'douq el kaâk ouarka, mtaâ dar !', tip:'« mta3 dar » = fait maison.' },
+      { id:'u15s14', fr:'Le boutbila nous réveille pour le shour.', t:[['el boutbila','البوطبيلة'],['yfi99na','يفيّقنا'],['lel s7our.','للسحور.']], phon:'el boutbila yfiqqna lel ss-hour.', tip:'« yfi99 » = il réveille.' },
+      { id:'u15s15', fr:'Le shour, c’est vers trois heures du matin.', t:[['es-s7our','السحور'],['m3a','مع'],['tlatha','ثلاثة'],['mta3 sbe7.','متاع الصباح.']], phon:'ess-hour mâa tlatha mtaâ sbeh.' },
+      { id:'u15s16', fr:'Toi aussi, ma tante !', t:[['w inti','و انتي'],['b khir,','بخير،'],['ya khalti!','يا خالتي!']], phon:'ou inti b khir, ya khalti !', tip:'Réponse à « 3id mabrouk » : « w inti b khir ».' },
+      { id:'u15s17', fr:'C’est délicieux, merci !', t:[['bnin','بنين'],['barcha,','برشا،'],['y3aychek!','يعيّشك!']], phon:'bnine barcha, yâaychek !' },
+      { id:'u15s18', fr:'Avant l’Aïd, on va au hammam.', t:[['9bal','قبل'],['el 3id,','العيد،'],['nemchiw','نمشيو'],['lel hammam.','للحمّام.']], phon:'qbal el âid, nemchiou lel hammam.' }
+    ],
+    lessons: [
+      { id:'u15l1', title:'Ramadan', auto:true, words:['u15_ramdhan','u15_sayem','u15_ftour','u15_s7our','u15_nfatrou','u15_sa77achribtek'], sentences:['u15s1','u15s2','u15s3','u15s15'] },
+      { id:'u15l2', title:'La table du ftour', auto:true, words:['u15_tmer','u15_chorbafrik','u15_zlabia','u15_mkharek'], sentences:['u15s4','u15s5','u15s8'] },
+      { id:'u15l3', title:'Les veillées', auto:true, words:['u15_sahriyet','u15_boutbila','u15_hammam'], sentences:['u15s6','u15s7','u15s14','u15s18'] },
+      { id:'u15l4', title:'L’Aïd', auto:true, words:['u15_3id','u15_3idmabrouk','u15_sa77a3idkom','u15_7wayej','u15_7low','u15_ka3kwarka'], sentences:['u15s9','u15s10','u15s13'] },
+      { id:'u15l5', title:'Scène : le matin de l’Aïd', auto:true, words:['u15_3allouch','u15_nzourou'], sentences:['u15s11','u15s12','u15s16','u15s17'],
+        extra:[ {type:'dialogue', id:'d_u15'}, {type:'sign', id:'sign_eid'}, {type:'shadow', item:'u15s9'} ] }
+    ],
+    cultureCard: {
+      title: 'Ramadan et l’Aïd en Tunisie',
+      text: [
+        'À l’heure du ftour, la table tunisienne réunit dattes, lait, chorba frik et la fameuse brick ; on se souhaite « sa77a chribtek » (santé à ta chorba).',
+        'Les soirées sont longues : cafés pleins, concerts, promenades dans la médina, et les douceurs comme la zlabia et les mkharek, spécialités de Béja.',
+        'Avant l’aube, le « boutbila » passe dans les ruelles avec son tambour pour réveiller le quartier. À l’Aïd, on va au hammam, on met ses habits neufs et on offre des plateaux de kaak warka en disant « sa77a 3idkom ».'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U16 */
+  {
+    id: 'u16', title: 'Mariage & traditions', icon: '💍', color: '#B45309',
+    words: [
+      { id:'u16_3ers', fr:'Le mariage (la fête)', ar:'العرس', arabizi:'el 3ers', phon:'el âers', register:'neutre', alt:['3ers','ars','l3ers'], example:'u16s9' },
+      { id:'u16_3rousa', fr:'La mariée', ar:'العروسة', arabizi:'el 3rousa', phon:'el âroussa', register:'neutre', alt:['3rousa','arousa','3arousa'], example:'u16s5' },
+      { id:'u16_3ris', fr:'Le marié', ar:'العريس', arabizi:'el 3ris', phon:'el âriss', register:'neutre', alt:['3ris','aris'] },
+      { id:'u16_mabrouk', fr:'Félicitations !', ar:'مبروك', arabizi:'mabrouk', phon:'mabrouk', register:'neutre', alt:['mabrok','mebrouk','mbrouk'], example:'u16s1' },
+      { id:'u16_khotba', fr:'Les fiançailles (la demande)', ar:'الخطبة', arabizi:'el khotba', phon:'el khotba', register:'neutre', alt:['khotba','5otba'] },
+      { id:'u16_mahr', fr:'La dot', ar:'المهر', arabizi:'el mahr', phon:'el mahr', register:'neutre', alt:['mahr','mehr'] },
+      { id:'u16_jhez', fr:'Le trousseau de la mariée', ar:'الجهاز', arabizi:'ej-jhez', phon:'ejjhez', register:'neutre', alt:['jhez','jhaz','djhez'], example:'u16s11' },
+      { id:'u16_3adat', fr:'Les traditions', ar:'العادات', arabizi:'el 3adat', phon:'el âdat', register:'neutre', alt:['3adat','adat'] },
+      { id:'u16_invitation', fr:'L’invitation', ar:'الإنفيتاسيون', arabizi:'invitation', phon:'invitation', register:'neutre', loanFr:true, alt:['envitation','invitasyon'] },
+      { id:'u16_ma3roudh', fr:'Invité', ar:'معروض', arabizi:'ma3roudh', phon:'maâroudh', register:'neutre', alt:['maroudh','ma3roud'], example:'u16s3' },
+      { id:'u16_salle', fr:'La salle des fêtes', ar:'السال', arabizi:'salle', phon:'salle', register:'neutre', loanFr:true, alt:['sal','la salle'] },
+      { id:'u16_jelwa', fr:'La jelwa (présentation de la mariée)', ar:'الجلوة', arabizi:'el jelwa', phon:'el djelwa', register:'neutre', alt:['jelwa','jalwa'], example:'u16s8' },
+      { id:'u16_keswa', fr:'La keswa (robe traditionnelle brodée)', ar:'الكسوة', arabizi:'keswa', phon:'kessoua', register:'neutre', alt:['kiswa','el keswa'], example:'u16s5' },
+      { id:'u16_zgharit', fr:'Les youyous', ar:'الزغاريت', arabizi:'ez-zgharit', phon:'ezzgharit', register:'neutre', alt:['zgharit','zgharid'], example:'u16s6' },
+      { id:'u16_tbal', fr:'Le tbal (grand tambour)', ar:'الطبل', arabizi:'et-tbal', phon:'ettbal', register:'neutre', alt:['tbal','tbel'], example:'u16s13' },
+      { id:'u16_zokra', fr:'La zokra (hautbois traditionnel)', ar:'الزكرة', arabizi:'ez-zokra', phon:'ezzokra', register:'neutre', alt:['zokra','zoukra'], example:'u16s13' },
+      { id:'u16_ghna', fr:'Le chant', ar:'الغناء', arabizi:'el ghna', phon:'el ghna', register:'neutre', alt:['ghna','el ghena'] },
+      { id:'u16_nochot7ou', fr:'On danse', ar:'نشطحو', arabizi:'nochot7ou', phon:'nochothou', register:'neutre', alt:['nochto7o','nchat7ou','nochtou'], example:'u16s7' },
+      { id:'u16_bnet', fr:'Les filles', ar:'البنات', arabizi:'el bnet', phon:'el bnet', register:'neutre', alt:['bnet','bnat'] },
+      { id:'u16_7enna', fr:'Le henné', ar:'الحنّة', arabizi:'el 7enna', phon:'el henna', register:'neutre', alt:['7enna','henna'], example:'u16s4' },
+      { id:'u16_harqous', fr:'Le harqous (motifs noirs dessinés sur la mariée)', ar:'الحرقوس', arabizi:'el harqous', phon:'el harqouss', register:'neutre', alt:['harqous','harkous','7ar9ous'] }
+    ],
+    sentences: [
+      { id:'u16s1', fr:'Félicitations pour le mariage !', t:[['mabrouk','مبروك'],['el 3ers!','العرس!']], phon:'mabrouk el âers !' },
+      { id:'u16s2', fr:'Mon frère se marie cet été.', t:[['khouya','خويا'],['bech','باش'],['y3arres','يعرّس'],['had','هذا'],['es-sif.','الصيف.']], phon:'khouya bech yâarress had essif.', tip:'« 3arres » = se marier.' },
+      { id:'u16s3', fr:'Tu es invité au mariage !', t:[['inti','انتي'],['ma3roudh','معروض'],['lel 3ers!','للعرس!']], phon:'inti maâroudh lel âers !' },
+      { id:'u16s4', fr:'La soirée du henné, c’est jeudi.', t:[['lilt','ليلة'],['el 7enna','الحنّة'],['nhar','نهار'],['el khmis.','الخميس.']], phon:'lilt el henna nhar el khmiss.' },
+      { id:'u16s5', fr:'La mariée porte une keswa.', t:[['el 3rousa','العروسة'],['labsa','لابسة'],['keswa.','كسوة.']], phon:'el âroussa labssa kessoua.' },
+      { id:'u16s6', fr:'Les femmes lancent des youyous.', t:[['en-nsa','النساء'],['ya3mlou','يعملو'],['ez-zgharit.','الزغاريت.']], phon:'ennssa yaâmlou ezzgharit.' },
+      { id:'u16s7', fr:'On va danser toute la nuit !', t:[['bech','باش'],['nochot7ou','نشطحو'],['el lil','الليل'],['el kol!','الكل!']], phon:'bech nochothou el lil el kol !' },
+      { id:'u16s8', fr:'C’est l’heure de la jelwa, la mariée est présentée !', t:[['wa9t','وقت'],['el jelwa,','الجلوة،'],['el 3rousa','العروسة'],['jeya!','جاية!']], phon:'ouaqt el djelwa, el âroussa jeya !', tip:'Pendant la jelwa, la mariée, assise sur un trône, est présentée aux invitées.' },
+      { id:'u16s9', fr:'C’est quand, le mariage ?', t:[['wa9tech','وقتاش'],['el 3ers?','العرس؟']], phon:'ouaqtech el âers ?' },
+      { id:'u16s10', fr:'Que tout se passe bien !', t:[['rabbi','ربّي'],['ykammel','يكمّل'],['bel khir!','بالخير!']], phon:'rabbi ykammel bel khir !', tip:'Litt. « que Dieu l’achève dans le bien » : le vœu classique avant un mariage.' },
+      { id:'u16s11', fr:'Elle a préparé son trousseau.', t:[['7adhret','حضّرت'],['ej-jhez','الجهاز'],['mta3ha.','متاعها.']], phon:'hadhret ejjhez mtaâha.' },
+      { id:'u16s12', fr:'C’est la tradition chez nous.', t:[['hethi','هذي'],['el 3ada','العادة'],['3andna.','عندنا.']], phon:'hethi el âada âandna.' },
+      { id:'u16s13', fr:'Le tbal et la zokra jouent devant la maison.', t:[['et-tbal','الطبل'],['w','و'],['ez-zokra','الزكرة'],['9oddem','قدّام'],['ed-dar.','الدار.']], phon:'ettbal ou ezzokra qoddem eddar.' },
+      { id:'u16s14', fr:'Amine s’est fiancé !', t:[['Amine','أمين'],['khteb!','خطب!']], phon:'Amine khteb !' },
+      { id:'u16s15', fr:'Merci, et à ton tour bientôt !', t:[['rabbi','ربّي'],['ybarek fik,','يبارك فيك،'],['w','و'],['3a9balek!','عقبالك!']], phon:'rabbi ybarek fik, ou âaqbalek !', tip:'« 3a9balek » = « bientôt ton tour » : la réponse aux félicitations de mariage.' }
+    ],
+    lessons: [
+      { id:'u16l1', title:'Le mariage', auto:true, words:['u16_3ers','u16_3rousa','u16_3ris','u16_mabrouk'], sentences:['u16s1','u16s2','u16s9','u16s15'] },
+      { id:'u16l2', title:'Les fiançailles', auto:true, words:['u16_khotba','u16_mahr','u16_jhez','u16_3adat'], sentences:['u16s11','u16s12','u16s14'] },
+      { id:'u16l3', title:'Tu es invité !', auto:true, words:['u16_invitation','u16_ma3roudh','u16_salle','u16_jelwa'], sentences:['u16s3','u16s8','u16s10'] },
+      { id:'u16l4', title:'La fête', auto:true, words:['u16_zgharit','u16_tbal','u16_zokra','u16_ghna','u16_nochot7ou','u16_bnet'], sentences:['u16s6','u16s7','u16s13'] },
+      { id:'u16l5', title:'Scène : la soirée du henné', auto:true, words:['u16_7enna','u16_keswa','u16_harqous'], sentences:['u16s4','u16s5'],
+        extra:[ {type:'dialogue', id:'d_u16'}, {type:'sign', id:'sign_wedding'}, {type:'shadow', item:'u16s1'} ] }
+    ],
+    cultureCard: {
+      title: 'Henné, jelwa et keswa',
+      text: [
+        'Un mariage tunisien s’étale sur plusieurs jours : la soirée du henné, le hammam de la mariée, puis la grande fête, souvent en été.',
+        'Pendant la « jelwa », la mariée, parée d’une keswa brodée d’or et parfois du « harqous » (fins motifs noirs dessinés sur le visage et les mains), est présentée aux invitées.',
+        'Le tbal et la zokra, puis le mezoued, font danser jusqu’au bout de la nuit ; on félicite avec « mabrouk », et l’on répond « 3a9balek ! ».'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U17 */
+  {
+    id: 'u17', title: 'Argot & expressions', icon: '😎', color: '#DB2777',
+    words: [
+      { id:'u17_mouchnormal', fr:'Incroyable (litt. « pas normal »)', ar:'موش نورمال', arabizi:'mouch normal', phon:'mouch normal', register:'familier', loanFr:true, alt:['mich normal','moch normal'], example:'u17s1' },
+      { id:'u17_aya', fr:'Allez !', ar:'أيا', arabizi:'aya', phon:'aya', register:'familier', alt:['ayya','aye'], example:'u17s5' },
+      { id:'u17_mriguel', fr:'Nickel / Réglé', ar:'مريڨل', arabizi:'mriguel', phon:'mriguel', register:'familier', loanFr:true, alt:['mrigel','mrigl'], example:'u17s12' },
+      { id:'u17_wallah', fr:'Je te jure', ar:'والله', arabizi:'wallah', phon:'ouallah', register:'familier', alt:['wellah','walah'], example:'u17s3' },
+      { id:'u17_zahi', fr:'Joyeux / Plein d’entrain', ar:'زاهي', arabizi:'zahi', phon:'zahi', register:'familier', alt:['zehi','zahy'], example:'u17s18' },
+      { id:'u17_mahboul', fr:'Fou / Dingue', ar:'مهبول', arabizi:'mahboul', phon:'mahboul', register:'familier', alt:['mehboul','mahbul'], example:'u17s4' },
+      { id:'u17_khallini', fr:'Laisse-moi tranquille', ar:'خلّيني', arabizi:'khallini', phon:'khallini', register:'familier', alt:['khalini','khalleni'], example:'u17s2' },
+      { id:'u17_chbik', fr:'Qu’est-ce qui t’arrive ?', ar:'شبيك', arabizi:'chbik', phon:'chbik', register:'familier', alt:['chbiik','chbik?'], example:'u17s10' },
+      { id:'u17_tawtaw', fr:'Tout de suite', ar:'توّا توّا', arabizi:'taw taw', phon:'taou taou', register:'familier', alt:['tawtaw','taw tew'], example:'u17s5' },
+      { id:'u17_3adi', fr:'Normal / Tranquille', ar:'عادي', arabizi:'3adi', phon:'âdi', register:'neutre', alt:['adi','3ady'], example:'u17s6' },
+      { id:'u17_chay', fr:'Rien / Quelque chose', ar:'شيء', arabizi:'chay', phon:'chaï', register:'neutre', alt:['chey','chai'], example:'u17s6' },
+      { id:'u17_ken', fr:'Seulement / Juste', ar:'كان', arabizi:'ken', phon:'ken', register:'neutre', alt:['kan'], example:'u17s8' },
+      { id:'u17_3labalek', fr:'Tu sais / Tu es au courant', ar:'على بالك', arabizi:'3la balek', phon:'âla balek', register:'neutre', alt:['ala balek','3labalek'], example:'u17s7' },
+      { id:'u17_chnowaeljaw', fr:'Quoi de neuf ? (litt. « c’est quoi l’ambiance ? »)', ar:'شنوّة الجو', arabizi:'chnowa el jaw', phon:'chnoua el jaou', register:'familier', alt:['chnoua el jaw','chnowa ejjaw'], example:'u17s11' },
+      { id:'u17_meskin', fr:'Le pauvre', ar:'مسكين', arabizi:'meskin', phon:'meskine', register:'neutre', alt:['miskin','msskin'], example:'u17s9' },
+      { id:'u17_tfadhel', fr:'Je t’en prie / Vas-y', ar:'تفضّل', arabizi:'tfadhel', phon:'tfadhel', register:'neutre', alt:['tfadhal','tfadal'], example:'u17s14' },
+      { id:'u17_najjem', fr:'Je peux', ar:'نجّم', arabizi:'najjem', phon:'najjem', register:'neutre', alt:['nanjem','najem','nnajjem'], example:'u17s17' },
+      { id:'u17_bech', fr:'Pour / (futur) aller faire', ar:'باش', arabizi:'bech', phon:'bech', register:'neutre', alt:['besh','bach'] },
+      { id:'u17_kima', fr:'Comme', ar:'كيما', arabizi:'kima', phon:'kima', register:'neutre', alt:['kimma','kif'], example:'u17s13' },
+      { id:'u17_ama', fr:'Mais', ar:'أما', arabizi:'ama', phon:'ama', register:'neutre', alt:['amma'], example:'u17s15' }
+    ],
+    sentences: [
+      { id:'u17s1', fr:'C’est incroyable, mon frère !', t:[['mouch normal,','موش نورمال،'],['ya','يا'],['khouya!','خويا!']], phon:'mouch normal, ya khouya !' },
+      { id:'u17s2', fr:'Laisse-moi, je suis fatigué !', t:[['khallini,','خلّيني،'],['ena','أنا'],['ta3ben!','تعبان!']], phon:'khallini, éna taâben !' },
+      { id:'u17s3', fr:'Je te jure, c’est vrai.', t:[['wallah','والله'],['s7i7.','صحيح.']], phon:'ouallah shih.' },
+      { id:'u17s4', fr:'Ce type est fou !', t:[['hedha','هذا'],['mahboul!','مهبول!']], phon:'hedha mahboul !' },
+      { id:'u17s5', fr:'Allez, tout de suite !', t:[['aya,','أيا،'],['taw taw!','توّا توّا!']], phon:'aya, taou taou !', tip:'« taw taw » = tout de suite… en théorie !' },
+      { id:'u17s6', fr:'Tranquille, ce n’est rien.', t:[['3adi,','عادي،'],['ma famma','ما فمّا'],['chay.','شيء.']], phon:'âdi, ma famma chaï.' },
+      { id:'u17s7', fr:'Tu es au courant ?', t:[['rak','راك'],['3la balek?','على بالك؟']], phon:'rak âla balek ?' },
+      { id:'u17s8', fr:'Juste un peu, doucement.', t:[['ken','كان'],['chwaya,','شويّة،'],['chwaya.','شويّة.']], phon:'ken chouaya, chouaya.', tip:'« ken » = seulement (et aussi : si).' },
+      { id:'u17s9', fr:'Le pauvre, il n’a rien.', t:[['meskin,','مسكين،'],['ma 3andou','ما عندو'],['chay.','شيء.']], phon:'meskine, ma âandou chaï.' },
+      { id:'u17s10', fr:'Qu’est-ce qui t’arrive ? Qu’est-ce qui s’est passé ?', t:[['chbik?','شبيك؟'],['chnowa','شنوّة'],['sar?','صار؟']], phon:'chbik ? chnoua sar ?' },
+      { id:'u17s11', fr:'Quoi de neuf aujourd’hui ?', t:[['chnowa el jaw','شنوّة الجو'],['lyoum?','اليوم؟']], phon:'chnoua el jaou lyoum ?' },
+      { id:'u17s12', fr:'Tout est réglé.', t:[['koll','كل'],['chay','شيء'],['mriguel.','مريڨل.']], phon:'koll chaï mriguel.' },
+      { id:'u17s13', fr:'C’est bien, comme à Paris !', t:[['behi,','باهي،'],['kima','كيما'],['fi','في'],['Paris!','باريس!']], phon:'béhi, kima fi Paris !' },
+      { id:'u17s14', fr:'Je t’en prie, assieds-toi !', t:[['tfadhel,','تفضّل،'],['o93ed!','اقعد!']], phon:'tfadhel, oqâod !' },
+      { id:'u17s15', fr:'Mais tu le connais !', t:[['ama','أما'],['inti','انتي'],['ta3rfou!','تعرفو!']], phon:'ama inti taârfou !' },
+      { id:'u17s16', fr:'J’ai acheté une nouvelle voiture, je te jure !', t:[['chrit','شريت'],['karhba','كرهبة'],['jdida,','جديدة،'],['wallah!','والله!']], phon:'chrit karhba djdida, ouallah !' },
+      { id:'u17s17', fr:'Je peux t’aider ?', t:[['najjem','نجّم'],['n3awnek?','نعاونك؟']], phon:'najjem nâaounek ?' },
+      { id:'u17s18', fr:'Le mariage était super joyeux.', t:[['el 3ers','العرس'],['kan','كان'],['zahi','زاهي'],['barcha.','برشا.']], phon:'el âers kan zahi barcha.' }
+    ],
+    lessons: [
+      { id:'u17l1', title:'Mouch normal !', auto:true, words:['u17_mouchnormal','u17_aya','u17_mriguel','u17_wallah','u17_zahi'], sentences:['u17s1','u17s3','u17s12','u17s18'] },
+      { id:'u17l2', title:'Chbik ?', auto:true, words:['u17_mahboul','u17_khallini','u17_chbik','u17_tawtaw'], sentences:['u17s2','u17s4','u17s5','u17s10'] },
+      { id:'u17l3', title:'Tranquille', auto:true, words:['u17_3adi','u17_chay','u17_ken','u17_3labalek','u17_chnowaeljaw'], sentences:['u17s6','u17s7','u17s8','u17s11'] },
+      { id:'u17l4', title:'Les petits mots', auto:true, words:['u17_meskin','u17_tfadhel','u17_najjem','u17_bech'], sentences:['u17s9','u17s14','u17s17'] },
+      { id:'u17l5', title:'Scène : au café du coin', auto:true, words:['u17_kima','u17_ama'], sentences:['u17s13','u17s15','u17s16'],
+        extra:[ {type:'dialogue', id:'d_u17'}, {type:'shadow', item:'u17s1'} ] }
+    ],
+    cultureCard: {
+      title: 'Mouch normal, chbik et chnowa el jaw',
+      text: [
+        '« Mouch normal » (pas normal) est le compliment ultime : un plat, un but ou un concert « mouch normal », c’est qu’ils étaient incroyables.',
+        'Pour saluer un ami : « chnowa el jaw ? » (c’est quoi l’ambiance ?) ; s’il a l’air contrarié : « chbik ? » (qu’est-ce qui t’arrive ?).',
+        'Ces mots sont familiers : parfaits entre amis, à éviter avec les anciens ou au travail. Avec Khalti Fatiha, reste sur « brabbi » et « y3aychek » !'
+      ]
+    }
+  },
+
+  /* ------------------------------------------------------------- U18 */
+  {
+    id: 'u18', title: 'Proverbes (amthal)', icon: '📜', color: '#92400E',
+    words: [
+      { id:'u18_mthel', fr:'Le proverbe', ar:'المثل', arabizi:'el mthel', phon:'el mthel', register:'neutre', alt:['mthel','methel'], example:'u18s15' },
+      { id:'u18_kelma', fr:'Le mot / La parole', ar:'الكلمة', arabizi:'el kelma', phon:'el kelma', register:'neutre', alt:['kelma','kalma'] },
+      { id:'u18_fet', fr:'C’est passé', ar:'فات', arabizi:'fet', phon:'fet', register:'neutre', alt:['fat'], example:'u18s1' },
+      { id:'u18_met', fr:'Il est mort', ar:'مات', arabizi:'met', phon:'met', register:'neutre', alt:['mat'], example:'u18s1' },
+      { id:'u18_ta3tila', fr:'Le retard', ar:'التعطيلة', arabizi:'ta3tila', phon:'taâtila', register:'neutre', alt:['t3atila','t3tila'], example:'u18s2' },
+      { id:'u18_jmal', fr:'Le chameau', ar:'الجمل', arabizi:'el jmal', phon:'el djmal', register:'neutre', alt:['jmal','jmel'], example:'u18s4' },
+      { id:'u18_ghzal', fr:'La gazelle', ar:'الغزال', arabizi:'el ghzal', phon:'el ghzal', register:'neutre', alt:['ghzal','ghazal'], example:'u18s6' },
+      { id:'u18_khanfous', fr:'Le scarabée', ar:'الخنفوس', arabizi:'el khanfous', phon:'el khanfouss', register:'neutre', alt:['khanfous','khanfouss'], example:'u18s6' },
+      { id:'u18_ommou', fr:'Sa mère (à lui)', ar:'أمّو', arabizi:'ommou', phon:'ommou', register:'neutre', alt:['ommo','oummou'], example:'u18s6' },
+      { id:'u18_3sal', fr:'Le miel', ar:'العسل', arabizi:'el 3sal', phon:'el âssal', register:'neutre', alt:['3sal','assal','3sel'], example:'u18s5' },
+      { id:'u18_n7al', fr:'Les abeilles', ar:'النحل', arabizi:'en-n7al', phon:'ennhal', register:'neutre', alt:['n7al','nhal'], example:'u18s5' },
+      { id:'u18_3oud', fr:'Le bâton (le bois)', ar:'العود', arabizi:'el 3oud', phon:'el âoud', register:'neutre', alt:['3oud','oud'], example:'u18s7' },
+      { id:'u18_3a9el', fr:'Le sage (la personne sensée)', ar:'العاقل', arabizi:'el 3a9el', phon:'el âaqel', register:'neutre', alt:['3a9el','aqel'], example:'u18s16' },
+      { id:'u18_ya3ref', fr:'Il connaît / Il sait', ar:'يعرف', arabizi:'ya3ref', phon:'yaâref', register:'neutre', alt:['y3ref','yaaref'] },
+      { id:'u18_ensa', fr:'Oublie !', ar:'انسى', arabizi:'ensa', phon:'enssa', register:'neutre', alt:['nsa','ensah'], example:'u18s9' },
+      { id:'u18_khaf', fr:'Il a eu peur', ar:'خاف', arabizi:'khaf', phon:'khaf', register:'neutre', alt:['5af','khef'], example:'u18s10' },
+      { id:'u18_nja', fr:'Il s’en est sorti (sauvé)', ar:'نجا', arabizi:'nja', phon:'ndja', register:'neutre', alt:['nje','ndja'], example:'u18s10' },
+      { id:'u18_y7seb', fr:'Il compte', ar:'يحسب', arabizi:'y7seb', phon:'yhseb', register:'neutre', alt:['ye7seb','yahseb','yhseb'], example:'u18s11' },
+      { id:'u18_yfadhlou', fr:'Il lui en reste', ar:'يفضلّو', arabizi:'yfadhlou', phon:'yfadhlou', register:'neutre', alt:['yfadhlo','yfadhllou'], example:'u18s11' }
+    ],
+    sentences: [
+      { id:'u18s1', fr:'Le passé est passé. (litt. « ce qui est passé est mort »)', t:[['elli','اللي'],['fet','فات'],['met.','مات.']], phon:'elli fet met.', tip:'Pour dire : tourne la page, ne rumine pas.' },
+      { id:'u18s2', fr:'Chaque retard a du bon.', t:[['koll','كل'],['ta3tila','تعطيلة'],['fiha','فيها'],['khir.','خير.']], phon:'koll taâtila fiha khir.', tip:'Pour consoler quelqu’un qui a raté un louage, un rendez-vous…' },
+      { id:'u18s3', fr:'Une seule main ne peut pas applaudir.', t:[['el yed','اليد'],['wa7da','وحدة'],['ma tsaffa9ch.','ما تصفّقش.']], phon:'el yed ouahda ma tssaffaqch.', tip:'L’union fait la force.' },
+      { id:'u18s4', fr:'Le chameau ne voit pas sa bosse.', t:[['el jmal','الجمل'],['ma ychoufch','ما يشوفش'],['7adbtou.','حدبتو.']], phon:'el djmal ma ychoufch hadbtou.', tip:'On voit les défauts des autres, jamais les siens.' },
+      { id:'u18s5', fr:'Qui aime le miel supporte les piqûres des abeilles.', t:[['elli','اللي'],['y7ebb','يحب'],['el 3sal','العسل'],['yesbar','يصبر'],['l 9ris','لقريص'],['en-n7al.','النحل.']], phon:'elli yhebb el âssal yessbar l qriss ennhal.', tip:'Pas de réussite sans effort.' },
+      { id:'u18s6', fr:'Pour sa mère, chaque scarabée est une gazelle.', t:[['koll','كل'],['khanfous','خنفوس'],['3and','عند'],['ommou','أمّو'],['ghzal.','غزال.']], phon:'koll khanfouss âand ommou ghzal.', tip:'Aux yeux d’une mère, son enfant est toujours le plus beau.' },
+      { id:'u18s7', fr:'Le bâton que tu méprises peut t’aveugler.', t:[['el 3oud','العود'],['elli','اللي'],['t7a9rou','تحقرو'],['y3amik.','يعميك.']], phon:'el âoud elli thaqrou yâamik.', tip:'Ne sous-estime personne.' },
+      { id:'u18s8', fr:'La patience est la clé du soulagement.', t:[['es-sabr','الصبر'],['mefte7','مفتاح'],['el faraj.','الفرج.']], phon:'essabr meftéh el faraj.' },
+      { id:'u18s9', fr:'Fais le bien et oublie.', t:[['a3mel','اعمل'],['el khir','الخير'],['w','و'],['ensa.','انسى.']], phon:'aâmel el khir ou enssa.' },
+      { id:'u18s10', fr:'Qui a peur s’en sort. (la prudence sauve)', t:[['elli','اللي'],['khaf','خاف'],['nja.','نجا.']], phon:'elli khaf ndja.' },
+      { id:'u18s11', fr:'Qui compte tout seul trouve toujours qu’il lui reste quelque chose.', t:[['elli','اللي'],['y7seb','يحسب'],['wa7dou','وحدو'],['yfadhlou.','يفضلّو.']], phon:'elli yhseb ouahdou yfadhlou.', tip:'Pour dire : les comptes faits seul sont toujours trop optimistes.' },
+      { id:'u18s12', fr:'À chacun sa chance.', t:[['koll','كل'],['wa7ed','واحد'],['w','و'],['zharou.','زهرو.']], phon:'koll ouahed ou zharou.' },
+      { id:'u18s13', fr:'Qui ne te connaît pas ne sait pas ce que tu vaux.', t:[['elli','اللي'],['ma y3arfek','ما يعرفك'],['ykhasrek.','يخسرك.']], phon:'elli ma yâarfek ykhassrek.', tip:'Litt. « celui qui ne te connaît pas te gâche ».' },
+      { id:'u18s14', fr:'Comme on dit…', t:[['kima','كيما'],['y9oulou…','يقولو…']], phon:'kima yqoulou…' },
+      { id:'u18s15', fr:'Ton grand-père disait toujours ce proverbe.', t:[['jeddek','جدّك'],['kan','كان'],['dima','ديما'],['y9oul','يقول'],['el mthel','المثل'],['hedha.','هذا.']], phon:'djeddek kan dima yqoul el mthel hedha.' },
+      { id:'u18s16', fr:'Le sage comprend à demi-mot.', t:[['el 3a9el','العاقل'],['yefhem','يفهم'],['bel ghamza.','بالغمزة.']], phon:'el âaqel yefhem bel ghamza.', tip:'Litt. « d’un clin d’œil ».' }
+    ],
+    lessons: [
+      { id:'u18l1', title:'Le passé, la patience', auto:true, words:['u18_mthel','u18_kelma','u18_fet','u18_met','u18_ta3tila'], sentences:['u18s1','u18s2','u18s8','u18s14'] },
+      { id:'u18l2', title:'Les animaux des proverbes', auto:true, words:['u18_jmal','u18_ghzal','u18_khanfous','u18_ommou'], sentences:['u18s4','u18s6'] },
+      { id:'u18l3', title:'Le miel et le bâton', auto:true, words:['u18_3sal','u18_n7al','u18_3oud'], sentences:['u18s5','u18s7'] },
+      { id:'u18l4', title:'La sagesse', auto:true, words:['u18_3a9el','u18_ya3ref','u18_ensa','u18_khaf','u18_nja'], sentences:['u18s9','u18s10','u18s13','u18s16'] },
+      { id:'u18l5', title:'Scène : les proverbes de Jeddi', auto:true, words:['u18_y7seb','u18_yfadhlou'], sentences:['u18s3','u18s11','u18s12','u18s15'],
+        extra:[ {type:'dialogue', id:'d_u18'}, {type:'shadow', item:'u18s1'} ] }
+    ],
+    cultureCard: {
+      title: 'Les amthal, la sagesse des anciens',
+      text: [
+        'En Tunisie, un proverbe (mthel, pluriel amthal) clôt souvent une discussion : c’est la voix des grands-parents, qu’on cite avec un sourire.',
+        'Beaucoup de proverbes sont partagés avec l’Algérie et le Maroc, avec de petites variantes : « koll khanfous 3and ommou ghzal » devient « 3end mmo » à Casablanca.',
+        'Placer un « elli fet met » ou un « es-sabr mefte7 el faraj » au bon moment, c’est le plus beau compliment que tu puisses faire à ton tounsi.'
+      ]
+    }
+  }
+);
+
+CONTENT_BY.tn.dialogues.push(
+  { id:'d_u13', unit:'u13', title:'Pourquoi tu ne réponds pas ?', you:'Amine', lines:[
+    { speaker:'Karim', sentenceId:'u1s1' },
+    { speaker:'Toi', choices:['u1s2','u13s4','u13s9'], correct:0 },
+    { speaker:'Karim', sentenceId:'u13s12' },
+    { speaker:'Toi', choices:['u13s5','u13s3','u13s14'], correct:0 },
+    { speaker:'Karim', sentenceId:'u13s7' },
+    { speaker:'Toi', choices:['u13s16','u13s8','u13s1'], correct:0 }
+  ]},
+  { id:'d_u14', unit:'u14', title:'Au café, le lendemain du match', you:'Amine', lines:[
+    { speaker:'Karim', sentenceId:'u14s1' },
+    { speaker:'Toi', choices:['u14s2','u14s11','u14s12'], correct:0 },
+    { speaker:'Karim', sentenceId:'u14s4' },
+    { speaker:'Toi', choices:['u14s14','u13s4','u12s8'], correct:0 },
+    { speaker:'Karim', sentenceId:'u14s7' },
+    { speaker:'Toi', choices:['u14s16','u11s4','u14s9'], correct:0 },
+    { speaker:'Karim', sentenceId:'u14s3' }
+  ]},
+  { id:'d_u15', unit:'u15', title:'Le matin de l’Aïd', you:'Amine', lines:[
+    { speaker:'Khalti Fatiha', sentenceId:'u15s9' },
+    { speaker:'Toi', choices:['u15s16','u15s2','u15s7'], correct:0 },
+    { speaker:'Khalti Fatiha', sentenceId:'u15s13' },
+    { speaker:'Toi', choices:['u15s17','u15s11','u15s3'], correct:0 },
+    { speaker:'Khalti Fatiha', sentenceId:'u15s12' },
+    { speaker:'Toi', choices:['u1s12','u15s2','u15s3'], correct:0 }
+  ]},
+  { id:'d_u16', unit:'u16', title:'Karim a une grande nouvelle', you:'Amine', lines:[
+    { speaker:'Karim', sentenceId:'u16s2' },
+    { speaker:'Toi', choices:['u16s1','u16s12','u16s5'], correct:0 },
+    { speaker:'Karim', sentenceId:'u16s15' },
+    { speaker:'Karim', sentenceId:'u16s3' },
+    { speaker:'Toi', choices:['u16s9','u16s6','u16s14'], correct:0 },
+    { speaker:'Karim', sentenceId:'u16s4' },
+    { speaker:'Toi', choices:['u16s10','u16s8','u16s13'], correct:0 }
+  ]},
+  { id:'d_u17', unit:'u17', title:'Entre potes', you:'Amine', lines:[
+    { speaker:'Karim', sentenceId:'u17s11' },
+    { speaker:'Toi', choices:['u1s2','u17s9','u17s14'], correct:0 },
+    { speaker:'Karim', sentenceId:'u17s16' },
+    { speaker:'Toi', choices:['u17s1','u17s9','u17s10'], correct:0 },
+    { speaker:'Karim', sentenceId:'u17s13' },
+    { speaker:'Toi', choices:['u17s18','u17s5','u17s2'], correct:1 }
+  ]},
+  { id:'d_u18', unit:'u18', title:'Les proverbes de Jeddi', you:'Karim', lines:[
+    { speaker:'Toi', choices:['u5s6','u18s4','u18s9'], correct:0 },
+    { speaker:'Jeddi', sentenceId:'u18s2' },
+    { speaker:'Toi', choices:['u12s12','u18s6','u18s16'], correct:0 },
+    { speaker:'Jeddi', sentenceId:'u18s5' },
+    { speaker:'Toi', choices:['u1s3','u18s11','u18s7'], correct:0 },
+    { speaker:'Jeddi', sentenceId:'u18s8' }
+  ]}
+);
+
+CONTENT_BY.tn.signs.push(
+  { id:'sign_flexy', unit:'u13', kind:'shop', title:'شحن الرصيد', sub:'اتصالات تونس • أوريدو • أورنج', q:'Qu’est-ce qu’on peut faire dans cette boutique ?', options:['Recharger son crédit téléphone','Acheter du pain','Envoyer un colis','Réparer une voiture'], correct:0, note:'شحن الرصيد = recharge du crédit. Tunisie Telecom (اتصالات تونس), Ooredoo et Orange sont les trois opérateurs. À l’oral : « recharge ».' },
+  { id:'sign_stadium', unit:'u14', kind:'street', title:'ملعب حمادي العقربي', sub:'Stade Hammadi-Agrebi · Radès', q:'Qu’indique ce panneau ?', options:['Un stade','Une gare','Un hôpital','Une plage'], correct:0, note:'ملعب (mal3ab) = stade. Le stade de Radès, renommé Hammadi-Agrebi, accueille les grands matchs et les derbys de Tunis. À l’oral : « stade ».' },
+  { id:'sign_eid', unit:'u15', kind:'door', title:'مغلق', sub:'عيد مبروك', q:'Pourquoi ce magasin est-il fermé ?', options:['C’est l’Aïd','Il est en travaux','Il est à vendre','Le vendeur est malade'], correct:0, note:'مغلق = fermé. عيد مبروك = bonne fête. Pendant l’Aïd, beaucoup de commerces ferment un ou deux jours.' },
+  { id:'sign_wedding', unit:'u16', kind:'plate', title:'قاعة الأفراح', sub:'الياسمين', q:'Qu’est-ce que c’est ?', options:['Une salle des fêtes','Une école','Une mairie','Un hôtel'], correct:0, note:'قاعة الأفراح = salle des fêtes (litt. « salle des joies »). الياسمين = le Jasmin, un nom très courant en Tunisie. À l’oral : « la salle ».' }
+);
+
+/* ------------------------------------------------------- HISTOIRES (Tunisie) */
+CONTENT_BY.tn.stories.push(
+  { id:'st1', title:'Le réveil', icon:'⏰', unit:'u5', cast:['Ommi','Karim'], lines:[
+    { s:'Ommi', t:[['Karim,','كريم،','Karim'],['noudh!','نوض!','lève-toi !'],['rak','راك','tu es'],['t3attalt.','تعطّلت.','en retard']], fr:'Karim, lève-toi ! Tu es en retard.' },
+    { s:'Karim', t:[['mazel','مازال','encore'],['chwaya,','شويّة،','un peu'],['ommi…','أمّي…','maman']], fr:'Encore un peu, maman…' },
+    { s:'Ommi', t:[['es-sa3a','الساعة','il est'],['thmanya!','ثمانية!','huit heures'],['emchi','امشي','va'],['lel khedma.','للخدمة.','au travail']], fr:'Il est huit heures ! Va au travail.' },
+    { s:'Karim', t:[['chnowa','شنوّة','qu’est-ce que'],['famma','فمّا','il y a'],['fel','في','pour'],['ftour?','الفطور؟','le petit-déjeuner']], fr:'Qu’est-ce qu’il y a pour le petit-déjeuner ?' },
+    { s:'Ommi', t:[['famma','فمّا','il y a'],['kahwa','قهوة','du café'],['w','و','et'],['khobz','خبز','du pain'],['bel zit.','بالزيت.','à l’huile d’olive']], fr:'Il y a du café et du pain à l’huile d’olive.' },
+    { s:'Karim', t:[['bnin!','بنين!','délicieux !'],['y3aychek,','يعيّشك،','merci'],['ommi.','أمّي.','maman']], fr:'Délicieux ! Merci, maman.' },
+    { s:'Ommi', t:[['fissa3,','فيسع،','vite'],['el metro','المترو','le métro'],['ma yestannech.','ما يستنّاش.','n’attend pas']], fr:'Vite, le métro n’attend pas.' },
+    { s:'Karim', t:[['taw','توّا','tout de suite'],['nji!','نجي!','j’arrive'],['bislema,','بالسلامة،','au revoir'],['ommi!','أمّي!','maman']], fr:'J’arrive tout de suite ! Au revoir, maman !' }
+  ], quiz:[
+    { q:'Quelle heure est-il ?', options:['8 h','7 h','9 h'], correct:0 },
+    { q:'Que prend Karim au petit-déjeuner ?', options:['Du café et du pain à l’huile d’olive','Du lablabi','Du couscous'], correct:0 },
+    { q:'Pourquoi Karim doit-il se dépêcher ?', options:['Le métro n’attend pas','Le café refroidit','Khalti Fatiha arrive'], correct:0 }
+  ]},
+  { id:'st2', title:'Au café', icon:'☕', unit:'u4', cast:['Amine','Karim','Khalti Fatiha'], lines:[
+    { s:'Amine', t:[['aslema','عسلامة','salut'],['Karim,','كريم،','Karim'],['chnowa el jaw?','شنوّة الجو؟','quoi de neuf']], fr:'Salut Karim, quoi de neuf ?' },
+    { s:'Karim', t:[['labes,','لاباس،','ça va'],['l7amdoulillah.','الحمد لله.','Dieu merci'],['o93ed,','اقعد،','assieds-toi'],['o93ed!','اقعد!','assieds-toi']], fr:'Ça va, Dieu merci. Assieds-toi, assieds-toi !' },
+    { s:'Karim', t:[['chnowa','شنوّة','qu’est-ce que'],['t7ebb','تحب','tu veux'],['tochrob?','تشرب؟','boire']], fr:'Tu veux boire quoi ?' },
+    { s:'Amine', t:[['kapsin,','كابوسان،','un capucin'],['bla','بلا','sans'],['sokkor,','سكر،','sucre'],['brabbi.','بربّي.','s’il te plaît']], fr:'Un capucin, sans sucre, s’il te plaît.' },
+    { s:'Karim', t:[['w','و','et'],['ena','أنا','moi'],['tey','تاي','un thé'],['bel bondok.','بالبندق.','aux pignons']], fr:'Et moi, un thé aux pignons.' },
+    { s:'Amine', t:[['chouf!','شوف!','regarde !'],['Khalti Fatiha','خالتي فتيحة','Khalti Fatiha'],['jeya.','جاية.','arrive']], fr:'Regarde ! Khalti Fatiha arrive.' },
+    { s:'Karim', t:[['ahla','أهلا','bienvenue'],['bik,','بيك،','à toi'],['ya khalti!','يا خالتي!','ma tante'],['chnahwelek?','شنحوالك؟','comment vas-tu']], fr:'Bienvenue, ma tante ! Comment vas-tu ?' },
+    { s:'Khalti Fatiha', t:[['labes,','لاباس،','bien'],['rabbi','ربّي','que Dieu'],['ykhallikom,','يخلّيكم،','vous garde'],['ya wlidet!','يا وليدات!','les jeunes']], fr:'Bien, que Dieu vous garde, les jeunes !' }
+  ], quiz:[
+    { q:'Que boit Amine ?', options:['Un capucin sans sucre','Un thé aux pignons','De l’eau'], correct:0 },
+    { q:'Et Karim ?', options:['Un thé aux pignons','Un café noir','Un jus d’orange'], correct:0 },
+    { q:'Qui arrive au café ?', options:['Khalti Fatiha','Ommi','Le vendeur'], correct:0 }
+  ]},
+  { id:'st3', title:'Khalti Fatiha au souk', icon:'🍅', unit:'u6', cast:['Khalti Fatiha','Le vendeur'], lines:[
+    { s:'Le vendeur', t:[['ahla bik,','أهلا بيك،','bienvenue'],['ya khalti!','يا خالتي!','ma tante'],['chouf','شوف','regarde'],['et-tmatem,','الطماطم،','les tomates'],['jdida!','جديدة!','toutes fraîches']], fr:'Bienvenue, ma tante ! Regarde les tomates, toutes fraîches !' },
+    { s:'Khalti Fatiha', t:[['b9addech','بقدّاش','combien'],['el kilo?','الكيلو؟','le kilo']], fr:'Combien le kilo ?' },
+    { s:'Le vendeur', t:[['alf','ألف','un dinar'],['w mitin.','و ميتين.','et deux cents']], fr:'Un dinar deux cents (1 200 millimes).' },
+    { s:'Khalti Fatiha', t:[['ghali','غالي','cher'],['barcha!','برشا!','trop'],['na99es','نقّص','baisse'],['chwaya.','شويّة.','un peu']], fr:'C’est trop cher ! Baisse un peu.' },
+    { s:'Le vendeur', t:[['3lik,','عليك،','pour toi'],['alf','ألف','un dinar'],['w yezzi.','و يزّي.','et c’est tout']], fr:'Pour toi, un dinar et c’est tout.' },
+    { s:'Khalti Fatiha', t:[['behi,','باهي،','d’accord'],['a3tini','أعطيني','donne-moi'],['zouz','زوز','deux'],['kilo.','كيلو.','kilos']], fr:'D’accord, donne-moi deux kilos.' },
+    { s:'Le vendeur', t:[['hak,','هاك،','tiens'],['y3aychek','يعيّشك','merci'],['ya khalti.','يا خالتي.','ma tante']], fr:'Tiens, merci ma tante.' },
+    { s:'Khalti Fatiha', t:[['rabbi','ربّي','que Dieu'],['ybarek','يبارك','bénisse'],['fik.','فيك.','toi']], fr:'Que Dieu te bénisse.' }
+  ], quiz:[
+    { q:'Quel est le premier prix annoncé ?', options:['1 dinar 200','1 dinar','2 dinars'], correct:0 },
+    { q:'Quel est le prix final ?', options:['1 dinar','1 dinar 200','800 millimes'], correct:0 },
+    { q:'Combien de kilos achète Khalti Fatiha ?', options:['Deux','Un','Cinq'], correct:0 }
+  ]},
+  { id:'st4', title:'Le louage pour Sousse', icon:'🚐', unit:'u7', cast:['Amine','Le chauffeur'], lines:[
+    { s:'Amine', t:[['aslema,','عسلامة،','bonjour'],['el louage','اللواج','le louage'],['hedha','هذا','celui-ci'],['l Sousse?','لسوسة؟','pour Sousse']], fr:'Bonjour, ce louage va à Sousse ?' },
+    { s:'Le chauffeur', t:[['ey,','إي،','oui'],['mazelt','مازالت','il reste'],['blassa','بلاصة','place'],['wa7da.','وحدة.','une']], fr:'Oui, il reste une place.' },
+    { s:'Amine', t:[['b9addech','بقدّاش','combien'],['el blassa?','البلاصة؟','la place']], fr:'Combien la place ?' },
+    { s:'Le chauffeur', t:[['3achra','عشرة','dix'],['alaf.','آلاف.','dinars']], fr:'Dix dinars.' },
+    { s:'Amine', t:[['behi,','باهي،','d’accord'],['bech','باش','je vais'],['nerkeb.','نركب.','monter']], fr:'D’accord, je monte.' },
+    { s:'Le chauffeur', t:[['yezzi,','يزّي،','c’est bon'],['m3abbi!','معبّي!','c’est plein'],['aya!','أيا!','allez']], fr:'C’est bon, c’est plein ! Allez !' },
+    { s:'Amine', t:[['sama7ni,','سامحني،','pardon'],['bech','باش','je vais'],['nahbet','نهبط','descendre'],['fel ma7atta.','في المحطّة.','à la gare']], fr:'Pardon, je vais descendre à la gare.' },
+    { s:'Le chauffeur', t:[['behi,','باهي،','d’accord'],['ahla bik','أهلا بيك','bienvenue'],['f Sousse!','في سوسة!','à Sousse']], fr:'D’accord, bienvenue à Sousse !' }
+  ], quiz:[
+    { q:'Où va le louage ?', options:['À Sousse','À Sfax','À Bizerte'], correct:0 },
+    { q:'Combien coûte la place ?', options:['10 dinars','100 dinars','1 dinar'], correct:0 },
+    { q:'Où Amine descend-il ?', options:['À la gare','Au port','À la médina'], correct:0 }
+  ]},
+  { id:'st5', title:'Perdu dans la médina de Tunis', icon:'🧭', unit:'u8', cast:['Amine','Khalti Fatiha'], lines:[
+    { s:'Amine', t:[['sama7ni','سامحني','pardon'],['ya khalti,','يا خالتي،','ma tante'],['ena','أنا','je suis'],['dhaye3.','ضايع.','perdu']], fr:'Pardon, ma tante, je suis perdu.' },
+    { s:'Khalti Fatiha', t:[['ma3lich','ماعليش','pas grave'],['ya weldi,','يا ولدي،','mon fils'],['win','وين','où'],['machi?','ماشي؟','tu vas']], fr:'Pas grave, mon fils, où vas-tu ?' },
+    { s:'Amine', t:[['n7ebb','نحب','je veux'],['nemchi','نمشي','aller'],['l Bab Bhar.','لباب بحر.','à Bab Bhar']], fr:'Je veux aller à Bab Bhar.' },
+    { s:'Khalti Fatiha', t:[['emchi','امشي','va'],['toul,','طول،','tout droit'],['ba3d','بعد','ensuite'],['dour','دور','tourne'],['3al limin.','عاليمين.','à droite']], fr:'Va tout droit, puis tourne à droite.' },
+    { s:'Khalti Fatiha', t:[['tal9a','تلقى','tu trouveras'],['el bab,','الباب،','la porte'],['rahi','راهي','elle est'],['9riba.','قريبة.','tout près']], fr:'Tu trouveras la porte, elle est tout près.' },
+    { s:'Amine', t:[['y3aychek','يعيّشك','merci'],['barcha,','برشا،','beaucoup'],['ya khalti!','يا خالتي!','ma tante']], fr:'Merci beaucoup, ma tante !' },
+    { s:'Khalti Fatiha', t:[['bla mzeya.','بلا مزيّة.','de rien'],['ahla bik','أهلا بيك','bienvenue'],['f Tounes!','في تونس!','à Tunis']], fr:'De rien. Bienvenue à Tunis !' }
+  ], quiz:[
+    { q:'Où veut aller Amine ?', options:['À Bab Bhar','À la gare','Au café'], correct:0 },
+    { q:'Quel chemin doit-il prendre ?', options:['Tout droit, puis à droite','À gauche au rond-point','Monter les escaliers'], correct:0 },
+    { q:'Dans quelle ville se passe l’histoire ?', options:['Tunis','Sousse','Djerba'], correct:0 }
+  ]},
+  { id:'st6', title:'Le couscous du dimanche', icon:'🍲', unit:'u4', cast:['Ommi','Karim','Amine'], lines:[
+    { s:'Ommi', t:[['lyoum','اليوم','aujourd’hui'],['el a7ad,','الأحد،','c’est dimanche'],['famma','فمّا','il y a'],['kousksi!','كسكسي!','du couscous']], fr:'Aujourd’hui, c’est dimanche : il y a du couscous !' },
+    { s:'Karim', t:[['mouch normal!','موش نورمال!','génial !'],['nkallem','نكلّم','j’appelle'],['Amine?','أمين؟','Amine']], fr:'Génial ! J’appelle Amine ?' },
+    { s:'Ommi', t:[['ey,','إي،','oui'],['9ollou','قلّو','dis-lui'],['yji.','يجي.','de venir']], fr:'Oui, dis-lui de venir.' },
+    { s:'Amine', t:[['salam 3alaykom!','السلام عليكم!','bonjour à vous']], fr:'Bonjour à tous !' },
+    { s:'Ommi', t:[['ahla bik','أهلا بيك','bienvenue'],['ya weldi.','يا ولدي.','mon fils'],['o93ed','اقعد','assieds-toi'],['m3ana.','معانا.','avec nous']], fr:'Bienvenue, mon fils. Assieds-toi avec nous.' },
+    { s:'Amine', t:[['el kousksi','الكسكسي','le couscous'],['hedha','هذا','ce'],['mouch normal!','موش نورمال!','est incroyable']], fr:'Ce couscous est incroyable !' },
+    { s:'Ommi', t:[['koul,','كول،','mange'],['koul!','كول!','mange'],['sa77a.','صحّة.','bon appétit']], fr:'Mange, mange ! Bon appétit.' },
+    { s:'Amine', t:[['chba3t,','شبعت،','je n’ai plus faim'],['l7amdoulillah.','الحمد لله.','Dieu merci'],['y3aychek!','يعيّشك!','merci']], fr:'Je n’ai plus faim, Dieu merci. Merci !' }
+  ], quiz:[
+    { q:'Quel jour sommes-nous ?', options:['Dimanche','Vendredi','Lundi'], correct:0 },
+    { q:'Qui Karim appelle-t-il ?', options:['Amine','Khalti Fatiha','Le vendeur'], correct:0 },
+    { q:'Que dit Ommi en servant ?', options:['Mange, mange ! Bon appétit','Dépêche-toi','Au revoir'], correct:0 }
+  ]},
+  { id:'st7', title:'Le téléphone cassé', icon:'📱', unit:'u13', cast:['Amine','Karim'], lines:[
+    { s:'Amine', t:[['allo,','ألو،','allô'],['Karim?','كريم؟','Karim'],['3lech','علاش','pourquoi'],['ma trodch?','ما تردّش؟','tu ne réponds pas']], fr:'Allô, Karim ? Pourquoi tu ne réponds pas ?' },
+    { s:'Karim', t:[['sama7ni,','سامحني،','pardon'],['el portable','البورطابل','le téléphone'],['ta7','طاح','est tombé'],['w','و','et'],['tkasser.','تكسّر.','s’est cassé']], fr:'Pardon, mon téléphone est tombé et s’est cassé.' },
+    { s:'Amine', t:[['meskin!','مسكين!','le pauvre'],['w','و','et'],['taw,','توّا،','maintenant'],['kifech','كيفاش','comment'],['tkallem?','تكلّم؟','tu appelles']], fr:'Le pauvre ! Et maintenant, comment tu appelles ?' },
+    { s:'Karim', t:[['bel portable','بالبورطابل','avec le téléphone'],['mta3','متاع','de'],['ommi.','أمّي.','ma mère']], fr:'Avec le téléphone de ma mère.' },
+    { s:'Amine', t:[['ab3athli','ابعثلي','envoie-moi'],['message,','ميساج،','un message'],['nab3athlek','نبعثلك','je t’envoie'],['et-taswira','التصويرة','la photo'],['mta3','متاع','du'],['el match.','الماتش.','match']], fr:'Envoie-moi un message, je t’envoie la photo du match.' },
+    { s:'Karim', t:[['behi,','باهي،','d’accord'],['ama','أما','mais'],['ma fammech','ما فمّاش','il n’y a pas'],['rézo','ريزو','de réseau'],['hne.','هنا.','ici']], fr:'D’accord, mais il n’y a pas de réseau ici.' },
+    { s:'Amine', t:[['otla3','اطلع','monte'],['lel sta7,','للسطح،','sur la terrasse'],['famma','فمّا','il y a'],['rézo!','ريزو!','du réseau']], fr:'Monte sur la terrasse, il y a du réseau !' },
+    { s:'Karim', t:[['mouch normal,','موش نورمال،','génial'],['ya khouya!','يا خويا!','mon frère'],['taw','توّا','tout de suite'],['nitla3!','نطلع!','je monte']], fr:'Génial, mon frère ! Je monte tout de suite !' }
+  ], quiz:[
+    { q:'Pourquoi Karim ne répondait pas ?', options:['Son téléphone est cassé','Il dormait','Il était au stade'], correct:0 },
+    { q:'Avec quel téléphone appelle-t-il ?', options:['Celui de sa mère','Celui d’Amine','Celui du voisin'], correct:0 },
+    { q:'Où y a-t-il du réseau ?', options:['Sur la terrasse','Dans la cuisine','Au café'], correct:0 }
+  ]},
+  { id:'st8', title:'La soirée du henné', icon:'💍', unit:'u16', cast:['Khalti Fatiha','Karim'], lines:[
+    { s:'Khalti Fatiha', t:[['mabrouk,','مبروك،','félicitations'],['ya Karim!','يا كريم!','Karim'],['wa9tech','وقتاش','quand'],['el 3ers?','العرس؟','le mariage']], fr:'Félicitations, Karim ! C’est quand, le mariage ?' },
+    { s:'Karim', t:[['rabbi ybarek fik,','ربّي يبارك فيك،','merci (que Dieu te bénisse)'],['ya khalti.','يا خالتي.','ma tante'],['el 3ers','العرس','le mariage'],['nhar','نهار','le jour de'],['es-sebt.','السبت.','samedi']], fr:'Merci, ma tante. Le mariage, c’est samedi.' },
+    { s:'Khalti Fatiha', t:[['w','و','et'],['lilt','ليلة','la soirée'],['el 7enna?','الحنّة؟','du henné']], fr:'Et la soirée du henné ?' },
+    { s:'Karim', t:[['lilt','ليلة','la soirée'],['el 7enna','الحنّة','du henné'],['lyoum,','اليوم،','aujourd’hui'],['fed-dar.','في الدار.','à la maison']], fr:'La soirée du henné, c’est aujourd’hui, à la maison.' },
+    { s:'Khalti Fatiha', t:[['el 3rousa','العروسة','la mariée'],['bech','باش','va'],['telbes','تلبس','porter'],['keswa?','كسوة؟','une keswa']], fr:'La mariée va porter une keswa ?' },
+    { s:'Karim', t:[['ey,','إي،','oui'],['w','و','et'],['et-tbal','الطبل','le tbal'],['jey','جاي','arrive'],['l3chiya!','العشيّة!','ce soir']], fr:'Oui, et le tbal arrive ce soir !' },
+    { s:'Khalti Fatiha', t:[['mouch normal!','موش نورمال!','génial'],['bech','باش','on va'],['nochot7ou','نشطحو','danser'],['el lil','الليل','la nuit'],['el kol!','الكل!','toute']], fr:'Génial ! On va danser toute la nuit !' },
+    { s:'Karim', t:[['inchallah,','إن شاء الله،','si Dieu le veut'],['w','و','et'],['3a9bal','عقبال','bientôt le tour de'],['weldek,','ولدك،','ton fils'],['ya khalti!','يا خالتي!','ma tante']], fr:'Si Dieu le veut ! Et bientôt le tour de ton fils, ma tante !' }
+  ], quiz:[
+    { q:'Quel jour a lieu le mariage ?', options:['Samedi','Jeudi','Vendredi'], correct:0 },
+    { q:'Où a lieu la soirée du henné ?', options:['À la maison','Dans une salle des fêtes','Au café'], correct:0 },
+    { q:'Qu’est-ce qui arrive ce soir ?', options:['Le tbal','Le louage','Le pharmacien'], correct:0 }
+  ]}
+);
+
+/* ------------------------------------------------------- TEST DE NIVEAU */
+CONTENT_BY.tn.placement.push(
+  { type:'mcq_dz2fr', item:'u1_chnahwelek', unit:'u1' },
+  { type:'mcq_fr2dz', item:'u1_y3aychek', unit:'u1' },
+  { type:'mcq_dz2fr', item:'u2_khouya', unit:'u2' },
+  { type:'mcq_fr2dz', item:'u2_esmi', unit:'u2' },
+  { type:'mcq_dz2fr', item:'u3_9addech', unit:'u3' },
+  { type:'mcq_fr2dz', item:'u3_khamsa', unit:'u3' },
+  { type:'mcq_dz2fr', item:'u4_mafammech', unit:'u4' },
+  { type:'mcq_fr2dz', item:'u4_khobz', unit:'u4' },
+  { type:'mcq_dz2fr', item:'u5_ghodwa', unit:'u5' },
+  { type:'mcq_dz2fr', item:'u6_na99es', unit:'u6' }
+);
+
+/* ------------------------------------------------------- GRAMMAIRE (Tunisie) */
+CONTENT_BY.tn.grammar.push(
+  { id:'g_neg', title:'La négation : ma … ch et mouch', lessons:['u1l4','u3l5','u5l1','u6l4'],
+    intro:'Avec un verbe (ou « 3andi », « famma »), on entoure le mot : ma + mot + ch. Devant un nom ou un adjectif, on dit « mouch ».',
+    table:[['ma fhemt-ech','ما فهمتش','je n’ai pas compris'],['ma 3andi-ch','ما عنديش','je n’ai pas'],['ma famma-ch','ما فمّاش','il n’y a pas'],['mouch behi','موش باهي','pas bien']],
+    tip:'« mouch mochkla » = pas de problème. « mouch normal » = incroyable !' },
+  { id:'g_bech', title:'Le futur proche : bech + verbe', lessons:['u5l2','u12l3'],
+    intro:'Pour dire « je vais (faire) », on met « bech » devant le verbe au présent.',
+    table:[['bech nji','باش نجي','je vais venir'],['bech temchi','باش تمشي','tu vas partir'],['bech nokhrjou','باش نخرجو','nous allons sortir'],['bech yechri','باش يشري','il va acheter']],
+    tip:'« bech » veut aussi dire « pour » : jit bech nchoufek = je suis venu pour te voir.' },
+  { id:'g_poss', title:'Les possessifs : -i, -ek… et mta3', lessons:['u2l2','u2l3'],
+    intro:'« Mon, ton, son… » se collent à la fin du mot, ou se disent avec « mta3 ».',
+    table:[['esm-i','اسمي','mon nom'],['esm-ek','اسمك','ton nom'],['esm-ou','اسمو','son nom (à lui)'],['esm-ha','اسمها','son nom (à elle)'],['mta3i / mta3ek','متاعي / متاعك','à moi / à toi']],
+    tip:'Avec mta3 : el karhba mta3i = ma voiture.' },
+  { id:'g_mta3', title:'mta3 : le « de » de la possession', lessons:['u6l3','u8l4'],
+    intro:'« mta3 » relie deux noms quand l’un appartient à l’autre — c’est le réflexe tunisien.',
+    table:[['el kilo mta3 tmatem','الكيلو متاع الطماطم','le kilo de tomates'],['el louage mta3 Sousse','اللواج متاع سوسة','le louage pour Sousse'],['mta3 chkoun?','متاع شكون؟','à qui ?']],
+    tip:'« mta3 dar » = fait maison (litt. « de la maison »).' },
+  { id:'g_famma', title:'famma / ma fammech : il y a', lessons:['u4l3','u13l2'],
+    intro:'« Famma » est le « il y a » tunisien ; à la forme négative, « ma fammech ».',
+    table:[['famma khobz?','فمّا خبز؟','il y a du pain ?'],['ma fammech','ما فمّاش','il n’y en a pas'],['ma famma chay','ما فمّا شيء','il n’y a rien'],['famma zo7ma','فمّا زحمة','il y a des bouchons']],
+    tip:'Réponse rapide : « famma » (oui, il y en a) ou « ma fammech » (non).' },
+  { id:'g_feel', title:'Dire comment on se sent', lessons:['u10l1','u10l2'],
+    intro:'Pas de verbe « être » au présent : on met simplement le pronom + l’adjectif. Au féminin, on ajoute -a.',
+    table:[['ena fer7an','أنا فرحان','je suis content'],['inti fer7ana','انتي فرحانة','tu es contente'],['houwa ta3ben','هو تعبان','il est fatigué'],['hiya m9ahra','هي مقهورة','elle est triste']],
+    tip:'Au pluriel, on ajoute -in : a7na fer7anin (nous sommes contents).' },
+  { id:'g_body', title:'Avoir mal : … youja3ni', lessons:['u11l1'],
+    intro:'Pour dire où l’on a mal : la partie du corps + -i (mon), puis youja3ni (il me fait mal) ou touja3ni (elle me fait mal).',
+    table:[['rasi youja3ni','راسي يوجعني','j’ai mal à la tête'],['kerchi touja3ni','كرشي توجعني','j’ai mal au ventre'],['snini youj3ouni','سنيني يوجعوني','j’ai mal aux dents'],['chnowa youja3ek?','شنوّة يوجعك؟','qu’est-ce qui te fait mal ?']],
+    tip:'Au pluriel (les dents, les yeux) : youj3ouni.' }
+);
+
 const AUDIO_MAP={};
 
 /* =====================================================================
@@ -4783,6 +6322,23 @@ const MIM_LINES_BY = { dz: MIM_LINES, ma: {
   afternoon: [['Labas? Yallah nt3ellmo chwiya', 'Ça va ? Allez, on étudie un peu']],
   evening: [['Msa lkhir! Chwiya d darija 9bel ma tn3es?', 'Bonsoir ! Un peu de darija avant de dormir ?']],
   goal: [['L’objectif tsala! Nta m3allem', 'Objectif atteint ! T’es un chef']]
+}, tn: {
+  correct: [['Behi barcha! 😼', 'Très bien !'], ['Sa77a!', 'Bravo !'], ['Ya3tik es-sa77a!', 'Bien joué !'], ['Mouch normal!', 'Incroyable !'], ['Hakka! Kammel', 'C’est ça ! Continue']],
+  almost: [['9rib! Mazel chwaya', 'Presque ! Il manque un petit rien'], ['Behi, ama rodd belek', 'Bien, mais fais attention']],
+  wrong: [['Mouch hakka… 3awed', 'Pas comme ça… recommence'], ['Ma3lich, inti tet3allem', 'Pas grave, tu apprends']],
+  dontknow: [['Ma3lich, hak: hethi hiya', 'Pas grave, tiens : c’est ça'], ['Nwarrik, behi?', 'Je te montre, d’accord ?']],
+  combo: [['Aya! Ma tw9efch', 'Allez ! Ne t’arrête pas']],
+  streak: [['{n} ayyem! Inti m3allem', '{n} jours de suite ! T’es un champion']],
+  idle: [['Winek? Ena nestanna fik…', 'T’es où ? Je t’attends…']],
+  perfect: [['Bla ghalta! Inti m3allem', 'Sans faute ! T’es un maître']],
+  end: [['Wfet! Ya3tik es-sa77a', 'Terminé ! Bien joué']],
+  hearts: [['Ma b9alekch 9loub…', 'Tu n’as plus de cœurs…']],
+  empty: [['Ma famma chay! Koll chay mriguel', 'Rien ! Tout est en ordre']],
+  notfound: [['Ma l9it chay…', 'J’ai rien trouvé…']],
+  morning: [['Sbe7 el khir! Kahwa w darja?', 'Bonjour ! Café et darja ?']],
+  afternoon: [['Chnowa el jaw? Aya na9raw chwaya', 'Quoi de neuf ? Allez, on étudie un peu']],
+  evening: [['Msa el khir! Chwaya darja 9bal ma torgod?', 'Bonsoir ! Un peu de darja avant de dormir ?']],
+  goal: [['L’objectif wfé! Inti m3allem', 'Objectif atteint ! T’es un chef']]
 } };
 /* Petites phrases de l’interface, par version */
 const VTXT = {
@@ -4791,7 +6347,10 @@ const VTXT = {
     notFound: 'Ma l9itch walou…', city: 'Alger' },
   ma: { hello: { morning: 'Sba7 lkhir', afternoon: 'Labas', evening: 'Msa lkhir' }, allDone: 'Tout est fait, nadi !', thanks: 'Chokran', heartsOk: 'Labas, 3endek l9loub', good: 'mzyan',
     why: ['Goul liya, 3lach?', 'Dis-moi, pourquoi ?'], know: ['Nchoufou ach kat3ref', 'On va voir ce que tu sais'], knowYes: ['Nadi! Kat3ref chwiya', 'Balèze ! Tu en sais déjà un peu'], knowNo: ['Ma3lich, yallah nbdaw', 'Pas grave, allez on commence'],
-    notFound: 'Ma l9it walou…', city: 'Casablanca' }
+    notFound: 'Ma l9it walou…', city: 'Casablanca' },
+  tn: { hello: { morning: 'Sbe7 el khir', afternoon: 'Aslema', evening: 'Msa el khir' }, allDone: 'Tout est fait, mouch normal !', thanks: 'Y3aychek', heartsOk: 'Labes, 3andek l9loub', good: 'behi',
+    why: ['9olli, 3lech?', 'Dis-moi, pourquoi ?'], know: ['Nchoufou chnowa ta3ref', 'On va voir ce que tu sais'], knowYes: ['Mouch normal! Ta3ref chwaya', 'Balèze ! Tu en sais déjà un peu'], knowNo: ['Ma3lich, aya nebdew', 'Pas grave, allez on commence'],
+    notFound: 'Ma l9it chay…', city: 'Tunis' }
 };
 const vt = k => ((VTXT[(typeof ACTIVE_V !== 'undefined' && ACTIVE_V) || 'dz'] || VTXT.dz)[k]) || VTXT.dz[k];
 function mimLine(kind, vars = {}) {
@@ -4938,7 +6497,7 @@ const GUIDES = {
   }
 };
 const GUIDE_ORDER = ['zinou', 'sbaa', 'nesr'];
-const VERSIONS = { dz: { guide: 'zinou', ready: true }, ma: { guide: 'sbaa', ready: true }, tn: { guide: 'nesr', ready: false } };
+const VERSIONS = { dz: { guide: 'zinou', ready: true }, ma: { guide: 'sbaa', ready: true }, tn: { guide: 'nesr', ready: true } };
 const currentGuide = () => (typeof S !== 'undefined' && S && GUIDES[S.mascot]) || null;
 const guideName = () => (currentGuide() || { name: 'Mimoush' }).name;
 const lsGet = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
