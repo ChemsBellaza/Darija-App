@@ -7246,17 +7246,32 @@ EX.write = (ex, el, api) => {
     area.innerHTML = `<div class="small muted center">Une case = une lettre (kh, ch, gh comptent pour une).</div>`;
     const ins = $$('.lb-in', el);
     let active = ins[0];
-    const foot = api.foot(kbarHTML(KBAR.slice(0, 6)));
-    bindKbar(foot, s => { if (!active) return; active.value = s.slice(0, +active.dataset.len); active.dispatchEvent(new Event('input')); });
+    /* Clavier d’appoint : la bonne réponse est TOUJOURS proposée (lettre spéciale → clavier habituel ; voyelle / consonne ordinaire → 4 choix) */
+    const VOW = ['a', 'e', 'i', 'o', 'ou', 'é'], CON = ['b', 't', 's', 'l', 'm', 'n', 'r', 'k', 'd', 'h', 'j', 'z', 'f', 'w', 'y'];
+    const choiceKeys = u => {
+      const c = String(u).toLowerCase();
+      if (isSpecial(c)) return KBAR.slice(0, 6);
+      const pool = VOW.includes(c) ? VOW : CON;
+      const opts = shuffle(pool.filter(x => x !== c)).slice(0, 3).concat([c]);
+      return shuffle(opts).map(x => [x, '', '']);
+    };
+    const choiceCache = {};
+    const setFoot = inp => {
+      const key = inp ? inp.dataset.u : '';
+      const keys = inp ? (choiceCache[key] || (choiceCache[key] = choiceKeys(fill.units[+key]))) : KBAR.slice(0, 6);
+      const f = api.foot(kbarHTML(keys).replace('aria-label="Lettres spéciales"', 'aria-label="Choisis la lettre"'));
+      bindKbar(f, v => { if (!active) return; active.value = v.slice(0, +active.dataset.len); active.dispatchEvent(new Event('input')); });
+    };
     ins.forEach((inp, k) => {
-      inp.addEventListener('focus', () => { active = inp; ins.forEach(x => x.classList.toggle('cur', x === inp)); });
+      inp.addEventListener('focus', () => { active = inp; ins.forEach(x => x.classList.toggle('cur', x === inp)); setFoot(inp); });
       inp.addEventListener('input', () => { syncFill(); if (inp.value.length >= +inp.dataset.len && ins[k + 1]) ins[k + 1].focus(); });
       inp.addEventListener('keydown', e => {
         if (e.key === 'Backspace' && !inp.value && ins[k - 1]) { e.preventDefault(); ins[k - 1].focus(); ins[k - 1].value = ''; syncFill(); }
         if (e.key === 'Enter') { e.preventDefault(); if (ins[k + 1]) ins[k + 1].focus(); else api.submit(); }
       });
     });
-    ins[0].classList.add('cur');
+    ins[0].classList.add('cur'); setFoot(ins[0]);
+    ins.forEach(inp => inp.addEventListener('pointerdown', () => { active = inp; ins.forEach(x => x.classList.toggle('cur', x === inp)); setFoot(inp); }));
     setTimeout(() => { try { ins[0].focus({ preventScroll: true }); } catch (e) {} }, 350);
   }
   return { check() {
@@ -7291,11 +7306,11 @@ EX.write = (ex, el, api) => {
     return { ok: r.ok, almost: !!r.almost, showWhy: !exact, answer: html, explain: why.map(w => `<div>${w}</div>`).join(''), typed, xpMult, xpBase: mode === 'words' ? 1 : mode === 'letters' ? 1.5 : 2, srsQ: st.hint >= 3 ? 2 : null, soundMiss, ladder: lad };
   } };
 };
-function kbarHTML(keys) { return `<div class="kbar" role="group" aria-label="Lettres spéciales">${keys.map(k => `<button class="kk" data-ins="${esc(k[0])}" data-tip="${esc(k[1] + ' · ' + k[2])}" aria-label="${esc(k[0] + ' = ' + k[2])}" title="${esc(k[0] + ' = ' + k[1] + ' (' + k[2] + ')')}">${esc(k[0])}<small>${k[1]}</small></button>`).join('')}</div>`; }
+function kbarHTML(keys) { return `<div class="kbar" role="group" aria-label="Lettres spéciales">${keys.map(k => `<button class="kk" data-ins="${esc(k[0])}" data-tip="${k[1] ? esc(k[1] + ' · ' + k[2]) : ''}" aria-label="${esc(k[2] ? k[0] + ' = ' + k[2] : k[0])}" title="${k[1] ? esc(k[0] + ' = ' + k[1] + ' (' + k[2] + ')') : ''}">${esc(k[0])}${k[1] ? `<small>${k[1]}</small>` : ''}</button>`).join('')}</div>`; }
 function bindKbar(foot, ins) {
   $$('.kk', foot).forEach(k => {
     let timer = 0, long = false;
-    const showTip = () => { long = true; const t = document.createElement('div'); t.className = 'tip-pop'; t.innerHTML = k.dataset.tip.replace(/^(\S+)/, '<span class="ar" lang="ar">$1</span>'); k.appendChild(t); setTimeout(() => t.remove(), 1600); };
+    const showTip = () => { long = true; if (!k.dataset.tip || k.dataset.tip === ' · ') return; const t = document.createElement('div'); t.className = 'tip-pop'; t.innerHTML = k.dataset.tip.replace(/^(\S+)/, '<span class="ar" lang="ar">$1</span>'); k.appendChild(t); setTimeout(() => t.remove(), 1600); };
     k.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
     k.addEventListener('pointerdown', e => { e.preventDefault(); long = false; clearTimeout(timer); timer = setTimeout(showTip, 420); });
     k.addEventListener('pointerup', e => { e.preventDefault(); clearTimeout(timer); if (!long) { ins(k.dataset.ins); Sfx.play('tap'); } });
