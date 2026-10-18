@@ -851,6 +851,25 @@ body::after{display:none}
   .backdrop{left:calc(50% - 235px);right:calc(50% - 235px)}
 }
 
+/* ---------- GARDE-ROBE DES GUIDES */
+body.gbg .mim-frame:has(> svg.gd-cur){background:var(--gd-bg) center bottom/cover no-repeat,linear-gradient(180deg,var(--s3),var(--s2))}
+.wr-top{display:flex;gap:14px;align-items:flex-end;margin-bottom:12px}
+.wr-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:2px 0 8px}.wr-tabs::-webkit-scrollbar{display:none}
+.wr-tabs .chip{flex:none;border:1.5px solid var(--line2);background:var(--s1);color:var(--ink);border-radius:999px;padding:6px 11px;font:600 .84rem var(--f-body);cursor:pointer}
+.wr-tabs .chip.on{border-color:var(--v1);background:rgba(var(--v-rgb),.12);color:var(--v1-dk)}
+.wr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-height:46vh;overflow-y:auto;padding:2px}
+.wr-cell{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 4px 7px;border:2px solid var(--line2);background:var(--s1);border-radius:16px;cursor:pointer;color:var(--ink);min-height:96px}
+.wr-cell small{font-size:.72rem;line-height:1.15;text-align:center;color:var(--mut)}
+.wr-cell.on{border-color:var(--v1);background:rgba(var(--v-rgb),.1)}.wr-cell.on small{color:var(--v1-dk);font-weight:600}
+.wr-ic{position:relative;width:56px;height:52px;display:flex;align-items:center;justify-content:center}.wr-ic svg{width:100%;height:100%}
+.wr-cell.bgc .wr-ic{border-radius:12px;overflow:hidden;width:48px;height:54px}
+.wr-none{font-size:26px;color:var(--mut)}
+.wr-cell.locked .wr-ic svg{filter:grayscale(1) brightness(.6);opacity:.35}
+.wr-lock{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:18px}
+.wr-flag{position:absolute;top:5px;right:6px;line-height:0}.wr-flag .flag{width:14px;height:10px}
+.wr-note{min-height:1.3em;margin-top:8px;text-align:center}
+.wr-unlock .mim-frame{margin-left:auto;margin-right:auto}
+
 </style>
 </head>
 <body data-version="dz">
@@ -5694,7 +5713,7 @@ function defaultState() {
     lessons: {}, alphaLessons: {}, cards: {}, mistakes: {}, badges: {}, letters: {},
     stories: {}, custom: {}, daily: {}, duels: {}, placementUnit: 0,
     stats: { lessons: 0, exercises: 0, correct: 0, perfect: 0, seconds: 0 },
-    version: null, mascot: null, vault: {}, pop: 1
+    version: null, mascot: null, vault: {}, pop: 1, outfits: {}
   };
 }
 /* L’état S est chargé par Profiles.init() (IndexedDB, repli localStorage) — voir le module PROFILS */
@@ -6463,9 +6482,9 @@ const GUIDES = {
     id: 'zinou', v: 'dz', name: 'Zinou', animal: 'le fennec', dialect: 'Le dialecte algérien', dialectShort: 'algérien',
     who: 'Malin, rapide, un brin taquin.',
     tagline: 'La darija d’Alger, celle qu’on parle vraiment au café, dans la 7ouma et en famille.',
-    country: { name: 'L’Algérie', hook: 'Le plus grand pays d’Afrique, entre Méditerranée et Sahara.',
-      text: 'Alger la Blanche descend en cascade vers la mer, avec sa Casbah classée au patrimoine mondial. Plus au sud, les dunes du Sahara et les fresques du Tassili n’Ajjer. Partout, le raï, le chaâbi et une hospitalité qui commence par un café.',
-      tags: ['🏙️ Casbah d’Alger', '🏜️ Tassili n’Ajjer', '🎶 Raï & chaâbi', '🥘 Couscous'] },
+    country: { name: 'L’Algérie', hook: 'Le plus grand pays d’Afrique, de la Méditerranée au Sahara.',
+      text: 'Alger la Blanche et sa Casbah, les ruines romaines de Timgad, les fresques du Tassili n’Ajjer et les dunes du Grand Erg. Le raï et le chaâbi dans l’air, et toujours un café pour t’accueillir.',
+      tags: ['🏙️ Casbah d’Alger', '🏜️ Tassili n’Ajjer', '🎶 Raï & chaâbi', '🌸 Iris d’Alger'] },
     // TODO(native) : phrase d’accueil à faire valider par un locuteur natif algérien
     hi: { kind: 'sentence', arabizi: 'Wesh ! Nta li tchoufni ?', ar: 'واش! نتا لي تشوفني؟', phon: 'ouech ! enta li tchoufni ?', fr: 'Salut ! C’est toi qui me vois ?' },
     intro: { dz: 'Ana Zinou, el fennec ! Yallah n9raw', fr: 'Moi c’est Zinou, le fennec. On apprend ensemble !' },
@@ -6476,7 +6495,7 @@ const GUIDES = {
     who: 'Confiant, chaleureux, toujours là pour t’encourager.',
     tagline: 'La darija du Maroc, celle de la rue, du souk et des repas en famille.',
     country: { name: 'Le Maroc', hook: 'Des sommets de l’Atlas aux dunes de Merzouga.',
-      text: 'Les souks de Marrakech et la place Jemaa el-Fna, Chefchaouen toute en bleu, la médina de Fès, les vagues d’Essaouira… Et à chaque rencontre, un thé à la menthe servi de haut.',
+      text: 'Marrakech et la place Jemaa el-Fna, Chefchaouen toute en bleu, la médina de Fès, les vagues d’Essaouira. Et pour se retrouver, un thé à la menthe.',
       tags: ['🌆 Jemaa el-Fna', '💙 Chefchaouen', '🏔️ Atlas', '🫖 Thé à la menthe'] },
     // TODO(native) : phrase d’accueil à faire valider par un locuteur natif marocain
     hi: { kind: 'sentence', arabizi: 'Salam ! Mrehba bik !', ar: 'سلام! مرحبا بيك!', phon: 'salam ! mer7ba bik !', fr: 'Salut ! Bienvenue !' },
@@ -6487,8 +6506,8 @@ const GUIDES = {
     id: 'nesr', v: 'tn', name: 'Nesr', animal: 'l’aiglon', dialect: 'Le dialecte tunisien', dialectShort: 'tunisien',
     who: 'Calme, précis, l’œil vif.',
     tagline: 'Le tounsi, celui qu’on parle à Tunis, au café comme à la plage.',
-    country: { name: 'La Tunisie', hook: 'Un petit pays, une très longue histoire et une grande douceur de vivre.',
-      text: 'Les maisons blanches et bleues de Sidi Bou Saïd, les ruines de Carthage, les plages de Djerba et les oasis de Tozeur. Le soir, le jasmin parfume les rues et la famille se retrouve autour d’un couscous au poisson.',
+    country: { name: 'La Tunisie', hook: 'Entre Méditerranée et Sahara, une histoire millénaire et un art de vivre doux.',
+      text: 'Les maisons blanches et bleues de Sidi Bou Saïd, Carthage face à la mer, les plages de Djerba et les oasis de Tozeur. Le soir, le jasmin parfume les rues.',
       tags: ['💙 Sidi Bou Saïd', '🏛️ Carthage', '🏝️ Djerba', '🌼 Jasmin'] },
     // TODO(native) : phrase d’accueil à faire valider par un locuteur natif tunisien
     hi: { kind: 'sentence', arabizi: 'Aslema ! Chnowa ahwalek ?', ar: 'عسلامة! شنوّة أحوالك؟', phon: 'asléma ! chnoua a7ouélek ?', fr: 'Salut ! Comment ça va ?' },
@@ -6573,17 +6592,18 @@ function guideSVG(id, state = 'idle', opts = {}) {
   const c = Object.assign({ wink: id === 'zinou' }, g.pal);
   const p = GD_DRAW[g.id](c, state);
   const label = opts.label || `${g.name}, ${g.animal}`;
+  const w = opts.outfit && typeof wrLayers === 'function' ? wrLayers(g.id, opts.outfit) : { head: '', neck: '', hand: '' };
   return `<svg class="gd gd-${g.id} st-${state}${opts.cls ? ' ' + opts.cls : ''}" viewBox="${g.id === 'zinou' ? '-7 -9 134 134' : '0 0 120 120'}" role="img" aria-label="${esc(label)}"><g class="g-move"><g class="g-float">
     ${p.tail}<g class="g-body">${p.body}</g>
-    <g class="g-headpos"><g class="g-head"><g class="g-look">${p.head}</g></g></g>
-    <g class="g-breathe">${gdScarf(c)}</g>${p.front}${gdSleepZ(state)}${gdSpark(state)}
+    <g class="g-headpos"><g class="g-head"><g class="g-look">${p.head}${w.head}</g></g></g>
+    <g class="g-breathe">${gdScarf(c)}${w.neck}</g>${p.front}${w.hand}${gdSleepZ(state)}${gdSpark(state)}
   </g></g></svg>`;
 }
 /* Mimoush (hôte) ou le guide choisi selon le contexte. Les écrans Profil appellent catSVG directement. */
 const GD_STATE = { neutral: 'idle', happy: 'happy', proud: 'proud', sad: 'sad', sleep: 'sleep', wave: 'wave', idle: 'idle' };
 function mimSVG(state = 'neutral', label, av) {
   const g = currentGuide();
-  if (g) return guideSVG(g.id, GD_STATE[state] || 'idle', { label });
+  if (g) return guideSVG(g.id, GD_STATE[state] || 'idle', { label, outfit: typeof wrOutfit === 'function' ? wrOutfit(g.id) : null, cls: 'gd-cur' });
   return catSVG(state === 'wave' ? 'happy' : state, label, av);
 }
 
@@ -6593,6 +6613,7 @@ function applyVersion(v) {
   v = VERSIONS[v] ? v : 'dz';
   document.body.setAttribute('data-version', v);
   if (VERSIONS[v].ready) loadContent(v);
+  if (typeof applyGuideBg === 'function') applyGuideBg();
 }
 function setGuide(id) {
   const g = GUIDES[id]; if (!g) return;
@@ -6789,6 +6810,219 @@ function guidesStaticHTML() {
   return `<style>#app{display:none!important}body{background:#FFF8EF}</style><div style="font-family:Poppins,Inter,system-ui,sans-serif;color:#1C1633;background:#FFF8EF;min-height:100vh;padding:32px 16px;text-align:center">
     <h1 style="margin:0 0 6px">Kelma – À toi la parole !</h1><p style="color:#675F7D;margin:0 0 22px">Active JavaScript pour lancer l’app. Voici tes futurs guides :</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">${GUIDE_ORDER.map(id => { const g = GUIDES[id]; return `<div style="width:120px"><div style="width:110px;height:124px;margin:0 auto;border-radius:20px;background:linear-gradient(180deg,#313B60,#262F4F);border:1px solid rgba(255,255,255,.14);overflow:hidden;display:flex;align-items:flex-end;padding:6px 4px 0">${guideSVG(id, 'idle')}</div><b style="display:block;margin-top:8px">${g.name}</b><small style="color:#675F7D">${g.dialect}</small></div>`; }).join('')}</div></div>`;
+}
+
+/* =====================================================================
+   GARDE-ROBE DES GUIDES — un objet débloqué à chaque unité terminée.
+   11 objets communs + 7 objets propres à chaque pays (fonds compris).
+   Les guides gardent leur nom et leur bouille : seuls les accessoires changent.
+   Chaque objet est dessiné dans un repère local puis posé sur une « ancre » propre à chaque guide.
+   TODO(native) : faire valider les objets culturels et leurs légendes par des natifs.
+   ===================================================================== */
+const WR_SLOTS = [['head', '🧢', 'Tête'], ['flower', '🌸', 'Fleur'], ['face', '👓', 'Visage'], ['neck', '🎀', 'Cou'], ['hand', '✋', 'Main'], ['bg', '🖼️', 'Fond']];
+
+/* Ancres : tête = bas du chapeau, fleur = derrière l’oreille, visage = yeux, cou = centre de l’écharpe, main = objet tenu */
+const WR_ANCHOR = {
+  zinou: { head: [60, 35, .82], flower: [87, 40, .9], face: [46, 74, 56], neck: [60, 89, 1], hand: [82, 93, 1.25] },
+  sbaa:  { head: [60, 31, .92], flower: [87, 36, .9], face: [48.5, 71.5, 53], neck: [60, 89, 1], hand: [82, 93, 1.25] },
+  nesr:  { head: [60, 30, .95], flower: [86, 34, .9], face: [45, 75, 52], neck: [60, 89, 1], hand: [85, 95, 1.2] }
+};
+
+/* ---------- Dessins (repère local) */
+/* point sur le fil du collier (courbe M-17 2 Q0 12 17 2) */
+const wrArcY = x => { const t = (x + 17) / 34; return 2 + 20 * t * (1 - t); };
+const WRD = {
+  /* tête : la base du chapeau est en y = 0 */
+  cap: () => `<path d="M-15 0 C-15 -18 15 -18 15 0 Z" fill="#2F7DE1"/><path d="M-15 0 C-15 -18 15 -18 15 0" fill="none" stroke="#1F5FB0" stroke-width="1.4"/><path d="M-2 0 Q14 -3 25 1 Q14 4 -2 2 Z" fill="#1F5FB0"/><circle cx="0" cy="-15" r="2.2" fill="#1F5FB0"/><path d="M-6 -9 h12" stroke="#FFF" stroke-width="2.2" stroke-linecap="round" opacity=".85"/>`,
+  beanie: () => `<path d="M-16 1 C-16 -19 16 -19 16 1 Z" fill="#E4572E"/><path d="M-8 -13 v10 M0 -15 v12 M8 -13 v10" stroke="#C2421D" stroke-width="1.6" stroke-linecap="round"/><rect x="-17" y="-4" width="34" height="7" rx="3.5" fill="#C2421D"/><circle cx="0" cy="-18" r="5" fill="#FFF6E8"/><circle cx="-1.5" cy="-19.5" r="1.6" fill="#FFFFFF"/>`,
+  crown: () => `<path d="M-15 0 L-16 -15 L-8 -7 L0 -19 L8 -7 L16 -15 L15 0 Z" fill="#FFC93C" stroke="#D99A1E" stroke-width="1.5" stroke-linejoin="round"/><rect x="-15" y="-4" width="30" height="4" rx="1.5" fill="#F2AE24"/><circle cx="0" cy="-8" r="2.6" fill="#E8414E"/><circle cx="-9" cy="-5.5" r="1.8" fill="#2F7DE1"/><circle cx="9" cy="-5.5" r="1.8" fill="#18A866"/><circle cx="0" cy="-19.5" r="1.8" fill="#FFF3C4"/>`,
+  chechia: () => `<path d="M-14 0 L-12 -15 Q0 -17.5 12 -15 L14 0 Z" fill="#C8102E"/><ellipse cx="0" cy="-15" rx="12" ry="2.6" fill="#A50D25"/><path d="M-14 0 Q0 3 14 0" stroke="#A50D25" stroke-width="1.6" fill="none"/><path d="M1 -16 Q8 -15 11 -9" stroke="#1B1B22" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M9 -10 l3 6 l1.5 -6 z" fill="#1B1B22"/>`,
+  tarbouche: () => `<path d="M-13 0 L-9.5 -21 Q0 -23 9.5 -21 L13 0 Z" fill="#B3202A"/><ellipse cx="0" cy="-21" rx="9.5" ry="2.4" fill="#8E1820"/><path d="M-13 0 Q0 3 13 0" stroke="#8E1820" stroke-width="1.6" fill="none"/><path d="M0 -22 Q7 -21 9 -14 L10 -4" stroke="#1B1B22" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M8 -7 l2 7 l2.5 -7 z" fill="#1B1B22"/>`,
+  /* fleur : centrée en (0, 0) */
+  iris: () => `<path d="M2 4 Q6 12 4 18" stroke="#3E9B4F" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 12 q6 -2 8 -8 q-7 1 -8 8 z" fill="#4FB062"/>
+    <ellipse cx="0" cy="-6" rx="3.6" ry="7" fill="#9B7BEA"/><ellipse cx="-6" cy="1" rx="3.6" ry="7.2" fill="#7E5BD6" transform="rotate(-62 -6 1)"/><ellipse cx="6" cy="1" rx="3.6" ry="7.2" fill="#7E5BD6" transform="rotate(62 6 1)"/>
+    <path d="M-5.5 1.5 l-3 1.2 M5.5 1.5 l3 1.2" stroke="#FFD24A" stroke-width="1.8" stroke-linecap="round"/><circle cx="0" cy="0" r="2.4" fill="#FFD24A"/>`,
+  machmoum: () => `<path d="M0 3 L3 18" stroke="#4FA35E" stroke-width="1.8" stroke-linecap="round"/><path d="M-2 3 L-1 17 M2 3 L6 16" stroke="#4FA35E" stroke-width="1.2" stroke-linecap="round"/>
+    ${[[-5, -3], [0, -7], [5, -3], [-2, 1.5], [3.5, 2], [0, -2.5]].map(([x, y]) => `<g transform="translate(${x} ${y})">${[0, 72, 144, 216, 288].map(a => `<ellipse cx="0" cy="-2.3" rx="1.5" ry="2.4" fill="#FFFFFF" stroke="#E6DED0" stroke-width=".5" transform="rotate(${a})"/>`).join('')}<circle r="1" fill="#F6E7A8"/></g>`).join('')}`,
+  /* visage : coordonnées absolues des yeux */
+  glasses: (xl, xr, y) => { const r = Math.min(9.5, (xr - xl) * .34); return `<g fill="#FFFFFF" fill-opacity=".18" stroke="#3B2A20" stroke-width="2.3"><circle cx="${xl}" cy="${y + .5}" r="${r}"/><circle cx="${xr}" cy="${y + .5}" r="${r}"/></g><path d="M${xl + r} ${y} Q60 ${y - 4} ${xr - r} ${y}" stroke="#3B2A20" stroke-width="2.1" fill="none"/><path d="M${xl - r + 3} ${y - 3} q2 -3 5 -3.4" stroke="#FFFFFF" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".9"/>`; },
+  sunglasses: (xl, xr, y) => { const w = Math.min(19, (xr - xl) * .68), h = 10; return `<g fill="#1E2235" stroke="#0E1020" stroke-width="1.2"><rect x="${xl - w / 2}" y="${y - h / 2}" width="${w}" height="${h}" rx="4.5"/><rect x="${xr - w / 2}" y="${y - h / 2}" width="${w}" height="${h}" rx="4.5"/></g><path d="M${xl + w / 2} ${y - 1} Q60 ${y - 4} ${xr - w / 2} ${y - 1}" stroke="#0E1020" stroke-width="2" fill="none"/><path d="M${xl - w / 2 + 3} ${y - 1.5} l3.5 -2.4 M${xr - w / 2 + 3} ${y - 1.5} l3.5 -2.4" stroke="#8FD3FF" stroke-width="1.6" stroke-linecap="round"/>`; },
+  /* cou : centre de l’écharpe en (0, 0) */
+  bowtie: () => `<path d="M0 1 L-12 -6 Q-14 1 -12 8 Z" fill="#2D3A8C"/><path d="M0 1 L12 -6 Q14 1 12 8 Z" fill="#2D3A8C"/><circle cx="-8" cy="-1" r="1.3" fill="#FFF"/><circle cx="-8" cy="4" r="1.3" fill="#FFF"/><circle cx="8" cy="-1" r="1.3" fill="#FFF"/><circle cx="8" cy="4" r="1.3" fill="#FFF"/><rect x="-3.2" y="-2.6" width="6.4" height="7.2" rx="2.2" fill="#1F2A6E"/>`,
+  medal: () => `<path d="M-6 0 L0 12 L6 0" stroke="#2F7DE1" stroke-width="4.5" fill="none" stroke-linejoin="round"/><path d="M-6 0 L0 12" stroke="#E8414E" stroke-width="2" fill="none"/><circle cx="0" cy="17" r="7" fill="#FFC93C" stroke="#D99A1E" stroke-width="1.5"/><path d="M0 12.6 l1.4 2.9 3.2 .4 -2.3 2.2 .6 3.1 -2.9 -1.5 -2.9 1.5 .6 -3.1 -2.3 -2.2 3.2 -.4 z" fill="#FFF3C4"/>`,
+  headphones: () => `<path d="M-20 -2 Q0 16 20 -2" stroke="#2E2E3A" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="-27" y="-9" width="10" height="14" rx="5" fill="#2E2E3A"/><rect x="17" y="-9" width="10" height="14" rx="5" fill="#2E2E3A"/><rect x="-25" y="-6.5" width="6" height="9" rx="3" fill="#4FC3F7"/><rect x="19" y="-6.5" width="6" height="9" rx="3" fill="#4FC3F7"/>`,
+  kabyle: () => `<path d="M-17 2 Q0 12 17 2" stroke="#C9CED6" stroke-width="1.6" fill="none"/>${[-13, -7, 7, 13].map(x => `<circle cx="${x}" cy="${wrArcY(x).toFixed(2)}" r="1.9" fill="#D9342B"/>`).join('')}
+    <path d="M-6 8 L6 8 L0 19 Z" fill="#D7DCE3" stroke="#9AA3B0" stroke-width="1"/><circle cx="0" cy="11.5" r="2.4" fill="#D9342B"/><circle cx="-3" cy="9.3" r="1" fill="#2F7DE1"/><circle cx="3" cy="9.3" r="1" fill="#18A866"/><circle cx="0" cy="15.5" r="1" fill="#FFC93C"/><circle cx="0" cy="20.6" r="1.4" fill="#D7DCE3" stroke="#9AA3B0" stroke-width=".8"/>`,
+  amazigh: () => `<path d="M-17 2 Q0 12 17 2" stroke="#C9CED6" stroke-width="1.6" fill="none"/>${[-14, -8, 8, 14].map(x => `<circle cx="${x}" cy="${wrArcY(x).toFixed(2)}" r="2.6" fill="#F0A030" stroke="#C9781A" stroke-width=".7"/>`).join('')}
+    <path d="M0 7 L7 14 L0 21 L-7 14 Z" fill="#D7DCE3" stroke="#9AA3B0" stroke-width="1"/><path d="M0 10 L4 14 L0 18 L-4 14 Z" fill="none" stroke="#9AA3B0" stroke-width=".8"/><circle cx="0" cy="14" r="1.6" fill="#D9342B"/>`,
+  /* main : objet centré en (0, 0), tenu par le bas */
+  ball: () => `<circle cx="0" cy="-2" r="9.5" fill="#FFFFFF" stroke="#2A2A33" stroke-width="1.4"/><path d="M0 -6 l3.8 2.8 -1.5 4.4 h-4.6 l-1.5 -4.4 z" fill="#2A2A33"/><path d="M0 -6 v-5.3 M3.8 -3.2 l5 -1.6 M2.3 1.2 l3.2 4.5 M-2.3 1.2 l-3.2 4.5 M-3.8 -3.2 l-5 -1.6" stroke="#2A2A33" stroke-width="1.1"/>`,
+  book: () => `<rect x="-9" y="-14" width="18" height="22" rx="2.2" fill="#3D7BE0"/><rect x="7" y="-13" width="3" height="20" rx="1" fill="#FFF6E8"/><path d="M0 -9 l3.5 3.5 -3.5 3.5 -3.5 -3.5 z" fill="#FFC93C"/><path d="M-5 2 h10" stroke="#FFF" stroke-width="1.6" stroke-linecap="round"/>`,
+  cafe: () => `<path d="M-7 -8 h14 l-1.6 10 q-5.4 3 -10.8 0 z" fill="#FFFFFF" stroke="#C9CED6" stroke-width="1"/><path d="M-6.6 -5 h13.2" stroke="#18A866" stroke-width="1.8"/><path d="M7 -6 q5 0 4 4 q-.6 3 -5.4 2.6" stroke="#C9CED6" stroke-width="1.6" fill="none"/><ellipse cx="0" cy="3.4" rx="10" ry="2.2" fill="#E9EDF2"/><path d="M-2.5 -11 q-2 -3 0 -6 M2.5 -11 q2 -3 0 -6" stroke="#B9C0CC" stroke-width="1.3" fill="none" stroke-linecap="round"/>`,
+  thementhe: () => `<path d="M-6 -12 h12 l-1.8 15 h-8.4 z" fill="#E8A33D" fill-opacity=".9" stroke="#F4D27A" stroke-width="1"/><path d="M-5.6 -8 h11.2" stroke="#E1B23C" stroke-width="2.2"/><path d="M-4.8 -3 h9.6" stroke="#E1B23C" stroke-width="1.2" stroke-dasharray="1.6 1.4"/><path d="M-1 -12 q-6 -5 -2 -9 q3 4 2 9 z M1 -12 q5 -6 7 -3 q-3 3 -7 3 z" fill="#3FAE5A"/>`,
+  thepignons: () => `<path d="M-6 -11 h12 l-1.6 14 h-8.8 z" fill="#C8752B" fill-opacity=".92" stroke="#F0D9B0" stroke-width="1"/><ellipse cx="-2.5" cy="-11" rx="1.6" ry="1" fill="#F3E2C0"/><ellipse cx="1" cy="-11.6" rx="1.6" ry="1" fill="#F3E2C0"/><ellipse cx="3.6" cy="-10.6" rx="1.4" ry=".9" fill="#F3E2C0"/><ellipse cx="-.6" cy="-10" rx="1.4" ry=".9" fill="#F3E2C0"/><path d="M-5 -4 h10" stroke="#E2B05B" stroke-width="1.2"/>`,
+  mandole: () => `<g transform="rotate(-28)"><rect x="-1.6" y="-26" width="3.2" height="17" rx="1" fill="#7A4A22"/><rect x="-3" y="-30" width="6" height="5" rx="1.2" fill="#5E3616"/><ellipse cx="0" cy="-2" rx="9" ry="10.5" fill="#B9773A" stroke="#8A5225" stroke-width="1.2"/><circle cx="0" cy="-4" r="2.6" fill="#4A2A10"/><path d="M-1 -28 V5 M1 -28 V5" stroke="#F4E6C8" stroke-width=".5"/><rect x="-3.5" y="3" width="7" height="1.8" rx=".8" fill="#5E3616"/></g>`,
+  lanterne: () => `<path d="M0 -21 v4" stroke="#B88A2E" stroke-width="1.6"/><path d="M-4 -17 h8 l2 4 h-12 z" fill="#C99A3A"/><path d="M-7 -13 h14 l-2 14 h-10 z" fill="#C99A3A"/><path d="M-5.2 -11 h4 l-.6 10 h-2.6 z" fill="#2F7DE1" opacity=".85"/><path d="M1.2 -11 h4 l-.8 10 h-2.6 z" fill="#E8414E" opacity=".85"/><path d="M-5 1 h10 l-2 4 h-6 z" fill="#B88A2E"/><circle cx="0" cy="-6" r="2.2" fill="#FFE08A"/>`,
+  cage: () => `<path d="M-10 4 V-6 Q-10 -18 0 -18 Q10 -18 10 -6 V4" fill="#FFFFFF" fill-opacity=".55" stroke="#FFFFFF" stroke-width="1.6"/><path d="M-5 4 V-14 M0 4 V-18 M5 4 V-14" stroke="#FFFFFF" stroke-width="1.1"/><path d="M-10 -6 h20" stroke="#2F7DE1" stroke-width="1.3"/><rect x="-11.5" y="3" width="23" height="3.4" rx="1.4" fill="#2F7DE1"/><circle cx="0" cy="-21" r="2" fill="#2F7DE1"/><g transform="translate(-1 -2)"><ellipse cx="0" cy="0" rx="3.4" ry="2.6" fill="#FFC93C"/><circle cx="2.6" cy="-1.8" r="1.8" fill="#FFC93C"/><path d="M4.2 -1.8 l1.6 .5 -1.6 .5 z" fill="#F08A24"/></g>`
+};
+
+/* ---------- Fonds (image SVG plein cadre, ratio des cadres ≈ 100 × 112) */
+const WR_BG = {
+  nuit: () => `<defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2550"/><stop offset="1" stop-color="#3A4C8C"/></linearGradient></defs><rect width="100" height="112" fill="url(#a)"/><path d="M78 14 a9 9 0 1 0 6 16 a7 7 0 1 1 -6 -16 z" fill="#FFE7A0"/>${[[12, 12], [30, 24], [52, 10], [20, 40], [64, 34], [88, 46], [42, 46], [8, 62]].map(([x, y], i) => `<circle cx="${x}" cy="${y}" r="${i % 3 ? 1 : 1.6}" fill="#FFFFFF" opacity=".9"/>`).join('')}<path d="M0 96 Q25 88 50 94 T100 92 V112 H0 Z" fill="#26346B"/>`,
+  casbah: () => `<rect width="100" height="112" fill="#CFE9FB"/><circle cx="80" cy="18" r="8" fill="#FFE08A"/><rect y="84" width="100" height="28" fill="#5BB3E8"/><path d="M0 92 Q50 88 100 92" stroke="#9BD3F3" stroke-width="1.4" fill="none"/>
+    ${[[0, 58, 18, 30], [14, 50, 16, 38], [28, 62, 18, 26], [44, 54, 14, 34], [56, 66, 20, 22], [74, 58, 16, 30], [88, 64, 14, 24]].map(([x, y, w, h]) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#FFFFFF" stroke="#E3E8EF" stroke-width=".8"/><rect x="${x + w / 2 - 2}" y="${y + 6}" width="4" height="5" rx="2" fill="#2F7DE1" opacity=".7"/>`).join('')}`,
+  tassili: () => `<defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F9C98B"/><stop offset="1" stop-color="#F6A66B"/></linearGradient></defs><rect width="100" height="112" fill="url(#a)"/><circle cx="24" cy="26" r="10" fill="#FFF0C2"/>
+    <path d="M8 96 V58 Q8 50 14 50 Q20 50 20 58 V96 Z M30 96 V44 Q30 36 38 36 Q46 36 46 44 V96 Z M62 96 V52 Q62 44 70 44 Q78 44 78 52 V70 Q86 70 86 62 Q86 56 92 56 V96 Z" fill="#9C5A3C"/><path d="M0 92 Q50 84 100 92 V112 H0 Z" fill="#E59A5C"/>`,
+  ghardaia: () => `<rect width="100" height="112" fill="#D8ECFA"/><path d="M0 100 L20 70 L50 52 L80 70 L100 100 Z" fill="#E9D3AE"/>
+    ${[[18, 78, 12, 12, '#F2C6A0'], [30, 70, 12, 14, '#BFD9EE'], [42, 60, 14, 16, '#F6E2B8'], [56, 64, 12, 14, '#F2B8B0'], [68, 74, 12, 12, '#CFE5C8'], [36, 84, 14, 12, '#F6D7A6'], [52, 82, 14, 12, '#BCD5F0']].map(([x, y, w, h, c]) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c}"/><rect x="${x + w / 2 - 1.5}" y="${y + 4}" width="3" height="4" fill="#7A6A58" opacity=".5"/>`).join('')}
+    <path d="M47 60 L49 36 L53 36 L55 60 Z" fill="#EADBC0"/><rect y="98" width="100" height="14" fill="#D9BF94"/>`,
+  riad: () => `<rect width="100" height="112" fill="#F5EBDD"/><g opacity=".9">${[...Array(6)].map((_, r) => [...Array(6)].map((_, c) => `<path d="M${c * 18 + 9} ${r * 18 + 1} l8 8 -8 8 -8 -8 z" fill="${(r + c) % 2 ? '#1E7A6E' : '#2F7DE1'}" opacity=".35"/>`).join('')).join('')}</g>
+    <path d="M22 112 V50 Q22 28 50 22 Q78 28 78 50 V112 Z" fill="#FFF7EA"/><ellipse cx="50" cy="100" rx="22" ry="5" fill="#7CC6E8"/><path d="M28 100 q22 10 44 0" stroke="#1E7A6E" stroke-width="2" fill="none"/>`,
+  chefchaouen: () => `<rect width="100" height="112" fill="#BFE0F7"/><rect x="0" y="20" width="46" height="92" fill="#3E8DD8"/><rect x="54" y="30" width="46" height="82" fill="#5FA6E6"/><path d="M14 112 V70 Q14 58 24 58 Q34 58 34 70 V112 Z" fill="#245FA8"/>
+    <path d="M46 112 h8 v-8 h8 v-8 h8 v-8 h30 V112 Z" fill="#9CCBF2"/><circle cx="66" cy="54" r="5" fill="#E8414E"/><rect x="62" y="58" width="8" height="6" rx="1.5" fill="#C9781A"/><circle cx="84" cy="48" r="5" fill="#F6A6C8"/><rect x="80" y="52" width="8" height="6" rx="1.5" fill="#C9781A"/>`,
+  merzouga: () => `<defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD9A0"/><stop offset="1" stop-color="#FFB97A"/></linearGradient></defs><rect width="100" height="112" fill="url(#a)"/><circle cx="74" cy="26" r="11" fill="#FFF0C2"/>
+    <path d="M0 78 Q30 58 60 74 T100 70 V112 H0 Z" fill="#E98A3C"/><path d="M0 92 Q40 76 100 90 V112 H0 Z" fill="#F2A456"/>
+    <g fill="#8A4B23" transform="translate(70 62)"><ellipse cx="0" cy="0" rx="7" ry="4"/><circle cx="-1" cy="-3.5" r="2.6"/><path d="M6 -1 q4 -6 6 -7 l1.5 1.5 q-2 2 -5 7 z"/><path d="M-5 2 v6 M-2 3 v5 M3 3 v5 M5.5 2 v6" stroke="#8A4B23" stroke-width="1.3"/></g>`,
+  sidibou: () => `<rect width="100" height="112" fill="#CFE9FB"/><rect x="0" y="30" width="100" height="82" fill="#FFFFFF"/><path d="M34 112 V66 Q34 50 50 50 Q66 50 66 66 V112 Z" fill="#1C6FC4"/><circle cx="60" cy="84" r="1.6" fill="#FFC93C"/>
+    <path d="M10 46 h16 v16 h-16 z M74 46 h16 v16 h-16 z" fill="#1C6FC4"/><path d="M18 46 v16 M10 54 h16 M82 46 v16 M74 54 h16" stroke="#FFFFFF" stroke-width="1"/>
+    <g fill="#E3489A">${[[4, 30], [10, 26], [16, 31], [22, 27], [28, 32], [82, 28], [88, 33], [94, 29]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="4"/>`).join('')}</g><path d="M2 32 Q14 36 30 33 M80 32 Q90 36 100 32" stroke="#4FA35E" stroke-width="2" fill="none"/>`,
+  djerba: () => `<rect width="100" height="112" fill="#CDEFFB"/><circle cx="22" cy="20" r="8" fill="#FFE08A"/><rect y="62" width="100" height="26" fill="#2EC4C9"/><path d="M0 70 Q50 66 100 70" stroke="#8BE3E6" stroke-width="1.4" fill="none"/><path d="M0 86 Q50 80 100 88 V112 H0 Z" fill="#F6DEB0"/>
+    <path d="M80 92 Q78 70 84 52" stroke="#8A5A33" stroke-width="3" fill="none"/><g fill="#3FA35A" transform="translate(84 52)"><path d="M0 0 q-14 -4 -20 6 q10 -6 20 -6 z"/><path d="M0 0 q14 -4 20 6 q-10 -6 -20 -6 z"/><path d="M0 0 q-6 -12 -16 -12 q8 4 16 12 z"/><path d="M0 0 q6 -12 16 -12 q-8 4 -16 12 z"/></g>`,
+  tozeur: () => `<rect width="100" height="112" fill="#FFF0D2"/><g opacity=".5">${[...Array(7)].map((_, r) => [...Array(6)].map((_, c) => `<rect x="${c * 18 + (r % 2 ? 9 : 0) - 2}" y="${r * 9 + 2}" width="16" height="7" fill="#E9B57E"/>`).join('')).join('')}</g><path d="M0 90 Q50 82 100 90 V112 H0 Z" fill="#7FBF6A"/>
+    ${[[18, 96, 1], [50, 92, 1.2], [82, 96, 1]].map(([x, y, s]) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M0 0 Q-2 -18 2 -32" stroke="#8A5A33" stroke-width="2.6" fill="none"/><g fill="#3E9B4F" transform="translate(2 -32)"><path d="M0 0 q-12 -3 -16 5 q8 -5 16 -5 z"/><path d="M0 0 q12 -3 16 5 q-8 -5 -16 -5 z"/><path d="M0 0 q-5 -10 -13 -10 q6 3 13 10 z"/><path d="M0 0 q5 -10 13 -10 q-6 3 -13 10 z"/></g></g>`).join('')}`
+};
+
+/* ---------- Catalogue : unité qui débloque l’objet (u1 … u18) */
+const WR_ITEMS = [
+  { id: 'glasses', slot: 'face', unit: 1, name: 'Lunettes rondes' },
+  { id: 'cap', slot: 'head', unit: 3, name: 'Casquette' },
+  { id: 'bowtie', slot: 'neck', unit: 5, name: 'Nœud papillon' },
+  { id: 'ball', slot: 'hand', unit: 7, name: 'Ballon de foot' },
+  { id: 'beanie', slot: 'head', unit: 8, name: 'Bonnet' },
+  { id: 'sunglasses', slot: 'face', unit: 10, name: 'Lunettes de soleil' },
+  { id: 'book', slot: 'hand', unit: 11, name: 'Cahier' },
+  { id: 'headphones', slot: 'neck', unit: 13, name: 'Casque audio' },
+  { id: 'medal', slot: 'neck', unit: 16, name: 'Médaille' },
+  { id: 'nuit', slot: 'bg', unit: 17, name: 'Nuit étoilée' },
+  { id: 'crown', slot: 'head', unit: 18, name: 'Couronne', note: 'Tu as terminé tout le parcours. Bravo !' },
+  /* Algérie — Zinou */
+  { id: 'casbah', slot: 'bg', unit: 2, g: 'zinou', name: 'La Casbah d’Alger', note: 'La vieille ville d’Alger, classée au patrimoine mondial.' },
+  { id: 'cafe', slot: 'hand', unit: 4, g: 'zinou', name: 'Petit café', note: 'Le café, premier geste d’accueil.' },
+  { id: 'iris', slot: 'flower', unit: 6, g: 'zinou', name: 'Iris d’Alger', note: 'Une fleur violette qui fleurit en plein hiver.' },
+  { id: 'tassili', slot: 'bg', unit: 9, g: 'zinou', name: 'Tassili n’Ajjer', note: 'Des arches de roche et des fresques millénaires au cœur du Sahara.' },
+  { id: 'kabyle', slot: 'neck', unit: 12, g: 'zinou', name: 'Collier kabyle', note: 'Un bijou en argent, orné de corail et d’émail.' },
+  { id: 'mandole', slot: 'hand', unit: 14, g: 'zinou', name: 'Mandole', note: 'La guitare du chaâbi algérois.' },
+  { id: 'ghardaia', slot: 'bg', unit: 15, g: 'zinou', name: 'Ghardaïa', note: 'Les maisons couleur pastel de la vallée du M’zab.' },
+  /* Maroc — Sbaa */
+  { id: 'riad', slot: 'bg', unit: 2, g: 'sbaa', name: 'Riad et zelliges', note: 'Une maison autour d’un patio, décorée de zelliges.' },
+  { id: 'thementhe', slot: 'hand', unit: 4, g: 'sbaa', name: 'Thé à la menthe', note: 'Servi dans des verres décorés.' },
+  { id: 'tarbouche', slot: 'head', unit: 6, g: 'sbaa', name: 'Tarbouche', note: 'Le fez rouge des grandes occasions.' },
+  { id: 'chefchaouen', slot: 'bg', unit: 9, g: 'sbaa', name: 'Chefchaouen', note: 'La ville bleue, au pied du Rif.' },
+  { id: 'amazigh', slot: 'neck', unit: 12, g: 'sbaa', name: 'Collier amazigh', note: 'Argent et perles d’ambre.' },
+  { id: 'lanterne', slot: 'hand', unit: 14, g: 'sbaa', name: 'Lanterne', note: 'En cuivre ciselé et verre coloré.' },
+  { id: 'merzouga', slot: 'bg', unit: 15, g: 'sbaa', name: 'Dunes de Merzouga', note: 'Les grandes dunes orangées de l’Erg Chebbi.' },
+  /* Tunisie — Nesr */
+  { id: 'sidibou', slot: 'bg', unit: 2, g: 'nesr', name: 'Sidi Bou Saïd', note: 'Murs blancs, portes bleues et bougainvilliers.' },
+  { id: 'thepignons', slot: 'hand', unit: 4, g: 'nesr', name: 'Thé aux pignons', note: 'Un thé avec des pignons de pin, la touche tunisienne.' },
+  { id: 'chechia', slot: 'head', unit: 6, g: 'nesr', name: 'Chéchia', note: 'Le bonnet de feutre rouge, fabriqué à Tunis depuis des siècles.' },
+  { id: 'djerba', slot: 'bg', unit: 9, g: 'nesr', name: 'Djerba', note: 'L’île aux plages de sable fin.' },
+  { id: 'machmoum', slot: 'flower', unit: 12, g: 'nesr', name: 'Machmoum', note: 'Un petit bouquet de jasmin qu’on glisse derrière l’oreille.' },
+  { id: 'cage', slot: 'hand', unit: 14, g: 'nesr', name: 'Cage de Sidi Bou Saïd', note: 'Les fameuses cages blanches et bleues.' },
+  { id: 'tozeur', slot: 'bg', unit: 15, g: 'nesr', name: 'Oasis de Tozeur', note: 'Des palmiers et des murs de briques ocre.' }
+];
+const wrItemsFor = gid => WR_ITEMS.filter(i => !i.g || i.g === gid).sort((a, b) => a.unit - b.unit);
+const wrItem = id => WR_ITEMS.find(i => i.id === id);
+function wrUnlocked(it) { const u = DB.units[it.unit - 1]; return !!u && unitDone(u.id); }
+function wrOutfit(gid) {
+  if (!S.outfits) S.outfits = {};
+  const o = S.outfits[gid] || (S.outfits[gid] = {});
+  /* objet retiré du catalogue ou plus débloqué (autre progression) : on l’ignore */
+  const clean = {}; Object.keys(o).forEach(k => { const it = wrItem(o[k]); if (it && (!it.g || it.g === gid) && wrUnlocked(it)) clean[k] = o[k]; });
+  return clean;
+}
+/* Calques à insérer dans guideSVG */
+function wrLayers(gid, outfit) {
+  const A = WR_ANCHOR[gid]; if (!A || !outfit) return { head: '', neck: '', hand: '' };
+  const at = (k, svg) => { const a = A[k]; return `<g class="wr wr-${k}" transform="translate(${a[0]} ${a[1]}) scale(${a[2]})">${svg}</g>`; };
+  const d = id => (WRD[id] || (() => ''));
+  let head = '', neck = '', hand = '';
+  if (outfit.flower) head += at('flower', d(outfit.flower)());
+  if (outfit.face) { const f = A.face; head += `<g class="wr wr-face">${d(outfit.face)(f[0], f[1], f[2])}</g>`; }
+  if (outfit.head) head += at('head', d(outfit.head)());
+  if (outfit.neck) neck = at('neck', d(outfit.neck)());
+  if (outfit.hand) hand = at('hand', d(outfit.hand)());
+  return { head, neck, hand };
+}
+/* Petite icône d’un objet seul (grille de la garde-robe) */
+function wrIcon(it) {
+  if (it.slot === 'bg') return `<svg viewBox="0 0 100 112" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${WR_BG[it.id]()}</svg>`;
+  const f = WRD[it.id];
+  const inner = it.slot === 'face' ? f(-11, 11, 0) : f();
+  const vb = { head: '-20 -26 40 34', flower: '-13 -13 26 32', face: '-24 -14 48 28', neck: '-28 -12 56 36', hand: '-16 -24 32 32' }[it.slot];
+  return `<svg viewBox="${vb}" aria-hidden="true">${inner}</svg>`;
+}
+const wrBgURL = id => WR_BG[id] ? `url('data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112" preserveAspectRatio="xMidYMax slice">${WR_BG[id]()}</svg>`).replace(/'/g, '%27')}')` : '';
+/* Fond du guide actuel, appliqué à tous les cadres du guide (voir style.css : body.gbg) */
+function applyGuideBg() {
+  const g = typeof currentGuide === 'function' && currentGuide();
+  const bg = g ? wrOutfit(g.id).bg : null;
+  document.body.classList.toggle('gbg', !!bg);
+  if (bg) document.body.style.setProperty('--gd-bg', wrBgURL(bg)); else document.body.style.removeProperty('--gd-bg');
+}
+/* Objets débloqués par une unité donnée pour le guide actuel */
+function wrNewForUnit(u) { const g = currentGuide(); return g ? wrItemsFor(g.id).filter(i => i.unit === u.index + 1) : []; }
+
+/* ---------- Écran Garde-robe (feuille du bas) */
+function wardrobeSheet(startSlot) {
+  const g = currentGuide(); if (!g) return;
+  const items = wrItemsFor(g.id);
+  const slots = WR_SLOTS.filter(s => items.some(i => i.slot === s[0]));
+  let tab = startSlot && slots.some(s => s[0] === startSlot) ? startSlot : slots[0][0];
+  const count = items.filter(wrUnlocked).length;
+  const sh = openSheet(`<div class="wr-sheet"><div class="wr-top"><div class="mim-frame arch lg wr-prev"></div><div class="grow"><h2 style="margin:0">Garde-robe de ${esc(g.name)}</h2>
+      <div class="small muted" style="margin-top:4px">${count} / ${items.length} objets débloqués · un nouvel objet à chaque unité terminée</div><div class="lvbar" style="margin-top:8px"><i style="width:${Math.round(100 * count / items.length)}%"></i></div></div></div>
+    <div class="wr-tabs" role="tablist">${slots.map(s => `<button class="chip" role="tab" data-slot="${s[0]}">${s[1]} ${s[2]}</button>`).join('')}</div>
+    <div class="wr-grid" id="wrGrid"></div><div class="small muted wr-note" id="wrNote" aria-live="polite"></div>
+    <button class="btn" id="wrOk" style="margin-top:12px">C’est bon !</button></div>`, sh => {
+    $('#wrOk', sh).onclick = closeSheet;
+  });
+  const prev = () => { $('.wr-prev', sh).innerHTML = guideSVG(g.id, 'happy', { outfit: wrOutfit(g.id), cls: 'gd-cur' }); };
+  const draw = () => {
+    $$('.wr-tabs .chip', sh).forEach(b => { b.classList.toggle('on', b.dataset.slot === tab); b.setAttribute('aria-selected', b.dataset.slot === tab); });
+    const cur = wrOutfit(g.id)[tab];
+    const list = items.filter(i => i.slot === tab);
+    $('#wrGrid', sh).innerHTML = `<button class="wr-cell ${!cur ? 'on' : ''}" data-id=""><span class="wr-ic wr-none">∅</span><small>${tab === 'bg' ? 'Classique' : 'Rien'}</small></button>` +
+      list.map(i => { const ok = wrUnlocked(i); return `<button class="wr-cell ${cur === i.id ? 'on' : ''} ${ok ? '' : 'locked'} ${i.slot === 'bg' ? 'bgc' : ''}" data-id="${i.id}" ${ok ? '' : 'aria-disabled="true"'} aria-label="${esc(i.name + (ok ? '' : ' (verrouillé)'))}">
+        <span class="wr-ic">${wrIcon(i)}${ok ? '' : '<span class="wr-lock">🔒</span>'}</span><small>${ok ? esc(i.name) : 'Unité ' + i.unit}</small>${i.g ? `<span class="wr-flag">${flagSVG(g.v, 'flag mini')}</span>` : ''}</button>`; }).join('');
+    $$('.wr-cell', sh).forEach(b => b.onclick = () => {
+      const id = b.dataset.id, it = id && wrItem(id), note = $('#wrNote', sh);
+      if (it && !wrUnlocked(it)) { note.textContent = `🔒 ${it.name} : termine l’unité ${it.unit} pour le débloquer.`; Sfx.play('tap'); return; }
+      const o = S.outfits[g.id] = Object.assign({}, wrOutfit(g.id));
+      if (id && o[tab] !== id) o[tab] = id; else delete o[tab];
+      note.textContent = it && o[tab] ? (it.note || '') : '';
+      save(); Sfx.play('tap'); buzz(10); prev(); draw(); applyGuideBg(); wrRefreshFrames();
+    });
+  };
+  $$('.wr-tabs .chip', sh).forEach(b => b.onclick = () => { tab = b.dataset.slot; $('#wrNote', sh).textContent = ''; draw(); });
+  prev(); draw();
+}
+/* Met à jour les cadres déjà affichés (carte du Profil, accueil) */
+function wrRefreshFrames() { $$('svg.gd-cur').forEach(s => { const host = s.parentNode; if (host && !host.closest('.wr-sheet')) host.innerHTML = guideSVG(S.mascot, 'idle', { outfit: wrOutfit(S.mascot), cls: 'gd-cur' }); }); }
+
+/* ---------- Surprise de fin d’unité */
+function unlockSheet(items, then) {
+  const g = currentGuide(); if (!g || !items.length) { then && then(); return; }
+  const it = items[0];
+  const tryOn = Object.assign({}, wrOutfit(g.id), { [it.slot]: it.id });
+  openSheet(`<div class="wr-unlock center"><span class="ex-tag">🎁 Nouvel objet débloqué</span>
+    <div class="mim-frame arch lg wr-prev" style="margin:12px auto 10px${it.slot === 'bg' ? `;background:${wrBgURL(it.id)} center bottom/cover no-repeat` : ''}">${guideSVG(g.id, 'proud', { outfit: tryOn })}</div>
+    <h2 style="margin:0">${esc(it.name)}</h2>${it.note ? `<p class="muted" style="margin:6px 0 0">${esc(it.note)}</p>` : ''}
+    <div class="row" style="margin-top:16px"><button class="btn ghost grow" id="ulLater">Plus tard</button><button class="btn grow" id="ulWear">${it.slot === 'bg' ? 'Mettre ce fond' : 'L’essayer'}</button></div></div>`, sh => {
+    const next = () => { closeSheet(); if (then) setTimeout(then, 200); };
+    $('#ulLater', sh).onclick = next;
+    $('#ulWear', sh).onclick = () => { S.outfits[g.id] = tryOn; save(); applyGuideBg(); wrRefreshFrames(); toast(`${g.name} porte maintenant : ${it.name}`); next(); };
+  });
+  try { confetti(); } catch (e) {}
 }
 
 /* =====================================================================
@@ -7792,6 +8026,11 @@ function runSession(cfg) {
   }
   function next() {
     if (cfg.hearts && S.hearts <= 0) { outOfHearts(); return; }
+    /* Test adaptatif : en fin de bloc, cfg.adapt peut ajouter des exercices à la file ou arrêter la session */
+    if (cfg.adapt && pos >= queue.length - 1) {
+      let a; try { a = cfg.adapt(results, queue); } catch (e) { console.error(e); a = 'stop'; }
+      if (a === 'stop') { finish(false); return; }
+    }
     pos++;
     if (pos >= queue.length) finish(false); else render();
   }
@@ -8357,7 +8596,7 @@ function startLesson(l) {
       save(); checkBadges();
       const unitNow = unitDone(u.id) && !wasUnitDone;
       endScreen(ctx, res, { title: acc >= 1 ? 'Sans faute !' : 'Leçon terminée !', stars, bonus, sub: unitNow ? `Unité « ${esc(u.title)} » bouclée !` : '', forceConfetti: true,
-        after: () => { refresh(); if (unitNow) setTimeout(() => cultureSheet(u, '🏅 Unité terminée'), 250); } });
+        after: () => { refresh(); if (unitNow) setTimeout(() => unlockSheet(wrNewForUnit(u), () => cultureSheet(u, '🏅 Unité terminée')), 250); } });
     }
   });
 }
@@ -8610,8 +8849,8 @@ function screenProfile(scr) {
     <div class="stats" style="margin-top:12px"><div class="stat"><b>${S.xp}</b><small>XP total</small></div><div class="stat"><b style="color:var(--coral-ink)">${sk}</b><small>série · 🧊${S.freezes || 0}</small></div><div class="stat"><b>${S.bestStreak}</b><small>record</small></div>
       <div class="stat"><b>${SRS.learnedWords().length}</b><small>mots appris</small></div><div class="stat"><b style="color:var(--mint-ink)">${SRS.mastered().length}</b><small>maîtrisés</small></div><div class="stat"><b>${acc}%</b><small>précision</small></div></div>
 
-    <div class="section-t">Ton guide</div><div class="card guide-card"><div class="mim-frame arch">${currentGuide() ? guideSVG(S.mascot, 'idle') : ''}</div><div class="grow"><b class="ttl">${esc(guideName())}</b><div class="small muted">${currentGuide() ? esc(currentGuide().animal + ' · ' + currentGuide().dialect) : ''}</div>
-      <button class="btn sm" id="pGuide" style="margin-top:10px">Changer de guide</button></div></div>
+    <div class="section-t">Ton guide</div><div class="card guide-card"><div class="mim-frame arch">${currentGuide() ? guideSVG(S.mascot, 'idle', { outfit: wrOutfit(S.mascot), cls: 'gd-cur' }) : ''}</div><div class="grow"><b class="ttl">${esc(guideName())}</b><div class="small muted">${currentGuide() ? esc(currentGuide().animal + ' · ' + currentGuide().dialect) : ''}</div>
+      <div class="row" style="margin-top:10px;flex-wrap:wrap;gap:8px">${currentGuide() ? `<button class="btn sm" id="pWard">👕 Garde-robe · ${wrItemsFor(S.mascot).filter(wrUnlocked).length}/${wrItemsFor(S.mascot).length}</button>` : ''}<button class="btn ghost sm" id="pGuide">Changer de guide</button></div></div></div>
     <div class="section-t">👥 Profils sur cet appareil</div><div class="card">
       <div class="list">${ids.map(id => { const st = Profiles.states[id], me = id === Profiles.current && !Profiles.guest; return `<div class="li" style="${me ? 'border-color:var(--blue)' : ''}"><span class="mim-frame arch sm" style="width:44px;height:50px">${catSVG('neutral', '', st.avatar)}</span><div class="grow"><b class="ttl">${esc(st.name || 'Sans nom')}</b>${st.pinHash ? ' 🔒' : ''}<div class="fr">${st.xp} XP · série ${st.streak || 0}</div></div>${me ? '<span class="badge neu">actif</span>' : `<button class="btn ghost sm" data-switch="${id}">Passer</button>`}</div>`; }).join('')}</div>
       <div class="row" style="margin-top:10px;flex-wrap:wrap"><button class="btn ghost sm grow" id="pNew">＋ Nouveau profil</button>${Profiles.guest ? '' : `<button class="btn ghost sm grow" id="pPin">${S.pinHash ? '🔓 Retirer le code' : '🔒 Code à 4 chiffres'}</button>`}</div>
@@ -8668,6 +8907,7 @@ function screenProfile(scr) {
   $('#pPersist', scr).onclick = async () => { const ok = await Profiles.askPersist(); toast(ok ? '🛡️ Stockage protégé ✓' : 'Safari n’a pas accordé la protection : installe l’app sur l’écran d’accueil, puis réessaie.', 3600); screenProfile(scr); };
   $$('[data-switch]', scr).forEach(b => b.onclick = () => switchProfile(b.dataset.switch));
   $('#pNew', scr).onclick = () => promptNewProfile(false);
+  const pw = $('#pWard', scr); if (pw) pw.onclick = () => wardrobeSheet();
   $('#pGuide', scr).onclick = () => guidePicker({ skipIntro: true, closable: true, onDone: () => { SHOWN = null; TAB = 'profile'; renderApp(); toast(guideName() + ' t’accompagne !'); } });
   const pin = $('#pPin', scr); if (pin) pin.onclick = () => S.pinHash ? confirmBox('Retirer le code de ce profil ?', 'Retirer', async () => { await Profiles.setPin(Profiles.current, null); screenProfile(scr); }) : pinPad('Choisis un code à 4 chiffres', code => pinPad('Confirme le code', async (c2, sh) => { if (c2 !== code) { toast('Les deux codes ne correspondent pas'); buzz([60, 40, 60]); return; } closeSheet(); await Profiles.setPin(Profiles.current, code); toast('🔒 Code enregistré'); screenProfile(scr); }), 'Il sera demandé pour ouvrir ce profil sur cet appareil.');
   const del = $('#pDel', scr); if (del) del.onclick = () => confirmBox(`Supprimer « ${S.name || 'ce profil'} » et toute sa progression ? Fais une sauvegarde avant si besoin.`, 'Supprimer', () => { Profiles.remove(Profiles.current); SHOWN = null; if (Profiles.ids().length) Profiles.enter(Profiles.ids()[0]); else { Profiles.current = null; S = defaultState(); } TAB = 'learn'; renderApp(); toast('Profil supprimé'); }, true);
@@ -8757,25 +8997,70 @@ function onboarding(step) {
     bindOpt('script', 4);
   }
   if (step === 4) {
-    scr.innerHTML = head(4, 'Tu connais déjà un peu ?', { dz: vt('know')[0], fr: vt('know')[1] }) + opts([['new', '🐣', 'Je débute', 'On commence par les salutations'], ['test', '🎯', 'Test de niveau', '10 questions pour trouver ton point de départ']]);
+    scr.innerHTML = head(4, 'Tu connais déjà un peu ?', { dz: vt('know')[0], fr: vt('know')[1] }) + opts([['new', '🐣', 'Je débute', 'On commence par les salutations'], ['test', '🎯', 'Test de niveau', 'Questions qui s’adaptent à toi, 2 à 4 minutes']]);
     $$('.onb .opt', scr).forEach(b => b.onclick = () => { if (b.dataset.v === 'new') finishOnboarding(0); else placementTest(); });
   }
   const bk = $('#obBack', scr); if (bk) bk.onclick = () => onboarding(step - 1);
 }
+/* ---------- TEST DE NIVEAU ADAPTATIF
+   6 paliers de 3 unités (u1-3 … u16-18), 4 questions par palier, générées à partir du contenu de la version active.
+   On commence au palier 2 ; réussir (≥ 3/4) fait monter d’un palier, échouer redescend au palier 1 (une seule fois) ou arrête le test.
+   Les questions montent en difficulté : mots → phrases entières, distracteurs du même thème, phrases à reconstruire, mot faux à repérer. */
+const PLACE_LEVELS = ['Débutant', 'Élémentaire', 'Pré-intermédiaire', 'Intermédiaire', 'Intermédiaire avancé', 'Avancé', 'Expert'];
+function placementBlock(tier) {
+  const units = DB.units.slice((tier - 1) * 3, tier * 3);
+  if (!units.length) return [];
+  const wordsOf = u => u.lessons.flatMap(l => l.words || []).map(getItem).filter(Boolean);
+  const sentsOf = u => u.lessons.flatMap(l => l.sentences || []).map(getItem).filter(s => s && s.t && s.t.length);
+  const W = units.flatMap(wordsOf), SN = units.flatMap(sentsOf);
+  const minTok = tier <= 1 ? 3 : tier <= 3 ? 4 : 5;
+  const long = SN.filter(s => s.t.length >= minTok), shortS = SN.filter(s => s.t.length >= 3);
+  const lastU = units[units.length - 1], lastW = wordsOf(lastU).length ? wordsOf(lastU) : W;
+  const used = new Set();
+  const take = (arr, fallback) => { const c = shuffle(arr.filter(x => !used.has(x.id))); const p = c[0] || shuffle((fallback || arr).filter(x => !used.has(x.id)))[0] || pick(fallback || arr); if (p) used.add(p.id); return p; };
+  const mk = (type, it, extra) => it ? Object.assign({ type, item: it.id, srs: [], tier }, extra || {}) : null;
+  const sAny = long.length ? long : shortS.length ? shortS : SN;
+  const out = [];
+  // 1. comprendre : phrase entière (palier ≥ 2) ou mot (palier 1)
+  out.push(tier === 1 ? mk('mcq_dz2fr', take(W)) : mk('mcq_dz2fr', take(sAny, SN)));
+  // 2. produire : trouver la bonne traduction d’un mot de l’unité la plus avancée du palier
+  out.push(mk('mcq_fr2dz', take(lastW, W)));
+  // 3. compléter une phrase avec le bon mot
+  out.push(mk('cloze', take(sAny, SN)));
+  // 4. le plus difficile : reconstruire une phrase (palier ≥ 3), repérer le mot faux (palier ≤ 2)
+  out.push(tier >= 3 ? mk('tiles', take(sAny.filter(s => s.t.length <= 8), sAny)) : mk(tier === 2 ? 'tiles' : 'spot', take(sAny, SN), tier === 2 ? { dir: 'fr' } : {}));
+  return out.filter(Boolean).map(e => Object.assign({ srs: [] }, e));
+}
 function placementTest() {
-  const ex = CONTENT.placement.map(p => Object.assign({ srs: [] }, p));
+  const maxTier = Math.min(6, Math.ceil(DB.units.length / 3));
+  let tier = Math.min(2, maxTier), passed = 0, passedScore = 0, askedLow = false, done = false;
+  const first = placementBlock(tier);
+  if (!first.length) { finishOnboarding(0); return; }
   runSession({
-    title: 'Test de niveau', exercises: ex, mode: 'placement', hearts: false, xpPer: 0, retry: false, badge: '🎯 Test',
+    title: 'Test de niveau', exercises: first, mode: 'placement', hearts: false, xpPer: 0, retry: false, badge: '🎯 Test',
     quitMsg: 'Arrêter le test ? Tu commenceras au début.', onClose: () => { if (!S.onboarded) finishOnboarding(0); },
+    adapt(results, queue) {
+      const blk = results.filter(r => r.ex.tier === tier);
+      const score = blk.filter(r => r.ok).length, need = Math.ceil(blk.length * 0.75);
+      if (score >= need) {
+        passed = Math.max(passed, tier); passedScore = score === blk.length ? 3 : 2;
+        if (tier >= maxTier || (askedLow && tier === 1)) return 'stop';
+        tier++;
+      } else if (tier === 2 && !askedLow && maxTier >= 2) { askedLow = true; tier = 1; }
+      else return 'stop';
+      const more = placementBlock(tier);
+      if (!more.length) return 'stop';
+      more.forEach(e => queue.push(e));
+    },
     onEnd(res, ctx) {
-      const byUnit = {};
-      res.results.forEach(r => { const u = r.ex.unit; byUnit[u] = byUnit[u] !== false && r.ok; });
-      let k = 0;
-      for (const u of DB.units) { if (byUnit[u.id] === true) k = u.index + 1; else break; }
+      /* palier réussi p avec score parfait → on valide ses 3 unités, sinon seulement les 2 premières */
+      let k = passed ? (passed - 1) * 3 + passedScore : 0;
+      k = Math.min(k, Math.max(0, DB.units.length - 2));
+      const lvl = PLACE_LEVELS[Math.min(passed, PLACE_LEVELS.length - 1)];
       ctx.close = () => { ctx.layer.remove(); };
-      endScreen(ctx, res, { title: k ? `Niveau : unité ${k + 1}` : 'On commence au début !', proud: k >= 2,
+      endScreen(ctx, res, { title: k ? `Niveau : ${lvl}` : 'On commence au début !', proud: k >= 3,
         line: k ? { dz: vt('knowYes')[0], fr: vt('knowYes')[1] } : { dz: vt('knowNo')[0], fr: vt('knowNo')[1] },
-        sub: k ? `Tu maîtrises déjà ${k} unité${k > 1 ? 's' : ''}. Elles restent accessibles pour réviser.` : 'C’est fait pour ça. Yallah !', btn: 'C’est parti', after: () => finishOnboarding(k) });
+        sub: k ? `Tu démarres à l’unité ${k + 1}. Les ${k} premières restent accessibles pour réviser.` : 'C’est fait pour ça. Yallah !', btn: 'C’est parti', after: () => finishOnboarding(k) });
     }
   });
 }
