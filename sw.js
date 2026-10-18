@@ -1,6 +1,6 @@
 /* Kelma — service worker (hors ligne). Aucun serveur : simple cache du navigateur.
    Change VERSION à chaque mise à jour du fichier HTML pour forcer le rafraîchissement. */
-const VERSION = 'kelma-pop-8';
+const VERSION = 'kelma-pop-9';
 const SHELL = ['./', './index.html', './manifest.json',
   './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'];
 const RUNTIME_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com', 'cdn.jsdelivr.net'];
@@ -25,6 +25,24 @@ self.addEventListener('fetch', e => {
   if (req.mode === 'navigate') {
     e.respondWith(fetch(req).then(r => { const cp = r.clone(); caches.open(VERSION).then(c => c.put(req, cp)); return r; })
       .catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match('./index.html'))));
+    return;
+  }
+  /* Audio : Safari/iOS demande des plages d'octets (Range). On répond en 206 depuis le fichier complet en cache. */
+  if (url.origin === location.origin && url.pathname.includes('/audio/') && req.headers.has('range')) {
+    e.respondWith((async () => {
+      const c = await caches.open(VERSION), key = url.href;
+      let full = await c.match(key);
+      if (!full) { const r = await fetch(key); if (!r.ok) return r; await c.put(key, r.clone()); full = r; }
+      const buf = await full.arrayBuffer(), size = buf.byteLength;
+      const m = /bytes=(\d*)-(\d*)/.exec(req.headers.get('range')) || [];
+      let a = m[1] ? +m[1] : 0, b = m[2] ? +m[2] : size - 1;
+      if (!m[1] && m[2]) { a = Math.max(0, size - +m[2]); b = size - 1; }
+      b = Math.min(b, size - 1);
+      if (a > b) return new Response(null, { status: 416, headers: { 'Content-Range': 'bytes */' + size } });
+      return new Response(buf.slice(a, b + 1), { status: 206, headers: {
+        'Content-Type': full.headers.get('Content-Type') || 'audio/mp4',
+        'Content-Range': 'bytes ' + a + '-' + b + '/' + size, 'Content-Length': String(b - a + 1), 'Accept-Ranges': 'bytes' } });
+    })());
     return;
   }
   /* Polices et bibliothèques CDN : cache puis mise à jour en arrière-plan */
